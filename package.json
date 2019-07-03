@@ -5,8 +5,7 @@
     "node": "8.11.4"
   },
   "scripts": {
-    "postinstall": "gulp build",
-    "start": "gulp serve"
+    "postinstall": "gulp"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
