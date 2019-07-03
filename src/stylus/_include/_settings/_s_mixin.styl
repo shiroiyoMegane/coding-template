@@ -1,0 +1,97 @@
+// /* mixin & Variable */
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,700')
+
+MQ(maxWidth){
+	@media screen and (max-width: maxWidth) {
+		{block}
+	}
+}
+
+MQ_SET(prop, width){
+	@media screen and (prop: maxWidth) {
+		{block}
+	}
+}
+
+MQ_SP(maxWidth){
+	@media screen and (max-width: maxWidth) {
+		{block}
+	}
+	
+}
+
+MQ_PC(minWidth){
+	@media screen and (min-width: minWidth) {
+		{block}
+	}
+	
+}
+
+HOVER(minWidth){
+	@media screen and (min-width: minWidth) {
+		&:hover {
+			{block}
+		}
+	}
+	
+}
+
+wSet(width, parent)
+	return width / parent * 100%;
+
+CF()
+	+cache('clearfix')
+		&::after
+			content: "";
+			display: block;
+			clear: both;
+
+flexBox()
+	display: flex;
+	flex-wrap: wrap;
+
+// roboto()
+// 	font-family: 'Roboto', sans-serif;
+
+fontSet()
+	font-family: DF_FONT;
+	fontSize(14);
+	line-height: 1.6;
+	-webkit-text-size-adjust: 100%;
+	
+	+MQ_SP(SP_RES_WID)
+		fontSize(13);
+		
+fontSize(size) {
+	font-size: (size) px;
+	font-size: (size / 10) rem;
+}
+
+lastReset()
+	*
+		&:last-child
+			margin-bottom: 0;
+
+vwsp(size)
+	rate = 100 / 650;
+	return rate * size * 1vw
+
+vwpc(size)
+	rate = 100 / 1600;
+	return rate * size * 1vw
+
+fontSp(font_size)
+	font-size: font_size * 1px;
+	font-size: vwsp(font_size);
+
+fontPc(font_size)
+	font-size: font_size * 1px;
+	font-size: vwpc(font_size);
+
+marginBottom(MARGIN)
+	margin-bottom MARGIN * 1px
+	lastReset()
+
+	+MQ_SP(SP_RES_WID)
+		margin-bottom (MARGIN / 2) * 1px
+

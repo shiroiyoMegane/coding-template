@@ -1,0 +1,16 @@
+extends _include/_template/_t_base_template
+
+block vars
+	- var KEY = "home"
+	- var PAGE = PAGES[KEY]
+	- var RELATIVE_PATH = PAGE.PATH
+	- var header = "false"
+	- var footer = "false"
+	- var side = ["false","left"]
+	- var jquery = "false"
+
+
+block contents
+	ul
+		li
+			a(href="component.html") コンポーネント集
