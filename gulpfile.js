@@ -150,6 +150,19 @@ gulp.task('reload', () => {
 	browserSync.reload();
 });
 
+
+
+//Browser Sync
+const serve = require("browser-sync");
+gulp.task('serve', () => {
+	serve({
+		port: port,
+		server: {
+			baseDir: url.dist
+		}
+	});
+});
+
 //watch
 gulp.task('watch', function () {
 	gulp.watch(url.src + url.js + 'entry.js', ['webpack']);
