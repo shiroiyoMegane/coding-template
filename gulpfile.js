@@ -155,11 +155,9 @@ gulp.task('reload', () => {
 //Browser Sync
 const serve = require("browser-sync");
 gulp.task('serve', () => {
-	serve({
-		port: port,
-		server: {
-			baseDir: url.dist
-		}
+	browserSync.init({
+		proxy: url.virtualDomain,
+		open: '/dist'
 	});
 });
 
