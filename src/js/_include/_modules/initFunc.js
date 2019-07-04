@@ -1,7 +1,10 @@
+
+
 module.exports = (tg, op, flag) => {
+	const uaSet = require('./ua.js');
+
 	let timeoutId = 1, pageFlag;
 	let currentWidth = window.innerWidth;
-
 
 
 	tg.DOMReadBefore(op);
@@ -24,7 +27,7 @@ module.exports = (tg, op, flag) => {
 				timeoutId = 0;
 	
 				// ios resize制御
-				if(currentWidth <= op.SP_WIDTH) {
+				if(op.UA != 'pc'){
 					if (currentWidth == window.innerWidth) return;
 					currentWidth = window.innerWidth;
 					tg.windowResize(op);

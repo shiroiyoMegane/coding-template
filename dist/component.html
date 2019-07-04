@@ -2712,7 +2712,7 @@ iconTagSet(tag)
 		display block
 		iconTagSet('.btnWrapper')
 		color inherit
-		border 1px solid POINT_COLOR01
+		border 1px solid #ccc
 		text-decoration none
 
 	.btnWrapper
@@ -2814,25 +2814,39 @@ iconTagSet(tag)
                   <div class="c-btnSet">
                     <ul class="c-colSet is-three">
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-fade01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">フェード</span></span></a></div>
+                        <div class="a-bgColorChange01 is-fade01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェード</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideRight01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドライト</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideRight01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドライト</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideLeft01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドレフト</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideLeft01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドレフト</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideTop01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドトップ</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideTop01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドトップ</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideBottom01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドボトム</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideBottom01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドボトム</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideCenterIn01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドセンターイン</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideCenterIn01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドセンターイン</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-bgColorChange01 is-slideCenterOut01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">スライドセンターアウト</span></span></a></div>
+                        <div class="a-bgColorChange01 is-slideCenterOut01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">スライドセンターアウト</span></span></a></div>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -2844,8 +2858,7 @@ iconTagSet(tag)
                     <div class="source js-accordion-child">
                       <pre><code>
                           .a-bgColorChange01 (.is-slideCenterOut)
-                          	a(href="").animationBlock
-                          		テキスト
+                          	テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -2853,204 +2866,198 @@ iconTagSet(tag)
                     <p class="p-markupBtn js-accordion-parent stylus">stylus
                     </p>
                     <div class="source js-accordion-child">
-                      <pre><code>.a-borderChange01
+                      <pre><code>span.a-borderChange01
+	display inline-block
+	a
+		text-decoration none
+
+.a-borderChange01
 	BORDER_COLOR = #000
 
 	position relative
-	.animationBlock
-		display block
-		transition 0.3s all ease
+	
+	display block
+	transition 0.3s all ease
 	
 	&.is-boderBottomLeft01
-		.animationBlock
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin left
+			transform scaleX(0)
+			transition 0.5s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform-origin left
-				transform scaleX(0)
-				transition 0.5s all ease
-				
-			&:hover
-				&:before
-					transform scaleX(1.0)
+				transform scaleX(1.0)
 	
 	&.is-boderBottomCenter01
-		.animationBlock
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform scaleX(0)
+			transition 0.5s all ease
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform scaleX(0)
-				transition 0.5s all ease
-			&:hover
-				&:before
-					transform scaleX(1.0)
+				transform scaleX(1.0)
 	
 	&.is-boderBottomRight01
-		.animationBlock
-			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform-origin right
-				transform scaleX(0)
-				transition 0.5s all ease
-				
-			&:hover
-				&:before
-					transform scaleX(1.0)
-	
-	&.is-boderBold01
-		.animationBlock
-			border none
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin right
+			transform scaleX(0)
 			transition 0.5s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 100%
-				border 1px solid BORDER_COLOR
-				box-sizing border-box
-				transition 0.3s all ease
+				transform scaleX(1.0)
 
-			&:hover
-				&:before
-					border-width 5px
+	&.is-boderBold01
+		border none
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 1px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+
+		&:hover, &.is-inview
+			&:before
+				border-width 5px
 
 	&.is-boderBold02
-		.animationBlock
-			border none
-			transition 0.5s all ease
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 5px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 100%
-				border 5px solid BORDER_COLOR
-				box-sizing border-box
-				transition 0.3s all ease
-				
-			&:hover
-				&:before
-					border-width 1px
+				border-width 1px
 	
 	&.is-boderDraw01
-		.animationBlock
-			border 1px solid #ccc
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			bottom 0
+			right  0
+		
+		&:hover, &.is-inview
 			&:before, &:after
-				content ""
-				display block
-				position absolute
-				width 0
-				height 0
-				box-sizing border-box
-				border 1px solid transparent
-
-			&:before
-				top 0
-				left 0
-			&:after
-				bottom 0
-				right  0
-			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-				&:before
-					border-top-color BORDER_COLOR
-					border-right-color BORDER_COLOR
-					transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-				&:after
-					border-bottom-color BORDER_COLOR
-					border-left-color BORDER_COLOR
-					transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
-
-	&.is-boderDraw02
-		.animationBlock
-			border 1px solid #ccc
-			&:before, &:after
-				content ""
-				display block
-				position absolute
-				width 0
-				height 0
-				box-sizing border-box
-				border 1px solid transparent
-
-			&:before
-				top 0
-				left 0
-			&:after
-				top 0
-				left  0
-			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-				&:before
-					border-top-color BORDER_COLOR
-					border-right-color BORDER_COLOR
-					transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-				&:after
-					border-bottom-color BORDER_COLOR
-					border-left-color BORDER_COLOR
-					transition height 0.25s ease-out, width 0.25s ease-out 0.25s
-
-	&.is-boderDraw03
-		.animationBlock
-			border 1px solid #ccc
-			&:before, &:after
-				content ""
-				display block
-				position absolute
 				width 100%
 				height 100%
-				box-sizing border-box
-				transition 0.5s all ease
-
 			&:before
-				top 0
-				left 0
-				border-top 1px solid BORDER_COLOR
-				border-bottom 1px solid BORDER_COLOR
-				transform scale(0,1)
-				
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
 			&:after
-				top 0
-				left  0
-				border-left 1px solid BORDER_COLOR
-				border-right 1px solid BORDER_COLOR
-				transform scale(1,0)
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
+
+	&.is-boderDraw02
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			top 0
+			left  0
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+			&:before
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+			&:after
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition height 0.25s ease-out, width 0.25s ease-out 0.25s
+
+	&.is-boderDraw03
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 100%
+			height 100%
+			box-sizing border-box
+			transition 0.5s all ease
+
+		&:before
+			top 0
+			left 0
+			border-top 1px solid BORDER_COLOR
+			border-bottom 1px solid BORDER_COLOR
+			transform scale(0,1)
 			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-					transform scale(1,1)</code></pre>
+		&:after
+			top 0
+			left  0
+			border-left 1px solid BORDER_COLOR
+			border-right 1px solid BORDER_COLOR
+			transform scale(1,0)
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+				transform scale(1,1)
+</code></pre>
                     </div>
                   </div>
                 </div>
@@ -3065,7 +3072,9 @@ iconTagSet(tag)
                   <div class="c-btnSet">
                     <ul class="c-colSet is-three">
                       <li class="col">
-                        <div class="m-btnSet01 a-shadowAppear01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">シャドウ01</span></span></a></div>
+                        <div class="a-shadowAppear01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">シャドウ01</span></span></a></div>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -3077,8 +3086,8 @@ iconTagSet(tag)
                     <div class="source js-accordion-child">
                       <pre><code>
                           .a-shadowAppear01
-                          	a(href="").animationBlock
-                          		テキスト
+                          	.hoverAnimationBlock
+                          		コンテンツ
                           </code></pre>
                     </div>
                   </div>
@@ -3087,11 +3096,10 @@ iconTagSet(tag)
                     </p>
                     <div class="source js-accordion-child">
                       <pre><code>.a-shadowAppear01
-	.animationBlock
-		display block
-		transition 0.3s all ease
-		&:hover
-			box-shadow 0px 0px 10px #aaaaaa</code></pre>
+	display block
+	transition 0.3s all ease
+	&:hover, &.is-inview
+		box-shadow 0px 0px 10px #aaaaaa</code></pre>
                     </div>
                   </div>
                 </div>
@@ -3106,28 +3114,44 @@ iconTagSet(tag)
                   <div class="c-btnSet">
                     <ul class="c-colSet is-three">
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderBottomLeft01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム01</span></span></a></div>
+                        <div class="a-borderChange01 is-boderBottomLeft01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム01</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderBottomCenter01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
+                        <div class="a-borderChange01 is-boderBottomCenter01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderBottomRight01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
+                        <div class="a-borderChange01 is-boderBottomRight01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderBold01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド01</span></span></a></div>
+                        <div class="a-borderChange01 is-boderBold01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド01</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderBold02"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド02</span></span></a></div>
+                        <div class="a-borderChange01 is-boderBold02">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド02</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderDraw01"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー01</span></span></a></div>
+                        <div class="a-borderChange01 is-boderDraw01">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー01</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderDraw02"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー02</span></span></a></div>
+                        <div class="a-borderChange01 is-boderDraw02">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー02</span></span></a></div>
+                        </div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01 a-borderChange01 is-boderDraw03"><a class="animationBlock" href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー03</span></span></a></div>
+                        <div class="a-borderChange01 is-boderDraw03">
+                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー03</span></span></a></div>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -3139,8 +3163,7 @@ iconTagSet(tag)
                     <div class="source js-accordion-child">
                       <pre><code>
                           .a-borderChange01
-                          	a(href="").animationBlock
-                          		テキスト
+                          	コンテンツ
                           </code></pre>
                     </div>
                   </div>
@@ -3148,204 +3171,198 @@ iconTagSet(tag)
                     <p class="p-markupBtn js-accordion-parent stylus">stylus
                     </p>
                     <div class="source js-accordion-child">
-                      <pre><code>.a-borderChange01
+                      <pre><code>span.a-borderChange01
+	display inline-block
+	a
+		text-decoration none
+
+.a-borderChange01
 	BORDER_COLOR = #000
 
 	position relative
-	.animationBlock
-		display block
-		transition 0.3s all ease
+	
+	display block
+	transition 0.3s all ease
 	
 	&.is-boderBottomLeft01
-		.animationBlock
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin left
+			transform scaleX(0)
+			transition 0.5s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform-origin left
-				transform scaleX(0)
-				transition 0.5s all ease
-				
-			&:hover
-				&:before
-					transform scaleX(1.0)
+				transform scaleX(1.0)
 	
 	&.is-boderBottomCenter01
-		.animationBlock
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform scaleX(0)
+			transition 0.5s all ease
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform scaleX(0)
-				transition 0.5s all ease
-			&:hover
-				&:before
-					transform scaleX(1.0)
+				transform scaleX(1.0)
 	
 	&.is-boderBottomRight01
-		.animationBlock
-			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 3px
-				background-color BORDER_COLOR
-				transform-origin right
-				transform scaleX(0)
-				transition 0.5s all ease
-				
-			&:hover
-				&:before
-					transform scaleX(1.0)
-	
-	&.is-boderBold01
-		.animationBlock
-			border none
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin right
+			transform scaleX(0)
 			transition 0.5s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 100%
-				border 1px solid BORDER_COLOR
-				box-sizing border-box
-				transition 0.3s all ease
+				transform scaleX(1.0)
 
-			&:hover
-				&:before
-					border-width 5px
+	&.is-boderBold01
+		border none
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 1px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+
+		&:hover, &.is-inview
+			&:before
+				border-width 5px
 
 	&.is-boderBold02
-		.animationBlock
-			border none
-			transition 0.5s all ease
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 5px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+			
+		&:hover, &.is-inview
 			&:before
-				content ""
-				display block
-				position absolute
-				left 0
-				bottom 0
-				width 100%
-				height 100%
-				border 5px solid BORDER_COLOR
-				box-sizing border-box
-				transition 0.3s all ease
-				
-			&:hover
-				&:before
-					border-width 1px
+				border-width 1px
 	
 	&.is-boderDraw01
-		.animationBlock
-			border 1px solid #ccc
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			bottom 0
+			right  0
+		
+		&:hover, &.is-inview
 			&:before, &:after
-				content ""
-				display block
-				position absolute
-				width 0
-				height 0
-				box-sizing border-box
-				border 1px solid transparent
-
-			&:before
-				top 0
-				left 0
-			&:after
-				bottom 0
-				right  0
-			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-				&:before
-					border-top-color BORDER_COLOR
-					border-right-color BORDER_COLOR
-					transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-				&:after
-					border-bottom-color BORDER_COLOR
-					border-left-color BORDER_COLOR
-					transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
-
-	&.is-boderDraw02
-		.animationBlock
-			border 1px solid #ccc
-			&:before, &:after
-				content ""
-				display block
-				position absolute
-				width 0
-				height 0
-				box-sizing border-box
-				border 1px solid transparent
-
-			&:before
-				top 0
-				left 0
-			&:after
-				top 0
-				left  0
-			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-				&:before
-					border-top-color BORDER_COLOR
-					border-right-color BORDER_COLOR
-					transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-				&:after
-					border-bottom-color BORDER_COLOR
-					border-left-color BORDER_COLOR
-					transition height 0.25s ease-out, width 0.25s ease-out 0.25s
-
-	&.is-boderDraw03
-		.animationBlock
-			border 1px solid #ccc
-			&:before, &:after
-				content ""
-				display block
-				position absolute
 				width 100%
 				height 100%
-				box-sizing border-box
-				transition 0.5s all ease
-
 			&:before
-				top 0
-				left 0
-				border-top 1px solid BORDER_COLOR
-				border-bottom 1px solid BORDER_COLOR
-				transform scale(0,1)
-				
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
 			&:after
-				top 0
-				left  0
-				border-left 1px solid BORDER_COLOR
-				border-right 1px solid BORDER_COLOR
-				transform scale(1,0)
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
+
+	&.is-boderDraw02
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			top 0
+			left  0
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+			&:before
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+			&:after
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition height 0.25s ease-out, width 0.25s ease-out 0.25s
+
+	&.is-boderDraw03
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 100%
+			height 100%
+			box-sizing border-box
+			transition 0.5s all ease
+
+		&:before
+			top 0
+			left 0
+			border-top 1px solid BORDER_COLOR
+			border-bottom 1px solid BORDER_COLOR
+			transform scale(0,1)
 			
-			&:hover
-				&:before, &:after
-					width 100%
-					height 100%
-					transform scale(1,1)</code></pre>
+		&:after
+			top 0
+			left  0
+			border-left 1px solid BORDER_COLOR
+			border-right 1px solid BORDER_COLOR
+			transform scale(1,0)
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+				transform scale(1,1)
+</code></pre>
                     </div>
                   </div>
                 </div>
@@ -3355,7 +3372,14 @@ iconTagSet(tag)
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>ズーム01</span></h2>
+                <h2 class="m-markupTitle"><span>フェードイン01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="a-fadeIn01 js-inview">
+                    <div class="a-shadowAppear01">
+                      <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3424,8 +3448,10 @@ iconTagSet(tag)
                       <pre><code>
                           const matchHeight = require('../_modules/matchHeight.js');
                           
-                          //DOM読み込み後とリサイズ処理に入れる
-                          matchHeight('.js-matchHeight');
+                          //DOM読み込み後に入れる
+                          matchHeight({
+                          	className: '.js-matchHeight', // 要素名
+                          });
                           </code></pre>
                     </div>
                   </div>
@@ -3496,7 +3522,9 @@ iconTagSet(tag)
                           const spTellLink = require('../_modules/spTellLink.js');
                           
                           //DOM読み込み後に入れる
-                          spTellLink('.js-tellLink', op);
+                          spTellLink({
+                          	className: '.js-tellLink', // 要素名
+                          });
                           </code></pre>
                     </div>
                   </div>
@@ -3549,6 +3577,47 @@ iconTagSet(tag)
                           	setBefore: function() {},
                           	setAfter: function() {},
                           	animationAfter: function() {},
+                          });
+                          
+                          </code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>inView</span></h2>
+                <div class="l-markupBlock">
+                  <div class="a-fadeIn01 js-inview">
+                    <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a></div>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .js-inview
+                          	コンテンツ
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent js">js
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          const inView = require('../_modules/inView.js');
+                          
+                          //DOM読み込み後に入れる
+                          inView({
+                          	className: '.js-inview', // 要素名
+                          	changeTiming: 0, // 位置調整 0~0.5
+                          	reverse: true, // 繰り返し
                           });</code></pre>
                     </div>
                   </div>

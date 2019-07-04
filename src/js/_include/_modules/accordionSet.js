@@ -19,7 +19,7 @@ module.exports = (op) => {
 
 	let gArray = {}; fArray = {}, arrayLength = 0;
 
-	function init() {
+	let init = () => {
 		let _t = this;
 			gArray = {};
 			_t.target = document.querySelectorAll(_g_op.target);

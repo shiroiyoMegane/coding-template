@@ -267,17 +267,18 @@ a:active {
 a:focus {
   outline: none;
 }
-.a-bgColorChange01 .animationBlock {
+.a-bgColorChange01 {
   display: block;
   position: relative;
   color: #fff;
   transition: 0.3s all ease;
 }
-.a-bgColorChange01 .animationBlock:hover {
+.a-bgColorChange01:hover,
+.a-bgColorChange01.is-inview {
   color: #000;
 }
-.a-bgColorChange01 .animationBlock:before,
-.a-bgColorChange01 .animationBlock:after {
+.a-bgColorChange01:before,
+.a-bgColorChange01:after {
   content: "";
   display: block;
   position: absolute;
@@ -287,59 +288,70 @@ a:focus {
   height: 100%;
   z-index: -1;
 }
-.a-bgColorChange01 .animationBlock:before {
+.a-bgColorChange01:before {
   background-color: #fff;
   transition: 0.3s all ease;
 }
-.a-bgColorChange01 .animationBlock:after {
+.a-bgColorChange01:after {
   background-color: #000;
   transition: 0.3s all ease;
 }
-.a-bgColorChange01.is-fade01 .animationBlock:hover:after {
+.a-bgColorChange01.is-fade01:hover:after,
+.a-bgColorChange01.is-fade01.is-inview:after {
   opacity: 0;
 }
 .a-bgColorChange01.is-slideRight01 {
   overflow: hidden;
 }
-.a-bgColorChange01.is-slideRight01 .animationBlock:hover:after {
+.a-bgColorChange01.is-slideRight01:hover:after,
+.a-bgColorChange01.is-slideRight01.is-inview:after {
   transform: translate3d(100%, 0, 0);
 }
 .a-bgColorChange01.is-slideLeft01 {
   overflow: hidden;
 }
-.a-bgColorChange01.is-slideLeft01 .animationBlock:hover:after {
+.a-bgColorChange01.is-slideLeft01:hover:after,
+.a-bgColorChange01.is-slideLeft01.is-inview:after {
   transform: translate3d(-100%, 0, 0);
 }
 .a-bgColorChange01.is-slideTop01 {
   overflow: hidden;
 }
-.a-bgColorChange01.is-slideTop01 .animationBlock:hover:after {
+.a-bgColorChange01.is-slideTop01:hover:after,
+.a-bgColorChange01.is-slideTop01.is-inview:after {
   transform: translate3d(0, -100%, 0);
 }
 .a-bgColorChange01.is-slideBottom01 {
   overflow: hidden;
 }
-.a-bgColorChange01.is-slideBottom01 .animationBlock:hover:after {
+.a-bgColorChange01.is-slideBottom01:hover:after,
+.a-bgColorChange01.is-slideBottom01.is-inview:after {
   transform: translate3d(0, 100%, 0);
 }
-.a-bgColorChange01.is-slideCenterIn01 .animationBlock:hover:after {
+.a-bgColorChange01.is-slideCenterIn01:hover:after,
+.a-bgColorChange01.is-slideCenterIn01.is-inview:after {
   transform: scaleX(0);
 }
-.a-bgColorChange01.is-slideCenterOut01 .animationBlock:before {
+.a-bgColorChange01.is-slideCenterOut01:before {
   z-index: 0;
   transform: scaleX(0);
 }
-.a-bgColorChange01.is-slideCenterOut01 .animationBlock:hover:before {
+.a-bgColorChange01.is-slideCenterOut01:hover:before,
+.a-bgColorChange01.is-slideCenterOut01.is-inview:before {
   transform: scaleX(1);
+}
+span.a-borderChange01 {
+  display: inline-block;
+}
+span.a-borderChange01 a {
+  text-decoration: none;
 }
 .a-borderChange01 {
   position: relative;
-}
-.a-borderChange01 .animationBlock {
   display: block;
   transition: 0.3s all ease;
 }
-.a-borderChange01.is-boderBottomLeft01 .animationBlock:before {
+.a-borderChange01.is-boderBottomLeft01:before {
   content: "";
   display: block;
   position: absolute;
@@ -352,10 +364,11 @@ a:focus {
   transform: scaleX(0);
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderBottomLeft01 .animationBlock:hover:before {
+.a-borderChange01.is-boderBottomLeft01:hover:before,
+.a-borderChange01.is-boderBottomLeft01.is-inview:before {
   transform: scaleX(1);
 }
-.a-borderChange01.is-boderBottomCenter01 .animationBlock:before {
+.a-borderChange01.is-boderBottomCenter01:before {
   content: "";
   display: block;
   position: absolute;
@@ -367,10 +380,11 @@ a:focus {
   transform: scaleX(0);
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderBottomCenter01 .animationBlock:hover:before {
+.a-borderChange01.is-boderBottomCenter01:hover:before,
+.a-borderChange01.is-boderBottomCenter01.is-inview:before {
   transform: scaleX(1);
 }
-.a-borderChange01.is-boderBottomRight01 .animationBlock:before {
+.a-borderChange01.is-boderBottomRight01:before {
   content: "";
   display: block;
   position: absolute;
@@ -383,14 +397,15 @@ a:focus {
   transform: scaleX(0);
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderBottomRight01 .animationBlock:hover:before {
+.a-borderChange01.is-boderBottomRight01:hover:before,
+.a-borderChange01.is-boderBottomRight01.is-inview:before {
   transform: scaleX(1);
 }
-.a-borderChange01.is-boderBold01 .animationBlock {
+.a-borderChange01.is-boderBold01 {
   border: none;
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderBold01 .animationBlock:before {
+.a-borderChange01.is-boderBold01:before {
   content: "";
   display: block;
   position: absolute;
@@ -402,14 +417,14 @@ a:focus {
   box-sizing: border-box;
   transition: 0.3s all ease;
 }
-.a-borderChange01.is-boderBold01 .animationBlock:hover:before {
+.a-borderChange01.is-boderBold01:hover:before,
+.a-borderChange01.is-boderBold01.is-inview:before {
   border-width: 5px;
 }
-.a-borderChange01.is-boderBold02 .animationBlock {
-  border: none;
+.a-borderChange01.is-boderBold02 {
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderBold02 .animationBlock:before {
+.a-borderChange01.is-boderBold02:before {
   content: "";
   display: block;
   position: absolute;
@@ -421,14 +436,12 @@ a:focus {
   box-sizing: border-box;
   transition: 0.3s all ease;
 }
-.a-borderChange01.is-boderBold02 .animationBlock:hover:before {
+.a-borderChange01.is-boderBold02:hover:before,
+.a-borderChange01.is-boderBold02.is-inview:before {
   border-width: 1px;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock {
-  border: 1px solid #ccc;
-}
-.a-borderChange01.is-boderDraw01 .animationBlock:before,
-.a-borderChange01.is-boderDraw01 .animationBlock:after {
+.a-borderChange01.is-boderDraw01:before,
+.a-borderChange01.is-boderDraw01:after {
   content: "";
   display: block;
   position: absolute;
@@ -437,34 +450,35 @@ a:focus {
   box-sizing: border-box;
   border: 1px solid transparent;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock:before {
+.a-borderChange01.is-boderDraw01:before {
   top: 0;
   left: 0;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock:after {
+.a-borderChange01.is-boderDraw01:after {
   bottom: 0;
   right: 0;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock:hover:before,
-.a-borderChange01.is-boderDraw01 .animationBlock:hover:after {
+.a-borderChange01.is-boderDraw01:hover:before,
+.a-borderChange01.is-boderDraw01.is-inview:before,
+.a-borderChange01.is-boderDraw01:hover:after,
+.a-borderChange01.is-boderDraw01.is-inview:after {
   width: 100%;
   height: 100%;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock:hover:before {
+.a-borderChange01.is-boderDraw01:hover:before,
+.a-borderChange01.is-boderDraw01.is-inview:before {
   border-top-color: #000;
   border-right-color: #000;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
-.a-borderChange01.is-boderDraw01 .animationBlock:hover:after {
+.a-borderChange01.is-boderDraw01:hover:after,
+.a-borderChange01.is-boderDraw01.is-inview:after {
   border-bottom-color: #000;
   border-left-color: #000;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock {
-  border: 1px solid #ccc;
-}
-.a-borderChange01.is-boderDraw02 .animationBlock:before,
-.a-borderChange01.is-boderDraw02 .animationBlock:after {
+.a-borderChange01.is-boderDraw02:before,
+.a-borderChange01.is-boderDraw02:after {
   content: "";
   display: block;
   position: absolute;
@@ -473,34 +487,35 @@ a:focus {
   box-sizing: border-box;
   border: 1px solid transparent;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock:before {
+.a-borderChange01.is-boderDraw02:before {
   top: 0;
   left: 0;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock:after {
+.a-borderChange01.is-boderDraw02:after {
   top: 0;
   left: 0;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock:hover:before,
-.a-borderChange01.is-boderDraw02 .animationBlock:hover:after {
+.a-borderChange01.is-boderDraw02:hover:before,
+.a-borderChange01.is-boderDraw02.is-inview:before,
+.a-borderChange01.is-boderDraw02:hover:after,
+.a-borderChange01.is-boderDraw02.is-inview:after {
   width: 100%;
   height: 100%;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock:hover:before {
+.a-borderChange01.is-boderDraw02:hover:before,
+.a-borderChange01.is-boderDraw02.is-inview:before {
   border-top-color: #000;
   border-right-color: #000;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
-.a-borderChange01.is-boderDraw02 .animationBlock:hover:after {
+.a-borderChange01.is-boderDraw02:hover:after,
+.a-borderChange01.is-boderDraw02.is-inview:after {
   border-bottom-color: #000;
   border-left-color: #000;
   transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }
-.a-borderChange01.is-boderDraw03 .animationBlock {
-  border: 1px solid #ccc;
-}
-.a-borderChange01.is-boderDraw03 .animationBlock:before,
-.a-borderChange01.is-boderDraw03 .animationBlock:after {
+.a-borderChange01.is-boderDraw03:before,
+.a-borderChange01.is-boderDraw03:after {
   content: "";
   display: block;
   position: absolute;
@@ -509,31 +524,41 @@ a:focus {
   box-sizing: border-box;
   transition: 0.5s all ease;
 }
-.a-borderChange01.is-boderDraw03 .animationBlock:before {
+.a-borderChange01.is-boderDraw03:before {
   top: 0;
   left: 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   transform: scale(0, 1);
 }
-.a-borderChange01.is-boderDraw03 .animationBlock:after {
+.a-borderChange01.is-boderDraw03:after {
   top: 0;
   left: 0;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   transform: scale(1, 0);
 }
-.a-borderChange01.is-boderDraw03 .animationBlock:hover:before,
-.a-borderChange01.is-boderDraw03 .animationBlock:hover:after {
+.a-borderChange01.is-boderDraw03:hover:before,
+.a-borderChange01.is-boderDraw03.is-inview:before,
+.a-borderChange01.is-boderDraw03:hover:after,
+.a-borderChange01.is-boderDraw03.is-inview:after {
   width: 100%;
   height: 100%;
   transform: scale(1, 1);
 }
-.a-shadowAppear01 .animationBlock {
+.a-fadeIn01 {
+  opacity: 0;
+  transition: opacity, 0.5s ease 0.5s;
+}
+.a-fadeIn01.is-inview {
+  opacity: 1;
+}
+.a-shadowAppear01 {
   display: block;
   transition: 0.3s all ease;
 }
-.a-shadowAppear01 .animationBlock:hover {
+.a-shadowAppear01:hover,
+.a-shadowAppear01.is-inview {
   box-shadow: 0px 0px 10px #aaa;
 }
 .m-btnSet01 {
@@ -550,7 +575,7 @@ a:focus {
 .m-btnSet01 a {
   display: block;
   color: inherit;
-  border: 1px solid #2b193d;
+  border: 1px solid #ccc;
   text-decoration: none;
 }
 .m-btnSet01 a[target^='_blank'] .btnWrapper:before,

@@ -1,20 +1,53 @@
-//高さそろえる
+module.exports = (op) => {
+	const uaSet = require('./ua.js');
 
-module.exports = (className) => {
-	
-	let elm = document.querySelectorAll(className);
+	let _g_defaultOp = {
+		className: '.js-matchHeight', //要素
+		UA: new uaSet().dvType(),
+	}
+	let _g_op = Object.assign(_g_defaultOp, op);
+
+	let elm = document.querySelectorAll(_g_op.className);
 	if(elm != null) {
-		
-		let array = [], arrayLength = 0, arrayCount = 0;
-		arrayLengthSet(array);
+		let arrayLength = 0; arrayCount = 0;
 
+		let init = () => {
+			let _t = this;
+				_t.timeoutId = 1;
+				_t.array = [];
+				_t.currentWidth = window.innerWidth;
+			
+			arrayLengthSet(_t.array);
+
+			//リサイズ
+			window.addEventListener("resize", () => {
+				timeoutFunc(_t.timeoutId, () => {
+					// ios resize制御
+					if(_g_op.UA != 'pc'){
+						if (_t.currentWidth == window.innerWidth) return;
+						_t.currentWidth = window.innerWidth;
+						arrayLengthSet(_t.array);
+					} else {
+						arrayLengthSet(_t.array);
+					}
+				})
+			});
+
+			_t.timeoutId = setTimeout( () => {
+				_t.timeoutId = 0;
+			}, 100 ) ;
+		}
+
+		//横並びじゃない要素が何箇所あるか
 		function arrayLengthSet(ar) {
-			let offTop = 0;
+			let _t = this;
+				_t.offTop = 0;
 			[].slice.call(elm).forEach(function(event, i) {
-				if(offTop !== 0 && offTop !== event.offsetTop) {
+				//同じ位置に居なければ次の配列へ、同じなら配列の長さを追加
+				if(_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
 					arrayLength++;
 				}
-				offTop = event.offsetTop;
+				_t.offTop = event.offsetTop;
 			});
 			for(let i = 0; i <= arrayLength; i++) {
 				ar.push([]);
@@ -22,39 +55,62 @@ module.exports = (className) => {
 			arraySetFunc(ar);
 		}
 
+		//横並びの要素を各配列に追加
 		function arraySetFunc(ar) {
-			let offTop = 0;
+			let _t = this;
+				_t.offTop = 0;
 			[].slice.call(elm).forEach(function(event, i) {
-				if(offTop !== 0 && offTop !== event.offsetTop) {
+				//同じ位置に居なければ次の配列へ、同じなら配列に追加
+				if(_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
 					arrayCount++;
 				}
 				ar[arrayCount].push(event);
-				offTop = event.offsetTop;
+				_t.offTop = event.offsetTop;
 			});
 			heightSetFunc(ar);
 		}
 
+		//横並びの要素ごとに高さを設定
 		function heightSetFunc(ar) {
-			let height;
+			let _t = this;
+				_t.height = 0;
 			for(let i = 0; i <= arrayCount; i++) {
-				height = 0;
+				_t.height = 0;
 				ar[i].forEach(function(event, index) {
 					if (index === 0 || index % ar[i].length === 0) {
-						height = event.clientHeight;
 
+						//初期化
+						for (let n = index; n <= index + index + ar[i].length - 1; n++) {
+							ar[i][n].style.height = 'inherit';
+						}
+
+						//横並びの要素で一番高い高さを取得
+						height = event.clientHeight;
 						for (let n = index + 1; n <= index + ar[i].length - 1; n++) {
-							if (height < ar[i][n].clientHeight) {
-								height = ar[i][n].clientHeight;
+							if (_t.height < ar[i][n].clientHeight) {
+								_t.height = ar[i][n].clientHeight;
 							}
 						}
 
+						//高さを設定
 						for (let n = index; n <= index + index + ar[i].length - 1; n++) {
-							ar[i][n].style.height = height + "px" ;
+							ar[i][n].style.height = _t.height + "px" ;
 						}
 					}
 				});
 			}
 		}
+
+		//resizeとscrollのtimeout
+		let timeoutFunc = (tId, callback) => {
+			if (tId) return ;
+			tId = setTimeout( () => {
+				tId = 0 ;
+				callback();
+			}, 100 ) ;
+		}
+
+		init();
 	}
 }
 

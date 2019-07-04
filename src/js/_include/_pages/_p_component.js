@@ -1,16 +1,17 @@
 const initFunc = require('../_modules/initFunc.js');
+
+// 追加module
 const matchHeight = require('../_modules/matchHeight.js');
 const smoothScroll = require('../_modules/smoothScroll.js');
 const spTellLink = require('../_modules/spTellLink.js');
 const accordionSet = require('../_modules/accordionSet.js');
+const inView = require('../_modules/inView.js');
 
 // マークアップアコーディオン用
 function markupBlock() {
 
-	init();
 	function init() {
 		let _t = this;
-
 		_t.$target = $(".l-markupBlock");
 		replaceWord(_t.$target,'.pug+.source code', '                        ')
 		replaceWord(_t.$target,'.js+.source code', '                        ')
@@ -28,32 +29,31 @@ function markupBlock() {
 			$(this).find(_f_tg).text(_t.$str);
 		});
 	}
+	init();
 }
-
-
-
 
 // init
 class initSet {
 	DOMReadBefore(op) {
+		// DOM読み込み前
 	}
 	DOMReadAfter(op) {
+		// DOM読み込み後
 		smoothScroll();
-		matchHeight('.js-matchHeight');
-		spTellLink('.js-tellLink', op);
-
-		accordionSet({
-			target: '.js-accordion'
-		});
-
+		matchHeight();
+		spTellLink();
+		accordionSet();
+		inView();
 		markupBlock();
 	}
 	imageReadAfter(op) {
+		// 画像読み込み後
 	}
 	windowResize(op) {
-		matchHeight('.js-matchHeight');
+		// リサイズ
 	}
 	windowScroll(op) {
+		// スクロール
 	}
 }
 

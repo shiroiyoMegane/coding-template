@@ -93,9 +93,9 @@
 
 __webpack_require__(1);
 var comSet = __webpack_require__(278);
-var homeSet = __webpack_require__(280);
-var componentSet = __webpack_require__(281);
-var uaSet = __webpack_require__(286);
+var homeSet = __webpack_require__(281);
+var componentSet = __webpack_require__(282);
+var uaSet = __webpack_require__(280);
 
 var option = {
 	SP_WIDTH: 768,
@@ -7927,9 +7927,13 @@ module.exports = function (option) {
 
 /***/ }),
 /* 279 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+
 
 module.exports = function (tg, op, flag) {
+	var uaSet = __webpack_require__(280);
+
 	var timeoutId = 1,
 	    pageFlag = void 0;
 	var currentWidth = window.innerWidth;
@@ -7954,7 +7958,7 @@ module.exports = function (tg, op, flag) {
 				timeoutId = 0;
 
 				// ios resize制御
-				if (currentWidth <= op.SP_WIDTH) {
+				if (op.UA != 'pc') {
 					if (currentWidth == window.innerWidth) return;
 					currentWidth = window.innerWidth;
 					tg.windowResize(op);
@@ -7981,6 +7985,40 @@ module.exports = function (tg, op, flag) {
 
 /***/ }),
 /* 280 */
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+//ua 判定
+module.exports = function () {
+	function ua() {
+		_classCallCheck(this, ua);
+
+		this.ua = navigator.userAgent;
+		this.type = 'pc';
+	}
+
+	_createClass(ua, [{
+		key: 'dvType',
+		value: function dvType() {
+			if (this.ua.indexOf('iPhone') > 0 || this.ua.indexOf('Android') > 0 && this.ua.indexOf('Mobile') > 0) {
+				// スマートフォン用コード
+				this.type = 'sp';
+			} else if (this.ua.indexOf('iPad') > 0 || this.ua.indexOf('Android') > 0) {
+				// タブレット用コード
+				this.type = 'tb';
+			}
+			return this.type;
+		}
+	}]);
+
+	return ua;
+}();
+
+/***/ }),
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8022,7 +8060,7 @@ module.exports = function (option) {
 };
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8030,18 +8068,19 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var initFunc = __webpack_require__(279);
-var matchHeight = __webpack_require__(282);
-var smoothScroll = __webpack_require__(283);
-var spTellLink = __webpack_require__(284);
-var accordionSet = __webpack_require__(285);
+
+// 追加module
+var matchHeight = __webpack_require__(283);
+var smoothScroll = __webpack_require__(284);
+var spTellLink = __webpack_require__(285);
+var accordionSet = __webpack_require__(286);
+var inView = __webpack_require__(287);
 
 // マークアップアコーディオン用
 function markupBlock() {
 
-	init();
 	function init() {
 		var _t = this;
-
 		_t.$target = $(".l-markupBlock");
 		replaceWord(_t.$target, '.pug+.source code', '                        ');
 		replaceWord(_t.$target, '.js+.source code', '                        ');
@@ -8059,6 +8098,7 @@ function markupBlock() {
 			$(this).find(_f_tg).text(_t.$str);
 		});
 	}
+	init();
 }
 
 // init
@@ -8070,31 +8110,35 @@ var initSet = function () {
 
 	_createClass(initSet, [{
 		key: 'DOMReadBefore',
-		value: function DOMReadBefore(op) {}
+		value: function DOMReadBefore(op) {
+			// DOM読み込み前
+		}
 	}, {
 		key: 'DOMReadAfter',
 		value: function DOMReadAfter(op) {
+			// DOM読み込み後
 			smoothScroll();
-			matchHeight('.js-matchHeight');
-			spTellLink('.js-tellLink', op);
-
-			accordionSet({
-				target: '.js-accordion'
-			});
-
+			matchHeight();
+			spTellLink();
+			accordionSet();
+			inView();
 			markupBlock();
 		}
 	}, {
 		key: 'imageReadAfter',
-		value: function imageReadAfter(op) {}
+		value: function imageReadAfter(op) {
+			// 画像読み込み後
+		}
 	}, {
 		key: 'windowResize',
 		value: function windowResize(op) {
-			matchHeight('.js-matchHeight');
+			// リサイズ
 		}
 	}, {
 		key: 'windowScroll',
-		value: function windowScroll(op) {}
+		value: function windowScroll(op) {
+			// スクロール
+		}
 	}]);
 
 	return initSet;
@@ -8106,22 +8150,33 @@ module.exports = function (option) {
 };
 
 /***/ }),
-/* 282 */
-/***/ (function(module, exports) {
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
 
-//高さそろえる
+var _this = this;
 
-module.exports = function (className) {
+module.exports = function (op) {
+	var uaSet = __webpack_require__(280);
 
-	var elm = document.querySelectorAll(className);
+	var _g_defaultOp = {
+		className: '.js-matchHeight', //要素
+		UA: new uaSet().dvType()
+	};
+	var _g_op = Object.assign(_g_defaultOp, op);
+
+	var elm = document.querySelectorAll(_g_op.className);
 	if (elm != null) {
+
+		//横並びじゃない要素が何箇所あるか
 		var arrayLengthSet = function arrayLengthSet(ar) {
-			var offTop = 0;
+			var _t = this;
+			_t.offTop = 0;
 			[].slice.call(elm).forEach(function (event, i) {
-				if (offTop !== 0 && offTop !== event.offsetTop) {
+				//同じ位置に居なければ次の配列へ、同じなら配列の長さを追加
+				if (_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
 					arrayLength++;
 				}
-				offTop = event.offsetTop;
+				_t.offTop = event.offsetTop;
 			});
 			for (var i = 0; i <= arrayLength; i++) {
 				ar.push([]);
@@ -8129,35 +8184,51 @@ module.exports = function (className) {
 			arraySetFunc(ar);
 		};
 
+		//横並びの要素を各配列に追加
+
+
 		var arraySetFunc = function arraySetFunc(ar) {
-			var offTop = 0;
+			var _t = this;
+			_t.offTop = 0;
 			[].slice.call(elm).forEach(function (event, i) {
-				if (offTop !== 0 && offTop !== event.offsetTop) {
+				//同じ位置に居なければ次の配列へ、同じなら配列に追加
+				if (_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
 					arrayCount++;
 				}
 				ar[arrayCount].push(event);
-				offTop = event.offsetTop;
+				_t.offTop = event.offsetTop;
 			});
 			heightSetFunc(ar);
 		};
 
+		//横並びの要素ごとに高さを設定
+
+
 		var heightSetFunc = function heightSetFunc(ar) {
-			var height = void 0;
+			var _t = this;
+			_t.height = 0;
 
 			var _loop = function _loop(i) {
-				height = 0;
+				_t.height = 0;
 				ar[i].forEach(function (event, index) {
 					if (index === 0 || index % ar[i].length === 0) {
-						height = event.clientHeight;
 
-						for (var n = index + 1; n <= index + ar[i].length - 1; n++) {
-							if (height < ar[i][n].clientHeight) {
-								height = ar[i][n].clientHeight;
+						//初期化
+						for (var n = index; n <= index + index + ar[i].length - 1; n++) {
+							ar[i][n].style.height = 'inherit';
+						}
+
+						//横並びの要素で一番高い高さを取得
+						height = event.clientHeight;
+						for (var _n = index + 1; _n <= index + ar[i].length - 1; _n++) {
+							if (_t.height < ar[i][_n].clientHeight) {
+								_t.height = ar[i][_n].clientHeight;
 							}
 						}
 
-						for (var _n = index; _n <= index + index + ar[i].length - 1; _n++) {
-							ar[i][_n].style.height = height + "px";
+						//高さを設定
+						for (var _n2 = index; _n2 <= index + index + ar[i].length - 1; _n2++) {
+							ar[i][_n2].style.height = _t.height + "px";
 						}
 					}
 				});
@@ -8168,15 +8239,50 @@ module.exports = function (className) {
 			}
 		};
 
-		var array = [],
-		    arrayLength = 0,
-		    arrayCount = 0;
-		arrayLengthSet(array);
+		//resizeとscrollのtimeout
+
+
+		var arrayLength = 0;arrayCount = 0;
+
+		var init = function init() {
+			var _t = _this;
+			_t.timeoutId = 1;
+			_t.array = [];
+			_t.currentWidth = window.innerWidth;
+
+			arrayLengthSet(_t.array);
+
+			//リサイズ
+			window.addEventListener("resize", function () {
+				timeoutFunc(_t.timeoutId, function () {
+					// ios resize制御
+					if (_g_op.UA != 'pc') {
+						if (_t.currentWidth == window.innerWidth) return;
+						_t.currentWidth = window.innerWidth;
+						arrayLengthSet(_t.array);
+					} else {
+						arrayLengthSet(_t.array);
+					}
+				});
+			});
+
+			_t.timeoutId = setTimeout(function () {
+				_t.timeoutId = 0;
+			}, 100);
+		};var timeoutFunc = function timeoutFunc(tId, callback) {
+			if (tId) return;
+			tId = setTimeout(function () {
+				tId = 0;
+				callback();
+			}, 100);
+		};
+
+		init();
 	}
 };
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports) {
 
 //スムーススクロール npm install SweetScroll
@@ -8225,14 +8331,20 @@ module.exports = function () {
 };
 
 /***/ }),
-/* 284 */
-/***/ (function(module, exports) {
+/* 285 */
+/***/ (function(module, exports, __webpack_require__) {
 
-//スマホのときだけ電話番号用リンク
+module.exports = function (op) {
+	var uaSet = __webpack_require__(280);
 
-module.exports = function (trigger, op) {
-	var linkTarget = document.querySelectorAll(trigger);
-	if (op.UA == 'pc') {
+	var _g_defaultOp = {
+		className: '.js-tellLink',
+		UA: new uaSet().dvType()
+	};
+	var _g_op = Object.assign(_g_defaultOp, op);
+
+	var linkTarget = document.querySelectorAll(_g_op.className);
+	if (_g_op.UA == 'pc') {
 		Array.prototype.slice.call(linkTarget).forEach(function (event) {
 			event.outerHTML = event.innerHTML;
 		});
@@ -8240,10 +8352,12 @@ module.exports = function (trigger, op) {
 };
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _this = this;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -8268,8 +8382,8 @@ module.exports = function (op) {
 
 	var gArray = {};fArray = {}, arrayLength = 0;
 
-	function init() {
-		var _t = this;
+	var init = function init() {
+		var _t = _this;
 		gArray = {};
 		_t.target = document.querySelectorAll(_g_op.target);
 
@@ -8277,7 +8391,7 @@ module.exports = function (op) {
 			gArray[index] = new accordionWrap(event);
 			gArray[index].set();
 		});
-	}
+	};
 
 	var accordionWrap = function () {
 		function accordionWrap(_c_tg) {
@@ -8394,38 +8508,142 @@ module.exports = function (op) {
 };
 
 /***/ }),
-/* 286 */
-/***/ (function(module, exports) {
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _this = this;
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//ua 判定
-module.exports = function () {
-	function ua() {
-		_classCallCheck(this, ua);
+module.exports = function (op) {
+	var uaSet = __webpack_require__(280);
 
-		this.ua = navigator.userAgent;
-		this.type = 'pc';
-	}
+	// デフォルトオプション
+	var _g_defaultOp = {
+		className: '.js-inview',
+		UA: new uaSet().dvType(),
+		changeTiming: 0, // 0~0.5
+		reverse: true // 繰り返し
+	};
+	var _g_op = Object.assign(_g_defaultOp, op);
 
-	_createClass(ua, [{
-		key: 'dvType',
-		value: function dvType() {
-			if (this.ua.indexOf('iPhone') > 0 || this.ua.indexOf('Android') > 0 && this.ua.indexOf('Mobile') > 0) {
-				// スマートフォン用コード
-				this.type = 'sp';
-			} else if (this.ua.indexOf('iPad') > 0 || this.ua.indexOf('Android') > 0) {
-				// タブレット用コード
-				this.type = 'tb';
-			}
-			return this.type;
+	var elm = document.querySelectorAll(_g_op.className);
+	var scrollTopPos = void 0,
+	    scrollBottomPos = void 0;
+
+	var init = function init() {
+		if (elm != null) {
+			var _t = _this;
+			_t.target = elm;
+			_t.array = {};
+			_t.timeoutId = 1;
+			_t.currentWidth = window.innerWidth;
+
+			scrollTopSet();
+			inviewSetFunc(_t, true);
+
+			//リサイズ
+			window.addEventListener("resize", function () {
+				timeoutFunc(_t.timeoutId, function () {
+					// ios resize制御
+					if (_g_op.UA != 'pc') {
+						if (_t.currentWidth == window.innerWidth) return;
+						_t.currentWidth = window.innerWidth;
+						inviewSetFunc(_t);
+					} else {
+						inviewSetFunc(_t);
+					}
+				});
+			});
+
+			//スクロール
+			window.addEventListener("scroll", function () {
+				timeoutFunc(_t.timeoutId, function () {
+					inviewSetFunc(_t);
+				});
+			});
+
+			_t.timeoutId = setTimeout(function () {
+				_t.timeoutId = 0;
+			}, 100);
 		}
-	}]);
+	};
 
-	return ua;
-}();
+	//inviewSetを設定 宣言のみtrueで走る
+	var inviewSetFunc = function inviewSetFunc(t, flag) {
+		[].slice.call(t.target).forEach(function (event, index) {
+			if (flag == true) {
+				t.array[index] = new inviewSet(event);
+			}
+			t.array[index].set();
+			// t.array[index].debug();
+		});
+	};
+
+	//ブラウザのトップとボトムの位置計算
+	var scrollTopSet = function scrollTopSet() {
+		scrollTopPos = window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+		scrollBottomPos = scrollTopPos + window.innerHeight;
+
+		//表示タイミングの調整
+		scrollTopPos = scrollTopPos + window.innerHeight * _g_op.changeTiming;
+		scrollBottomPos = scrollBottomPos - window.innerHeight * _g_op.changeTiming;
+	};
+
+	//resizeとscrollのtimeout
+	var timeoutFunc = function timeoutFunc(tId, callback) {
+		if (tId) return;
+		tId = setTimeout(function () {
+			tId = 0;
+			callback();
+		}, 100);
+	};
+
+	//inviewのclass
+
+	var inviewSet = function () {
+		function inviewSet(_c_tg) {
+			_classCallCheck(this, inviewSet);
+
+			var _t = this;
+			_t.tg = _c_tg;
+		}
+
+		_createClass(inviewSet, [{
+			key: 'set',
+			value: function set() {
+				scrollTopSet();
+				var _t = this;
+				_t.tgRect = _t.tg.getBoundingClientRect();
+				_t.tgTop = _t.tgRect.top + scrollTopPos;
+				_t.tgBottom = _t.tgTop + _t.tg.clientHeight;
+
+				if (scrollTopPos < _t.tgTop && _t.tgBottom < scrollBottomPos) {
+					_t.tg.classList.add("is-inview");
+				} else {
+					if (_g_op.reverse == true) {
+						_t.tg.classList.remove("is-inview");
+					}
+				}
+			}
+		}, {
+			key: 'debug',
+			value: function debug() {
+				var _t = this;
+				console.log('スクロールトップ:' + scrollTopPos);
+				console.log('スクロールボトム:' + scrollBottomPos);
+				console.log('ターゲットトップ:' + _t.tgTop);
+				console.log('ターゲットボトム:' + _t.tgBottom);
+			}
+		}]);
+
+		return inviewSet;
+	}();
+
+	init();
+};
 
 /***/ })
 /******/ ]);
