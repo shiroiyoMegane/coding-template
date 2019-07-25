@@ -44,10 +44,11 @@ module.exports = (op) => {
 				_t.offTop = 0;
 			[].slice.call(elm).forEach(function(event, i) {
 				//同じ位置に居なければ次の配列へ、同じなら配列の長さを追加
-				if(_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
+				if(_t.offTop !== 0 && _t.offTop !== event.getBoundingClientRect().top + window.pageYOffset) {
 					arrayLength++;
 				}
-				_t.offTop = event.offsetTop;
+				_t.offTop = event.getBoundingClientRect().top + window.pageYOffset;
+				console.log(elm);
 			});
 			for(let i = 0; i <= arrayLength; i++) {
 				ar.push([]);
@@ -61,11 +62,11 @@ module.exports = (op) => {
 				_t.offTop = 0;
 			[].slice.call(elm).forEach(function(event, i) {
 				//同じ位置に居なければ次の配列へ、同じなら配列に追加
-				if(_t.offTop !== 0 && _t.offTop !== event.offsetTop) {
+				if(_t.offTop !== 0 && _t.offTop !== event.getBoundingClientRect().top + window.pageYOffset) {
 					arrayCount++;
 				}
 				ar[arrayCount].push(event);
-				_t.offTop = event.offsetTop;
+				_t.offTop = event.getBoundingClientRect().top + window.pageYOffset;
 			});
 			heightSetFunc(ar);
 		}
