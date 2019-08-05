@@ -1,0 +1,23 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span コンポーネント - 画像背景コンポーネント01
+			+l-markupBlock
+				.c-imageBgSet01
+					p.bg
+						img(src="https://placehold.jp/1800x400.png", alt="")
+					.contentsArea.is-left
+						h3.m-title-boldLarge01
+							span タイトル
+						p.text テキストが入ります
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.c-imageBgSet01
+						p.bg
+							img(src="https://placehold.jp/1800x400.png", alt="")
+						.contentsArea (.is-left / .is-center / .is-right)
+							p テキスト
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_components/_c_imageBgSet01.styl

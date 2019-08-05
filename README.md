@@ -119,7 +119,7 @@
     
     ■ 参考
         .l-contentsWrapper                                  <= 接頭詞+レイアウト名
-            .c-imageSet.is-three                            <= 接頭詞+コンポーネント名.ステート名
+            .c-imageSet01.is-three                            <= 接頭詞+コンポーネント名.ステート名
                 ul
                     li
                         .box

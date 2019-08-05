@@ -1,0 +1,34 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span プラグイン - matchHeight(高さを揃える)
+		
+			+l-markupBlock
+				.c-colSet01.is-two
+					.col
+						.m-defaultSet
+							p.js-matchHeight タイトルが入ります
+								br
+								| タイトルが入りますタイトルが入りますタイトルが入ります
+							.m-imageSet01
+								p.image
+									img(src="https://placehold.jp/150x150.png", alt="")
+					.col
+						.m-defaultSet
+							p.js-matchHeight タイトルが入ります
+							.m-imageSet01
+								p.image
+									img(src="https://placehold.jp/150x150.png", alt="")
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					p.js-matchHeight テキスト
+					
+				+p-markupBtn('js').
+					const matchHeight = require('../_modules/matchHeight.js');
+
+					//DOM読み込み後に入れる
+					matchHeight({
+						className: '.js-matchHeight', // 要素名
+					});

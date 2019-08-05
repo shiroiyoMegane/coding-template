@@ -1,8 +1,0 @@
-mixin m-module-btn(text,url,state)
-	p.m-module-btn(class= state)
-		if state == 'is-outer'
-			a(href!= url target="_blank")
-				span!= text
-		else
-			a(href!= url)
-				span!= text

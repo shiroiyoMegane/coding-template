@@ -1,0 +1,192 @@
+//- アニメーション - ボックスボーダー01
+span.a-borderChange01
+	display inline-block
+	a
+		text-decoration none
+
+.a-borderChange01
+	BORDER_COLOR = #000
+
+	position relative
+	
+	display block
+	transition 0.3s all ease
+	
+	&.is-boderBottomLeft01
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin left
+			transform scaleX(0)
+			transition 0.5s all ease
+			
+		&:hover, &.is-inview
+			&:before
+				transform scaleX(1.0)
+	
+	&.is-boderBottomCenter01
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform scaleX(0)
+			transition 0.5s all ease
+		&:hover, &.is-inview
+			&:before
+				transform scaleX(1.0)
+	
+	&.is-boderBottomRight01
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 3px
+			background-color BORDER_COLOR
+			transform-origin right
+			transform scaleX(0)
+			transition 0.5s all ease
+			
+		&:hover, &.is-inview
+			&:before
+				transform scaleX(1.0)
+
+	&.is-boderBold01
+		border none
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 1px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+
+		&:hover, &.is-inview
+			&:before
+				border-width 5px
+
+	&.is-boderBold02
+		transition 0.5s all ease
+		&:before
+			content ""
+			display block
+			position absolute
+			left 0
+			bottom 0
+			width 100%
+			height 100%
+			border 5px solid BORDER_COLOR
+			box-sizing border-box
+			transition 0.3s all ease
+			
+		&:hover, &.is-inview
+			&:before
+				border-width 1px
+	
+	&.is-boderDraw01
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			bottom 0
+			right  0
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+			&:before
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+			&:after
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
+
+	&.is-boderDraw02
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 0
+			height 0
+			box-sizing border-box
+			border 1px solid transparent
+
+		&:before
+			top 0
+			left 0
+		&:after
+			top 0
+			left  0
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+			&:before
+				border-top-color BORDER_COLOR
+				border-right-color BORDER_COLOR
+				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+			&:after
+				border-bottom-color BORDER_COLOR
+				border-left-color BORDER_COLOR
+				transition height 0.25s ease-out, width 0.25s ease-out 0.25s
+
+	&.is-boderDraw03
+		&:before, &:after
+			content ""
+			display block
+			position absolute
+			width 100%
+			height 100%
+			box-sizing border-box
+			transition 0.5s all ease
+
+		&:before
+			top 0
+			left 0
+			border-top 1px solid BORDER_COLOR
+			border-bottom 1px solid BORDER_COLOR
+			transform scale(0,1)
+			
+		&:after
+			top 0
+			left  0
+			border-left 1px solid BORDER_COLOR
+			border-right 1px solid BORDER_COLOR
+			transform scale(1,0)
+		
+		&:hover, &.is-inview
+			&:before, &:after
+				width 100%
+				height 100%
+				transform scale(1,1)

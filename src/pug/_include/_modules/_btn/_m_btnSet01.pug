@@ -1,0 +1,21 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span モジュール - ボタンモジュール01
+			
+			+l-markupBlock
+				p.m-btnSet01
+					a(href=".pdf")
+						span.btnWrapper
+							span.btnInner ボタン
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					p.m-btnSet01
+						a(href="") 拡張子でアイコン切り分け
+							span.btnWrapper
+								span.btnInner ボタン
+
+				+p-markupBtn('stylus')
+					include ../../../../stylus/_include/_modules/_btn/_m_btnSet01.styl

@@ -1,0 +1,31 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span コンポーネント - 画像+テキストコンポーネント01
+
+			+l-markupBlock
+
+				.c-imageText01.is-imageRight
+					.imageBlock
+						.m-imageSet01
+							figure.image
+								img(src="https://placehold.jp/400x248.png", alt="")
+								figcaption キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。
+
+					.textBlock
+						.m-defaultSet
+							p!= DUMMY_TEXT_200
+							p!= DUMMY_TEXT_400
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.c-imageText01 (.is-imageRight / .is-imageLeft)
+						.imageBlock
+							.m-imageSet01
+
+						.textBlock
+							.m-defaultSet
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_components/_c_imageText01.styl

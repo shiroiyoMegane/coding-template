@@ -1,0 +1,24 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span プラグイン - sp用 電話番号リンク
+
+			+l-markupBlock
+				p
+					a(href="tel:0000000000").js-tellLink
+						span 000-000-0000
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					p
+						a(href="tel:0000000000").js-tellLink
+							span 000-000-0000
+
+				+p-markupBtn('js').
+					const spTellLink = require('../_modules/spTellLink.js');
+
+					//DOM読み込み後に入れる
+					spTellLink({
+						className: '.js-tellLink', // 要素名
+					});

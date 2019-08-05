@@ -1,0 +1,46 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span モジュール - アイコンセット
+
+			+l-markupBlock
+				.m-defaultSet
+					ul.is-disc
+						li
+							a(href="sample.pdf")
+								span pdfファイル
+						li
+							a(href="sample.doc")
+								span ワードファイル
+						li
+							a(href="sample.xls")
+								span エクセルファイル
+						li
+							a(href="sample.ppt")
+								span パワーポイントファイル
+						li
+							a(href="sample.mp3")
+								span 音楽ファイル
+						li
+							a(href="sample.mp4")
+								span 動画ファイル
+						li
+							a(href="sample.rtf")
+								span その他ファイル
+						li
+							a(href="sample.html" target="_blank")
+								span 外部リンク
+
+			
+			+l-markupBlock
+				+p-markupBtn('pug').
+					a(href="sample.pdf")
+						span pdfファイル
+					a(href="sample.doc")
+						span その他ファイル
+					a(href="" target="_blank")
+						span 外部リンクファイル
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_modules/_m_iconSet.styl

@@ -1,0 +1,24 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span モジュール - 画像モジュール01
+			
+			+l-markupBlock
+				.m-imageSet01
+					figure.image
+						img(src="https://placehold.jp/150x150.png", alt="")
+						figcaption テキストが入ります
+				.m-imageSet01
+					p.image
+						img(src="https://placehold.jp/150x150.png", alt="")
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.m-imageSet01
+						figure.image p.image
+							img(src="画像", alt="")
+							figcaption テキスト
+					
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_modules/_m_imageSet01.styl

@@ -13,7 +13,7 @@ html(lang="ja" class= "is-" + KEY)
 
 		main#l-contentsTop
 			if(header == "true")
-				include ../_components/_c_common_header01
+				include ../_components/_c_comHeader01
 
 			if(side[0] == "true")
 				.l-sideWrapper(class= (side[1] == "left" ? "is-left" : "is-right" ) )
@@ -26,5 +26,5 @@ html(lang="ja" class= "is-" + KEY)
 					block contents
 
 			if(footer == "true")
-				include ../_components/_c_common_footer01
+				include ../_components/_c_comFooter01
 

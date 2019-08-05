@@ -1,0 +1,40 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span モジュール - pc sp 切り替えセット
+
+			+l-markupBlock
+				.is-sp
+					.m-imageSet01
+						figure.image
+							img(src="https://placehold.jp/640x400.png", alt="")
+							figcaption spのみ表示されます
+				.is-pc
+					.m-imageSet01
+						figure.image
+							img(src="https://placehold.jp/960x150.png", alt="")
+							figcaption pcのみ表示されます
+				
+				.is-pcOnly
+					.m-imageSet01
+						figure.image
+							img(src="https://placehold.jp/960x20.png", alt="")
+							figcaption pcのみ表示されます
+			
+			+l-markupBlock
+				+p-markupBtn('pug').
+					// pcとspで切り替え表示
+					.is-sp
+						spのとき表示したい要素（必ずis-pcの前に書く）
+					.is-pc
+						pcのとき表示したい要素
+
+					// pcのみ、spのみ表示
+					.is-pcOnly
+						pcのとき表示したい要素
+					.is-spOnly
+						spのとき表示したい要素
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_modules/_m_responsiveChange.styl

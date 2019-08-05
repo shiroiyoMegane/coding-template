@@ -1,0 +1,51 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span コンポーネント - ボタンコンポーネント01
+			
+			+l-markupBlock
+				.c-btnSet01
+					ul.c-colSet01.is-three
+						li.col
+							.m-btnSet01
+								a(href="")
+									span.btnWrapper
+										span.btnInner 通常ボタン
+						li.col
+							.m-btnSet01
+								a(href=".pdf")
+									span.btnWrapper
+										span.btnInner pdfファイル
+						li.col
+							.m-btnSet01
+								a(href=".doc")
+									span.btnWrapper
+										span.btnInner その他ファイル
+						li.col
+							.m-btnSet01
+								a(href="#sample")
+									span.btnWrapper
+										span.btnInner ページ内リンク
+						li.col
+							.m-btnSet01
+								a(href="index.html#sample")
+									span.btnWrapper
+										span.btnInner ＃付きリンク
+						li.col
+							.m-btnSet01
+								a(href="" target="_blank")
+									span.btnWrapper
+										span.btnInner ターゲットブランク
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.c-btnSet01
+						ul.box (.is-two / .is-three / .is-four)
+							li.item.m-btnSet01
+								a(href="")
+									span.btnWrapper
+										span.btnInner ボタン
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_components/_c_btnSet01.styl

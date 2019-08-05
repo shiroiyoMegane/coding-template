@@ -1,0 +1,22 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span プラグイン - smoothScroll
+		
+			+l-markupBlock
+				p
+					a(href="#l-contentsTop")
+						span ページトップへ戻る
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					p
+						a(href="#l-contentsTop")
+							span ページトップへ戻る
+					
+				+p-markupBtn('js').
+					const smoothScroll = require('../_modules/smoothScroll.js');
+
+					//DOM読み込み後に入れる
+					smoothScroll();
