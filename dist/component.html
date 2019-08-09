@@ -2369,6 +2369,138 @@ iconTagSet(tag)
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール01</span></h2>
+                <div class="l-markupBlock">
+                  <p class="m-btnSet01"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタン</span></span></a></p>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          p.m-btnSet01
+                          	a(href="") 拡張子でアイコン切り分け
+                          		span.btnWrapper
+                          			span.btnInner ボタン
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボタンモジュール01
+.m-btnSet01
+	marginBottom(30)
+	
+	a
+		display block
+		iconTagSet('.btnWrapper')
+		color inherit
+		border 1px solid #ccc
+		text-decoration none
+
+	.btnWrapper
+		display block
+		position relative
+		padding 20px 40px 20px 20px
+		box-sizing border-box
+		
+		
+		&:after
+			content ""
+			display block
+			position absolute
+			top 50%
+			right 10px
+
+			width 16px
+			height 16px
+			margin 0 !important
+
+			background-image url('../images/common/common_icon_arrow01.svg')
+			background-repeat no-repeat
+			background-size cover
+
+			transform translate3d(0, -50%, 0)
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール02</span></h2>
+                <div class="l-markupBlock">
+                  <p class="m-btnSet02"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタン</span></span></a></p>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          p.m-btnSet02
+                          	a(href="") 拡張子でアイコン切り分け
+                          		span.btnWrapper
+                          			span.btnInner ボタン
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+//- モジュール - ボタンモジュール02
+.m-btnSet02
+	marginBottom(30)
+	
+	a
+		display block
+		iconTagSet('.btnWrapper')
+		color SITE_BG01
+		background-color SITE_COLOR01
+		border 1px solid SITE_COLOR01
+		text-decoration none
+
+	.btnWrapper
+		display block
+		position relative
+		padding 20px 40px 20px 20px
+		box-sizing border-box
+		
+		
+		&:after
+			content ""
+			display block
+			position absolute
+			top 50%
+			right 10px
+
+			width 16px
+			height 16px
+			margin 0 !important
+
+			background-image url('../images/common/common_icon_arrow01.svg')
+			background-repeat no-repeat
+			background-size cover
+
+			transform translate3d(0, -50%, 0)
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
                 <h2 class="m-markupTitle"><span>モジュール - テキストボックス01</span></h2>
                 <div class="l-markupBlock">
                   <div class="m-inputText01">
