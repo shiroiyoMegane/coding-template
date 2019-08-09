@@ -1,0 +1,25 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span モジュール - チェックボタン01
+			+l-markupBlock
+				.m-inputCheck01
+					label(for="check01")
+						input(type="checkbox" name="checkbox" id="check01")
+						span ラベル
+					label(for="check02")
+						input(type="checkbox" name="checkbox" id="check02")
+						span ラベル
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.m-inputCheck01
+						label(for="check01")
+							input(type="checkbox" name="checkbox" id="check01")
+							span ラベル
+						label(for="check02")
+							input(type="checkbox" name="checkbox" id="check02")
+							span ラベル
+
+				+p-markupBtn('stylus')
+					include ../../../../stylus/_include/_modules/_m_formModules/_m_inputCheck01.styl

@@ -267,397 +267,6 @@ a:active {
 a:focus {
   outline: none;
 }
-.a-bgColorChange01 {
-  display: block;
-  position: relative;
-  margin-bottom: 20px;
-}
-.a-bgColorChange01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .a-bgColorChange01 {
-    margin-bottom: 10px;
-  }
-}
-.a-bgColorChange01.is-fade01:hover a,
-.a-bgColorChange01.is-fade01.is-inview a {
-  color: #fff;
-  border-color: #333;
-  background-color: #333;
-}
-.a-bgColorChange01.is-slideBottom01 {
-  overflow: hidden;
-}
-.a-bgColorChange01.is-slideBottom01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  transform: translate3d(0, -100%, 0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideBottom01:hover:after,
-.a-bgColorChange01.is-slideBottom01.is-inview:after {
-  transform: translate3d(0, 0, 0);
-}
-.a-bgColorChange01.is-slideBottom01:hover a,
-.a-bgColorChange01.is-slideBottom01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01.is-slideCenterIn01:before,
-.a-bgColorChange01.is-slideCenterIn01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #333;
-  transform: scaleX(0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideCenterIn01:before {
-  left: 0;
-  transform-origin: left top;
-}
-.a-bgColorChange01.is-slideCenterIn01:after {
-  right: 0;
-  transform-origin: right top;
-}
-.a-bgColorChange01.is-slideCenterIn01:hover:before,
-.a-bgColorChange01.is-slideCenterIn01.is-inview:before,
-.a-bgColorChange01.is-slideCenterIn01:hover:after,
-.a-bgColorChange01.is-slideCenterIn01.is-inview:after {
-  transform: scaleX(1);
-}
-.a-bgColorChange01.is-slideCenterIn01:hover a,
-.a-bgColorChange01.is-slideCenterIn01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01.is-slideCenterOut01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  transform: scaleX(0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideCenterOut01:hover:after,
-.a-bgColorChange01.is-slideCenterOut01.is-inview:after {
-  transform: scaleX(1);
-}
-.a-bgColorChange01.is-slideCenterOut01:hover a,
-.a-bgColorChange01.is-slideCenterOut01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01.is-slideLeft01 {
-  overflow: hidden;
-}
-.a-bgColorChange01.is-slideLeft01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  transform: translate3d(100%, 0, 0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideLeft01:hover:after,
-.a-bgColorChange01.is-slideLeft01.is-inview:after {
-  transform: translate3d(0, 0, 0);
-}
-.a-bgColorChange01.is-slideLeft01:hover a,
-.a-bgColorChange01.is-slideLeft01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01.is-slideRight01 {
-  overflow: hidden;
-}
-.a-bgColorChange01.is-slideRight01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  transform: translate3d(-100%, 0, 0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideRight01:hover:after,
-.a-bgColorChange01.is-slideRight01.is-inview:after {
-  transform: translate3d(0, 0, 0);
-}
-.a-bgColorChange01.is-slideRight01:hover a,
-.a-bgColorChange01.is-slideRight01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01.is-slideTop01 {
-  overflow: hidden;
-}
-.a-bgColorChange01.is-slideTop01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  transform: translate3d(0, 100%, 0);
-  transition: 0.3s all ease;
-  z-index: -1;
-}
-.a-bgColorChange01.is-slideTop01:hover:after,
-.a-bgColorChange01.is-slideTop01.is-inview:after {
-  transform: translate3d(0, 0, 0);
-}
-.a-bgColorChange01.is-slideTop01:hover a,
-.a-bgColorChange01.is-slideTop01.is-inview a {
-  color: #fff;
-}
-.a-bgColorChange01 a {
-  transition: 0.3s all ease;
-}
-span.a-borderChange01 {
-  display: inline-block;
-}
-span.a-borderChange01 a {
-  text-decoration: none;
-}
-.a-borderChange01 {
-  position: relative;
-  display: block;
-  transition: 0.3s all ease;
-}
-.a-borderChange01.is-boderBottomLeft01:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderBottomLeft01:hover:before,
-.a-borderChange01.is-boderBottomLeft01.is-inview:before {
-  transform: scaleX(1);
-}
-.a-borderChange01.is-boderBottomCenter01:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  transform: scaleX(0);
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderBottomCenter01:hover:before,
-.a-borderChange01.is-boderBottomCenter01.is-inview:before {
-  transform: scaleX(1);
-}
-.a-borderChange01.is-boderBottomRight01:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderBottomRight01:hover:before,
-.a-borderChange01.is-boderBottomRight01.is-inview:before {
-  transform: scaleX(1);
-}
-.a-borderChange01.is-boderBold01 {
-  border: none;
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderBold01:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  transition: 0.3s all ease;
-}
-.a-borderChange01.is-boderBold01:hover:before,
-.a-borderChange01.is-boderBold01.is-inview:before {
-  border-width: 5px;
-}
-.a-borderChange01.is-boderBold02 {
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderBold02:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border: 5px solid #000;
-  box-sizing: border-box;
-  transition: 0.3s all ease;
-}
-.a-borderChange01.is-boderBold02:hover:before,
-.a-borderChange01.is-boderBold02.is-inview:before {
-  border-width: 1px;
-}
-.a-borderChange01.is-boderDraw01:before,
-.a-borderChange01.is-boderDraw01:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-}
-.a-borderChange01.is-boderDraw01:before {
-  top: 0;
-  left: 0;
-}
-.a-borderChange01.is-boderDraw01:after {
-  bottom: 0;
-  right: 0;
-}
-.a-borderChange01.is-boderDraw01:hover:before,
-.a-borderChange01.is-boderDraw01.is-inview:before,
-.a-borderChange01.is-boderDraw01:hover:after,
-.a-borderChange01.is-boderDraw01.is-inview:after {
-  width: 100%;
-  height: 100%;
-}
-.a-borderChange01.is-boderDraw01:hover:before,
-.a-borderChange01.is-boderDraw01.is-inview:before {
-  border-top-color: #000;
-  border-right-color: #000;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-}
-.a-borderChange01.is-boderDraw01:hover:after,
-.a-borderChange01.is-boderDraw01.is-inview:after {
-  border-bottom-color: #000;
-  border-left-color: #000;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-}
-.a-borderChange01.is-boderDraw02:before,
-.a-borderChange01.is-boderDraw02:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-}
-.a-borderChange01.is-boderDraw02:before {
-  top: 0;
-  left: 0;
-}
-.a-borderChange01.is-boderDraw02:after {
-  top: 0;
-  left: 0;
-}
-.a-borderChange01.is-boderDraw02:hover:before,
-.a-borderChange01.is-boderDraw02.is-inview:before,
-.a-borderChange01.is-boderDraw02:hover:after,
-.a-borderChange01.is-boderDraw02.is-inview:after {
-  width: 100%;
-  height: 100%;
-}
-.a-borderChange01.is-boderDraw02:hover:before,
-.a-borderChange01.is-boderDraw02.is-inview:before {
-  border-top-color: #000;
-  border-right-color: #000;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-}
-.a-borderChange01.is-boderDraw02:hover:after,
-.a-borderChange01.is-boderDraw02.is-inview:after {
-  border-bottom-color: #000;
-  border-left-color: #000;
-  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
-}
-.a-borderChange01.is-boderDraw03:before,
-.a-borderChange01.is-boderDraw03:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  transition: 0.5s all ease;
-}
-.a-borderChange01.is-boderDraw03:before {
-  top: 0;
-  left: 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  transform: scale(0, 1);
-}
-.a-borderChange01.is-boderDraw03:after {
-  top: 0;
-  left: 0;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
-  transform: scale(1, 0);
-}
-.a-borderChange01.is-boderDraw03:hover:before,
-.a-borderChange01.is-boderDraw03.is-inview:before,
-.a-borderChange01.is-boderDraw03:hover:after,
-.a-borderChange01.is-boderDraw03.is-inview:after {
-  width: 100%;
-  height: 100%;
-  transform: scale(1, 1);
-}
-.a-fadeIn01 {
-  opacity: 0;
-  transition: opacity, 0.5s ease 0.5s;
-}
-.a-fadeIn01.is-inview {
-  opacity: 1;
-}
-.a-shadowAppear01 {
-  display: block;
-  transition: 0.3s all ease;
-}
-.a-shadowAppear01:hover,
-.a-shadowAppear01.is-inview {
-  box-shadow: 0px 0px 10px #aaa;
-}
 .m-btnSet01 {
   margin-bottom: 30px;
 }
@@ -675,13 +284,219 @@ span.a-borderChange01 a {
   border: 1px solid #ccc;
   text-decoration: none;
 }
-.m-btnSet01 .btnWrapper {
-  display: block;
-  position: relative;
-  padding: 20px 40px 20px 20px;
-  box-sizing: border-box;
+.m-btnSet01 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet01 a[target^='_blank'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
 }
-.m-btnSet01 .btnWrapper:after {
+.m-btnSet01 a[target^='_blank'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
+  content: "";
+}
+.m-btnSet01 a[target^='_blank'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.doc'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.docx'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.docm'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.xls'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.xml'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.csv'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:before {
+  content: "";
+}
+.m-btnSet01 a[target^='_blank'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.doc'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.docx'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.docm'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.xls'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.xml'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.csv'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:after {
+  content: none;
+}
+.m-btnSet01 a[href*="#"] .btnWrapper:before,
+.m-btnSet01 a[href*="#"] .btnWrapper:after {
+  transform: translate3d(0, -50%, 0) rotate(90deg);
+}
+.m-btnSet01 a[href*="#"] .btnWrapper[href*=".html"]:before,
+.m-btnSet01 a[href*="#"] .btnWrapper[href*=".html"]:after {
+  transform: translate3d(0, -50%, 0) rotate(0);
+}
+.m-btnSet01 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet01 a[target^='_blank'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_outer01.svg");
+}
+.m-btnSet01 a[href$='.pdf'] .btnWrapper {
+  content: #333;
+}
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_pdf01.svg");
+}
+.m-btnSet01 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_doc01.svg");
+}
+.m-btnSet01 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_excel01.svg");
+}
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_ppt01.svg");
+}
+.m-btnSet01 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet01 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet01 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet01 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wma'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wave'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wav'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.flac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aif'] .btnWrapper:after,
+.m-btnSet01 a[href$='.omg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.oma'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.oga'] .btnWrapper:after,
+.m-btnSet01 a[href$='.asf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet01 a[href$='.alac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ape'] .btnWrapper:after,
+.m-btnSet01 a[href$='.tak'] .btnWrapper:after,
+.m-btnSet01 a[href$='.tta'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_music01.svg");
+}
+.m-btnSet01 a[href$='.avi']:before,
+.m-btnSet01 a[href$='.mov']:before,
+.m-btnSet01 a[href$='.wmv']:before,
+.m-btnSet01 a[href$='.flv']:before,
+.m-btnSet01 a[href$='.mpg']:before,
+.m-btnSet01 a[href$='.mp4']:before,
+.m-btnSet01 a[href$='.avi']:after,
+.m-btnSet01 a[href$='.mov']:after,
+.m-btnSet01 a[href$='.wmv']:after,
+.m-btnSet01 a[href$='.flv']:after,
+.m-btnSet01 a[href$='.mpg']:after,
+.m-btnSet01 a[href$='.mp4']:after {
+  background-image: url("../images/common/common_icon_movie01.svg");
+}
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_etc01.svg");
+}
+.m-btnSet01 a .btnWrapper:after {
   content: "";
   display: block;
   position: absolute;
@@ -690,10 +505,21 @@ span.a-borderChange01 a {
   width: 16px;
   height: 16px;
   margin: 0 !important;
-  background-image: url("../images/common/common_icon_arrow01.svg");
   background-repeat: no-repeat;
   background-size: cover;
   transform: translate3d(0, -50%, 0);
+  background-image: url("../images/common/common_icon_arrow01.svg");
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
+}
+.m-btnSet01 a .btnWrapper span {
+  vertical-align: middle;
+}
+.m-btnSet01 .btnWrapper {
+  display: block;
+  position: relative;
+  padding: 20px 40px 20px 20px;
+  box-sizing: border-box;
 }
 .m-btnSet02 {
   margin-bottom: 30px;
@@ -712,6 +538,237 @@ span.a-borderChange01 a {
   background-color: #333;
   border: 1px solid #333;
   text-decoration: none;
+}
+.m-btnSet02 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet02 a[target^='_blank'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.m-btnSet02 a[target^='_blank'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
+  content: "";
+}
+.m-btnSet02 a[target^='_blank'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.doc'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.docx'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.docm'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.xls'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.xml'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.csv'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:before {
+  content: "";
+}
+.m-btnSet02 a[target^='_blank'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.doc'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.docx'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.docm'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.xls'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.xml'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.csv'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:after {
+  content: none;
+}
+.m-btnSet02 a[href*="#"] .btnWrapper:before,
+.m-btnSet02 a[href*="#"] .btnWrapper:after {
+  transform: translate3d(0, -50%, 0) rotate(90deg);
+}
+.m-btnSet02 a[href*="#"] .btnWrapper[href*=".html"]:before,
+.m-btnSet02 a[href*="#"] .btnWrapper[href*=".html"]:after {
+  transform: translate3d(0, -50%, 0) rotate(0);
+}
+.m-btnSet02 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet02 a[target^='_blank'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_outer01.svg");
+}
+.m-btnSet02 a[href$='.pdf'] .btnWrapper {
+  content: #fff;
+}
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_pdf01.svg");
+}
+.m-btnSet02 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.doc'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_doc01.svg");
+}
+.m-btnSet02 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xls'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:after,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_excel01.svg");
+}
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_ppt01.svg");
+}
+.m-btnSet02 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet02 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet02 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet02 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wma'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wave'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wav'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.flac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aif'] .btnWrapper:after,
+.m-btnSet02 a[href$='.omg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.oma'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.oga'] .btnWrapper:after,
+.m-btnSet02 a[href$='.asf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet02 a[href$='.alac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ape'] .btnWrapper:after,
+.m-btnSet02 a[href$='.tak'] .btnWrapper:after,
+.m-btnSet02 a[href$='.tta'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_music01.svg");
+}
+.m-btnSet02 a[href$='.avi']:before,
+.m-btnSet02 a[href$='.mov']:before,
+.m-btnSet02 a[href$='.wmv']:before,
+.m-btnSet02 a[href$='.flv']:before,
+.m-btnSet02 a[href$='.mpg']:before,
+.m-btnSet02 a[href$='.mp4']:before,
+.m-btnSet02 a[href$='.avi']:after,
+.m-btnSet02 a[href$='.mov']:after,
+.m-btnSet02 a[href$='.wmv']:after,
+.m-btnSet02 a[href$='.flv']:after,
+.m-btnSet02 a[href$='.mpg']:after,
+.m-btnSet02 a[href$='.mp4']:after {
+  background-image: url("../images/common/common_icon_movie01.svg");
+}
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_etc01.svg");
+}
+.m-btnSet02 a .btnWrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(0, -50%, 0);
+  background-image: url("../images/common/common_icon_arrow01.svg");
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
+}
+.m-btnSet02 a .btnWrapper span {
+  vertical-align: middle;
 }
 .m-btnSet02 .btnWrapper {
   display: block;
@@ -793,6 +850,1252 @@ span.a-borderChange01 a {
   font-size: 1rem;
   vertical-align: sub;
 }
+.m-defaultSet div a[target^='_blank']:before,
+.m-defaultSet p a[target^='_blank']:before,
+.m-defaultSet li a[target^='_blank']:before,
+.m-defaultSet figure a[target^='_blank']:before,
+.m-defaultSet div a[href$='.pdf']:before,
+.m-defaultSet p a[href$='.pdf']:before,
+.m-defaultSet li a[href$='.pdf']:before,
+.m-defaultSet figure a[href$='.pdf']:before,
+.m-defaultSet div a[href$='.doc']:before,
+.m-defaultSet p a[href$='.doc']:before,
+.m-defaultSet li a[href$='.doc']:before,
+.m-defaultSet figure a[href$='.doc']:before,
+.m-defaultSet div a[href$='.docx']:before,
+.m-defaultSet p a[href$='.docx']:before,
+.m-defaultSet li a[href$='.docx']:before,
+.m-defaultSet figure a[href$='.docx']:before,
+.m-defaultSet div a[href$='.docm']:before,
+.m-defaultSet p a[href$='.docm']:before,
+.m-defaultSet li a[href$='.docm']:before,
+.m-defaultSet figure a[href$='.docm']:before,
+.m-defaultSet div a[href$='.dotx']:before,
+.m-defaultSet p a[href$='.dotx']:before,
+.m-defaultSet li a[href$='.dotx']:before,
+.m-defaultSet figure a[href$='.dotx']:before,
+.m-defaultSet div a[href$='.dotm']:before,
+.m-defaultSet p a[href$='.dotm']:before,
+.m-defaultSet li a[href$='.dotm']:before,
+.m-defaultSet figure a[href$='.dotm']:before,
+.m-defaultSet div a[href$='.rtf']:before,
+.m-defaultSet p a[href$='.rtf']:before,
+.m-defaultSet li a[href$='.rtf']:before,
+.m-defaultSet figure a[href$='.rtf']:before,
+.m-defaultSet div a[href$='.xls']:before,
+.m-defaultSet p a[href$='.xls']:before,
+.m-defaultSet li a[href$='.xls']:before,
+.m-defaultSet figure a[href$='.xls']:before,
+.m-defaultSet div a[href$='.xlsx']:before,
+.m-defaultSet p a[href$='.xlsx']:before,
+.m-defaultSet li a[href$='.xlsx']:before,
+.m-defaultSet figure a[href$='.xlsx']:before,
+.m-defaultSet div a[href$='.xlt']:before,
+.m-defaultSet p a[href$='.xlt']:before,
+.m-defaultSet li a[href$='.xlt']:before,
+.m-defaultSet figure a[href$='.xlt']:before,
+.m-defaultSet div a[href$='.xml']:before,
+.m-defaultSet p a[href$='.xml']:before,
+.m-defaultSet li a[href$='.xml']:before,
+.m-defaultSet figure a[href$='.xml']:before,
+.m-defaultSet div a[href$='.xlsm']:before,
+.m-defaultSet p a[href$='.xlsm']:before,
+.m-defaultSet li a[href$='.xlsm']:before,
+.m-defaultSet figure a[href$='.xlsm']:before,
+.m-defaultSet div a[href$='.csv']:before,
+.m-defaultSet p a[href$='.csv']:before,
+.m-defaultSet li a[href$='.csv']:before,
+.m-defaultSet figure a[href$='.csv']:before,
+.m-defaultSet div a[href$='.ppt']:before,
+.m-defaultSet p a[href$='.ppt']:before,
+.m-defaultSet li a[href$='.ppt']:before,
+.m-defaultSet figure a[href$='.ppt']:before,
+.m-defaultSet div a[href$='.pptx']:before,
+.m-defaultSet p a[href$='.pptx']:before,
+.m-defaultSet li a[href$='.pptx']:before,
+.m-defaultSet figure a[href$='.pptx']:before,
+.m-defaultSet div a[href$='.pptm']:before,
+.m-defaultSet p a[href$='.pptm']:before,
+.m-defaultSet li a[href$='.pptm']:before,
+.m-defaultSet figure a[href$='.pptm']:before,
+.m-defaultSet div a[href$='.mp3']:before,
+.m-defaultSet p a[href$='.mp3']:before,
+.m-defaultSet li a[href$='.mp3']:before,
+.m-defaultSet figure a[href$='.mp3']:before,
+.m-defaultSet div a[href$='.wma']:before,
+.m-defaultSet p a[href$='.wma']:before,
+.m-defaultSet li a[href$='.wma']:before,
+.m-defaultSet figure a[href$='.wma']:before,
+.m-defaultSet div a[href$='.wave']:before,
+.m-defaultSet p a[href$='.wave']:before,
+.m-defaultSet li a[href$='.wave']:before,
+.m-defaultSet figure a[href$='.wave']:before,
+.m-defaultSet div a[href$='.wav']:before,
+.m-defaultSet p a[href$='.wav']:before,
+.m-defaultSet li a[href$='.wav']:before,
+.m-defaultSet figure a[href$='.wav']:before,
+.m-defaultSet div a[href$='.aac']:before,
+.m-defaultSet p a[href$='.aac']:before,
+.m-defaultSet li a[href$='.aac']:before,
+.m-defaultSet figure a[href$='.aac']:before,
+.m-defaultSet div a[href$='.flac']:before,
+.m-defaultSet p a[href$='.flac']:before,
+.m-defaultSet li a[href$='.flac']:before,
+.m-defaultSet figure a[href$='.flac']:before,
+.m-defaultSet div a[href$='.aif']:before,
+.m-defaultSet p a[href$='.aif']:before,
+.m-defaultSet li a[href$='.aif']:before,
+.m-defaultSet figure a[href$='.aif']:before,
+.m-defaultSet div a[href$='.omg']:before,
+.m-defaultSet p a[href$='.omg']:before,
+.m-defaultSet li a[href$='.omg']:before,
+.m-defaultSet figure a[href$='.omg']:before,
+.m-defaultSet div a[href$='.oma']:before,
+.m-defaultSet p a[href$='.oma']:before,
+.m-defaultSet li a[href$='.oma']:before,
+.m-defaultSet figure a[href$='.oma']:before,
+.m-defaultSet div a[href$='.aa3']:before,
+.m-defaultSet p a[href$='.aa3']:before,
+.m-defaultSet li a[href$='.aa3']:before,
+.m-defaultSet figure a[href$='.aa3']:before,
+.m-defaultSet div a[href$='.ogg']:before,
+.m-defaultSet p a[href$='.ogg']:before,
+.m-defaultSet li a[href$='.ogg']:before,
+.m-defaultSet figure a[href$='.ogg']:before,
+.m-defaultSet div a[href$='.oga']:before,
+.m-defaultSet p a[href$='.oga']:before,
+.m-defaultSet li a[href$='.oga']:before,
+.m-defaultSet figure a[href$='.oga']:before,
+.m-defaultSet div a[href$='.asf']:before,
+.m-defaultSet p a[href$='.asf']:before,
+.m-defaultSet li a[href$='.asf']:before,
+.m-defaultSet figure a[href$='.asf']:before,
+.m-defaultSet div a[href$='.m4a']:before,
+.m-defaultSet p a[href$='.m4a']:before,
+.m-defaultSet li a[href$='.m4a']:before,
+.m-defaultSet figure a[href$='.m4a']:before,
+.m-defaultSet div a[href$='.mov']:before,
+.m-defaultSet p a[href$='.mov']:before,
+.m-defaultSet li a[href$='.mov']:before,
+.m-defaultSet figure a[href$='.mov']:before,
+.m-defaultSet div a[href$='.alac']:before,
+.m-defaultSet p a[href$='.alac']:before,
+.m-defaultSet li a[href$='.alac']:before,
+.m-defaultSet figure a[href$='.alac']:before,
+.m-defaultSet div a[href$='.ape']:before,
+.m-defaultSet p a[href$='.ape']:before,
+.m-defaultSet li a[href$='.ape']:before,
+.m-defaultSet figure a[href$='.ape']:before,
+.m-defaultSet div a[href$='.tak']:before,
+.m-defaultSet p a[href$='.tak']:before,
+.m-defaultSet li a[href$='.tak']:before,
+.m-defaultSet figure a[href$='.tak']:before,
+.m-defaultSet div a[href$='.tta']:before,
+.m-defaultSet p a[href$='.tta']:before,
+.m-defaultSet li a[href$='.tta']:before,
+.m-defaultSet figure a[href$='.tta']:before,
+.m-defaultSet div a[href$='.aiff']:before,
+.m-defaultSet p a[href$='.aiff']:before,
+.m-defaultSet li a[href$='.aiff']:before,
+.m-defaultSet figure a[href$='.aiff']:before,
+.m-defaultSet div a[href$='.avi']:before,
+.m-defaultSet p a[href$='.avi']:before,
+.m-defaultSet li a[href$='.avi']:before,
+.m-defaultSet figure a[href$='.avi']:before,
+.m-defaultSet div a[href$='.wmv']:before,
+.m-defaultSet p a[href$='.wmv']:before,
+.m-defaultSet li a[href$='.wmv']:before,
+.m-defaultSet figure a[href$='.wmv']:before,
+.m-defaultSet div a[href$='.flv']:before,
+.m-defaultSet p a[href$='.flv']:before,
+.m-defaultSet li a[href$='.flv']:before,
+.m-defaultSet figure a[href$='.flv']:before,
+.m-defaultSet div a[href$='.mpg']:before,
+.m-defaultSet p a[href$='.mpg']:before,
+.m-defaultSet li a[href$='.mpg']:before,
+.m-defaultSet figure a[href$='.mpg']:before,
+.m-defaultSet div a[href$='.mp4']:before,
+.m-defaultSet p a[href$='.mp4']:before,
+.m-defaultSet li a[href$='.mp4']:before,
+.m-defaultSet figure a[href$='.mp4']:before,
+.m-defaultSet div a[target^='_blank']:after,
+.m-defaultSet p a[target^='_blank']:after,
+.m-defaultSet li a[target^='_blank']:after,
+.m-defaultSet figure a[target^='_blank']:after,
+.m-defaultSet div a[href$='.pdf']:after,
+.m-defaultSet p a[href$='.pdf']:after,
+.m-defaultSet li a[href$='.pdf']:after,
+.m-defaultSet figure a[href$='.pdf']:after,
+.m-defaultSet div a[href$='.doc']:after,
+.m-defaultSet p a[href$='.doc']:after,
+.m-defaultSet li a[href$='.doc']:after,
+.m-defaultSet figure a[href$='.doc']:after,
+.m-defaultSet div a[href$='.docx']:after,
+.m-defaultSet p a[href$='.docx']:after,
+.m-defaultSet li a[href$='.docx']:after,
+.m-defaultSet figure a[href$='.docx']:after,
+.m-defaultSet div a[href$='.docm']:after,
+.m-defaultSet p a[href$='.docm']:after,
+.m-defaultSet li a[href$='.docm']:after,
+.m-defaultSet figure a[href$='.docm']:after,
+.m-defaultSet div a[href$='.dotx']:after,
+.m-defaultSet p a[href$='.dotx']:after,
+.m-defaultSet li a[href$='.dotx']:after,
+.m-defaultSet figure a[href$='.dotx']:after,
+.m-defaultSet div a[href$='.dotm']:after,
+.m-defaultSet p a[href$='.dotm']:after,
+.m-defaultSet li a[href$='.dotm']:after,
+.m-defaultSet figure a[href$='.dotm']:after,
+.m-defaultSet div a[href$='.rtf']:after,
+.m-defaultSet p a[href$='.rtf']:after,
+.m-defaultSet li a[href$='.rtf']:after,
+.m-defaultSet figure a[href$='.rtf']:after,
+.m-defaultSet div a[href$='.xls']:after,
+.m-defaultSet p a[href$='.xls']:after,
+.m-defaultSet li a[href$='.xls']:after,
+.m-defaultSet figure a[href$='.xls']:after,
+.m-defaultSet div a[href$='.xlsx']:after,
+.m-defaultSet p a[href$='.xlsx']:after,
+.m-defaultSet li a[href$='.xlsx']:after,
+.m-defaultSet figure a[href$='.xlsx']:after,
+.m-defaultSet div a[href$='.xlt']:after,
+.m-defaultSet p a[href$='.xlt']:after,
+.m-defaultSet li a[href$='.xlt']:after,
+.m-defaultSet figure a[href$='.xlt']:after,
+.m-defaultSet div a[href$='.xml']:after,
+.m-defaultSet p a[href$='.xml']:after,
+.m-defaultSet li a[href$='.xml']:after,
+.m-defaultSet figure a[href$='.xml']:after,
+.m-defaultSet div a[href$='.xlsm']:after,
+.m-defaultSet p a[href$='.xlsm']:after,
+.m-defaultSet li a[href$='.xlsm']:after,
+.m-defaultSet figure a[href$='.xlsm']:after,
+.m-defaultSet div a[href$='.csv']:after,
+.m-defaultSet p a[href$='.csv']:after,
+.m-defaultSet li a[href$='.csv']:after,
+.m-defaultSet figure a[href$='.csv']:after,
+.m-defaultSet div a[href$='.ppt']:after,
+.m-defaultSet p a[href$='.ppt']:after,
+.m-defaultSet li a[href$='.ppt']:after,
+.m-defaultSet figure a[href$='.ppt']:after,
+.m-defaultSet div a[href$='.pptx']:after,
+.m-defaultSet p a[href$='.pptx']:after,
+.m-defaultSet li a[href$='.pptx']:after,
+.m-defaultSet figure a[href$='.pptx']:after,
+.m-defaultSet div a[href$='.pptm']:after,
+.m-defaultSet p a[href$='.pptm']:after,
+.m-defaultSet li a[href$='.pptm']:after,
+.m-defaultSet figure a[href$='.pptm']:after,
+.m-defaultSet div a[href$='.mp3']:after,
+.m-defaultSet p a[href$='.mp3']:after,
+.m-defaultSet li a[href$='.mp3']:after,
+.m-defaultSet figure a[href$='.mp3']:after,
+.m-defaultSet div a[href$='.wma']:after,
+.m-defaultSet p a[href$='.wma']:after,
+.m-defaultSet li a[href$='.wma']:after,
+.m-defaultSet figure a[href$='.wma']:after,
+.m-defaultSet div a[href$='.wave']:after,
+.m-defaultSet p a[href$='.wave']:after,
+.m-defaultSet li a[href$='.wave']:after,
+.m-defaultSet figure a[href$='.wave']:after,
+.m-defaultSet div a[href$='.wav']:after,
+.m-defaultSet p a[href$='.wav']:after,
+.m-defaultSet li a[href$='.wav']:after,
+.m-defaultSet figure a[href$='.wav']:after,
+.m-defaultSet div a[href$='.aac']:after,
+.m-defaultSet p a[href$='.aac']:after,
+.m-defaultSet li a[href$='.aac']:after,
+.m-defaultSet figure a[href$='.aac']:after,
+.m-defaultSet div a[href$='.flac']:after,
+.m-defaultSet p a[href$='.flac']:after,
+.m-defaultSet li a[href$='.flac']:after,
+.m-defaultSet figure a[href$='.flac']:after,
+.m-defaultSet div a[href$='.aif']:after,
+.m-defaultSet p a[href$='.aif']:after,
+.m-defaultSet li a[href$='.aif']:after,
+.m-defaultSet figure a[href$='.aif']:after,
+.m-defaultSet div a[href$='.omg']:after,
+.m-defaultSet p a[href$='.omg']:after,
+.m-defaultSet li a[href$='.omg']:after,
+.m-defaultSet figure a[href$='.omg']:after,
+.m-defaultSet div a[href$='.oma']:after,
+.m-defaultSet p a[href$='.oma']:after,
+.m-defaultSet li a[href$='.oma']:after,
+.m-defaultSet figure a[href$='.oma']:after,
+.m-defaultSet div a[href$='.aa3']:after,
+.m-defaultSet p a[href$='.aa3']:after,
+.m-defaultSet li a[href$='.aa3']:after,
+.m-defaultSet figure a[href$='.aa3']:after,
+.m-defaultSet div a[href$='.ogg']:after,
+.m-defaultSet p a[href$='.ogg']:after,
+.m-defaultSet li a[href$='.ogg']:after,
+.m-defaultSet figure a[href$='.ogg']:after,
+.m-defaultSet div a[href$='.oga']:after,
+.m-defaultSet p a[href$='.oga']:after,
+.m-defaultSet li a[href$='.oga']:after,
+.m-defaultSet figure a[href$='.oga']:after,
+.m-defaultSet div a[href$='.asf']:after,
+.m-defaultSet p a[href$='.asf']:after,
+.m-defaultSet li a[href$='.asf']:after,
+.m-defaultSet figure a[href$='.asf']:after,
+.m-defaultSet div a[href$='.m4a']:after,
+.m-defaultSet p a[href$='.m4a']:after,
+.m-defaultSet li a[href$='.m4a']:after,
+.m-defaultSet figure a[href$='.m4a']:after,
+.m-defaultSet div a[href$='.mov']:after,
+.m-defaultSet p a[href$='.mov']:after,
+.m-defaultSet li a[href$='.mov']:after,
+.m-defaultSet figure a[href$='.mov']:after,
+.m-defaultSet div a[href$='.alac']:after,
+.m-defaultSet p a[href$='.alac']:after,
+.m-defaultSet li a[href$='.alac']:after,
+.m-defaultSet figure a[href$='.alac']:after,
+.m-defaultSet div a[href$='.ape']:after,
+.m-defaultSet p a[href$='.ape']:after,
+.m-defaultSet li a[href$='.ape']:after,
+.m-defaultSet figure a[href$='.ape']:after,
+.m-defaultSet div a[href$='.tak']:after,
+.m-defaultSet p a[href$='.tak']:after,
+.m-defaultSet li a[href$='.tak']:after,
+.m-defaultSet figure a[href$='.tak']:after,
+.m-defaultSet div a[href$='.tta']:after,
+.m-defaultSet p a[href$='.tta']:after,
+.m-defaultSet li a[href$='.tta']:after,
+.m-defaultSet figure a[href$='.tta']:after,
+.m-defaultSet div a[href$='.aiff']:after,
+.m-defaultSet p a[href$='.aiff']:after,
+.m-defaultSet li a[href$='.aiff']:after,
+.m-defaultSet figure a[href$='.aiff']:after,
+.m-defaultSet div a[href$='.avi']:after,
+.m-defaultSet p a[href$='.avi']:after,
+.m-defaultSet li a[href$='.avi']:after,
+.m-defaultSet figure a[href$='.avi']:after,
+.m-defaultSet div a[href$='.wmv']:after,
+.m-defaultSet p a[href$='.wmv']:after,
+.m-defaultSet li a[href$='.wmv']:after,
+.m-defaultSet figure a[href$='.wmv']:after,
+.m-defaultSet div a[href$='.flv']:after,
+.m-defaultSet p a[href$='.flv']:after,
+.m-defaultSet li a[href$='.flv']:after,
+.m-defaultSet figure a[href$='.flv']:after,
+.m-defaultSet div a[href$='.mpg']:after,
+.m-defaultSet p a[href$='.mpg']:after,
+.m-defaultSet li a[href$='.mpg']:after,
+.m-defaultSet figure a[href$='.mpg']:after,
+.m-defaultSet div a[href$='.mp4']:after,
+.m-defaultSet p a[href$='.mp4']:after,
+.m-defaultSet li a[href$='.mp4']:after,
+.m-defaultSet figure a[href$='.mp4']:after {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.m-defaultSet div a[target^='_blank']:after,
+.m-defaultSet p a[target^='_blank']:after,
+.m-defaultSet li a[target^='_blank']:after,
+.m-defaultSet figure a[target^='_blank']:after,
+.m-defaultSet div a[href$='.pdf']:after,
+.m-defaultSet p a[href$='.pdf']:after,
+.m-defaultSet li a[href$='.pdf']:after,
+.m-defaultSet figure a[href$='.pdf']:after,
+.m-defaultSet div a[href$='.doc']:after,
+.m-defaultSet p a[href$='.doc']:after,
+.m-defaultSet li a[href$='.doc']:after,
+.m-defaultSet figure a[href$='.doc']:after,
+.m-defaultSet div a[href$='.docx']:after,
+.m-defaultSet p a[href$='.docx']:after,
+.m-defaultSet li a[href$='.docx']:after,
+.m-defaultSet figure a[href$='.docx']:after,
+.m-defaultSet div a[href$='.docm']:after,
+.m-defaultSet p a[href$='.docm']:after,
+.m-defaultSet li a[href$='.docm']:after,
+.m-defaultSet figure a[href$='.docm']:after,
+.m-defaultSet div a[href$='.dotx']:after,
+.m-defaultSet p a[href$='.dotx']:after,
+.m-defaultSet li a[href$='.dotx']:after,
+.m-defaultSet figure a[href$='.dotx']:after,
+.m-defaultSet div a[href$='.dotm']:after,
+.m-defaultSet p a[href$='.dotm']:after,
+.m-defaultSet li a[href$='.dotm']:after,
+.m-defaultSet figure a[href$='.dotm']:after,
+.m-defaultSet div a[href$='.rtf']:after,
+.m-defaultSet p a[href$='.rtf']:after,
+.m-defaultSet li a[href$='.rtf']:after,
+.m-defaultSet figure a[href$='.rtf']:after,
+.m-defaultSet div a[href$='.xls']:after,
+.m-defaultSet p a[href$='.xls']:after,
+.m-defaultSet li a[href$='.xls']:after,
+.m-defaultSet figure a[href$='.xls']:after,
+.m-defaultSet div a[href$='.xlsx']:after,
+.m-defaultSet p a[href$='.xlsx']:after,
+.m-defaultSet li a[href$='.xlsx']:after,
+.m-defaultSet figure a[href$='.xlsx']:after,
+.m-defaultSet div a[href$='.xlt']:after,
+.m-defaultSet p a[href$='.xlt']:after,
+.m-defaultSet li a[href$='.xlt']:after,
+.m-defaultSet figure a[href$='.xlt']:after,
+.m-defaultSet div a[href$='.xml']:after,
+.m-defaultSet p a[href$='.xml']:after,
+.m-defaultSet li a[href$='.xml']:after,
+.m-defaultSet figure a[href$='.xml']:after,
+.m-defaultSet div a[href$='.xlsm']:after,
+.m-defaultSet p a[href$='.xlsm']:after,
+.m-defaultSet li a[href$='.xlsm']:after,
+.m-defaultSet figure a[href$='.xlsm']:after,
+.m-defaultSet div a[href$='.csv']:after,
+.m-defaultSet p a[href$='.csv']:after,
+.m-defaultSet li a[href$='.csv']:after,
+.m-defaultSet figure a[href$='.csv']:after,
+.m-defaultSet div a[href$='.ppt']:after,
+.m-defaultSet p a[href$='.ppt']:after,
+.m-defaultSet li a[href$='.ppt']:after,
+.m-defaultSet figure a[href$='.ppt']:after,
+.m-defaultSet div a[href$='.pptx']:after,
+.m-defaultSet p a[href$='.pptx']:after,
+.m-defaultSet li a[href$='.pptx']:after,
+.m-defaultSet figure a[href$='.pptx']:after,
+.m-defaultSet div a[href$='.pptm']:after,
+.m-defaultSet p a[href$='.pptm']:after,
+.m-defaultSet li a[href$='.pptm']:after,
+.m-defaultSet figure a[href$='.pptm']:after,
+.m-defaultSet div a[href$='.mp3']:after,
+.m-defaultSet p a[href$='.mp3']:after,
+.m-defaultSet li a[href$='.mp3']:after,
+.m-defaultSet figure a[href$='.mp3']:after,
+.m-defaultSet div a[href$='.wma']:after,
+.m-defaultSet p a[href$='.wma']:after,
+.m-defaultSet li a[href$='.wma']:after,
+.m-defaultSet figure a[href$='.wma']:after,
+.m-defaultSet div a[href$='.wave']:after,
+.m-defaultSet p a[href$='.wave']:after,
+.m-defaultSet li a[href$='.wave']:after,
+.m-defaultSet figure a[href$='.wave']:after,
+.m-defaultSet div a[href$='.wav']:after,
+.m-defaultSet p a[href$='.wav']:after,
+.m-defaultSet li a[href$='.wav']:after,
+.m-defaultSet figure a[href$='.wav']:after,
+.m-defaultSet div a[href$='.aac']:after,
+.m-defaultSet p a[href$='.aac']:after,
+.m-defaultSet li a[href$='.aac']:after,
+.m-defaultSet figure a[href$='.aac']:after,
+.m-defaultSet div a[href$='.flac']:after,
+.m-defaultSet p a[href$='.flac']:after,
+.m-defaultSet li a[href$='.flac']:after,
+.m-defaultSet figure a[href$='.flac']:after,
+.m-defaultSet div a[href$='.aif']:after,
+.m-defaultSet p a[href$='.aif']:after,
+.m-defaultSet li a[href$='.aif']:after,
+.m-defaultSet figure a[href$='.aif']:after,
+.m-defaultSet div a[href$='.omg']:after,
+.m-defaultSet p a[href$='.omg']:after,
+.m-defaultSet li a[href$='.omg']:after,
+.m-defaultSet figure a[href$='.omg']:after,
+.m-defaultSet div a[href$='.oma']:after,
+.m-defaultSet p a[href$='.oma']:after,
+.m-defaultSet li a[href$='.oma']:after,
+.m-defaultSet figure a[href$='.oma']:after,
+.m-defaultSet div a[href$='.aa3']:after,
+.m-defaultSet p a[href$='.aa3']:after,
+.m-defaultSet li a[href$='.aa3']:after,
+.m-defaultSet figure a[href$='.aa3']:after,
+.m-defaultSet div a[href$='.ogg']:after,
+.m-defaultSet p a[href$='.ogg']:after,
+.m-defaultSet li a[href$='.ogg']:after,
+.m-defaultSet figure a[href$='.ogg']:after,
+.m-defaultSet div a[href$='.oga']:after,
+.m-defaultSet p a[href$='.oga']:after,
+.m-defaultSet li a[href$='.oga']:after,
+.m-defaultSet figure a[href$='.oga']:after,
+.m-defaultSet div a[href$='.asf']:after,
+.m-defaultSet p a[href$='.asf']:after,
+.m-defaultSet li a[href$='.asf']:after,
+.m-defaultSet figure a[href$='.asf']:after,
+.m-defaultSet div a[href$='.m4a']:after,
+.m-defaultSet p a[href$='.m4a']:after,
+.m-defaultSet li a[href$='.m4a']:after,
+.m-defaultSet figure a[href$='.m4a']:after,
+.m-defaultSet div a[href$='.mov']:after,
+.m-defaultSet p a[href$='.mov']:after,
+.m-defaultSet li a[href$='.mov']:after,
+.m-defaultSet figure a[href$='.mov']:after,
+.m-defaultSet div a[href$='.alac']:after,
+.m-defaultSet p a[href$='.alac']:after,
+.m-defaultSet li a[href$='.alac']:after,
+.m-defaultSet figure a[href$='.alac']:after,
+.m-defaultSet div a[href$='.ape']:after,
+.m-defaultSet p a[href$='.ape']:after,
+.m-defaultSet li a[href$='.ape']:after,
+.m-defaultSet figure a[href$='.ape']:after,
+.m-defaultSet div a[href$='.tak']:after,
+.m-defaultSet p a[href$='.tak']:after,
+.m-defaultSet li a[href$='.tak']:after,
+.m-defaultSet figure a[href$='.tak']:after,
+.m-defaultSet div a[href$='.tta']:after,
+.m-defaultSet p a[href$='.tta']:after,
+.m-defaultSet li a[href$='.tta']:after,
+.m-defaultSet figure a[href$='.tta']:after,
+.m-defaultSet div a[href$='.aiff']:after,
+.m-defaultSet p a[href$='.aiff']:after,
+.m-defaultSet li a[href$='.aiff']:after,
+.m-defaultSet figure a[href$='.aiff']:after,
+.m-defaultSet div a[href$='.avi']:after,
+.m-defaultSet p a[href$='.avi']:after,
+.m-defaultSet li a[href$='.avi']:after,
+.m-defaultSet figure a[href$='.avi']:after,
+.m-defaultSet div a[href$='.wmv']:after,
+.m-defaultSet p a[href$='.wmv']:after,
+.m-defaultSet li a[href$='.wmv']:after,
+.m-defaultSet figure a[href$='.wmv']:after,
+.m-defaultSet div a[href$='.flv']:after,
+.m-defaultSet p a[href$='.flv']:after,
+.m-defaultSet li a[href$='.flv']:after,
+.m-defaultSet figure a[href$='.flv']:after,
+.m-defaultSet div a[href$='.mpg']:after,
+.m-defaultSet p a[href$='.mpg']:after,
+.m-defaultSet li a[href$='.mpg']:after,
+.m-defaultSet figure a[href$='.mpg']:after,
+.m-defaultSet div a[href$='.mp4']:after,
+.m-defaultSet p a[href$='.mp4']:after,
+.m-defaultSet li a[href$='.mp4']:after,
+.m-defaultSet figure a[href$='.mp4']:after {
+  content: "";
+}
+.m-defaultSet div a[target^='_blank'].icon-before:before,
+.m-defaultSet p a[target^='_blank'].icon-before:before,
+.m-defaultSet li a[target^='_blank'].icon-before:before,
+.m-defaultSet figure a[target^='_blank'].icon-before:before,
+.m-defaultSet div a[href$='.pdf'].icon-before:before,
+.m-defaultSet p a[href$='.pdf'].icon-before:before,
+.m-defaultSet li a[href$='.pdf'].icon-before:before,
+.m-defaultSet figure a[href$='.pdf'].icon-before:before,
+.m-defaultSet div a[href$='.doc'].icon-before:before,
+.m-defaultSet p a[href$='.doc'].icon-before:before,
+.m-defaultSet li a[href$='.doc'].icon-before:before,
+.m-defaultSet figure a[href$='.doc'].icon-before:before,
+.m-defaultSet div a[href$='.docx'].icon-before:before,
+.m-defaultSet p a[href$='.docx'].icon-before:before,
+.m-defaultSet li a[href$='.docx'].icon-before:before,
+.m-defaultSet figure a[href$='.docx'].icon-before:before,
+.m-defaultSet div a[href$='.docm'].icon-before:before,
+.m-defaultSet p a[href$='.docm'].icon-before:before,
+.m-defaultSet li a[href$='.docm'].icon-before:before,
+.m-defaultSet figure a[href$='.docm'].icon-before:before,
+.m-defaultSet div a[href$='.dotx'].icon-before:before,
+.m-defaultSet p a[href$='.dotx'].icon-before:before,
+.m-defaultSet li a[href$='.dotx'].icon-before:before,
+.m-defaultSet figure a[href$='.dotx'].icon-before:before,
+.m-defaultSet div a[href$='.dotm'].icon-before:before,
+.m-defaultSet p a[href$='.dotm'].icon-before:before,
+.m-defaultSet li a[href$='.dotm'].icon-before:before,
+.m-defaultSet figure a[href$='.dotm'].icon-before:before,
+.m-defaultSet div a[href$='.rtf'].icon-before:before,
+.m-defaultSet p a[href$='.rtf'].icon-before:before,
+.m-defaultSet li a[href$='.rtf'].icon-before:before,
+.m-defaultSet figure a[href$='.rtf'].icon-before:before,
+.m-defaultSet div a[href$='.xls'].icon-before:before,
+.m-defaultSet p a[href$='.xls'].icon-before:before,
+.m-defaultSet li a[href$='.xls'].icon-before:before,
+.m-defaultSet figure a[href$='.xls'].icon-before:before,
+.m-defaultSet div a[href$='.xlsx'].icon-before:before,
+.m-defaultSet p a[href$='.xlsx'].icon-before:before,
+.m-defaultSet li a[href$='.xlsx'].icon-before:before,
+.m-defaultSet figure a[href$='.xlsx'].icon-before:before,
+.m-defaultSet div a[href$='.xlt'].icon-before:before,
+.m-defaultSet p a[href$='.xlt'].icon-before:before,
+.m-defaultSet li a[href$='.xlt'].icon-before:before,
+.m-defaultSet figure a[href$='.xlt'].icon-before:before,
+.m-defaultSet div a[href$='.xml'].icon-before:before,
+.m-defaultSet p a[href$='.xml'].icon-before:before,
+.m-defaultSet li a[href$='.xml'].icon-before:before,
+.m-defaultSet figure a[href$='.xml'].icon-before:before,
+.m-defaultSet div a[href$='.xlsm'].icon-before:before,
+.m-defaultSet p a[href$='.xlsm'].icon-before:before,
+.m-defaultSet li a[href$='.xlsm'].icon-before:before,
+.m-defaultSet figure a[href$='.xlsm'].icon-before:before,
+.m-defaultSet div a[href$='.csv'].icon-before:before,
+.m-defaultSet p a[href$='.csv'].icon-before:before,
+.m-defaultSet li a[href$='.csv'].icon-before:before,
+.m-defaultSet figure a[href$='.csv'].icon-before:before,
+.m-defaultSet div a[href$='.ppt'].icon-before:before,
+.m-defaultSet p a[href$='.ppt'].icon-before:before,
+.m-defaultSet li a[href$='.ppt'].icon-before:before,
+.m-defaultSet figure a[href$='.ppt'].icon-before:before,
+.m-defaultSet div a[href$='.pptx'].icon-before:before,
+.m-defaultSet p a[href$='.pptx'].icon-before:before,
+.m-defaultSet li a[href$='.pptx'].icon-before:before,
+.m-defaultSet figure a[href$='.pptx'].icon-before:before,
+.m-defaultSet div a[href$='.pptm'].icon-before:before,
+.m-defaultSet p a[href$='.pptm'].icon-before:before,
+.m-defaultSet li a[href$='.pptm'].icon-before:before,
+.m-defaultSet figure a[href$='.pptm'].icon-before:before,
+.m-defaultSet div a[href$='.mp3'].icon-before:before,
+.m-defaultSet p a[href$='.mp3'].icon-before:before,
+.m-defaultSet li a[href$='.mp3'].icon-before:before,
+.m-defaultSet figure a[href$='.mp3'].icon-before:before,
+.m-defaultSet div a[href$='.wma'].icon-before:before,
+.m-defaultSet p a[href$='.wma'].icon-before:before,
+.m-defaultSet li a[href$='.wma'].icon-before:before,
+.m-defaultSet figure a[href$='.wma'].icon-before:before,
+.m-defaultSet div a[href$='.wave'].icon-before:before,
+.m-defaultSet p a[href$='.wave'].icon-before:before,
+.m-defaultSet li a[href$='.wave'].icon-before:before,
+.m-defaultSet figure a[href$='.wave'].icon-before:before,
+.m-defaultSet div a[href$='.wav'].icon-before:before,
+.m-defaultSet p a[href$='.wav'].icon-before:before,
+.m-defaultSet li a[href$='.wav'].icon-before:before,
+.m-defaultSet figure a[href$='.wav'].icon-before:before,
+.m-defaultSet div a[href$='.aac'].icon-before:before,
+.m-defaultSet p a[href$='.aac'].icon-before:before,
+.m-defaultSet li a[href$='.aac'].icon-before:before,
+.m-defaultSet figure a[href$='.aac'].icon-before:before,
+.m-defaultSet div a[href$='.flac'].icon-before:before,
+.m-defaultSet p a[href$='.flac'].icon-before:before,
+.m-defaultSet li a[href$='.flac'].icon-before:before,
+.m-defaultSet figure a[href$='.flac'].icon-before:before,
+.m-defaultSet div a[href$='.aif'].icon-before:before,
+.m-defaultSet p a[href$='.aif'].icon-before:before,
+.m-defaultSet li a[href$='.aif'].icon-before:before,
+.m-defaultSet figure a[href$='.aif'].icon-before:before,
+.m-defaultSet div a[href$='.omg'].icon-before:before,
+.m-defaultSet p a[href$='.omg'].icon-before:before,
+.m-defaultSet li a[href$='.omg'].icon-before:before,
+.m-defaultSet figure a[href$='.omg'].icon-before:before,
+.m-defaultSet div a[href$='.oma'].icon-before:before,
+.m-defaultSet p a[href$='.oma'].icon-before:before,
+.m-defaultSet li a[href$='.oma'].icon-before:before,
+.m-defaultSet figure a[href$='.oma'].icon-before:before,
+.m-defaultSet div a[href$='.aa3'].icon-before:before,
+.m-defaultSet p a[href$='.aa3'].icon-before:before,
+.m-defaultSet li a[href$='.aa3'].icon-before:before,
+.m-defaultSet figure a[href$='.aa3'].icon-before:before,
+.m-defaultSet div a[href$='.ogg'].icon-before:before,
+.m-defaultSet p a[href$='.ogg'].icon-before:before,
+.m-defaultSet li a[href$='.ogg'].icon-before:before,
+.m-defaultSet figure a[href$='.ogg'].icon-before:before,
+.m-defaultSet div a[href$='.oga'].icon-before:before,
+.m-defaultSet p a[href$='.oga'].icon-before:before,
+.m-defaultSet li a[href$='.oga'].icon-before:before,
+.m-defaultSet figure a[href$='.oga'].icon-before:before,
+.m-defaultSet div a[href$='.asf'].icon-before:before,
+.m-defaultSet p a[href$='.asf'].icon-before:before,
+.m-defaultSet li a[href$='.asf'].icon-before:before,
+.m-defaultSet figure a[href$='.asf'].icon-before:before,
+.m-defaultSet div a[href$='.m4a'].icon-before:before,
+.m-defaultSet p a[href$='.m4a'].icon-before:before,
+.m-defaultSet li a[href$='.m4a'].icon-before:before,
+.m-defaultSet figure a[href$='.m4a'].icon-before:before,
+.m-defaultSet div a[href$='.mov'].icon-before:before,
+.m-defaultSet p a[href$='.mov'].icon-before:before,
+.m-defaultSet li a[href$='.mov'].icon-before:before,
+.m-defaultSet figure a[href$='.mov'].icon-before:before,
+.m-defaultSet div a[href$='.alac'].icon-before:before,
+.m-defaultSet p a[href$='.alac'].icon-before:before,
+.m-defaultSet li a[href$='.alac'].icon-before:before,
+.m-defaultSet figure a[href$='.alac'].icon-before:before,
+.m-defaultSet div a[href$='.ape'].icon-before:before,
+.m-defaultSet p a[href$='.ape'].icon-before:before,
+.m-defaultSet li a[href$='.ape'].icon-before:before,
+.m-defaultSet figure a[href$='.ape'].icon-before:before,
+.m-defaultSet div a[href$='.tak'].icon-before:before,
+.m-defaultSet p a[href$='.tak'].icon-before:before,
+.m-defaultSet li a[href$='.tak'].icon-before:before,
+.m-defaultSet figure a[href$='.tak'].icon-before:before,
+.m-defaultSet div a[href$='.tta'].icon-before:before,
+.m-defaultSet p a[href$='.tta'].icon-before:before,
+.m-defaultSet li a[href$='.tta'].icon-before:before,
+.m-defaultSet figure a[href$='.tta'].icon-before:before,
+.m-defaultSet div a[href$='.aiff'].icon-before:before,
+.m-defaultSet p a[href$='.aiff'].icon-before:before,
+.m-defaultSet li a[href$='.aiff'].icon-before:before,
+.m-defaultSet figure a[href$='.aiff'].icon-before:before,
+.m-defaultSet div a[href$='.avi'].icon-before:before,
+.m-defaultSet p a[href$='.avi'].icon-before:before,
+.m-defaultSet li a[href$='.avi'].icon-before:before,
+.m-defaultSet figure a[href$='.avi'].icon-before:before,
+.m-defaultSet div a[href$='.wmv'].icon-before:before,
+.m-defaultSet p a[href$='.wmv'].icon-before:before,
+.m-defaultSet li a[href$='.wmv'].icon-before:before,
+.m-defaultSet figure a[href$='.wmv'].icon-before:before,
+.m-defaultSet div a[href$='.flv'].icon-before:before,
+.m-defaultSet p a[href$='.flv'].icon-before:before,
+.m-defaultSet li a[href$='.flv'].icon-before:before,
+.m-defaultSet figure a[href$='.flv'].icon-before:before,
+.m-defaultSet div a[href$='.mpg'].icon-before:before,
+.m-defaultSet p a[href$='.mpg'].icon-before:before,
+.m-defaultSet li a[href$='.mpg'].icon-before:before,
+.m-defaultSet figure a[href$='.mpg'].icon-before:before,
+.m-defaultSet div a[href$='.mp4'].icon-before:before,
+.m-defaultSet p a[href$='.mp4'].icon-before:before,
+.m-defaultSet li a[href$='.mp4'].icon-before:before,
+.m-defaultSet figure a[href$='.mp4'].icon-before:before {
+  content: "";
+}
+.m-defaultSet div a[target^='_blank'].icon-before:after,
+.m-defaultSet p a[target^='_blank'].icon-before:after,
+.m-defaultSet li a[target^='_blank'].icon-before:after,
+.m-defaultSet figure a[target^='_blank'].icon-before:after,
+.m-defaultSet div a[href$='.pdf'].icon-before:after,
+.m-defaultSet p a[href$='.pdf'].icon-before:after,
+.m-defaultSet li a[href$='.pdf'].icon-before:after,
+.m-defaultSet figure a[href$='.pdf'].icon-before:after,
+.m-defaultSet div a[href$='.doc'].icon-before:after,
+.m-defaultSet p a[href$='.doc'].icon-before:after,
+.m-defaultSet li a[href$='.doc'].icon-before:after,
+.m-defaultSet figure a[href$='.doc'].icon-before:after,
+.m-defaultSet div a[href$='.docx'].icon-before:after,
+.m-defaultSet p a[href$='.docx'].icon-before:after,
+.m-defaultSet li a[href$='.docx'].icon-before:after,
+.m-defaultSet figure a[href$='.docx'].icon-before:after,
+.m-defaultSet div a[href$='.docm'].icon-before:after,
+.m-defaultSet p a[href$='.docm'].icon-before:after,
+.m-defaultSet li a[href$='.docm'].icon-before:after,
+.m-defaultSet figure a[href$='.docm'].icon-before:after,
+.m-defaultSet div a[href$='.dotx'].icon-before:after,
+.m-defaultSet p a[href$='.dotx'].icon-before:after,
+.m-defaultSet li a[href$='.dotx'].icon-before:after,
+.m-defaultSet figure a[href$='.dotx'].icon-before:after,
+.m-defaultSet div a[href$='.dotm'].icon-before:after,
+.m-defaultSet p a[href$='.dotm'].icon-before:after,
+.m-defaultSet li a[href$='.dotm'].icon-before:after,
+.m-defaultSet figure a[href$='.dotm'].icon-before:after,
+.m-defaultSet div a[href$='.rtf'].icon-before:after,
+.m-defaultSet p a[href$='.rtf'].icon-before:after,
+.m-defaultSet li a[href$='.rtf'].icon-before:after,
+.m-defaultSet figure a[href$='.rtf'].icon-before:after,
+.m-defaultSet div a[href$='.xls'].icon-before:after,
+.m-defaultSet p a[href$='.xls'].icon-before:after,
+.m-defaultSet li a[href$='.xls'].icon-before:after,
+.m-defaultSet figure a[href$='.xls'].icon-before:after,
+.m-defaultSet div a[href$='.xlsx'].icon-before:after,
+.m-defaultSet p a[href$='.xlsx'].icon-before:after,
+.m-defaultSet li a[href$='.xlsx'].icon-before:after,
+.m-defaultSet figure a[href$='.xlsx'].icon-before:after,
+.m-defaultSet div a[href$='.xlt'].icon-before:after,
+.m-defaultSet p a[href$='.xlt'].icon-before:after,
+.m-defaultSet li a[href$='.xlt'].icon-before:after,
+.m-defaultSet figure a[href$='.xlt'].icon-before:after,
+.m-defaultSet div a[href$='.xml'].icon-before:after,
+.m-defaultSet p a[href$='.xml'].icon-before:after,
+.m-defaultSet li a[href$='.xml'].icon-before:after,
+.m-defaultSet figure a[href$='.xml'].icon-before:after,
+.m-defaultSet div a[href$='.xlsm'].icon-before:after,
+.m-defaultSet p a[href$='.xlsm'].icon-before:after,
+.m-defaultSet li a[href$='.xlsm'].icon-before:after,
+.m-defaultSet figure a[href$='.xlsm'].icon-before:after,
+.m-defaultSet div a[href$='.csv'].icon-before:after,
+.m-defaultSet p a[href$='.csv'].icon-before:after,
+.m-defaultSet li a[href$='.csv'].icon-before:after,
+.m-defaultSet figure a[href$='.csv'].icon-before:after,
+.m-defaultSet div a[href$='.ppt'].icon-before:after,
+.m-defaultSet p a[href$='.ppt'].icon-before:after,
+.m-defaultSet li a[href$='.ppt'].icon-before:after,
+.m-defaultSet figure a[href$='.ppt'].icon-before:after,
+.m-defaultSet div a[href$='.pptx'].icon-before:after,
+.m-defaultSet p a[href$='.pptx'].icon-before:after,
+.m-defaultSet li a[href$='.pptx'].icon-before:after,
+.m-defaultSet figure a[href$='.pptx'].icon-before:after,
+.m-defaultSet div a[href$='.pptm'].icon-before:after,
+.m-defaultSet p a[href$='.pptm'].icon-before:after,
+.m-defaultSet li a[href$='.pptm'].icon-before:after,
+.m-defaultSet figure a[href$='.pptm'].icon-before:after,
+.m-defaultSet div a[href$='.mp3'].icon-before:after,
+.m-defaultSet p a[href$='.mp3'].icon-before:after,
+.m-defaultSet li a[href$='.mp3'].icon-before:after,
+.m-defaultSet figure a[href$='.mp3'].icon-before:after,
+.m-defaultSet div a[href$='.wma'].icon-before:after,
+.m-defaultSet p a[href$='.wma'].icon-before:after,
+.m-defaultSet li a[href$='.wma'].icon-before:after,
+.m-defaultSet figure a[href$='.wma'].icon-before:after,
+.m-defaultSet div a[href$='.wave'].icon-before:after,
+.m-defaultSet p a[href$='.wave'].icon-before:after,
+.m-defaultSet li a[href$='.wave'].icon-before:after,
+.m-defaultSet figure a[href$='.wave'].icon-before:after,
+.m-defaultSet div a[href$='.wav'].icon-before:after,
+.m-defaultSet p a[href$='.wav'].icon-before:after,
+.m-defaultSet li a[href$='.wav'].icon-before:after,
+.m-defaultSet figure a[href$='.wav'].icon-before:after,
+.m-defaultSet div a[href$='.aac'].icon-before:after,
+.m-defaultSet p a[href$='.aac'].icon-before:after,
+.m-defaultSet li a[href$='.aac'].icon-before:after,
+.m-defaultSet figure a[href$='.aac'].icon-before:after,
+.m-defaultSet div a[href$='.flac'].icon-before:after,
+.m-defaultSet p a[href$='.flac'].icon-before:after,
+.m-defaultSet li a[href$='.flac'].icon-before:after,
+.m-defaultSet figure a[href$='.flac'].icon-before:after,
+.m-defaultSet div a[href$='.aif'].icon-before:after,
+.m-defaultSet p a[href$='.aif'].icon-before:after,
+.m-defaultSet li a[href$='.aif'].icon-before:after,
+.m-defaultSet figure a[href$='.aif'].icon-before:after,
+.m-defaultSet div a[href$='.omg'].icon-before:after,
+.m-defaultSet p a[href$='.omg'].icon-before:after,
+.m-defaultSet li a[href$='.omg'].icon-before:after,
+.m-defaultSet figure a[href$='.omg'].icon-before:after,
+.m-defaultSet div a[href$='.oma'].icon-before:after,
+.m-defaultSet p a[href$='.oma'].icon-before:after,
+.m-defaultSet li a[href$='.oma'].icon-before:after,
+.m-defaultSet figure a[href$='.oma'].icon-before:after,
+.m-defaultSet div a[href$='.aa3'].icon-before:after,
+.m-defaultSet p a[href$='.aa3'].icon-before:after,
+.m-defaultSet li a[href$='.aa3'].icon-before:after,
+.m-defaultSet figure a[href$='.aa3'].icon-before:after,
+.m-defaultSet div a[href$='.ogg'].icon-before:after,
+.m-defaultSet p a[href$='.ogg'].icon-before:after,
+.m-defaultSet li a[href$='.ogg'].icon-before:after,
+.m-defaultSet figure a[href$='.ogg'].icon-before:after,
+.m-defaultSet div a[href$='.oga'].icon-before:after,
+.m-defaultSet p a[href$='.oga'].icon-before:after,
+.m-defaultSet li a[href$='.oga'].icon-before:after,
+.m-defaultSet figure a[href$='.oga'].icon-before:after,
+.m-defaultSet div a[href$='.asf'].icon-before:after,
+.m-defaultSet p a[href$='.asf'].icon-before:after,
+.m-defaultSet li a[href$='.asf'].icon-before:after,
+.m-defaultSet figure a[href$='.asf'].icon-before:after,
+.m-defaultSet div a[href$='.m4a'].icon-before:after,
+.m-defaultSet p a[href$='.m4a'].icon-before:after,
+.m-defaultSet li a[href$='.m4a'].icon-before:after,
+.m-defaultSet figure a[href$='.m4a'].icon-before:after,
+.m-defaultSet div a[href$='.mov'].icon-before:after,
+.m-defaultSet p a[href$='.mov'].icon-before:after,
+.m-defaultSet li a[href$='.mov'].icon-before:after,
+.m-defaultSet figure a[href$='.mov'].icon-before:after,
+.m-defaultSet div a[href$='.alac'].icon-before:after,
+.m-defaultSet p a[href$='.alac'].icon-before:after,
+.m-defaultSet li a[href$='.alac'].icon-before:after,
+.m-defaultSet figure a[href$='.alac'].icon-before:after,
+.m-defaultSet div a[href$='.ape'].icon-before:after,
+.m-defaultSet p a[href$='.ape'].icon-before:after,
+.m-defaultSet li a[href$='.ape'].icon-before:after,
+.m-defaultSet figure a[href$='.ape'].icon-before:after,
+.m-defaultSet div a[href$='.tak'].icon-before:after,
+.m-defaultSet p a[href$='.tak'].icon-before:after,
+.m-defaultSet li a[href$='.tak'].icon-before:after,
+.m-defaultSet figure a[href$='.tak'].icon-before:after,
+.m-defaultSet div a[href$='.tta'].icon-before:after,
+.m-defaultSet p a[href$='.tta'].icon-before:after,
+.m-defaultSet li a[href$='.tta'].icon-before:after,
+.m-defaultSet figure a[href$='.tta'].icon-before:after,
+.m-defaultSet div a[href$='.aiff'].icon-before:after,
+.m-defaultSet p a[href$='.aiff'].icon-before:after,
+.m-defaultSet li a[href$='.aiff'].icon-before:after,
+.m-defaultSet figure a[href$='.aiff'].icon-before:after,
+.m-defaultSet div a[href$='.avi'].icon-before:after,
+.m-defaultSet p a[href$='.avi'].icon-before:after,
+.m-defaultSet li a[href$='.avi'].icon-before:after,
+.m-defaultSet figure a[href$='.avi'].icon-before:after,
+.m-defaultSet div a[href$='.wmv'].icon-before:after,
+.m-defaultSet p a[href$='.wmv'].icon-before:after,
+.m-defaultSet li a[href$='.wmv'].icon-before:after,
+.m-defaultSet figure a[href$='.wmv'].icon-before:after,
+.m-defaultSet div a[href$='.flv'].icon-before:after,
+.m-defaultSet p a[href$='.flv'].icon-before:after,
+.m-defaultSet li a[href$='.flv'].icon-before:after,
+.m-defaultSet figure a[href$='.flv'].icon-before:after,
+.m-defaultSet div a[href$='.mpg'].icon-before:after,
+.m-defaultSet p a[href$='.mpg'].icon-before:after,
+.m-defaultSet li a[href$='.mpg'].icon-before:after,
+.m-defaultSet figure a[href$='.mpg'].icon-before:after,
+.m-defaultSet div a[href$='.mp4'].icon-before:after,
+.m-defaultSet p a[href$='.mp4'].icon-before:after,
+.m-defaultSet li a[href$='.mp4'].icon-before:after,
+.m-defaultSet figure a[href$='.mp4'].icon-before:after {
+  content: none;
+}
+.m-defaultSet div a[href*="#"]:before,
+.m-defaultSet p a[href*="#"]:before,
+.m-defaultSet li a[href*="#"]:before,
+.m-defaultSet figure a[href*="#"]:before,
+.m-defaultSet div a[href*="#"]:after,
+.m-defaultSet p a[href*="#"]:after,
+.m-defaultSet li a[href*="#"]:after,
+.m-defaultSet figure a[href*="#"]:after {
+  transform: translate3d(0, -50%, 0) rotate(90deg);
+}
+.m-defaultSet div a[href*="#"][href*=".html"]:before,
+.m-defaultSet p a[href*="#"][href*=".html"]:before,
+.m-defaultSet li a[href*="#"][href*=".html"]:before,
+.m-defaultSet figure a[href*="#"][href*=".html"]:before,
+.m-defaultSet div a[href*="#"][href*=".html"]:after,
+.m-defaultSet p a[href*="#"][href*=".html"]:after,
+.m-defaultSet li a[href*="#"][href*=".html"]:after,
+.m-defaultSet figure a[href*="#"][href*=".html"]:after {
+  transform: translate3d(0, -50%, 0) rotate(0);
+}
+.m-defaultSet div a[target^='_blank']:before,
+.m-defaultSet p a[target^='_blank']:before,
+.m-defaultSet li a[target^='_blank']:before,
+.m-defaultSet figure a[target^='_blank']:before,
+.m-defaultSet div a[target^='_blank']:after,
+.m-defaultSet p a[target^='_blank']:after,
+.m-defaultSet li a[target^='_blank']:after,
+.m-defaultSet figure a[target^='_blank']:after {
+  background-image: url("../images/common/common_icon_outer01.svg");
+}
+.m-defaultSet div a[href$='.pdf'],
+.m-defaultSet p a[href$='.pdf'],
+.m-defaultSet li a[href$='.pdf'],
+.m-defaultSet figure a[href$='.pdf'] {
+  content: #333;
+}
+.m-defaultSet div a[href$='.pdf']:before,
+.m-defaultSet p a[href$='.pdf']:before,
+.m-defaultSet li a[href$='.pdf']:before,
+.m-defaultSet figure a[href$='.pdf']:before,
+.m-defaultSet div a[href$='.pdf']:after,
+.m-defaultSet p a[href$='.pdf']:after,
+.m-defaultSet li a[href$='.pdf']:after,
+.m-defaultSet figure a[href$='.pdf']:after {
+  background-image: url("../images/common/common_icon_pdf01.svg");
+}
+.m-defaultSet div a[href$='.doc']:before,
+.m-defaultSet p a[href$='.doc']:before,
+.m-defaultSet li a[href$='.doc']:before,
+.m-defaultSet figure a[href$='.doc']:before,
+.m-defaultSet div a[href$='.docx']:before,
+.m-defaultSet p a[href$='.docx']:before,
+.m-defaultSet li a[href$='.docx']:before,
+.m-defaultSet figure a[href$='.docx']:before,
+.m-defaultSet div a[href$='.docm']:before,
+.m-defaultSet p a[href$='.docm']:before,
+.m-defaultSet li a[href$='.docm']:before,
+.m-defaultSet figure a[href$='.docm']:before,
+.m-defaultSet div a[href$='.dotx']:before,
+.m-defaultSet p a[href$='.dotx']:before,
+.m-defaultSet li a[href$='.dotx']:before,
+.m-defaultSet figure a[href$='.dotx']:before,
+.m-defaultSet div a[href$='.dotm']:before,
+.m-defaultSet p a[href$='.dotm']:before,
+.m-defaultSet li a[href$='.dotm']:before,
+.m-defaultSet figure a[href$='.dotm']:before,
+.m-defaultSet div a[href$='.doc']:after,
+.m-defaultSet p a[href$='.doc']:after,
+.m-defaultSet li a[href$='.doc']:after,
+.m-defaultSet figure a[href$='.doc']:after,
+.m-defaultSet div a[href$='.docx']:after,
+.m-defaultSet p a[href$='.docx']:after,
+.m-defaultSet li a[href$='.docx']:after,
+.m-defaultSet figure a[href$='.docx']:after,
+.m-defaultSet div a[href$='.docm']:after,
+.m-defaultSet p a[href$='.docm']:after,
+.m-defaultSet li a[href$='.docm']:after,
+.m-defaultSet figure a[href$='.docm']:after,
+.m-defaultSet div a[href$='.dotx']:after,
+.m-defaultSet p a[href$='.dotx']:after,
+.m-defaultSet li a[href$='.dotx']:after,
+.m-defaultSet figure a[href$='.dotx']:after,
+.m-defaultSet div a[href$='.dotm']:after,
+.m-defaultSet p a[href$='.dotm']:after,
+.m-defaultSet li a[href$='.dotm']:after,
+.m-defaultSet figure a[href$='.dotm']:after {
+  background-image: url("../images/common/common_icon_doc01.svg");
+}
+.m-defaultSet div a[href$='.xls']:before,
+.m-defaultSet p a[href$='.xls']:before,
+.m-defaultSet li a[href$='.xls']:before,
+.m-defaultSet figure a[href$='.xls']:before,
+.m-defaultSet div a[href$='.xlsx']:before,
+.m-defaultSet p a[href$='.xlsx']:before,
+.m-defaultSet li a[href$='.xlsx']:before,
+.m-defaultSet figure a[href$='.xlsx']:before,
+.m-defaultSet div a[href$='.xlt']:before,
+.m-defaultSet p a[href$='.xlt']:before,
+.m-defaultSet li a[href$='.xlt']:before,
+.m-defaultSet figure a[href$='.xlt']:before,
+.m-defaultSet div a[href$='.xml']:before,
+.m-defaultSet p a[href$='.xml']:before,
+.m-defaultSet li a[href$='.xml']:before,
+.m-defaultSet figure a[href$='.xml']:before,
+.m-defaultSet div a[href$='.xlsm']:before,
+.m-defaultSet p a[href$='.xlsm']:before,
+.m-defaultSet li a[href$='.xlsm']:before,
+.m-defaultSet figure a[href$='.xlsm']:before,
+.m-defaultSet div a[href$='.csv']:before,
+.m-defaultSet p a[href$='.csv']:before,
+.m-defaultSet li a[href$='.csv']:before,
+.m-defaultSet figure a[href$='.csv']:before,
+.m-defaultSet div a[href$='.xls']:after,
+.m-defaultSet p a[href$='.xls']:after,
+.m-defaultSet li a[href$='.xls']:after,
+.m-defaultSet figure a[href$='.xls']:after,
+.m-defaultSet div a[href$='.xlsx']:after,
+.m-defaultSet p a[href$='.xlsx']:after,
+.m-defaultSet li a[href$='.xlsx']:after,
+.m-defaultSet figure a[href$='.xlsx']:after,
+.m-defaultSet div a[href$='.xlt']:after,
+.m-defaultSet p a[href$='.xlt']:after,
+.m-defaultSet li a[href$='.xlt']:after,
+.m-defaultSet figure a[href$='.xlt']:after,
+.m-defaultSet div a[href$='.xml']:after,
+.m-defaultSet p a[href$='.xml']:after,
+.m-defaultSet li a[href$='.xml']:after,
+.m-defaultSet figure a[href$='.xml']:after,
+.m-defaultSet div a[href$='.xlsm']:after,
+.m-defaultSet p a[href$='.xlsm']:after,
+.m-defaultSet li a[href$='.xlsm']:after,
+.m-defaultSet figure a[href$='.xlsm']:after,
+.m-defaultSet div a[href$='.csv']:after,
+.m-defaultSet p a[href$='.csv']:after,
+.m-defaultSet li a[href$='.csv']:after,
+.m-defaultSet figure a[href$='.csv']:after {
+  background-image: url("../images/common/common_icon_excel01.svg");
+}
+.m-defaultSet div a[href$='.ppt']:before,
+.m-defaultSet p a[href$='.ppt']:before,
+.m-defaultSet li a[href$='.ppt']:before,
+.m-defaultSet figure a[href$='.ppt']:before,
+.m-defaultSet div a[href$='.pptx']:before,
+.m-defaultSet p a[href$='.pptx']:before,
+.m-defaultSet li a[href$='.pptx']:before,
+.m-defaultSet figure a[href$='.pptx']:before,
+.m-defaultSet div a[href$='.pptm']:before,
+.m-defaultSet p a[href$='.pptm']:before,
+.m-defaultSet li a[href$='.pptm']:before,
+.m-defaultSet figure a[href$='.pptm']:before,
+.m-defaultSet div a[href$='.ppt']:after,
+.m-defaultSet p a[href$='.ppt']:after,
+.m-defaultSet li a[href$='.ppt']:after,
+.m-defaultSet figure a[href$='.ppt']:after,
+.m-defaultSet div a[href$='.pptx']:after,
+.m-defaultSet p a[href$='.pptx']:after,
+.m-defaultSet li a[href$='.pptx']:after,
+.m-defaultSet figure a[href$='.pptx']:after,
+.m-defaultSet div a[href$='.pptm']:after,
+.m-defaultSet p a[href$='.pptm']:after,
+.m-defaultSet li a[href$='.pptm']:after,
+.m-defaultSet figure a[href$='.pptm']:after {
+  background-image: url("../images/common/common_icon_ppt01.svg");
+}
+.m-defaultSet div a[href$='.mp3']:before,
+.m-defaultSet p a[href$='.mp3']:before,
+.m-defaultSet li a[href$='.mp3']:before,
+.m-defaultSet figure a[href$='.mp3']:before,
+.m-defaultSet div a[href$='.wma']:before,
+.m-defaultSet p a[href$='.wma']:before,
+.m-defaultSet li a[href$='.wma']:before,
+.m-defaultSet figure a[href$='.wma']:before,
+.m-defaultSet div a[href$='.wave']:before,
+.m-defaultSet p a[href$='.wave']:before,
+.m-defaultSet li a[href$='.wave']:before,
+.m-defaultSet figure a[href$='.wave']:before,
+.m-defaultSet div a[href$='.wav']:before,
+.m-defaultSet p a[href$='.wav']:before,
+.m-defaultSet li a[href$='.wav']:before,
+.m-defaultSet figure a[href$='.wav']:before,
+.m-defaultSet div a[href$='.aac']:before,
+.m-defaultSet p a[href$='.aac']:before,
+.m-defaultSet li a[href$='.aac']:before,
+.m-defaultSet figure a[href$='.aac']:before,
+.m-defaultSet div a[href$='.flac']:before,
+.m-defaultSet p a[href$='.flac']:before,
+.m-defaultSet li a[href$='.flac']:before,
+.m-defaultSet figure a[href$='.flac']:before,
+.m-defaultSet div a[href$='.aif']:before,
+.m-defaultSet p a[href$='.aif']:before,
+.m-defaultSet li a[href$='.aif']:before,
+.m-defaultSet figure a[href$='.aif']:before,
+.m-defaultSet div a[href$='.omg']:before,
+.m-defaultSet p a[href$='.omg']:before,
+.m-defaultSet li a[href$='.omg']:before,
+.m-defaultSet figure a[href$='.omg']:before,
+.m-defaultSet div a[href$='.oma']:before,
+.m-defaultSet p a[href$='.oma']:before,
+.m-defaultSet li a[href$='.oma']:before,
+.m-defaultSet figure a[href$='.oma']:before,
+.m-defaultSet div a[href$='.aa3']:before,
+.m-defaultSet p a[href$='.aa3']:before,
+.m-defaultSet li a[href$='.aa3']:before,
+.m-defaultSet figure a[href$='.aa3']:before,
+.m-defaultSet div a[href$='.ogg']:before,
+.m-defaultSet p a[href$='.ogg']:before,
+.m-defaultSet li a[href$='.ogg']:before,
+.m-defaultSet figure a[href$='.ogg']:before,
+.m-defaultSet div a[href$='.oga']:before,
+.m-defaultSet p a[href$='.oga']:before,
+.m-defaultSet li a[href$='.oga']:before,
+.m-defaultSet figure a[href$='.oga']:before,
+.m-defaultSet div a[href$='.asf']:before,
+.m-defaultSet p a[href$='.asf']:before,
+.m-defaultSet li a[href$='.asf']:before,
+.m-defaultSet figure a[href$='.asf']:before,
+.m-defaultSet div a[href$='.m4a']:before,
+.m-defaultSet p a[href$='.m4a']:before,
+.m-defaultSet li a[href$='.m4a']:before,
+.m-defaultSet figure a[href$='.m4a']:before,
+.m-defaultSet div a[href$='.mov']:before,
+.m-defaultSet p a[href$='.mov']:before,
+.m-defaultSet li a[href$='.mov']:before,
+.m-defaultSet figure a[href$='.mov']:before,
+.m-defaultSet div a[href$='.alac']:before,
+.m-defaultSet p a[href$='.alac']:before,
+.m-defaultSet li a[href$='.alac']:before,
+.m-defaultSet figure a[href$='.alac']:before,
+.m-defaultSet div a[href$='.ape']:before,
+.m-defaultSet p a[href$='.ape']:before,
+.m-defaultSet li a[href$='.ape']:before,
+.m-defaultSet figure a[href$='.ape']:before,
+.m-defaultSet div a[href$='.tak']:before,
+.m-defaultSet p a[href$='.tak']:before,
+.m-defaultSet li a[href$='.tak']:before,
+.m-defaultSet figure a[href$='.tak']:before,
+.m-defaultSet div a[href$='.tta']:before,
+.m-defaultSet p a[href$='.tta']:before,
+.m-defaultSet li a[href$='.tta']:before,
+.m-defaultSet figure a[href$='.tta']:before,
+.m-defaultSet div a[href$='.aiff']:before,
+.m-defaultSet p a[href$='.aiff']:before,
+.m-defaultSet li a[href$='.aiff']:before,
+.m-defaultSet figure a[href$='.aiff']:before,
+.m-defaultSet div a[href$='.mp3']:after,
+.m-defaultSet p a[href$='.mp3']:after,
+.m-defaultSet li a[href$='.mp3']:after,
+.m-defaultSet figure a[href$='.mp3']:after,
+.m-defaultSet div a[href$='.wma']:after,
+.m-defaultSet p a[href$='.wma']:after,
+.m-defaultSet li a[href$='.wma']:after,
+.m-defaultSet figure a[href$='.wma']:after,
+.m-defaultSet div a[href$='.wave']:after,
+.m-defaultSet p a[href$='.wave']:after,
+.m-defaultSet li a[href$='.wave']:after,
+.m-defaultSet figure a[href$='.wave']:after,
+.m-defaultSet div a[href$='.wav']:after,
+.m-defaultSet p a[href$='.wav']:after,
+.m-defaultSet li a[href$='.wav']:after,
+.m-defaultSet figure a[href$='.wav']:after,
+.m-defaultSet div a[href$='.aac']:after,
+.m-defaultSet p a[href$='.aac']:after,
+.m-defaultSet li a[href$='.aac']:after,
+.m-defaultSet figure a[href$='.aac']:after,
+.m-defaultSet div a[href$='.flac']:after,
+.m-defaultSet p a[href$='.flac']:after,
+.m-defaultSet li a[href$='.flac']:after,
+.m-defaultSet figure a[href$='.flac']:after,
+.m-defaultSet div a[href$='.aif']:after,
+.m-defaultSet p a[href$='.aif']:after,
+.m-defaultSet li a[href$='.aif']:after,
+.m-defaultSet figure a[href$='.aif']:after,
+.m-defaultSet div a[href$='.omg']:after,
+.m-defaultSet p a[href$='.omg']:after,
+.m-defaultSet li a[href$='.omg']:after,
+.m-defaultSet figure a[href$='.omg']:after,
+.m-defaultSet div a[href$='.oma']:after,
+.m-defaultSet p a[href$='.oma']:after,
+.m-defaultSet li a[href$='.oma']:after,
+.m-defaultSet figure a[href$='.oma']:after,
+.m-defaultSet div a[href$='.aa3']:after,
+.m-defaultSet p a[href$='.aa3']:after,
+.m-defaultSet li a[href$='.aa3']:after,
+.m-defaultSet figure a[href$='.aa3']:after,
+.m-defaultSet div a[href$='.ogg']:after,
+.m-defaultSet p a[href$='.ogg']:after,
+.m-defaultSet li a[href$='.ogg']:after,
+.m-defaultSet figure a[href$='.ogg']:after,
+.m-defaultSet div a[href$='.oga']:after,
+.m-defaultSet p a[href$='.oga']:after,
+.m-defaultSet li a[href$='.oga']:after,
+.m-defaultSet figure a[href$='.oga']:after,
+.m-defaultSet div a[href$='.asf']:after,
+.m-defaultSet p a[href$='.asf']:after,
+.m-defaultSet li a[href$='.asf']:after,
+.m-defaultSet figure a[href$='.asf']:after,
+.m-defaultSet div a[href$='.m4a']:after,
+.m-defaultSet p a[href$='.m4a']:after,
+.m-defaultSet li a[href$='.m4a']:after,
+.m-defaultSet figure a[href$='.m4a']:after,
+.m-defaultSet div a[href$='.mov']:after,
+.m-defaultSet p a[href$='.mov']:after,
+.m-defaultSet li a[href$='.mov']:after,
+.m-defaultSet figure a[href$='.mov']:after,
+.m-defaultSet div a[href$='.alac']:after,
+.m-defaultSet p a[href$='.alac']:after,
+.m-defaultSet li a[href$='.alac']:after,
+.m-defaultSet figure a[href$='.alac']:after,
+.m-defaultSet div a[href$='.ape']:after,
+.m-defaultSet p a[href$='.ape']:after,
+.m-defaultSet li a[href$='.ape']:after,
+.m-defaultSet figure a[href$='.ape']:after,
+.m-defaultSet div a[href$='.tak']:after,
+.m-defaultSet p a[href$='.tak']:after,
+.m-defaultSet li a[href$='.tak']:after,
+.m-defaultSet figure a[href$='.tak']:after,
+.m-defaultSet div a[href$='.tta']:after,
+.m-defaultSet p a[href$='.tta']:after,
+.m-defaultSet li a[href$='.tta']:after,
+.m-defaultSet figure a[href$='.tta']:after,
+.m-defaultSet div a[href$='.aiff']:after,
+.m-defaultSet p a[href$='.aiff']:after,
+.m-defaultSet li a[href$='.aiff']:after,
+.m-defaultSet figure a[href$='.aiff']:after {
+  background-image: url("../images/common/common_icon_music01.svg");
+}
+.m-defaultSet div a[href$='.avi']:before,
+.m-defaultSet p a[href$='.avi']:before,
+.m-defaultSet li a[href$='.avi']:before,
+.m-defaultSet figure a[href$='.avi']:before,
+.m-defaultSet div a[href$='.mov']:before,
+.m-defaultSet p a[href$='.mov']:before,
+.m-defaultSet li a[href$='.mov']:before,
+.m-defaultSet figure a[href$='.mov']:before,
+.m-defaultSet div a[href$='.wmv']:before,
+.m-defaultSet p a[href$='.wmv']:before,
+.m-defaultSet li a[href$='.wmv']:before,
+.m-defaultSet figure a[href$='.wmv']:before,
+.m-defaultSet div a[href$='.flv']:before,
+.m-defaultSet p a[href$='.flv']:before,
+.m-defaultSet li a[href$='.flv']:before,
+.m-defaultSet figure a[href$='.flv']:before,
+.m-defaultSet div a[href$='.mpg']:before,
+.m-defaultSet p a[href$='.mpg']:before,
+.m-defaultSet li a[href$='.mpg']:before,
+.m-defaultSet figure a[href$='.mpg']:before,
+.m-defaultSet div a[href$='.mp4']:before,
+.m-defaultSet p a[href$='.mp4']:before,
+.m-defaultSet li a[href$='.mp4']:before,
+.m-defaultSet figure a[href$='.mp4']:before,
+.m-defaultSet div a[href$='.avi']:after,
+.m-defaultSet p a[href$='.avi']:after,
+.m-defaultSet li a[href$='.avi']:after,
+.m-defaultSet figure a[href$='.avi']:after,
+.m-defaultSet div a[href$='.mov']:after,
+.m-defaultSet p a[href$='.mov']:after,
+.m-defaultSet li a[href$='.mov']:after,
+.m-defaultSet figure a[href$='.mov']:after,
+.m-defaultSet div a[href$='.wmv']:after,
+.m-defaultSet p a[href$='.wmv']:after,
+.m-defaultSet li a[href$='.wmv']:after,
+.m-defaultSet figure a[href$='.wmv']:after,
+.m-defaultSet div a[href$='.flv']:after,
+.m-defaultSet p a[href$='.flv']:after,
+.m-defaultSet li a[href$='.flv']:after,
+.m-defaultSet figure a[href$='.flv']:after,
+.m-defaultSet div a[href$='.mpg']:after,
+.m-defaultSet p a[href$='.mpg']:after,
+.m-defaultSet li a[href$='.mpg']:after,
+.m-defaultSet figure a[href$='.mpg']:after,
+.m-defaultSet div a[href$='.mp4']:after,
+.m-defaultSet p a[href$='.mp4']:after,
+.m-defaultSet li a[href$='.mp4']:after,
+.m-defaultSet figure a[href$='.mp4']:after {
+  background-image: url("../images/common/common_icon_movie01.svg");
+}
+.m-defaultSet div a[href$='.rtf']:before,
+.m-defaultSet p a[href$='.rtf']:before,
+.m-defaultSet li a[href$='.rtf']:before,
+.m-defaultSet figure a[href$='.rtf']:before,
+.m-defaultSet div a[href$='.rtf']:after,
+.m-defaultSet p a[href$='.rtf']:after,
+.m-defaultSet li a[href$='.rtf']:after,
+.m-defaultSet figure a[href$='.rtf']:after {
+  background-image: url("../images/common/common_icon_etc01.svg");
+}
+.m-defaultSet div a span,
+.m-defaultSet p a span,
+.m-defaultSet li a span,
+.m-defaultSet figure a span {
+  vertical-align: middle;
+}
 .m-defaultSet ul.is-decimal,
 .m-defaultSet ol.is-decimal,
 .m-defaultSet ul.is-disc,
@@ -872,17 +2175,6 @@ span.a-borderChange01 a {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-.m-imageSet01 {
-  margin-bottom: 20px;
-}
-.m-imageSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .m-imageSet01 {
-    margin-bottom: 10px;
-  }
-}
 .m-imageSet01 .image {
   display: table;
 }
@@ -905,6 +2197,7 @@ span.a-borderChange01 a {
 }
 .m-imageSet01 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .is-sp {
@@ -1105,17 +2398,6 @@ span.a-borderChange01 a {
 .c-breadcrumbSet01 ol li:before {
   content: ">";
   padding: 0 10px;
-}
-.c-btnSet01 {
-  margin-bottom: 60px;
-}
-.c-btnSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-btnSet01 {
-    margin-bottom: 30px;
-  }
 }
 .c-btnSet01 li>div {
   height: 100%;
@@ -1494,17 +2776,6 @@ header.c-comHeader01 .globalNavArea a {
   text-decoration: none;
   line-height: 1;
 }
-.c-formSet01 {
-  margin-bottom: 60px;
-}
-.c-formSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-formSet01 {
-    margin-bottom: 30px;
-  }
-}
 .c-formSet01 table {
   width: 100%;
 }
@@ -1575,15 +2846,6 @@ header.c-comHeader01 .globalNavArea a {
 }
 .c-imageBgSet01 {
   position: relative;
-  margin-bottom: 60px;
-}
-.c-imageBgSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-imageBgSet01 {
-    margin-bottom: 30px;
-  }
 }
 @media screen and (max-width: 768px) {
   .c-imageBgSet01 {
@@ -1619,27 +2881,30 @@ header.c-comHeader01 .globalNavArea a {
 .c-imageBgSet01 .contentsArea.is-center {
   align-items: center;
 }
-.c-imageSet01 {
-  margin-bottom: 60px;
+.c-imageSet01 .imageArea {
+  margin-bottom: 10px;
 }
-.c-imageSet01 *:last-child {
+.c-imageSet01 .imageArea *:last-child {
   margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
-  .c-imageSet01 {
-    margin-bottom: 30px;
+  .c-imageSet01 .imageArea {
+    margin-bottom: 5px;
   }
-}
-.c-imageText01 {
-  margin-bottom: 60px;
-}
-.c-imageText01 *:last-child {
-  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
-  .c-imageText01 {
-    margin-bottom: 30px;
+  .c-imageSet02 .imageArea .image img {
+    width: 100%;
   }
+}
+.c-imageSet02 .textArea {
+  position: relative;
+  width: calc(100% - 20px);
+  margin: -20px auto 0;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .c-imageText01.is-imageRight {
@@ -1757,7 +3022,7 @@ header.c-comHeader01 .globalNavArea a {
   }
 }
 .m-markupTitle {
-  display: table;
+  display: block;
   margin-bottom: 10px !important;
   padding: 5px;
   color: #fff;
@@ -1765,17 +3030,6 @@ header.c-comHeader01 .globalNavArea a {
   font-size: 10px;
   font-size: 1rem;
   line-height: 1;
-}
-.c-newsSet01 {
-  margin-bottom: 60px;
-}
-.c-newsSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-newsSet01 {
-    margin-bottom: 30px;
-  }
 }
 .c-newsSet01 dl {
   display: flex;
@@ -2035,6 +3289,9 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[target^='_blank']:after {
   background-image: url("../images/common/common_icon_outer01.svg");
 }
+.c-newsSet01 a[href$='.pdf'] {
+  content: #333;
+}
 .c-newsSet01 a[href$='.pdf']:before,
 .c-newsSet01 a[href$='.pdf']:after {
   background-image: url("../images/common/common_icon_pdf01.svg");
@@ -2170,17 +3427,6 @@ header.c-comHeader01 .globalNavArea a {
   font-size: 11px;
   font-size: 1.1rem;
   text-align: center;
-}
-.c-newsSet02 {
-  margin-bottom: 60px;
-}
-.c-newsSet02 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-newsSet02 {
-    margin-bottom: 30px;
-  }
 }
 .c-newsSet02 li {
   display: flex;
@@ -2329,6 +3575,9 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[target^='_blank'] .text:after {
   background-image: url("../images/common/common_icon_outer01.svg");
 }
+.c-newsSet02 a[href$='.pdf'] .text {
+  content: #333;
+}
 .c-newsSet02 a[href$='.pdf'] .text:before,
 .c-newsSet02 a[href$='.pdf'] .text:after {
   background-image: url("../images/common/common_icon_pdf01.svg");
@@ -2427,6 +3676,22 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.rtf'] .text:after {
   background-image: url("../images/common/common_icon_etc01.svg");
 }
+.c-newsSet02 a .text:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(0, -50%, 0);
+  background-image: url("../images/common/common_icon_arrow01.svg");
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
+}
 .c-newsSet02 a .text span {
   vertical-align: middle;
 }
@@ -2468,17 +3733,6 @@ header.c-comHeader01 .globalNavArea a {
   background-repeat: no-repeat;
   background-size: cover;
   transform: translate3d(0, -50%, 0);
-}
-.c-pagerSet01 {
-  margin-bottom: 60px;
-}
-.c-pagerSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-pagerSet01 {
-    margin-bottom: 30px;
-  }
 }
 .c-pagerSet01 ul {
   display: flex;
@@ -2572,17 +3826,6 @@ header.c-comHeader01 .globalNavArea a {
   padding: 15px;
   box-sizing: border-box;
 }
-.c-tableSet01 {
-  margin-bottom: 60px;
-}
-.c-tableSet01 *:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .c-tableSet01 {
-    margin-bottom: 30px;
-  }
-}
 .c-tableSet01 table {
   width: 100%;
 }
@@ -2659,6 +3902,631 @@ header.c-comHeader01 .globalNavArea a {
   .l-mqWrapper {
     padding: 0 15px;
   }
+}
+.a-bgColorChange01 {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+.a-bgColorChange01 *:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .a-bgColorChange01 {
+    margin-bottom: 10px;
+  }
+}
+.a-bgColorChange01.is-fade01:hover a,
+.a-bgColorChange01.is-fade01.is-inview a {
+  color: #fff;
+  border-color: #333;
+  background-color: #333;
+}
+.a-bgColorChange01.is-slideBottom01 {
+  overflow: hidden;
+}
+.a-bgColorChange01.is-slideBottom01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translate3d(0, -100%, 0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideBottom01:hover:after,
+.a-bgColorChange01.is-slideBottom01.is-inview:after {
+  transform: translate3d(0, 0, 0);
+}
+.a-bgColorChange01.is-slideBottom01:hover a,
+.a-bgColorChange01.is-slideBottom01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01.is-slideCenterIn01:before,
+.a-bgColorChange01.is-slideCenterIn01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideCenterIn01:before {
+  left: 0;
+  transform-origin: left top;
+}
+.a-bgColorChange01.is-slideCenterIn01:after {
+  right: 0;
+  transform-origin: right top;
+}
+.a-bgColorChange01.is-slideCenterIn01:hover:before,
+.a-bgColorChange01.is-slideCenterIn01.is-inview:before,
+.a-bgColorChange01.is-slideCenterIn01:hover:after,
+.a-bgColorChange01.is-slideCenterIn01.is-inview:after {
+  transform: scaleX(1);
+}
+.a-bgColorChange01.is-slideCenterIn01:hover a,
+.a-bgColorChange01.is-slideCenterIn01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01.is-slideCenterOut01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideCenterOut01:hover:after,
+.a-bgColorChange01.is-slideCenterOut01.is-inview:after {
+  transform: scaleX(1);
+}
+.a-bgColorChange01.is-slideCenterOut01:hover a,
+.a-bgColorChange01.is-slideCenterOut01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01.is-slideLeft01 {
+  overflow: hidden;
+}
+.a-bgColorChange01.is-slideLeft01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translate3d(100%, 0, 0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideLeft01:hover:after,
+.a-bgColorChange01.is-slideLeft01.is-inview:after {
+  transform: translate3d(0, 0, 0);
+}
+.a-bgColorChange01.is-slideLeft01:hover a,
+.a-bgColorChange01.is-slideLeft01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01.is-slideRight01 {
+  overflow: hidden;
+}
+.a-bgColorChange01.is-slideRight01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translate3d(-100%, 0, 0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideRight01:hover:after,
+.a-bgColorChange01.is-slideRight01.is-inview:after {
+  transform: translate3d(0, 0, 0);
+}
+.a-bgColorChange01.is-slideRight01:hover a,
+.a-bgColorChange01.is-slideRight01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01.is-slideTop01 {
+  overflow: hidden;
+}
+.a-bgColorChange01.is-slideTop01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: translate3d(0, 100%, 0);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.a-bgColorChange01.is-slideTop01:hover:after,
+.a-bgColorChange01.is-slideTop01.is-inview:after {
+  transform: translate3d(0, 0, 0);
+}
+.a-bgColorChange01.is-slideTop01:hover a,
+.a-bgColorChange01.is-slideTop01.is-inview a {
+  color: #fff;
+}
+.a-bgColorChange01 a {
+  transition: 0.3s all ease;
+}
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
+  content: "";
+}
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper.icon-before:before,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper.icon-before:before {
+  content: "";
+}
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper.icon-before:after,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper.icon-before:after {
+  content: none;
+}
+.a-bgColorChange01 a:hover[href*="#"] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href*="#"] .btnWrapper:after {
+  transform: translate3d(0, -50%, 0) rotate(90deg);
+}
+.a-bgColorChange01 a:hover[href*="#"] .btnWrapper[href*=".html"]:before,
+.a-bgColorChange01 a:hover[href*="#"] .btnWrapper[href*=".html"]:after {
+  transform: translate3d(0, -50%, 0) rotate(0);
+}
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_outer01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper {
+  content: #fff;
+}
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_pdf01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_doc01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_excel01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_ppt01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.mp3'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.wma'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.wave'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.wav'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.aac'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.flac'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.aif'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.omg'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.oma'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.aa3'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.ogg'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.oga'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.asf'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.m4a'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.mov'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.alac'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.ape'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.tak'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.tta'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.aiff'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.mp3'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.wma'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.wave'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.wav'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.aac'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.flac'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.aif'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.omg'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.oma'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.aa3'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.ogg'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.oga'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.asf'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.m4a'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.mov'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.alac'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.ape'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.tak'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.tta'] .btnWrapper:after,
+.a-bgColorChange01 a:hover[href$='.aiff'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_music01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.avi']:before,
+.a-bgColorChange01 a:hover[href$='.mov']:before,
+.a-bgColorChange01 a:hover[href$='.wmv']:before,
+.a-bgColorChange01 a:hover[href$='.flv']:before,
+.a-bgColorChange01 a:hover[href$='.mpg']:before,
+.a-bgColorChange01 a:hover[href$='.mp4']:before,
+.a-bgColorChange01 a:hover[href$='.avi']:after,
+.a-bgColorChange01 a:hover[href$='.mov']:after,
+.a-bgColorChange01 a:hover[href$='.wmv']:after,
+.a-bgColorChange01 a:hover[href$='.flv']:after,
+.a-bgColorChange01 a:hover[href$='.mpg']:after,
+.a-bgColorChange01 a:hover[href$='.mp4']:after {
+  background-image: url("../images/common/common_icon_movie01.svg");
+}
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:before,
+.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after {
+  background-image: url("../images/common/common_icon_etc01.svg");
+}
+.a-bgColorChange01 a:hover .btnWrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(0, -50%, 0);
+  background-image: url("../images/common/common_icon_arrow01.svg");
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
+}
+.a-bgColorChange01 a:hover .btnWrapper span {
+  vertical-align: middle;
+}
+.a-borderChange01 {
+  position: relative;
+  display: block;
+  transition: 0.3s all ease;
+  margin-bottom: 20px;
+}
+.a-borderChange01 *:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .a-borderChange01 {
+    margin-bottom: 10px;
+  }
+}
+.a-borderChange01.is-boderBold01 {
+  border: none;
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderBold01:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  transition: 0.3s all ease;
+}
+.a-borderChange01.is-boderBold01:hover:before,
+.a-borderChange01.is-boderBold01.is-inview:before {
+  border-width: 5px;
+}
+.a-borderChange01.is-boderBold02 {
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderBold02:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #333;
+  box-sizing: border-box;
+  transition: 0.3s all ease;
+}
+.a-borderChange01.is-boderBold02:hover:before,
+.a-borderChange01.is-boderBold02.is-inview:before {
+  border-width: 1px;
+}
+.a-borderChange01.is-boderBottomCenter01:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderBottomCenter01:hover:before,
+.a-borderChange01.is-boderBottomCenter01.is-inview:before {
+  transform: scaleX(1);
+}
+.a-borderChange01.is-boderBottomLeft01:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderBottomLeft01:hover:before,
+.a-borderChange01.is-boderBottomLeft01.is-inview:before {
+  transform: scaleX(1);
+}
+.a-borderChange01.is-boderBottomRight01:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderBottomRight01:hover:before,
+.a-borderChange01.is-boderBottomRight01.is-inview:before {
+  transform: scaleX(1);
+}
+.a-borderChange01.is-boderDraw01:before,
+.a-borderChange01.is-boderDraw01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+.a-borderChange01.is-boderDraw01:before {
+  top: 0;
+  left: 0;
+}
+.a-borderChange01.is-boderDraw01:after {
+  bottom: 0;
+  right: 0;
+}
+.a-borderChange01.is-boderDraw01:hover:before,
+.a-borderChange01.is-boderDraw01.is-inview:before,
+.a-borderChange01.is-boderDraw01:hover:after,
+.a-borderChange01.is-boderDraw01.is-inview:after {
+  width: 100%;
+  height: 100%;
+}
+.a-borderChange01.is-boderDraw01:hover:before,
+.a-borderChange01.is-boderDraw01.is-inview:before {
+  border-top-color: #333;
+  border-right-color: #333;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.a-borderChange01.is-boderDraw01:hover:after,
+.a-borderChange01.is-boderDraw01.is-inview:after {
+  border-bottom-color: #333;
+  border-left-color: #333;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+.a-borderChange01.is-boderDraw02:before,
+.a-borderChange01.is-boderDraw02:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+.a-borderChange01.is-boderDraw02:before {
+  top: 0;
+  left: 0;
+}
+.a-borderChange01.is-boderDraw02:after {
+  top: 0;
+  left: 0;
+}
+.a-borderChange01.is-boderDraw02:hover:before,
+.a-borderChange01.is-boderDraw02.is-inview:before,
+.a-borderChange01.is-boderDraw02:hover:after,
+.a-borderChange01.is-boderDraw02.is-inview:after {
+  width: 100%;
+  height: 100%;
+}
+.a-borderChange01.is-boderDraw02:hover:before,
+.a-borderChange01.is-boderDraw02.is-inview:before {
+  border-top-color: #333;
+  border-right-color: #333;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.a-borderChange01.is-boderDraw02:hover:after,
+.a-borderChange01.is-boderDraw02.is-inview:after {
+  border-bottom-color: #333;
+  border-left-color: #333;
+  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+}
+.a-borderChange01.is-boderDraw03:before,
+.a-borderChange01.is-boderDraw03:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: 0.5s all ease;
+}
+.a-borderChange01.is-boderDraw03:before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  transform: scale(0, 1);
+}
+.a-borderChange01.is-boderDraw03:after {
+  top: 0;
+  left: 0;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: scale(1, 0);
+}
+.a-borderChange01.is-boderDraw03:hover:before,
+.a-borderChange01.is-boderDraw03.is-inview:before,
+.a-borderChange01.is-boderDraw03:hover:after,
+.a-borderChange01.is-boderDraw03.is-inview:after {
+  width: 100%;
+  height: 100%;
+  transform: scale(1, 1);
+}
+.a-fadeIn01 {
+  opacity: 0;
+  transition: opacity, 0.5s ease 0.5s;
+}
+.a-fadeIn01.is-inview {
+  opacity: 1;
+}
+.a-shadowAppear01 {
+  display: block;
+  transition: 0.3s all ease;
+}
+.a-shadowAppear01:hover,
+.a-shadowAppear01.is-inview {
+  box-shadow: 0px 0px 10px #aaa;
 }
 main.is-home .p-home-mainvisual {
   display: block;

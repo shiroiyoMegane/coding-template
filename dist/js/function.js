@@ -8177,7 +8177,6 @@ module.exports = function (op) {
 					arrayLength++;
 				}
 				_t.offTop = event.getBoundingClientRect().top + window.pageYOffset;
-				console.log(elm);
 			});
 			for (var i = 0; i <= arrayLength; i++) {
 				ar.push([]);

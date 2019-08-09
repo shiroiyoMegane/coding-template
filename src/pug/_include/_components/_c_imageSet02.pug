@@ -1,0 +1,64 @@
++l-columnBox
+	+l-contentsWidth
+		+l-mqWrapper
+			h2.m-markupTitle
+				span コンポーネント - 画像コンポーネント02
+			
+			+l-markupBlock
+				.c-imageSet02
+					ul.c-colSet01.is-three
+						li.col
+							.imageArea
+								.m-imageSet01
+									p.image
+										img(src="https://placehold.jp/375x232.png", alt="")
+							.textArea
+								.m-defaultSet
+									p!= DUMMY_TEXT_50
+						li.col
+							.imageArea
+								.m-imageSet01
+									p.image
+										img(src="https://placehold.jp/375x232.png", alt="")
+							.textArea
+								.m-defaultSet
+									p!= DUMMY_TEXT_50
+						li.col
+							.imageArea
+								.m-imageSet01
+									p.image
+										img(src="https://placehold.jp/375x232.png", alt="")
+							.textArea
+								.m-defaultSet
+									p!= DUMMY_TEXT_50
+						li.col
+							.imageArea
+								.m-imageSet01
+									p.image
+										img(src="https://placehold.jp/375x232.png", alt="")
+							.textArea
+								.m-defaultSet
+									p!= DUMMY_TEXT_50
+						li.col
+							.imageArea
+								.m-imageSet01
+									p.image
+										img(src="https://placehold.jp/375x232.png", alt="")
+							.textArea
+								.m-defaultSet
+									p!= DUMMY_TEXT_50
+
+			+l-markupBlock
+				+p-markupBtn('pug').
+					.c-imageComponent
+						ul.box (.is-two / .is-three / .is-four)
+							li.item
+								.imageArea
+									.m-imageSet01
+										p.image
+											img(src="画像", alt="")
+								.textArea
+									テキスト
+
+				+p-markupBtn('stylus')
+					include ../../../stylus/_include/_components/_c_imageSet02.styl

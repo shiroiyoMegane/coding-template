@@ -326,7 +326,6 @@
                       <pre><code>//- コンポーネント - 画像+テキストコンポーネント01
 .c-imageText01
 	PADDING = 20px
-	marginBottom(60)
 
 	&.is-imageRight
 		+MQ_PC(SP_RES_WID)
@@ -407,7 +406,6 @@
                       <pre><code>//- コンポーネント - 画像背景コンポーネント01
 .c-imageBgSet01
 	position relative
-	marginBottom(60)
 
 	+MQ_SP(SP_RES_WID)
 		display block
@@ -453,40 +451,60 @@
                   <div class="c-imageSet01">
                     <ul class="c-colSet01 is-three">
                       <li class="col">
-                        <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
                           <div class="m-defaultSet">
                             <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
                           </div>
                         </div>
                       </li>
                       <li class="col">
-                        <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
                           <div class="m-defaultSet">
                             <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
                           </div>
                         </div>
                       </li>
                       <li class="col">
-                        <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
                           <div class="m-defaultSet">
                             <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
                           </div>
                         </div>
                       </li>
                       <li class="col">
-                        <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
                           <div class="m-defaultSet">
                             <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
                           </div>
                         </div>
                       </li>
                       <li class="col">
-                        <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
                           <div class="m-defaultSet">
                             <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
                           </div>
@@ -504,11 +522,12 @@
                           .c-imageComponent
                           	ul.box (.is-two / .is-three / .is-four)
                           		li.item
-                          			.m-imageSet01
-                          				p.image
-                          					img(src="画像", alt="")
-                          				.m-defaultSet
-                          					p!= テキスト
+                          			.imageArea
+                          				.m-imageSet01
+                          					p.image
+                          						img(src="画像", alt="")
+                          			.textArea
+                          				テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -518,9 +537,121 @@
                     <div class="source js-accordion-child">
                       <pre><code>//- コンポーネント - 画像コンポーネント01
 .c-imageSet01
-	SP_MARGIN = 10px
-	PC_MARGIN = 10px
-	marginBottom(60)</code></pre>
+	.imageArea
+		marginBottom(10)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>コンポーネント - 画像コンポーネント02</span></h2>
+                <div class="l-markupBlock">
+                  <div class="c-imageSet02">
+                    <ul class="c-colSet01 is-three">
+                      <li class="col">
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
+                          <div class="m-defaultSet">
+                            <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col">
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
+                          <div class="m-defaultSet">
+                            <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col">
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
+                          <div class="m-defaultSet">
+                            <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col">
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
+                          <div class="m-defaultSet">
+                            <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="col">
+                        <div class="imageArea">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                          </div>
+                        </div>
+                        <div class="textArea">
+                          <div class="m-defaultSet">
+                            <p>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .c-imageComponent
+                          	ul.box (.is-two / .is-three / .is-four)
+                          		li.item
+                          			.imageArea
+                          				.m-imageSet01
+                          					p.image
+                          						img(src="画像", alt="")
+                          			.textArea
+                          				テキスト
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- コンポーネント - 画像コンポーネント01
+.c-imageSet02
+	.imageArea
+		+MQ_SP(SP_RES_WID)
+			.image
+				img
+					width 100%
+	.textArea
+		position relative
+		width calc(100% - 20px)
+		margin -20px auto 0
+		padding 20px
+		background-color SITE_BG01
+		box-sizing border-box
+		z-index 1</code></pre>
                     </div>
                   </div>
                 </div>
@@ -576,10 +707,6 @@
                     <div class="source js-accordion-child">
                       <pre><code>//- コンポーネント - ボタンコンポーネント01
 .c-btnSet01
-	SP_MARGIN = 10px
-	PC_MARGIN = 10px
-	marginBottom(60)
-
 	li
 		&>div
 			height 100%
@@ -641,7 +768,6 @@
                     <div class="source js-accordion-child">
                       <pre><code>//- コンポーネント - テーブルセット01
 .c-tableSet01
-	marginBottom(60)
 	table
 		width 100%
 	
@@ -712,7 +838,6 @@
                     <div class="source js-accordion-child">
                       <pre><code>//- コンポーネント - ページャーセット01
 .c-pagerSet01
-	marginBottom(60)
 
 	ul
 		flexBox()
@@ -1200,7 +1325,6 @@ footer.c-comFooter01
                     <div class="source js-accordion-child">
                       <pre><code>//- 複合コンポーネント - ニュースコンポーネント01
 .c-newsSet01
-	marginBottom(60)
 	dl
 		flexBox()
 		
@@ -1216,7 +1340,7 @@ footer.c-comFooter01
 			border-top none
 
 	a
-		iconSet()
+		iconSet(SITE_COLOR01)
 
 	.titleBlock
 		width 170px
@@ -1310,7 +1434,6 @@ footer.c-comFooter01
                     <div class="source js-accordion-child">
                       <pre><code>//- 複合コンポーネント - ニュースコンポーネント02
 .c-newsSet02
-	marginBottom(60)
 	li
 		flexBox()
 		
@@ -1339,7 +1462,7 @@ footer.c-comFooter01
 		color inherit
 		text-decoration none
 		
-		iconTagSet('.text')
+		iconTagSet('.text', SITE_COLOR01)
 
 		+HOVER(SP_RES_WID)
 			.text
@@ -1565,7 +1688,6 @@ footer.c-comFooter01
                     <div class="source js-accordion-child">
                       <pre><code>//- 複合コンポーネント - フォームセット01
 .c-formSet01
-	marginBottom(60)
 	table
 		width 100%
 	
@@ -1821,7 +1943,7 @@ footer.c-comFooter01
 			fontSize(10);
 			vertical-align: sub;
 		a
-			iconSet()
+			iconSet(SITE_COLOR01)
 
 	ul, ol
 		&.is-decimal, &.is-disc
@@ -1887,10 +2009,13 @@ footer.c-comFooter01
                     </p>
                     <div class="source js-accordion-child">
                       <pre><code>//- モジュール - アイコンセット
+iconWidth = 16px
+iconHeight = 16px
+
 iconOption()
 	&:before, &:after
 		display inline-block
-		width 16px
+		width iconWidth
 		height 16px
 		margin 0 4px
 		background-repeat no-repeat
@@ -1912,39 +2037,87 @@ outerHashIcon()
 		&:before, &:after
 			transform translate3d(0, -50%, 0) rotate(0)
 
-outerIcon()
+outerIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_outer01.svg')
-
-pdfIcon()
+		background-image: svgImport('../images/common/common_icon_outer01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
+		
+pdfIcon(iconColor)
+	content iconColor
 	&:before, &:after
-		background-image url('../images/common/common_icon_pdf01.svg')
+		background-image: svgImport('../images/common/common_icon_pdf01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
+		
 
-pptIcon()
+pptIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_ppt01.svg')
+		background-image: svgImport('../images/common/common_icon_ppt01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-docIcon()
+docIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_doc01.svg')
+		background-image: svgImport('../images/common/common_icon_doc01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-excelIcon()
+excelIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_excel01.svg')
+		background-image: svgImport('../images/common/common_icon_excel01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-musicIcon()
+musicIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_music01.svg')
+		background-image: svgImport('../images/common/common_icon_music01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-movieIcon()
+movieIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_movie01.svg')
+		background-image: svgImport('../images/common/common_icon_movie01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-etcIcon()
+etcIcon(iconColor)
 	&:before, &:after
-		background-image url('../images/common/common_icon_etc01.svg')
+		background-image: svgImport('../images/common/common_icon_etc01.svg', '
+			rect
+				fill: '+ iconColor +'
+			polygon
+				fill: '+ iconColor +'
+		',false)
 
-iconSet()
+defaultIcon(iconColor)
+	background-image: svgImport('../images/common/common_icon_arrow01.svg')
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E")
+	
+
+iconSet(iconColor)
 	&[target^='_blank'], &[href$='.pdf'],
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
 	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
@@ -1955,30 +2128,29 @@ iconSet()
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
 		iconOption()
 	&[href*="#"]
-		outerHashIcon()
+		outerHashIcon(iconColor)
 	&[target^='_blank']
-		outerIcon()
+		outerIcon(iconColor)
 	&[href$='.pdf']
-		pdfIcon()
+		pdfIcon(iconColor)
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
-		docIcon()
+		docIcon(iconColor)
 	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
-		excelIcon()
+		excelIcon(iconColor)
 	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-		pptIcon()
+		pptIcon(iconColor)
 	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
 	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
 	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
-		musicIcon()
+		musicIcon(iconColor)
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		movieIcon()
+		movieIcon(iconColor)
 	&[href$='.rtf']
-		etcIcon()
-
+		etcIcon(iconColor)
 	span
 		vertical-align middle
 
-iconTagSet(tag)
+iconTagSet(tag,iconColor)
 	&[target^='_blank'], &[href$='.pdf'],
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
 	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
@@ -1987,34 +2159,48 @@ iconTagSet(tag)
 			iconOption()
 	&[href*="#"]
 		{tag}
-			outerHashIcon()
+			outerHashIcon(iconColor)
 	&[target^='_blank']
 		{tag}
-			outerIcon()
+			outerIcon(iconColor)
 	&[href$='.pdf']
 		{tag}
-			pdfIcon()
+			pdfIcon(iconColor)
+			
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
 		{tag}
-			docIcon()
+			docIcon(iconColor)
 	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
 		{tag}
-			excelIcon()
+			excelIcon(iconColor)
 	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
 		{tag}
-			pptIcon()
+			pptIcon(iconColor)
 	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
 	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
 	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
 		{tag}
-			musicIcon()
+			musicIcon(iconColor)
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		movieIcon()
+		movieIcon(iconColor)
 	&[href$='.rtf']
 		{tag}
-			etcIcon()
-	
+			etcIcon(iconColor)
 	{tag}
+		&:after
+			content ""
+			display block
+			position absolute
+			top 50%
+			right 10px
+			width iconWidth
+			height iconHeight
+			margin 0 !important
+			background-repeat no-repeat
+			background-size cover
+			transform translate3d(0, -50%, 0)
+
+			defaultIcon(iconColor)
 		span
 			vertical-align middle</code></pre>
                     </div>
@@ -2396,7 +2582,7 @@ iconTagSet(tag)
 	
 	a
 		display block
-		iconTagSet('.btnWrapper')
+		iconTagSet('.btnWrapper',SITE_COLOR01)
 		color inherit
 		border 1px solid #ccc
 		text-decoration none
@@ -2407,24 +2593,7 @@ iconTagSet(tag)
 		padding 20px 40px 20px 20px
 		box-sizing border-box
 		
-		
-		&:after
-			content ""
-			display block
-			position absolute
-			top 50%
-			right 10px
-
-			width 16px
-			height 16px
-			margin 0 !important
-
-			background-image url('../images/common/common_icon_arrow01.svg')
-			background-repeat no-repeat
-			background-size cover
-
-			transform translate3d(0, -50%, 0)
-</code></pre>
+		</code></pre>
                     </div>
                   </div>
                 </div>
@@ -2459,10 +2628,9 @@ iconTagSet(tag)
 //- モジュール - ボタンモジュール02
 .m-btnSet02
 	marginBottom(30)
-	
 	a
 		display block
-		iconTagSet('.btnWrapper')
+		iconTagSet('.btnWrapper', SITE_BG01)
 		color SITE_BG01
 		background-color SITE_COLOR01
 		border 1px solid SITE_COLOR01
@@ -2721,12 +2889,14 @@ iconTagSet(tag)
                 <h2 class="m-markupTitle"><span>モジュール - 画像モジュール01</span></h2>
                 <div class="l-markupBlock">
                   <div class="m-imageSet01">
-                    <figure class="image"><img src="https://placehold.jp/150x150.png" alt="">
+                    <figure class="image"><img src="https://placehold.jp/400x150.png" alt="">
                       <figcaption>テキストが入ります</figcaption>
                     </figure>
                   </div>
+                </div>
+                <div class="l-markupBlock">
                   <div class="m-imageSet01">
-                    <p class="image"><img src="https://placehold.jp/150x150.png" alt=""></p>
+                    <p class="image"><img src="https://placehold.jp/400x150.png" alt=""></p>
                   </div>
                 </div>
                 <div class="l-markupBlock">
@@ -2748,7 +2918,6 @@ iconTagSet(tag)
                     <div class="source js-accordion-child">
                       <pre><code>//- モジュール - 画像モジュール01
 .m-imageSet01
-	marginBottom(20)
 	.image
 		display table
 		+MQ_SP(SP_RES_WID)
@@ -2766,6 +2935,7 @@ iconTagSet(tag)
 			width 100%
 	img
 		max-width 100%
+		width 100%
 		height auto
 </code></pre>
                     </div>
@@ -2795,12 +2965,14 @@ iconTagSet(tag)
 	@import "_a_bgColorChange01/*"
 
 	a
-		transition 0.3s all ease</code></pre>
+		transition 0.3s all ease
+		&:hover
+			iconTagSet('.btnWrapper', SITE_BG01)</code></pre>
                     </div>
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-fade01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 フェード</span></span></a></p>
+                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - フェード</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -2827,7 +2999,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideRight01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドライト</span></span></a></p>
+                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドライト</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -2869,7 +3041,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideLeft01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドレフト</span></span></a></p>
+                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドレフト</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -2911,7 +3083,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideBottom01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドボトム</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドボトム</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -2953,7 +3125,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideTop01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドトップ</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドトップ</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -2995,7 +3167,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideCenterOut01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドセンターアウト</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターアウト</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3035,7 +3207,7 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideCenterIn01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 スライドセンターイン</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターイン</span></span></a></p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3089,14 +3261,8 @@ iconTagSet(tag)
               <div class="l-mqWrapper">
                 <h2 class="m-markupTitle"><span>アニメーション - ボックスシャドウ01</span></h2>
                 <div class="l-markupBlock">
-                  <div class="c-btnSet01">
-                    <ul class="c-colSet01 is-three">
-                      <li class="col">
-                        <div class="a-shadowAppear01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">シャドウ01</span></span></a></div>
-                        </div>
-                      </li>
-                    </ul>
+                  <div class="a-shadowAppear01">
+                    <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスシャドウ01 - シャドウ01</span></span></a></div>
                   </div>
                 </div>
                 <div class="l-markupBlock">
@@ -3132,52 +3298,6 @@ iconTagSet(tag)
               <div class="l-mqWrapper">
                 <h2 class="m-markupTitle"><span>アニメーション - ボックスボーダー01</span></h2>
                 <div class="l-markupBlock">
-                  <div class="c-btnSet01">
-                    <ul class="c-colSet01 is-three">
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderBottomLeft01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム01</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderBottomCenter01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderBottomRight01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボトム02</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderBold01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド01</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderBold02">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド02</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderDraw01">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー01</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderDraw02">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー02</span></span></a></div>
-                        </div>
-                      </li>
-                      <li class="col">
-                        <div class="a-borderChange01 is-boderDraw03">
-                          <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダードロー03</span></span></a></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
                   <div class="js-accordion">
                     <p class="p-markupBtn js-accordion-parent pug">pug
                     </p>
@@ -3193,198 +3313,363 @@ iconTagSet(tag)
                     </p>
                     <div class="source js-accordion-child">
                       <pre><code>//- アニメーション - ボックスボーダー01
-span.a-borderChange01
-	display inline-block
-	a
-		text-decoration none
-
 .a-borderChange01
-	BORDER_COLOR = #000
-
 	position relative
 	
 	display block
 	transition 0.3s all ease
-	
-	&.is-boderBottomLeft01
-		&:before
-			content ""
-			display block
-			position absolute
-			left 0
-			bottom 0
-			width 100%
-			height 3px
-			background-color BORDER_COLOR
-			transform-origin left
-			transform scaleX(0)
-			transition 0.5s all ease
-			
-		&:hover, &.is-inview
-			&:before
-				transform scaleX(1.0)
-	
-	&.is-boderBottomCenter01
-		&:before
-			content ""
-			display block
-			position absolute
-			left 0
-			bottom 0
-			width 100%
-			height 3px
-			background-color BORDER_COLOR
-			transform scaleX(0)
-			transition 0.5s all ease
-		&:hover, &.is-inview
-			&:before
-				transform scaleX(1.0)
-	
-	&.is-boderBottomRight01
-		&:before
-			content ""
-			display block
-			position absolute
-			left 0
-			bottom 0
-			width 100%
-			height 3px
-			background-color BORDER_COLOR
-			transform-origin right
-			transform scaleX(0)
-			transition 0.5s all ease
-			
-		&:hover, &.is-inview
-			&:before
-				transform scaleX(1.0)
+	marginBottom(20)
 
-	&.is-boderBold01
-		border none
+	@import "_a_borderChange01/*"
+	</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderBottomLeft01">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドレフト01</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderBottomLeft01
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ボトム - スライドレフト01
+&.is-boderBottomLeft01
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 3px
+		background-color SITE_COLOR01
+		transform-origin right
+		transform scaleX(0)
 		transition 0.5s all ease
+		
+	&:hover, &.is-inview
 		&:before
-			content ""
-			display block
-			position absolute
-			left 0
-			bottom 0
-			width 100%
-			height 100%
-			border 1px solid BORDER_COLOR
-			box-sizing border-box
-			transition 0.3s all ease
-
-		&:hover, &.is-inview
-			&:before
-				border-width 5px
-
-	&.is-boderBold02
+			transform scaleX(1.0)</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderBottomRight01">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドライト01</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderBottomRight01
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ボトム - スライドライト01
+&.is-boderBottomRight01
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 3px
+		background-color SITE_COLOR01
+		transform-origin left
+		transform scaleX(0)
 		transition 0.5s all ease
+		
+	&:hover, &.is-inview
 		&:before
-			content ""
-			display block
-			position absolute
-			left 0
-			bottom 0
-			width 100%
-			height 100%
-			border 5px solid BORDER_COLOR
-			box-sizing border-box
-			transition 0.3s all ease
-			
-		&:hover, &.is-inview
-			&:before
-				border-width 1px
+			transform scaleX(1.0)</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderBottomCenter01">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドセンター01</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderBottomCenter01
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ボトム - スライドセンター01
+&.is-boderBottomCenter01
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 3px
+		background-color SITE_COLOR01
+		transform scaleX(0)
+		transition 0.5s all ease
+	&:hover, &.is-inview
+		&:before
+			transform scaleX(1.0)</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderBold01">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド01</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderBold01
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ボールド01
+&.is-boderBold01
+	border none
+	transition 0.5s all ease
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 100%
+		border 1px solid SITE_COLOR01
+		box-sizing border-box
+		transition 0.3s all ease
+
+	&:hover, &.is-inview
+		&:before
+			border-width 5px</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderBold02">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド02</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderBold02
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ボールド02
+&.is-boderBold02
+	transition 0.5s all ease
+	&:before
+		content ""
+		display block
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 100%
+		border 5px solid SITE_COLOR01
+		box-sizing border-box
+		transition 0.3s all ease
+		
+	&:hover, &.is-inview
+		&:before
+			border-width 1px</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderDraw01">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー01</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderDraw01
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ドロー01
+&.is-boderDraw01
+	&:before, &:after
+		content ""
+		display block
+		position absolute
+		width 0
+		height 0
+		box-sizing border-box
+		border 1px solid transparent
+
+	&:before
+		top 0
+		left 0
+	&:after
+		bottom 0
+		right  0
 	
-	&.is-boderDraw01
+	&:hover, &.is-inview
 		&:before, &:after
-			content ""
-			display block
-			position absolute
-			width 0
-			height 0
-			box-sizing border-box
-			border 1px solid transparent
-
-		&:before
-			top 0
-			left 0
-		&:after
-			bottom 0
-			right  0
-		
-		&:hover, &.is-inview
-			&:before, &:after
-				width 100%
-				height 100%
-			&:before
-				border-top-color BORDER_COLOR
-				border-right-color BORDER_COLOR
-				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-			&:after
-				border-bottom-color BORDER_COLOR
-				border-left-color BORDER_COLOR
-				transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
-
-	&.is-boderDraw02
-		&:before, &:after
-			content ""
-			display block
-			position absolute
-			width 0
-			height 0
-			box-sizing border-box
-			border 1px solid transparent
-
-		&:before
-			top 0
-			left 0
-		&:after
-			top 0
-			left  0
-		
-		&:hover, &.is-inview
-			&:before, &:after
-				width 100%
-				height 100%
-			&:before
-				border-top-color BORDER_COLOR
-				border-right-color BORDER_COLOR
-				transition width 0.25s ease-out, height 0.25s ease-out 0.25s
-			&:after
-				border-bottom-color BORDER_COLOR
-				border-left-color BORDER_COLOR
-				transition height 0.25s ease-out, width 0.25s ease-out 0.25s
-
-	&.is-boderDraw03
-		&:before, &:after
-			content ""
-			display block
-			position absolute
 			width 100%
 			height 100%
-			box-sizing border-box
-			transition 0.5s all ease
-
 		&:before
-			top 0
-			left 0
-			border-top 1px solid BORDER_COLOR
-			border-bottom 1px solid BORDER_COLOR
-			transform scale(0,1)
-			
+			border-top-color SITE_COLOR01
+			border-right-color SITE_COLOR01
+			transition width 0.25s ease-out, height 0.25s ease-out 0.25s
 		&:after
-			top 0
-			left  0
-			border-left 1px solid BORDER_COLOR
-			border-right 1px solid BORDER_COLOR
-			transform scale(1,0)
-		
-		&:hover, &.is-inview
-			&:before, &:after
-				width 100%
-				height 100%
-				transform scale(1,1)
+			border-bottom-color SITE_COLOR01
+			border-left-color SITE_COLOR01
+			transition border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s
 </code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderDraw02">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー02</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderDraw02
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ドロー02
+&.is-boderDraw02
+	&:before, &:after
+		content ""
+		display block
+		position absolute
+		width 0
+		height 0
+		box-sizing border-box
+		border 1px solid transparent
+
+	&:before
+		top 0
+		left 0
+	&:after
+		top 0
+		left  0
+	
+	&:hover, &.is-inview
+		&:before, &:after
+			width 100%
+			height 100%
+		&:before
+			border-top-color SITE_COLOR01
+			border-right-color SITE_COLOR01
+			transition width 0.25s ease-out, height 0.25s ease-out 0.25s
+		&:after
+			border-bottom-color SITE_COLOR01
+			border-left-color SITE_COLOR01
+			transition height 0.25s ease-out, width 0.25s ease-out 0.25s</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-borderChange01 is-boderDraw03">
+                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー03</span></span></a></div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .a-borderChange01.is-boderDraw03
+                          	a(href="#")
+                          		テキスト</code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- ボックスボーダー01 - ドロー03
+&.is-boderDraw03
+	&:before, &:after
+		content ""
+		display block
+		position absolute
+		width 100%
+		height 100%
+		box-sizing border-box
+		transition 0.5s all ease
+
+	&:before
+		top 0
+		left 0
+		border-top 1px solid SITE_COLOR01
+		border-bottom 1px solid SITE_COLOR01
+		transform scale(0,1)
+		
+	&:after
+		top 0
+		left  0
+		border-left 1px solid SITE_COLOR01
+		border-right 1px solid SITE_COLOR01
+		transform scale(1,0)
+	
+	&:hover, &.is-inview
+		&:before, &:after
+			width 100%
+			height 100%
+			transform scale(1,1)</code></pre>
                     </div>
                   </div>
                 </div>

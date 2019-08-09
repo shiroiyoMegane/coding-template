@@ -48,7 +48,6 @@ module.exports = (op) => {
 					arrayLength++;
 				}
 				_t.offTop = event.getBoundingClientRect().top + window.pageYOffset;
-				console.log(elm);
 			});
 			for(let i = 0; i <= arrayLength; i++) {
 				ar.push([]);

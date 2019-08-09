@@ -8,6 +8,8 @@ const url = {
 	css : 'css/',
 	stylus : 'stylus/',
 	images : 'images/',
+	icons : 'icons/',
+	fonts : 'fonts/',
 	virtualDomain : 'http://test/'
 };
 const port = 8888;
@@ -62,6 +64,7 @@ gulp.task('pug', () => {
 
 //stylus
 const stylus = require('gulp-stylus');
+const stylusSvgImport = require('stylus-svg');
 
 gulp.task('stylus', () => {
 	gulp.src(url.src + url.stylus + '*.styl')
@@ -150,6 +153,83 @@ gulp.task('reload', () => {
 	browserSync.reload();
 });
 
+// var iconfont        = require('gulp-iconfont'),
+// 	consolidate     = require('gulp-consolidate');
+
+// var runTimestamp = Math.round(Date.now()/1000);
+
+// gulp.task('iconfonts', function(){
+// 	return gulp.src([url.src + url.icons + '*.svg'])
+// 	.pipe(iconfont({
+// 		startUnicode: 0xF001,
+// 		fontName: 'iconfont',
+// 		formats: ['ttf', 'eot', 'woff', 'svg'],
+// 		appendCodepoints:false,
+// 		normalize: true,
+// 		fontHeight: 500,
+// 		timestamp: runTimestamp
+// 	}))
+// 	.on('glyphs', function(glyphs) {
+// 		gulp.src(url.src + url.icons +'iconfont.css')
+// 		.pipe(consolidate('lodash', {
+// 			glyphs: glyphs.map(function(glyph) {
+// 				return { fileName: glyph.name, codePoint: glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() };
+// 			}),
+// 			fontName: 'iconfont',
+// 			fontPath: '../fonts/',
+// 			cssClass: 'icon'
+// 		}))
+// 		.pipe(gulp.dest(url.dist + url.fonts+'css/'));
+// 	})
+// 	.pipe(gulp.dest(url.dist + url.fonts));
+// });
+
+ 
+var iconfont    = require('gulp-iconfont');
+var consolidate = require('gulp-consolidate');
+ 
+var fontName = 'myfont'; // シンボルフォント名
+ 
+//--------------------------
+// add task - gulp-iconfont
+gulp.task('iconfonts', function(){
+	gulp.src([url.src + url.icons + '*.svg'])
+		.pipe(iconfont({
+		fontName: fontName // required
+		}))
+		.on('codepoints', function(codepoints) {
+			var options = {
+				glyphs: codepoints,
+				fontName: fontName,
+				fontPath: url.dist + url.fonts, // フォントパスをCSSからの相対パスで指定
+				className: 'myfont' // CSSのフォントのクラス名を指定
+			};
+			// シンボルフォント用のcssを作成
+			gulp.src(url.src + url.icons +'iconfont.css')
+				.pipe(consolidate('lodash', options))
+				.pipe(rename({ basename:fontName }))
+				.pipe(gulp.dest(url.dist + url.fonts+'css/')); // CSSの吐き出し先を指定
+				
+			// シンボルフォント一覧のサンプルHTMLを作成
+			gulp.src(url.src + url.icons +'myfont.html')
+				.pipe(consolidate('lodash', options))
+				.pipe(rename({ basename:'sample' }))
+				.pipe(gulp.dest(url.dist + url.fonts)); // サンプルHTMLの吐き出し先を指定
+		})
+		.pipe(gulp.dest(url.dist + url.fonts));
+});
+ 
+//-----------
+// SVGファイルを監視
+gulp.task('watch', function() {
+    gulp.watch('src/icons/*.svg', ['Iconfont']);
+});
+ 
+//--------------
+// default task
+gulp.task('default', ['watch']);
+
+
 //watch
 gulp.task('watch', function () {
 	gulp.watch(url.src + url.js + 'entry.js', ['webpack']);
@@ -160,6 +240,7 @@ gulp.task('watch', function () {
 	gulp.watch(url.src + url.stylus + '**/*.styl', ['stylus']);
 	gulp.watch(url.src + url.images + '/**/*.+(jpg|jpeg|png|gif)', ['imagemin']);
 	gulp.watch(url.src + url.images + '/**/*.+(svg)', ['svgmin']);
+	gulp.watch(url.src + url.icons + '*.svg', ['iconfonts']);
 });
 
 gulp.task('build', ['webpack', 'jsVendor', 'pug', 'stylus', 'scss', 'imagemin','svgmin']);
