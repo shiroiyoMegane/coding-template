@@ -292,7 +292,7 @@
                     <div class="imageBlock">
                       <div class="m-imageSet01">
                         <figure class="image"><img src="https://placehold.jp/400x248.png" alt="">
-                          <figcaption>キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。キャプションが入ります。</figcaption>
+                          <figcaption>キャプションが入ります。キャプションが入ります。キャプションが入ります。</figcaption>
                         </figure>
                       </div>
                     </div>
@@ -352,6 +352,7 @@
 	.imageBlock
 		+MQ_SP(SP_RES_WID)
 			width 100%
+			margin-bottom 10px
 			padding 0
 	
 	.textBlock
@@ -364,6 +365,171 @@
 		
 		img
 			max-width inherit
+			+MQ_PC(SP_RES_WID)
+				width inherit
+			+MQ_SP(SP_RES_WID)
+				max-width 100%</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント02</span></h2>
+                <div class="l-markupBlock">
+                  <div class="c-imageText02 is-imageLeft">
+                    <div class="imageBlock">
+                      <div class="m-imageSet01">
+                        <figure class="image"><img src="https://placehold.jp/400x248.png" alt="">
+                          <figcaption>キャプションが入ります。</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="textBlock">
+                      <div class="m-defaultSet">
+                        <p>日本国民は、正当に選挙された国会における代表者を通じて行動し、<a href=".doc"><span>われらとわれらの子孫</span></a>のために、<b>諸国民</b>との<i>協和による成果</i>と、<strong>わが国全土にわたつてた</strong><s>自由のもたらす恵沢</s>を確保し、政府<sub>の</sub>行為によつて再び<sup>戦争</sup>の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。<br>そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者が</p>
+                        <p>木曾路はすべて山の中である。<br>あるところは岨づたいに行く崖の道であり、<a href=".doc" class="icon-before"><span>あるところは数十間の深さ</span></a>に臨む<b>木曾川</b>の岸であり、<strong>あるところは山の尾をめぐる</strong>谷の入り口である。<i>一筋の街道</i>はこの<s>深い森林地帯</s>を貫いていた。<br>東ざかいの<sub>桜沢</sub>から、西の<sup>十曲峠</sup>まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。<br>道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .c-imageText02 (.is-imageRight / .is-imageLeft)
+                          	.imageBlock
+                          		.m-imageSet01
+                          
+                          	.textBlock
+                          		.m-defaultSet
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- コンポーネント - 画像+テキストコンポーネント02
+.c-imageText02
+	PADDING = 20px
+
+	&.is-imageRight
+		+MQ_PC(SP_RES_WID)
+			.imageBlock
+				float right
+				padding-left PADDING
+
+	&.is-imageLeft
+		+MQ_PC(SP_RES_WID)
+			.imageBlock
+				float left
+				padding-right PADDING
+			
+	.imageBlock
+		+MQ_SP(SP_RES_WID)
+			width 100%
+			margin-bottom 10px
+			padding 0
+	
+	.textBlock
+		width 100%
+	
+	
+	.m-imageSet01
+		+MQ_SP(SP_RES_WID)
+			width 100%
+		
+		img
+			max-width inherit
+			+MQ_SP(SP_RES_WID)
+				max-width 100%</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント03</span></h2>
+                <div class="l-markupBlock">
+                  <div class="c-imageText03 is-imageRight">
+                    <div class="imageBlock" style="background-image: url(&quot;https://placehold.jp/700x340.png&quot;)"></div>
+                    <div class="textBlock">
+                      <div class="m-defaultSet">
+                        <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .c-imageText03 (.is-imageRight / .is-imageLeft)
+                          	.imageBlock(style='background-image: url("画像")')
+                          	.textBlock
+                          		.m-defaultSet
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- コンポーネント - 画像+テキストコンポーネント03
+.c-imageText03
+	PADDING = 20px
+	IMAGE_WIDTH = 700px
+
+	border 1px solid SITE_COLOR02
+
+	&.is-imageRight
+		+MQ_PC(SP_RES_WID)
+			display flex
+			align-items center
+			.imageBlock
+				order 1
+
+	&.is-imageLeft
+		+MQ_PC(SP_RES_WID)
+			display flex
+			align-items center
+	
+	.imageBlock
+		background-repeat no-repeat
+		background-size cover
+		+MQ_PC(SP_RES_WID)
+			width IMAGE_WIDTH
+			min-height 340px
+		+MQ_SP(SP_RES_WID)
+			width 100%
+			padding-top 50%
+	
+	.textBlock
+		padding 15px
+		box-sizing border-box
+		+MQ_PC(SP_RES_WID)
+			width 'calc(100% - %s)' % IMAGE_WIDTH
+	
+	
+	.m-imageSet01
+		+MQ_SP(SP_RES_WID)
+			width 100%
+		
+		img
+			max-width inherit
+			+MQ_PC(SP_RES_WID)
+				width inherit
 			+MQ_SP(SP_RES_WID)
 				max-width 100%</code></pre>
                     </div>
@@ -669,7 +835,7 @@
                         <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">通常ボタン</span></span></a></div>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">pdfファイル</span></span></a></div>
+                        <div class="m-btnSet02"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">pdfファイル</span></span></a></div>
                       </li>
                       <li class="col">
                         <div class="m-btnSet01"><a href=".doc"><span class="btnWrapper"><span class="btnInner">その他ファイル</span></span></a></div>
@@ -1086,11 +1252,13 @@ header.c-comHeader01
 							margin-left 0
 							padding-left 0
 							border-left none
-						& > a
-							padding 0.5em 0
-							&:hover
+						&:hover
+							& > a
 								&+.childNav
 									display block
+						& > a
+							padding 0.5em 0
+							
 			+MQ_SP(SP_RES_WID)
 				& > ul
 					& > li
@@ -1462,7 +1630,7 @@ footer.c-comFooter01
 		color inherit
 		text-decoration none
 		
-		iconTagSet('.text', SITE_COLOR01)
+		iconTagSet('.text')
 
 		+HOVER(SP_RES_WID)
 			.text
@@ -2018,17 +2186,16 @@ iconOption()
 		width iconWidth
 		height 16px
 		margin 0 4px
-		background-repeat no-repeat
-		background-size cover
 		vertical-align middle
-	&:after
-		content ""
+		
+	&:before
+		display none
 	
 	&.icon-before
 		&:before
-			content ""
+			display inline-block
 		&:after
-			content none
+			display none
 
 outerHashIcon()
 	&:before, &:after
@@ -2037,87 +2204,46 @@ outerHashIcon()
 		&:before, &:after
 			transform translate3d(0, -50%, 0) rotate(0)
 
-outerIcon(iconColor)
+outerIcon()
 	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_outer01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
+		fontIconSet("\EA07")
 		
-pdfIcon(iconColor)
-	content iconColor
+pdfIcon()
 	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_pdf01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
+		fontIconSet("\EA08")
+
+pptIcon()
+	&:before, &:after
+		fontIconSet("\EA09")
+
+docIcon()
+	&:before, &:after
+		fontIconSet("\EA02")
+
+excelIcon()
+	&:before, &:after
+		fontIconSet("\EA04")
+
+musicIcon()
+	&:before, &:after
+		fontIconSet("\EA06")
+
+movieIcon()
+	&:before, &:after
+		fontIconSet("\EA05")
+
+etcIcon()
+	&:before, &:after
+		fontIconSet("\EA03")
+
+defaultIcon()
+	&:before, &:after
+		fontIconSet("\EA01")
 		
+	&:before
+		display none
 
-pptIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_ppt01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-docIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_doc01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-excelIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_excel01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-musicIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_music01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-movieIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_movie01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-etcIcon(iconColor)
-	&:before, &:after
-		background-image: svgImport('../images/common/common_icon_etc01.svg', '
-			rect
-				fill: '+ iconColor +'
-			polygon
-				fill: '+ iconColor +'
-		',false)
-
-defaultIcon(iconColor)
-	background-image: svgImport('../images/common/common_icon_arrow01.svg')
-	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E")
-	
-
-iconSet(iconColor)
+iconSet()
 	&[target^='_blank'], &[href$='.pdf'],
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
 	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
@@ -2127,80 +2253,82 @@ iconSet(iconColor)
 	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
 		iconOption()
+		&:before, &:after
+			color SITE_COLOR01
 	&[href*="#"]
-		outerHashIcon(iconColor)
+		outerHashIcon()
 	&[target^='_blank']
-		outerIcon(iconColor)
+		outerIcon()
 	&[href$='.pdf']
-		pdfIcon(iconColor)
+		pdfIcon()
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
-		docIcon(iconColor)
+		docIcon()
 	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
-		excelIcon(iconColor)
+		excelIcon()
 	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-		pptIcon(iconColor)
+		pptIcon()
 	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
 	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
 	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
-		musicIcon(iconColor)
+		musicIcon()
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		movieIcon(iconColor)
+		movieIcon()
 	&[href$='.rtf']
-		etcIcon(iconColor)
+		etcIcon()
 	span
 		vertical-align middle
 
-iconTagSet(tag,iconColor)
+iconTagSet(tag)
 	&[target^='_blank'], &[href$='.pdf'],
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
 	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
 	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
 		{tag}
 			iconOption()
 	&[href*="#"]
 		{tag}
-			outerHashIcon(iconColor)
+			outerHashIcon()
 	&[target^='_blank']
 		{tag}
-			outerIcon(iconColor)
+			outerIcon()
 	&[href$='.pdf']
 		{tag}
-			pdfIcon(iconColor)
-			
+			pdfIcon()
 	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
 		{tag}
-			docIcon(iconColor)
+			docIcon()
 	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
 		{tag}
-			excelIcon(iconColor)
+			excelIcon()
 	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
 		{tag}
-			pptIcon(iconColor)
+			pptIcon()
 	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
 	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
 	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
 		{tag}
-			musicIcon(iconColor)
+			musicIcon()
 	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		movieIcon(iconColor)
+		{tag}
+			movieIcon()
 	&[href$='.rtf']
 		{tag}
-			etcIcon(iconColor)
+			etcIcon()
 	{tag}
+		defaultIcon()
 		&:after
-			content ""
-			display block
 			position absolute
 			top 50%
 			right 10px
 			width iconWidth
 			height iconHeight
 			margin 0 !important
-			background-repeat no-repeat
-			background-size cover
 			transform translate3d(0, -50%, 0)
 
-			defaultIcon(iconColor)
 		span
 			vertical-align middle</code></pre>
                     </div>
@@ -2582,7 +2710,7 @@ iconTagSet(tag,iconColor)
 	
 	a
 		display block
-		iconTagSet('.btnWrapper',SITE_COLOR01)
+		iconTagSet('.btnWrapper')
 		color inherit
 		border 1px solid #ccc
 		text-decoration none
@@ -2630,7 +2758,7 @@ iconTagSet(tag,iconColor)
 	marginBottom(30)
 	a
 		display block
-		iconTagSet('.btnWrapper', SITE_BG01)
+		iconTagSet('.btnWrapper')
 		color SITE_BG01
 		background-color SITE_COLOR01
 		border 1px solid SITE_COLOR01
@@ -2966,8 +3094,7 @@ iconTagSet(tag,iconColor)
 
 	a
 		transition 0.3s all ease
-		&:hover
-			iconTagSet('.btnWrapper', SITE_BG01)</code></pre>
+</code></pre>
                     </div>
                   </div>
                 </div>

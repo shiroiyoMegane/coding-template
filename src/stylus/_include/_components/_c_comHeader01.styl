@@ -81,11 +81,13 @@ header.c-comHeader01
 							margin-left 0
 							padding-left 0
 							border-left none
-						& > a
-							padding 0.5em 0
-							&:hover
+						&:hover
+							& > a
 								&+.childNav
 									display block
+						& > a
+							padding 0.5em 0
+							
 			+MQ_SP(SP_RES_WID)
 				& > ul
 					& > li

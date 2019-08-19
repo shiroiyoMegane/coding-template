@@ -2,16 +2,16 @@
 	+l-contentsWidth
 		+l-mqWrapper
 			h2.m-markupTitle
-				span コンポーネント - 画像+テキストコンポーネント01
+				span コンポーネント - 画像+テキストコンポーネント02
 
 			+l-markupBlock
 
-				.c-imageText01.is-imageRight
+				.c-imageText02.is-imageLeft
 					.imageBlock
 						.m-imageSet01
 							figure.image
 								img(src="https://placehold.jp/400x248.png", alt="")
-								figcaption キャプションが入ります。キャプションが入ります。キャプションが入ります。
+								figcaption キャプションが入ります。
 
 					.textBlock
 						.m-defaultSet
@@ -20,7 +20,7 @@
 
 			+l-markupBlock
 				+p-markupBtn('pug').
-					.c-imageText01 (.is-imageRight / .is-imageLeft)
+					.c-imageText02 (.is-imageRight / .is-imageLeft)
 						.imageBlock
 							.m-imageSet01
 
@@ -28,4 +28,4 @@
 							.m-defaultSet
 
 				+p-markupBtn('stylus')
-					include ../../../stylus/_include/_components/_c_imageText01.styl
+					include ../../../stylus/_include/_components/_c_imageText02.styl

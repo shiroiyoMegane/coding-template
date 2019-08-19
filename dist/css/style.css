@@ -179,6 +179,70 @@ textarea {
   vertical-align: top;
   font-family: sans-serif;
 }
+@font-face {
+  font-family: "myfont";
+  src: url("../fonts/myfont.eot?c=1419063630662");
+  src: url("../fonts/myfont.eot?#iefix?c=1419063630662") format('eot'), url("../fonts/myfont.woff2?c=1419063630662") format('woff2'), url("../fonts/myfont.woff?c=1419063630662") format('woff'), url("../fonts/myfont.ttf?c=1419063630662") format('truetype'), url("../fonts/myfont.svg#myfont") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.is-iconFont:before {
+  display: inline-block;
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.is-iconFont-lg {
+  font-size: 1.333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.is-iconFont-2x {
+  font-size: 2em;
+}
+.is-iconFont-3x {
+  font-size: 3em;
+}
+.is-iconFont-4x {
+  font-size: 4em;
+}
+.is-iconFont-5x {
+  font-size: 5em;
+}
+.is-iconFont-fw {
+  width: 1.285714285714286em;
+  text-align: center;
+}
+.is-iconFont-arrow01:before {
+  content: "\EA01";
+}
+.is-iconFont-doc01:before {
+  content: "\EA02";
+}
+.is-iconFont-etc01:before {
+  content: "\EA03";
+}
+.is-iconFont-excel01:before {
+  content: "\EA04";
+}
+.is-iconFont-movie01:before {
+  content: "\EA05";
+}
+.is-iconFont-music01:before {
+  content: "\EA06";
+}
+.is-iconFont-outer01:before {
+  content: "\EA07";
+}
+.is-iconFont-pdf01:before {
+  content: "\EA08";
+}
+.is-iconFont-ppt01:before {
+  content: "\EA09";
+}
 html {
   height: 100%;
   font-size: 62.5%;
@@ -301,6 +365,31 @@ a:focus {
 .m-btnSet01 a[href$='.ppt'] .btnWrapper:before,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper:before,
 .m-btnSet01 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet01 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet01 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet01 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet01 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper:before,
 .m-btnSet01 a[target^='_blank'] .btnWrapper:after,
 .m-btnSet01 a[href$='.pdf'] .btnWrapper:after,
 .m-btnSet01 a[href$='.doc'] .btnWrapper:after,
@@ -317,33 +406,81 @@ a:focus {
 .m-btnSet01 a[href$='.csv'] .btnWrapper:after,
 .m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
-.m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wma'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wave'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wav'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.flac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aif'] .btnWrapper:after,
+.m-btnSet01 a[href$='.omg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.oma'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.oga'] .btnWrapper:after,
+.m-btnSet01 a[href$='.asf'] .btnWrapper:after,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet01 a[href$='.alac'] .btnWrapper:after,
+.m-btnSet01 a[href$='.ape'] .btnWrapper:after,
+.m-btnSet01 a[href$='.tak'] .btnWrapper:after,
+.m-btnSet01 a[href$='.tta'] .btnWrapper:after,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper:after,
+.m-btnSet01 a[href$='.avi'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.flv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper:after {
   display: inline-block;
   width: 16px;
   height: 16px;
   margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
   vertical-align: middle;
 }
-.m-btnSet01 a[target^='_blank'] .btnWrapper:after,
-.m-btnSet01 a[href$='.pdf'] .btnWrapper:after,
-.m-btnSet01 a[href$='.doc'] .btnWrapper:after,
-.m-btnSet01 a[href$='.docx'] .btnWrapper:after,
-.m-btnSet01 a[href$='.docm'] .btnWrapper:after,
-.m-btnSet01 a[href$='.dotx'] .btnWrapper:after,
-.m-btnSet01 a[href$='.dotm'] .btnWrapper:after,
-.m-btnSet01 a[href$='.rtf'] .btnWrapper:after,
-.m-btnSet01 a[href$='.xls'] .btnWrapper:after,
-.m-btnSet01 a[href$='.xlsx'] .btnWrapper:after,
-.m-btnSet01 a[href$='.xlt'] .btnWrapper:after,
-.m-btnSet01 a[href$='.xml'] .btnWrapper:after,
-.m-btnSet01 a[href$='.xlsm'] .btnWrapper:after,
-.m-btnSet01 a[href$='.csv'] .btnWrapper:after,
-.m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
-.m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
-.m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
-  content: "";
+.m-btnSet01 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet01 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet01 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet01 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet01 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet01 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet01 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet01 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet01 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper:before {
+  display: none;
 }
 .m-btnSet01 a[target^='_blank'] .btnWrapper.icon-before:before,
 .m-btnSet01 a[href$='.pdf'] .btnWrapper.icon-before:before,
@@ -361,8 +498,33 @@ a:focus {
 .m-btnSet01 a[href$='.csv'] .btnWrapper.icon-before:before,
 .m-btnSet01 a[href$='.ppt'] .btnWrapper.icon-before:before,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper.icon-before:before,
-.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:before {
-  content: "";
+.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.wma'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.wave'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.wav'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.aac'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.flac'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.aif'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.omg'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.oma'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.oga'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.asf'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.mov'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.alac'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.ape'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.tak'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.tta'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.avi'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.flv'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper.icon-before:before,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper.icon-before:before {
+  display: inline-block;
 }
 .m-btnSet01 a[target^='_blank'] .btnWrapper.icon-before:after,
 .m-btnSet01 a[href$='.pdf'] .btnWrapper.icon-before:after,
@@ -380,8 +542,33 @@ a:focus {
 .m-btnSet01 a[href$='.csv'] .btnWrapper.icon-before:after,
 .m-btnSet01 a[href$='.ppt'] .btnWrapper.icon-before:after,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper.icon-before:after,
-.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:after {
-  content: none;
+.m-btnSet01 a[href$='.pptm'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.mp3'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.wma'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.wave'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.wav'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.aac'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.flac'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.aif'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.omg'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.oma'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.aa3'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.ogg'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.oga'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.asf'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.m4a'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.mov'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.alac'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.ape'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.tak'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.tta'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.aiff'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.avi'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.flv'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper.icon-before:after,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper.icon-before:after {
+  display: none;
 }
 .m-btnSet01 a[href*="#"] .btnWrapper:before,
 .m-btnSet01 a[href*="#"] .btnWrapper:after {
@@ -393,14 +580,23 @@ a:focus {
 }
 .m-btnSet01 a[target^='_blank'] .btnWrapper:before,
 .m-btnSet01 a[target^='_blank'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.m-btnSet01 a[href$='.pdf'] .btnWrapper {
-  content: #333;
+  content: "\EA07";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.pdf'] .btnWrapper:before,
 .m-btnSet01 a[href$='.pdf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
+  content: "\EA08";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.doc'] .btnWrapper:before,
 .m-btnSet01 a[href$='.docx'] .btnWrapper:before,
@@ -412,7 +608,13 @@ a:focus {
 .m-btnSet01 a[href$='.docm'] .btnWrapper:after,
 .m-btnSet01 a[href$='.dotx'] .btnWrapper:after,
 .m-btnSet01 a[href$='.dotm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
+  content: "\EA02";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.xls'] .btnWrapper:before,
 .m-btnSet01 a[href$='.xlsx'] .btnWrapper:before,
@@ -426,7 +628,13 @@ a:focus {
 .m-btnSet01 a[href$='.xml'] .btnWrapper:after,
 .m-btnSet01 a[href$='.xlsm'] .btnWrapper:after,
 .m-btnSet01 a[href$='.csv'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
+  content: "\EA04";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.ppt'] .btnWrapper:before,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper:before,
@@ -434,7 +642,13 @@ a:focus {
 .m-btnSet01 a[href$='.ppt'] .btnWrapper:after,
 .m-btnSet01 a[href$='.pptx'] .btnWrapper:after,
 .m-btnSet01 a[href$='.pptm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
+  content: "\EA09";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.mp3'] .btnWrapper:before,
 .m-btnSet01 a[href$='.wma'] .btnWrapper:before,
@@ -476,41 +690,65 @@ a:focus {
 .m-btnSet01 a[href$='.tak'] .btnWrapper:after,
 .m-btnSet01 a[href$='.tta'] .btnWrapper:after,
 .m-btnSet01 a[href$='.aiff'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_music01.svg");
+  content: "\EA06";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.m-btnSet01 a[href$='.avi']:before,
-.m-btnSet01 a[href$='.mov']:before,
-.m-btnSet01 a[href$='.wmv']:before,
-.m-btnSet01 a[href$='.flv']:before,
-.m-btnSet01 a[href$='.mpg']:before,
-.m-btnSet01 a[href$='.mp4']:before,
-.m-btnSet01 a[href$='.avi']:after,
-.m-btnSet01 a[href$='.mov']:after,
-.m-btnSet01 a[href$='.wmv']:after,
-.m-btnSet01 a[href$='.flv']:after,
-.m-btnSet01 a[href$='.mpg']:after,
-.m-btnSet01 a[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
+.m-btnSet01 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper:before,
+.m-btnSet01 a[href$='.avi'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet01 a[href$='.wmv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.flv'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mpg'] .btnWrapper:after,
+.m-btnSet01 a[href$='.mp4'] .btnWrapper:after {
+  content: "\EA05";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet01 a[href$='.rtf'] .btnWrapper:before,
 .m-btnSet01 a[href$='.rtf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
+  content: "\EA03";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.m-btnSet01 a .btnWrapper:before,
+.m-btnSet01 a .btnWrapper:after {
+  content: "\EA01";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.m-btnSet01 a .btnWrapper:before {
+  display: none;
 }
 .m-btnSet01 a .btnWrapper:after {
-  content: "";
-  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
   width: 16px;
   height: 16px;
   margin: 0 !important;
-  background-repeat: no-repeat;
-  background-size: cover;
   transform: translate3d(0, -50%, 0);
-  background-image: url("../images/common/common_icon_arrow01.svg");
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
 }
 .m-btnSet01 a .btnWrapper span {
   vertical-align: middle;
@@ -556,6 +794,31 @@ a:focus {
 .m-btnSet02 a[href$='.ppt'] .btnWrapper:before,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper:before,
 .m-btnSet02 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet02 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet02 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet02 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet02 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper:before,
 .m-btnSet02 a[target^='_blank'] .btnWrapper:after,
 .m-btnSet02 a[href$='.pdf'] .btnWrapper:after,
 .m-btnSet02 a[href$='.doc'] .btnWrapper:after,
@@ -572,33 +835,81 @@ a:focus {
 .m-btnSet02 a[href$='.csv'] .btnWrapper:after,
 .m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
-.m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wma'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wave'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wav'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.flac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aif'] .btnWrapper:after,
+.m-btnSet02 a[href$='.omg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.oma'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.oga'] .btnWrapper:after,
+.m-btnSet02 a[href$='.asf'] .btnWrapper:after,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet02 a[href$='.alac'] .btnWrapper:after,
+.m-btnSet02 a[href$='.ape'] .btnWrapper:after,
+.m-btnSet02 a[href$='.tak'] .btnWrapper:after,
+.m-btnSet02 a[href$='.tta'] .btnWrapper:after,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper:after,
+.m-btnSet02 a[href$='.avi'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.flv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper:after {
   display: inline-block;
   width: 16px;
   height: 16px;
   margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
   vertical-align: middle;
 }
-.m-btnSet02 a[target^='_blank'] .btnWrapper:after,
-.m-btnSet02 a[href$='.pdf'] .btnWrapper:after,
-.m-btnSet02 a[href$='.doc'] .btnWrapper:after,
-.m-btnSet02 a[href$='.docx'] .btnWrapper:after,
-.m-btnSet02 a[href$='.docm'] .btnWrapper:after,
-.m-btnSet02 a[href$='.dotx'] .btnWrapper:after,
-.m-btnSet02 a[href$='.dotm'] .btnWrapper:after,
-.m-btnSet02 a[href$='.rtf'] .btnWrapper:after,
-.m-btnSet02 a[href$='.xls'] .btnWrapper:after,
-.m-btnSet02 a[href$='.xlsx'] .btnWrapper:after,
-.m-btnSet02 a[href$='.xlt'] .btnWrapper:after,
-.m-btnSet02 a[href$='.xml'] .btnWrapper:after,
-.m-btnSet02 a[href$='.xlsm'] .btnWrapper:after,
-.m-btnSet02 a[href$='.csv'] .btnWrapper:after,
-.m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
-.m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
-.m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
-  content: "";
+.m-btnSet02 a[target^='_blank'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pdf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.doc'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.docm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.dotm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.rtf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xls'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xml'] .btnWrapper:before,
+.m-btnSet02 a[href$='.xlsm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.csv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ppt'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptx'] .btnWrapper:before,
+.m-btnSet02 a[href$='.pptm'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wave'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wav'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aif'] .btnWrapper:before,
+.m-btnSet02 a[href$='.omg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oma'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.oga'] .btnWrapper:before,
+.m-btnSet02 a[href$='.asf'] .btnWrapper:before,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet02 a[href$='.alac'] .btnWrapper:before,
+.m-btnSet02 a[href$='.ape'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tak'] .btnWrapper:before,
+.m-btnSet02 a[href$='.tta'] .btnWrapper:before,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper:before,
+.m-btnSet02 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper:before {
+  display: none;
 }
 .m-btnSet02 a[target^='_blank'] .btnWrapper.icon-before:before,
 .m-btnSet02 a[href$='.pdf'] .btnWrapper.icon-before:before,
@@ -616,8 +927,33 @@ a:focus {
 .m-btnSet02 a[href$='.csv'] .btnWrapper.icon-before:before,
 .m-btnSet02 a[href$='.ppt'] .btnWrapper.icon-before:before,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper.icon-before:before,
-.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:before {
-  content: "";
+.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.wma'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.wave'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.wav'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.aac'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.flac'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.aif'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.omg'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.oma'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.oga'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.asf'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.mov'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.alac'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.ape'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.tak'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.tta'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.avi'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.flv'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper.icon-before:before,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper.icon-before:before {
+  display: inline-block;
 }
 .m-btnSet02 a[target^='_blank'] .btnWrapper.icon-before:after,
 .m-btnSet02 a[href$='.pdf'] .btnWrapper.icon-before:after,
@@ -635,8 +971,33 @@ a:focus {
 .m-btnSet02 a[href$='.csv'] .btnWrapper.icon-before:after,
 .m-btnSet02 a[href$='.ppt'] .btnWrapper.icon-before:after,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper.icon-before:after,
-.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:after {
-  content: none;
+.m-btnSet02 a[href$='.pptm'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.mp3'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.wma'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.wave'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.wav'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.aac'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.flac'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.aif'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.omg'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.oma'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.aa3'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.ogg'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.oga'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.asf'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.m4a'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.mov'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.alac'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.ape'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.tak'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.tta'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.aiff'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.avi'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.flv'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper.icon-before:after,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper.icon-before:after {
+  display: none;
 }
 .m-btnSet02 a[href*="#"] .btnWrapper:before,
 .m-btnSet02 a[href*="#"] .btnWrapper:after {
@@ -648,14 +1009,23 @@ a:focus {
 }
 .m-btnSet02 a[target^='_blank'] .btnWrapper:before,
 .m-btnSet02 a[target^='_blank'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.m-btnSet02 a[href$='.pdf'] .btnWrapper {
-  content: #fff;
+  content: "\EA07";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.pdf'] .btnWrapper:before,
 .m-btnSet02 a[href$='.pdf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
+  content: "\EA08";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.doc'] .btnWrapper:before,
 .m-btnSet02 a[href$='.docx'] .btnWrapper:before,
@@ -667,7 +1037,13 @@ a:focus {
 .m-btnSet02 a[href$='.docm'] .btnWrapper:after,
 .m-btnSet02 a[href$='.dotx'] .btnWrapper:after,
 .m-btnSet02 a[href$='.dotm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
+  content: "\EA02";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.xls'] .btnWrapper:before,
 .m-btnSet02 a[href$='.xlsx'] .btnWrapper:before,
@@ -681,7 +1057,13 @@ a:focus {
 .m-btnSet02 a[href$='.xml'] .btnWrapper:after,
 .m-btnSet02 a[href$='.xlsm'] .btnWrapper:after,
 .m-btnSet02 a[href$='.csv'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
+  content: "\EA04";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.ppt'] .btnWrapper:before,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper:before,
@@ -689,7 +1071,13 @@ a:focus {
 .m-btnSet02 a[href$='.ppt'] .btnWrapper:after,
 .m-btnSet02 a[href$='.pptx'] .btnWrapper:after,
 .m-btnSet02 a[href$='.pptm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
+  content: "\EA09";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.mp3'] .btnWrapper:before,
 .m-btnSet02 a[href$='.wma'] .btnWrapper:before,
@@ -731,41 +1119,65 @@ a:focus {
 .m-btnSet02 a[href$='.tak'] .btnWrapper:after,
 .m-btnSet02 a[href$='.tta'] .btnWrapper:after,
 .m-btnSet02 a[href$='.aiff'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_music01.svg");
+  content: "\EA06";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.m-btnSet02 a[href$='.avi']:before,
-.m-btnSet02 a[href$='.mov']:before,
-.m-btnSet02 a[href$='.wmv']:before,
-.m-btnSet02 a[href$='.flv']:before,
-.m-btnSet02 a[href$='.mpg']:before,
-.m-btnSet02 a[href$='.mp4']:before,
-.m-btnSet02 a[href$='.avi']:after,
-.m-btnSet02 a[href$='.mov']:after,
-.m-btnSet02 a[href$='.wmv']:after,
-.m-btnSet02 a[href$='.flv']:after,
-.m-btnSet02 a[href$='.mpg']:after,
-.m-btnSet02 a[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
+.m-btnSet02 a[href$='.avi'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:before,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.flv'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper:before,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper:before,
+.m-btnSet02 a[href$='.avi'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mov'] .btnWrapper:after,
+.m-btnSet02 a[href$='.wmv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.flv'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mpg'] .btnWrapper:after,
+.m-btnSet02 a[href$='.mp4'] .btnWrapper:after {
+  content: "\EA05";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-btnSet02 a[href$='.rtf'] .btnWrapper:before,
 .m-btnSet02 a[href$='.rtf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
+  content: "\EA03";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.m-btnSet02 a .btnWrapper:before,
+.m-btnSet02 a .btnWrapper:after {
+  content: "\EA01";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.m-btnSet02 a .btnWrapper:before {
+  display: none;
 }
 .m-btnSet02 a .btnWrapper:after {
-  content: "";
-  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
   width: 16px;
   height: 16px;
   margin: 0 !important;
-  background-repeat: no-repeat;
-  background-size: cover;
   transform: translate3d(0, -50%, 0);
-  background-image: url("../images/common/common_icon_arrow01.svg");
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
 }
 .m-btnSet02 a .btnWrapper span {
   vertical-align: middle;
@@ -1190,179 +1602,177 @@ a:focus {
   width: 16px;
   height: 16px;
   margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
   vertical-align: middle;
 }
-.m-defaultSet div a[target^='_blank']:after,
-.m-defaultSet p a[target^='_blank']:after,
-.m-defaultSet li a[target^='_blank']:after,
-.m-defaultSet figure a[target^='_blank']:after,
-.m-defaultSet div a[href$='.pdf']:after,
-.m-defaultSet p a[href$='.pdf']:after,
-.m-defaultSet li a[href$='.pdf']:after,
-.m-defaultSet figure a[href$='.pdf']:after,
-.m-defaultSet div a[href$='.doc']:after,
-.m-defaultSet p a[href$='.doc']:after,
-.m-defaultSet li a[href$='.doc']:after,
-.m-defaultSet figure a[href$='.doc']:after,
-.m-defaultSet div a[href$='.docx']:after,
-.m-defaultSet p a[href$='.docx']:after,
-.m-defaultSet li a[href$='.docx']:after,
-.m-defaultSet figure a[href$='.docx']:after,
-.m-defaultSet div a[href$='.docm']:after,
-.m-defaultSet p a[href$='.docm']:after,
-.m-defaultSet li a[href$='.docm']:after,
-.m-defaultSet figure a[href$='.docm']:after,
-.m-defaultSet div a[href$='.dotx']:after,
-.m-defaultSet p a[href$='.dotx']:after,
-.m-defaultSet li a[href$='.dotx']:after,
-.m-defaultSet figure a[href$='.dotx']:after,
-.m-defaultSet div a[href$='.dotm']:after,
-.m-defaultSet p a[href$='.dotm']:after,
-.m-defaultSet li a[href$='.dotm']:after,
-.m-defaultSet figure a[href$='.dotm']:after,
-.m-defaultSet div a[href$='.rtf']:after,
-.m-defaultSet p a[href$='.rtf']:after,
-.m-defaultSet li a[href$='.rtf']:after,
-.m-defaultSet figure a[href$='.rtf']:after,
-.m-defaultSet div a[href$='.xls']:after,
-.m-defaultSet p a[href$='.xls']:after,
-.m-defaultSet li a[href$='.xls']:after,
-.m-defaultSet figure a[href$='.xls']:after,
-.m-defaultSet div a[href$='.xlsx']:after,
-.m-defaultSet p a[href$='.xlsx']:after,
-.m-defaultSet li a[href$='.xlsx']:after,
-.m-defaultSet figure a[href$='.xlsx']:after,
-.m-defaultSet div a[href$='.xlt']:after,
-.m-defaultSet p a[href$='.xlt']:after,
-.m-defaultSet li a[href$='.xlt']:after,
-.m-defaultSet figure a[href$='.xlt']:after,
-.m-defaultSet div a[href$='.xml']:after,
-.m-defaultSet p a[href$='.xml']:after,
-.m-defaultSet li a[href$='.xml']:after,
-.m-defaultSet figure a[href$='.xml']:after,
-.m-defaultSet div a[href$='.xlsm']:after,
-.m-defaultSet p a[href$='.xlsm']:after,
-.m-defaultSet li a[href$='.xlsm']:after,
-.m-defaultSet figure a[href$='.xlsm']:after,
-.m-defaultSet div a[href$='.csv']:after,
-.m-defaultSet p a[href$='.csv']:after,
-.m-defaultSet li a[href$='.csv']:after,
-.m-defaultSet figure a[href$='.csv']:after,
-.m-defaultSet div a[href$='.ppt']:after,
-.m-defaultSet p a[href$='.ppt']:after,
-.m-defaultSet li a[href$='.ppt']:after,
-.m-defaultSet figure a[href$='.ppt']:after,
-.m-defaultSet div a[href$='.pptx']:after,
-.m-defaultSet p a[href$='.pptx']:after,
-.m-defaultSet li a[href$='.pptx']:after,
-.m-defaultSet figure a[href$='.pptx']:after,
-.m-defaultSet div a[href$='.pptm']:after,
-.m-defaultSet p a[href$='.pptm']:after,
-.m-defaultSet li a[href$='.pptm']:after,
-.m-defaultSet figure a[href$='.pptm']:after,
-.m-defaultSet div a[href$='.mp3']:after,
-.m-defaultSet p a[href$='.mp3']:after,
-.m-defaultSet li a[href$='.mp3']:after,
-.m-defaultSet figure a[href$='.mp3']:after,
-.m-defaultSet div a[href$='.wma']:after,
-.m-defaultSet p a[href$='.wma']:after,
-.m-defaultSet li a[href$='.wma']:after,
-.m-defaultSet figure a[href$='.wma']:after,
-.m-defaultSet div a[href$='.wave']:after,
-.m-defaultSet p a[href$='.wave']:after,
-.m-defaultSet li a[href$='.wave']:after,
-.m-defaultSet figure a[href$='.wave']:after,
-.m-defaultSet div a[href$='.wav']:after,
-.m-defaultSet p a[href$='.wav']:after,
-.m-defaultSet li a[href$='.wav']:after,
-.m-defaultSet figure a[href$='.wav']:after,
-.m-defaultSet div a[href$='.aac']:after,
-.m-defaultSet p a[href$='.aac']:after,
-.m-defaultSet li a[href$='.aac']:after,
-.m-defaultSet figure a[href$='.aac']:after,
-.m-defaultSet div a[href$='.flac']:after,
-.m-defaultSet p a[href$='.flac']:after,
-.m-defaultSet li a[href$='.flac']:after,
-.m-defaultSet figure a[href$='.flac']:after,
-.m-defaultSet div a[href$='.aif']:after,
-.m-defaultSet p a[href$='.aif']:after,
-.m-defaultSet li a[href$='.aif']:after,
-.m-defaultSet figure a[href$='.aif']:after,
-.m-defaultSet div a[href$='.omg']:after,
-.m-defaultSet p a[href$='.omg']:after,
-.m-defaultSet li a[href$='.omg']:after,
-.m-defaultSet figure a[href$='.omg']:after,
-.m-defaultSet div a[href$='.oma']:after,
-.m-defaultSet p a[href$='.oma']:after,
-.m-defaultSet li a[href$='.oma']:after,
-.m-defaultSet figure a[href$='.oma']:after,
-.m-defaultSet div a[href$='.aa3']:after,
-.m-defaultSet p a[href$='.aa3']:after,
-.m-defaultSet li a[href$='.aa3']:after,
-.m-defaultSet figure a[href$='.aa3']:after,
-.m-defaultSet div a[href$='.ogg']:after,
-.m-defaultSet p a[href$='.ogg']:after,
-.m-defaultSet li a[href$='.ogg']:after,
-.m-defaultSet figure a[href$='.ogg']:after,
-.m-defaultSet div a[href$='.oga']:after,
-.m-defaultSet p a[href$='.oga']:after,
-.m-defaultSet li a[href$='.oga']:after,
-.m-defaultSet figure a[href$='.oga']:after,
-.m-defaultSet div a[href$='.asf']:after,
-.m-defaultSet p a[href$='.asf']:after,
-.m-defaultSet li a[href$='.asf']:after,
-.m-defaultSet figure a[href$='.asf']:after,
-.m-defaultSet div a[href$='.m4a']:after,
-.m-defaultSet p a[href$='.m4a']:after,
-.m-defaultSet li a[href$='.m4a']:after,
-.m-defaultSet figure a[href$='.m4a']:after,
-.m-defaultSet div a[href$='.mov']:after,
-.m-defaultSet p a[href$='.mov']:after,
-.m-defaultSet li a[href$='.mov']:after,
-.m-defaultSet figure a[href$='.mov']:after,
-.m-defaultSet div a[href$='.alac']:after,
-.m-defaultSet p a[href$='.alac']:after,
-.m-defaultSet li a[href$='.alac']:after,
-.m-defaultSet figure a[href$='.alac']:after,
-.m-defaultSet div a[href$='.ape']:after,
-.m-defaultSet p a[href$='.ape']:after,
-.m-defaultSet li a[href$='.ape']:after,
-.m-defaultSet figure a[href$='.ape']:after,
-.m-defaultSet div a[href$='.tak']:after,
-.m-defaultSet p a[href$='.tak']:after,
-.m-defaultSet li a[href$='.tak']:after,
-.m-defaultSet figure a[href$='.tak']:after,
-.m-defaultSet div a[href$='.tta']:after,
-.m-defaultSet p a[href$='.tta']:after,
-.m-defaultSet li a[href$='.tta']:after,
-.m-defaultSet figure a[href$='.tta']:after,
-.m-defaultSet div a[href$='.aiff']:after,
-.m-defaultSet p a[href$='.aiff']:after,
-.m-defaultSet li a[href$='.aiff']:after,
-.m-defaultSet figure a[href$='.aiff']:after,
-.m-defaultSet div a[href$='.avi']:after,
-.m-defaultSet p a[href$='.avi']:after,
-.m-defaultSet li a[href$='.avi']:after,
-.m-defaultSet figure a[href$='.avi']:after,
-.m-defaultSet div a[href$='.wmv']:after,
-.m-defaultSet p a[href$='.wmv']:after,
-.m-defaultSet li a[href$='.wmv']:after,
-.m-defaultSet figure a[href$='.wmv']:after,
-.m-defaultSet div a[href$='.flv']:after,
-.m-defaultSet p a[href$='.flv']:after,
-.m-defaultSet li a[href$='.flv']:after,
-.m-defaultSet figure a[href$='.flv']:after,
-.m-defaultSet div a[href$='.mpg']:after,
-.m-defaultSet p a[href$='.mpg']:after,
-.m-defaultSet li a[href$='.mpg']:after,
-.m-defaultSet figure a[href$='.mpg']:after,
-.m-defaultSet div a[href$='.mp4']:after,
-.m-defaultSet p a[href$='.mp4']:after,
-.m-defaultSet li a[href$='.mp4']:after,
-.m-defaultSet figure a[href$='.mp4']:after {
-  content: "";
+.m-defaultSet div a[target^='_blank']:before,
+.m-defaultSet p a[target^='_blank']:before,
+.m-defaultSet li a[target^='_blank']:before,
+.m-defaultSet figure a[target^='_blank']:before,
+.m-defaultSet div a[href$='.pdf']:before,
+.m-defaultSet p a[href$='.pdf']:before,
+.m-defaultSet li a[href$='.pdf']:before,
+.m-defaultSet figure a[href$='.pdf']:before,
+.m-defaultSet div a[href$='.doc']:before,
+.m-defaultSet p a[href$='.doc']:before,
+.m-defaultSet li a[href$='.doc']:before,
+.m-defaultSet figure a[href$='.doc']:before,
+.m-defaultSet div a[href$='.docx']:before,
+.m-defaultSet p a[href$='.docx']:before,
+.m-defaultSet li a[href$='.docx']:before,
+.m-defaultSet figure a[href$='.docx']:before,
+.m-defaultSet div a[href$='.docm']:before,
+.m-defaultSet p a[href$='.docm']:before,
+.m-defaultSet li a[href$='.docm']:before,
+.m-defaultSet figure a[href$='.docm']:before,
+.m-defaultSet div a[href$='.dotx']:before,
+.m-defaultSet p a[href$='.dotx']:before,
+.m-defaultSet li a[href$='.dotx']:before,
+.m-defaultSet figure a[href$='.dotx']:before,
+.m-defaultSet div a[href$='.dotm']:before,
+.m-defaultSet p a[href$='.dotm']:before,
+.m-defaultSet li a[href$='.dotm']:before,
+.m-defaultSet figure a[href$='.dotm']:before,
+.m-defaultSet div a[href$='.rtf']:before,
+.m-defaultSet p a[href$='.rtf']:before,
+.m-defaultSet li a[href$='.rtf']:before,
+.m-defaultSet figure a[href$='.rtf']:before,
+.m-defaultSet div a[href$='.xls']:before,
+.m-defaultSet p a[href$='.xls']:before,
+.m-defaultSet li a[href$='.xls']:before,
+.m-defaultSet figure a[href$='.xls']:before,
+.m-defaultSet div a[href$='.xlsx']:before,
+.m-defaultSet p a[href$='.xlsx']:before,
+.m-defaultSet li a[href$='.xlsx']:before,
+.m-defaultSet figure a[href$='.xlsx']:before,
+.m-defaultSet div a[href$='.xlt']:before,
+.m-defaultSet p a[href$='.xlt']:before,
+.m-defaultSet li a[href$='.xlt']:before,
+.m-defaultSet figure a[href$='.xlt']:before,
+.m-defaultSet div a[href$='.xml']:before,
+.m-defaultSet p a[href$='.xml']:before,
+.m-defaultSet li a[href$='.xml']:before,
+.m-defaultSet figure a[href$='.xml']:before,
+.m-defaultSet div a[href$='.xlsm']:before,
+.m-defaultSet p a[href$='.xlsm']:before,
+.m-defaultSet li a[href$='.xlsm']:before,
+.m-defaultSet figure a[href$='.xlsm']:before,
+.m-defaultSet div a[href$='.csv']:before,
+.m-defaultSet p a[href$='.csv']:before,
+.m-defaultSet li a[href$='.csv']:before,
+.m-defaultSet figure a[href$='.csv']:before,
+.m-defaultSet div a[href$='.ppt']:before,
+.m-defaultSet p a[href$='.ppt']:before,
+.m-defaultSet li a[href$='.ppt']:before,
+.m-defaultSet figure a[href$='.ppt']:before,
+.m-defaultSet div a[href$='.pptx']:before,
+.m-defaultSet p a[href$='.pptx']:before,
+.m-defaultSet li a[href$='.pptx']:before,
+.m-defaultSet figure a[href$='.pptx']:before,
+.m-defaultSet div a[href$='.pptm']:before,
+.m-defaultSet p a[href$='.pptm']:before,
+.m-defaultSet li a[href$='.pptm']:before,
+.m-defaultSet figure a[href$='.pptm']:before,
+.m-defaultSet div a[href$='.mp3']:before,
+.m-defaultSet p a[href$='.mp3']:before,
+.m-defaultSet li a[href$='.mp3']:before,
+.m-defaultSet figure a[href$='.mp3']:before,
+.m-defaultSet div a[href$='.wma']:before,
+.m-defaultSet p a[href$='.wma']:before,
+.m-defaultSet li a[href$='.wma']:before,
+.m-defaultSet figure a[href$='.wma']:before,
+.m-defaultSet div a[href$='.wave']:before,
+.m-defaultSet p a[href$='.wave']:before,
+.m-defaultSet li a[href$='.wave']:before,
+.m-defaultSet figure a[href$='.wave']:before,
+.m-defaultSet div a[href$='.wav']:before,
+.m-defaultSet p a[href$='.wav']:before,
+.m-defaultSet li a[href$='.wav']:before,
+.m-defaultSet figure a[href$='.wav']:before,
+.m-defaultSet div a[href$='.aac']:before,
+.m-defaultSet p a[href$='.aac']:before,
+.m-defaultSet li a[href$='.aac']:before,
+.m-defaultSet figure a[href$='.aac']:before,
+.m-defaultSet div a[href$='.flac']:before,
+.m-defaultSet p a[href$='.flac']:before,
+.m-defaultSet li a[href$='.flac']:before,
+.m-defaultSet figure a[href$='.flac']:before,
+.m-defaultSet div a[href$='.aif']:before,
+.m-defaultSet p a[href$='.aif']:before,
+.m-defaultSet li a[href$='.aif']:before,
+.m-defaultSet figure a[href$='.aif']:before,
+.m-defaultSet div a[href$='.omg']:before,
+.m-defaultSet p a[href$='.omg']:before,
+.m-defaultSet li a[href$='.omg']:before,
+.m-defaultSet figure a[href$='.omg']:before,
+.m-defaultSet div a[href$='.oma']:before,
+.m-defaultSet p a[href$='.oma']:before,
+.m-defaultSet li a[href$='.oma']:before,
+.m-defaultSet figure a[href$='.oma']:before,
+.m-defaultSet div a[href$='.aa3']:before,
+.m-defaultSet p a[href$='.aa3']:before,
+.m-defaultSet li a[href$='.aa3']:before,
+.m-defaultSet figure a[href$='.aa3']:before,
+.m-defaultSet div a[href$='.ogg']:before,
+.m-defaultSet p a[href$='.ogg']:before,
+.m-defaultSet li a[href$='.ogg']:before,
+.m-defaultSet figure a[href$='.ogg']:before,
+.m-defaultSet div a[href$='.oga']:before,
+.m-defaultSet p a[href$='.oga']:before,
+.m-defaultSet li a[href$='.oga']:before,
+.m-defaultSet figure a[href$='.oga']:before,
+.m-defaultSet div a[href$='.asf']:before,
+.m-defaultSet p a[href$='.asf']:before,
+.m-defaultSet li a[href$='.asf']:before,
+.m-defaultSet figure a[href$='.asf']:before,
+.m-defaultSet div a[href$='.m4a']:before,
+.m-defaultSet p a[href$='.m4a']:before,
+.m-defaultSet li a[href$='.m4a']:before,
+.m-defaultSet figure a[href$='.m4a']:before,
+.m-defaultSet div a[href$='.mov']:before,
+.m-defaultSet p a[href$='.mov']:before,
+.m-defaultSet li a[href$='.mov']:before,
+.m-defaultSet figure a[href$='.mov']:before,
+.m-defaultSet div a[href$='.alac']:before,
+.m-defaultSet p a[href$='.alac']:before,
+.m-defaultSet li a[href$='.alac']:before,
+.m-defaultSet figure a[href$='.alac']:before,
+.m-defaultSet div a[href$='.ape']:before,
+.m-defaultSet p a[href$='.ape']:before,
+.m-defaultSet li a[href$='.ape']:before,
+.m-defaultSet figure a[href$='.ape']:before,
+.m-defaultSet div a[href$='.tak']:before,
+.m-defaultSet p a[href$='.tak']:before,
+.m-defaultSet li a[href$='.tak']:before,
+.m-defaultSet figure a[href$='.tak']:before,
+.m-defaultSet div a[href$='.tta']:before,
+.m-defaultSet p a[href$='.tta']:before,
+.m-defaultSet li a[href$='.tta']:before,
+.m-defaultSet figure a[href$='.tta']:before,
+.m-defaultSet div a[href$='.aiff']:before,
+.m-defaultSet p a[href$='.aiff']:before,
+.m-defaultSet li a[href$='.aiff']:before,
+.m-defaultSet figure a[href$='.aiff']:before,
+.m-defaultSet div a[href$='.avi']:before,
+.m-defaultSet p a[href$='.avi']:before,
+.m-defaultSet li a[href$='.avi']:before,
+.m-defaultSet figure a[href$='.avi']:before,
+.m-defaultSet div a[href$='.wmv']:before,
+.m-defaultSet p a[href$='.wmv']:before,
+.m-defaultSet li a[href$='.wmv']:before,
+.m-defaultSet figure a[href$='.wmv']:before,
+.m-defaultSet div a[href$='.flv']:before,
+.m-defaultSet p a[href$='.flv']:before,
+.m-defaultSet li a[href$='.flv']:before,
+.m-defaultSet figure a[href$='.flv']:before,
+.m-defaultSet div a[href$='.mpg']:before,
+.m-defaultSet p a[href$='.mpg']:before,
+.m-defaultSet li a[href$='.mpg']:before,
+.m-defaultSet figure a[href$='.mpg']:before,
+.m-defaultSet div a[href$='.mp4']:before,
+.m-defaultSet p a[href$='.mp4']:before,
+.m-defaultSet li a[href$='.mp4']:before,
+.m-defaultSet figure a[href$='.mp4']:before {
+  display: none;
 }
 .m-defaultSet div a[target^='_blank'].icon-before:before,
 .m-defaultSet p a[target^='_blank'].icon-before:before,
@@ -1532,7 +1942,7 @@ a:focus {
 .m-defaultSet p a[href$='.mp4'].icon-before:before,
 .m-defaultSet li a[href$='.mp4'].icon-before:before,
 .m-defaultSet figure a[href$='.mp4'].icon-before:before {
-  content: "";
+  display: inline-block;
 }
 .m-defaultSet div a[target^='_blank'].icon-before:after,
 .m-defaultSet p a[target^='_blank'].icon-before:after,
@@ -1702,7 +2112,345 @@ a:focus {
 .m-defaultSet p a[href$='.mp4'].icon-before:after,
 .m-defaultSet li a[href$='.mp4'].icon-before:after,
 .m-defaultSet figure a[href$='.mp4'].icon-before:after {
-  content: none;
+  display: none;
+}
+.m-defaultSet div a[target^='_blank']:before,
+.m-defaultSet p a[target^='_blank']:before,
+.m-defaultSet li a[target^='_blank']:before,
+.m-defaultSet figure a[target^='_blank']:before,
+.m-defaultSet div a[href$='.pdf']:before,
+.m-defaultSet p a[href$='.pdf']:before,
+.m-defaultSet li a[href$='.pdf']:before,
+.m-defaultSet figure a[href$='.pdf']:before,
+.m-defaultSet div a[href$='.doc']:before,
+.m-defaultSet p a[href$='.doc']:before,
+.m-defaultSet li a[href$='.doc']:before,
+.m-defaultSet figure a[href$='.doc']:before,
+.m-defaultSet div a[href$='.docx']:before,
+.m-defaultSet p a[href$='.docx']:before,
+.m-defaultSet li a[href$='.docx']:before,
+.m-defaultSet figure a[href$='.docx']:before,
+.m-defaultSet div a[href$='.docm']:before,
+.m-defaultSet p a[href$='.docm']:before,
+.m-defaultSet li a[href$='.docm']:before,
+.m-defaultSet figure a[href$='.docm']:before,
+.m-defaultSet div a[href$='.dotx']:before,
+.m-defaultSet p a[href$='.dotx']:before,
+.m-defaultSet li a[href$='.dotx']:before,
+.m-defaultSet figure a[href$='.dotx']:before,
+.m-defaultSet div a[href$='.dotm']:before,
+.m-defaultSet p a[href$='.dotm']:before,
+.m-defaultSet li a[href$='.dotm']:before,
+.m-defaultSet figure a[href$='.dotm']:before,
+.m-defaultSet div a[href$='.rtf']:before,
+.m-defaultSet p a[href$='.rtf']:before,
+.m-defaultSet li a[href$='.rtf']:before,
+.m-defaultSet figure a[href$='.rtf']:before,
+.m-defaultSet div a[href$='.xls']:before,
+.m-defaultSet p a[href$='.xls']:before,
+.m-defaultSet li a[href$='.xls']:before,
+.m-defaultSet figure a[href$='.xls']:before,
+.m-defaultSet div a[href$='.xlsx']:before,
+.m-defaultSet p a[href$='.xlsx']:before,
+.m-defaultSet li a[href$='.xlsx']:before,
+.m-defaultSet figure a[href$='.xlsx']:before,
+.m-defaultSet div a[href$='.xlt']:before,
+.m-defaultSet p a[href$='.xlt']:before,
+.m-defaultSet li a[href$='.xlt']:before,
+.m-defaultSet figure a[href$='.xlt']:before,
+.m-defaultSet div a[href$='.xml']:before,
+.m-defaultSet p a[href$='.xml']:before,
+.m-defaultSet li a[href$='.xml']:before,
+.m-defaultSet figure a[href$='.xml']:before,
+.m-defaultSet div a[href$='.xlsm']:before,
+.m-defaultSet p a[href$='.xlsm']:before,
+.m-defaultSet li a[href$='.xlsm']:before,
+.m-defaultSet figure a[href$='.xlsm']:before,
+.m-defaultSet div a[href$='.csv']:before,
+.m-defaultSet p a[href$='.csv']:before,
+.m-defaultSet li a[href$='.csv']:before,
+.m-defaultSet figure a[href$='.csv']:before,
+.m-defaultSet div a[href$='.ppt']:before,
+.m-defaultSet p a[href$='.ppt']:before,
+.m-defaultSet li a[href$='.ppt']:before,
+.m-defaultSet figure a[href$='.ppt']:before,
+.m-defaultSet div a[href$='.pptx']:before,
+.m-defaultSet p a[href$='.pptx']:before,
+.m-defaultSet li a[href$='.pptx']:before,
+.m-defaultSet figure a[href$='.pptx']:before,
+.m-defaultSet div a[href$='.pptm']:before,
+.m-defaultSet p a[href$='.pptm']:before,
+.m-defaultSet li a[href$='.pptm']:before,
+.m-defaultSet figure a[href$='.pptm']:before,
+.m-defaultSet div a[href$='.mp3']:before,
+.m-defaultSet p a[href$='.mp3']:before,
+.m-defaultSet li a[href$='.mp3']:before,
+.m-defaultSet figure a[href$='.mp3']:before,
+.m-defaultSet div a[href$='.wma']:before,
+.m-defaultSet p a[href$='.wma']:before,
+.m-defaultSet li a[href$='.wma']:before,
+.m-defaultSet figure a[href$='.wma']:before,
+.m-defaultSet div a[href$='.wave']:before,
+.m-defaultSet p a[href$='.wave']:before,
+.m-defaultSet li a[href$='.wave']:before,
+.m-defaultSet figure a[href$='.wave']:before,
+.m-defaultSet div a[href$='.wav']:before,
+.m-defaultSet p a[href$='.wav']:before,
+.m-defaultSet li a[href$='.wav']:before,
+.m-defaultSet figure a[href$='.wav']:before,
+.m-defaultSet div a[href$='.aac']:before,
+.m-defaultSet p a[href$='.aac']:before,
+.m-defaultSet li a[href$='.aac']:before,
+.m-defaultSet figure a[href$='.aac']:before,
+.m-defaultSet div a[href$='.flac']:before,
+.m-defaultSet p a[href$='.flac']:before,
+.m-defaultSet li a[href$='.flac']:before,
+.m-defaultSet figure a[href$='.flac']:before,
+.m-defaultSet div a[href$='.aif']:before,
+.m-defaultSet p a[href$='.aif']:before,
+.m-defaultSet li a[href$='.aif']:before,
+.m-defaultSet figure a[href$='.aif']:before,
+.m-defaultSet div a[href$='.omg']:before,
+.m-defaultSet p a[href$='.omg']:before,
+.m-defaultSet li a[href$='.omg']:before,
+.m-defaultSet figure a[href$='.omg']:before,
+.m-defaultSet div a[href$='.oma']:before,
+.m-defaultSet p a[href$='.oma']:before,
+.m-defaultSet li a[href$='.oma']:before,
+.m-defaultSet figure a[href$='.oma']:before,
+.m-defaultSet div a[href$='.aa3']:before,
+.m-defaultSet p a[href$='.aa3']:before,
+.m-defaultSet li a[href$='.aa3']:before,
+.m-defaultSet figure a[href$='.aa3']:before,
+.m-defaultSet div a[href$='.ogg']:before,
+.m-defaultSet p a[href$='.ogg']:before,
+.m-defaultSet li a[href$='.ogg']:before,
+.m-defaultSet figure a[href$='.ogg']:before,
+.m-defaultSet div a[href$='.oga']:before,
+.m-defaultSet p a[href$='.oga']:before,
+.m-defaultSet li a[href$='.oga']:before,
+.m-defaultSet figure a[href$='.oga']:before,
+.m-defaultSet div a[href$='.asf']:before,
+.m-defaultSet p a[href$='.asf']:before,
+.m-defaultSet li a[href$='.asf']:before,
+.m-defaultSet figure a[href$='.asf']:before,
+.m-defaultSet div a[href$='.m4a']:before,
+.m-defaultSet p a[href$='.m4a']:before,
+.m-defaultSet li a[href$='.m4a']:before,
+.m-defaultSet figure a[href$='.m4a']:before,
+.m-defaultSet div a[href$='.mov']:before,
+.m-defaultSet p a[href$='.mov']:before,
+.m-defaultSet li a[href$='.mov']:before,
+.m-defaultSet figure a[href$='.mov']:before,
+.m-defaultSet div a[href$='.alac']:before,
+.m-defaultSet p a[href$='.alac']:before,
+.m-defaultSet li a[href$='.alac']:before,
+.m-defaultSet figure a[href$='.alac']:before,
+.m-defaultSet div a[href$='.ape']:before,
+.m-defaultSet p a[href$='.ape']:before,
+.m-defaultSet li a[href$='.ape']:before,
+.m-defaultSet figure a[href$='.ape']:before,
+.m-defaultSet div a[href$='.tak']:before,
+.m-defaultSet p a[href$='.tak']:before,
+.m-defaultSet li a[href$='.tak']:before,
+.m-defaultSet figure a[href$='.tak']:before,
+.m-defaultSet div a[href$='.tta']:before,
+.m-defaultSet p a[href$='.tta']:before,
+.m-defaultSet li a[href$='.tta']:before,
+.m-defaultSet figure a[href$='.tta']:before,
+.m-defaultSet div a[href$='.aiff']:before,
+.m-defaultSet p a[href$='.aiff']:before,
+.m-defaultSet li a[href$='.aiff']:before,
+.m-defaultSet figure a[href$='.aiff']:before,
+.m-defaultSet div a[href$='.avi']:before,
+.m-defaultSet p a[href$='.avi']:before,
+.m-defaultSet li a[href$='.avi']:before,
+.m-defaultSet figure a[href$='.avi']:before,
+.m-defaultSet div a[href$='.wmv']:before,
+.m-defaultSet p a[href$='.wmv']:before,
+.m-defaultSet li a[href$='.wmv']:before,
+.m-defaultSet figure a[href$='.wmv']:before,
+.m-defaultSet div a[href$='.flv']:before,
+.m-defaultSet p a[href$='.flv']:before,
+.m-defaultSet li a[href$='.flv']:before,
+.m-defaultSet figure a[href$='.flv']:before,
+.m-defaultSet div a[href$='.mpg']:before,
+.m-defaultSet p a[href$='.mpg']:before,
+.m-defaultSet li a[href$='.mpg']:before,
+.m-defaultSet figure a[href$='.mpg']:before,
+.m-defaultSet div a[href$='.mp4']:before,
+.m-defaultSet p a[href$='.mp4']:before,
+.m-defaultSet li a[href$='.mp4']:before,
+.m-defaultSet figure a[href$='.mp4']:before,
+.m-defaultSet div a[target^='_blank']:after,
+.m-defaultSet p a[target^='_blank']:after,
+.m-defaultSet li a[target^='_blank']:after,
+.m-defaultSet figure a[target^='_blank']:after,
+.m-defaultSet div a[href$='.pdf']:after,
+.m-defaultSet p a[href$='.pdf']:after,
+.m-defaultSet li a[href$='.pdf']:after,
+.m-defaultSet figure a[href$='.pdf']:after,
+.m-defaultSet div a[href$='.doc']:after,
+.m-defaultSet p a[href$='.doc']:after,
+.m-defaultSet li a[href$='.doc']:after,
+.m-defaultSet figure a[href$='.doc']:after,
+.m-defaultSet div a[href$='.docx']:after,
+.m-defaultSet p a[href$='.docx']:after,
+.m-defaultSet li a[href$='.docx']:after,
+.m-defaultSet figure a[href$='.docx']:after,
+.m-defaultSet div a[href$='.docm']:after,
+.m-defaultSet p a[href$='.docm']:after,
+.m-defaultSet li a[href$='.docm']:after,
+.m-defaultSet figure a[href$='.docm']:after,
+.m-defaultSet div a[href$='.dotx']:after,
+.m-defaultSet p a[href$='.dotx']:after,
+.m-defaultSet li a[href$='.dotx']:after,
+.m-defaultSet figure a[href$='.dotx']:after,
+.m-defaultSet div a[href$='.dotm']:after,
+.m-defaultSet p a[href$='.dotm']:after,
+.m-defaultSet li a[href$='.dotm']:after,
+.m-defaultSet figure a[href$='.dotm']:after,
+.m-defaultSet div a[href$='.rtf']:after,
+.m-defaultSet p a[href$='.rtf']:after,
+.m-defaultSet li a[href$='.rtf']:after,
+.m-defaultSet figure a[href$='.rtf']:after,
+.m-defaultSet div a[href$='.xls']:after,
+.m-defaultSet p a[href$='.xls']:after,
+.m-defaultSet li a[href$='.xls']:after,
+.m-defaultSet figure a[href$='.xls']:after,
+.m-defaultSet div a[href$='.xlsx']:after,
+.m-defaultSet p a[href$='.xlsx']:after,
+.m-defaultSet li a[href$='.xlsx']:after,
+.m-defaultSet figure a[href$='.xlsx']:after,
+.m-defaultSet div a[href$='.xlt']:after,
+.m-defaultSet p a[href$='.xlt']:after,
+.m-defaultSet li a[href$='.xlt']:after,
+.m-defaultSet figure a[href$='.xlt']:after,
+.m-defaultSet div a[href$='.xml']:after,
+.m-defaultSet p a[href$='.xml']:after,
+.m-defaultSet li a[href$='.xml']:after,
+.m-defaultSet figure a[href$='.xml']:after,
+.m-defaultSet div a[href$='.xlsm']:after,
+.m-defaultSet p a[href$='.xlsm']:after,
+.m-defaultSet li a[href$='.xlsm']:after,
+.m-defaultSet figure a[href$='.xlsm']:after,
+.m-defaultSet div a[href$='.csv']:after,
+.m-defaultSet p a[href$='.csv']:after,
+.m-defaultSet li a[href$='.csv']:after,
+.m-defaultSet figure a[href$='.csv']:after,
+.m-defaultSet div a[href$='.ppt']:after,
+.m-defaultSet p a[href$='.ppt']:after,
+.m-defaultSet li a[href$='.ppt']:after,
+.m-defaultSet figure a[href$='.ppt']:after,
+.m-defaultSet div a[href$='.pptx']:after,
+.m-defaultSet p a[href$='.pptx']:after,
+.m-defaultSet li a[href$='.pptx']:after,
+.m-defaultSet figure a[href$='.pptx']:after,
+.m-defaultSet div a[href$='.pptm']:after,
+.m-defaultSet p a[href$='.pptm']:after,
+.m-defaultSet li a[href$='.pptm']:after,
+.m-defaultSet figure a[href$='.pptm']:after,
+.m-defaultSet div a[href$='.mp3']:after,
+.m-defaultSet p a[href$='.mp3']:after,
+.m-defaultSet li a[href$='.mp3']:after,
+.m-defaultSet figure a[href$='.mp3']:after,
+.m-defaultSet div a[href$='.wma']:after,
+.m-defaultSet p a[href$='.wma']:after,
+.m-defaultSet li a[href$='.wma']:after,
+.m-defaultSet figure a[href$='.wma']:after,
+.m-defaultSet div a[href$='.wave']:after,
+.m-defaultSet p a[href$='.wave']:after,
+.m-defaultSet li a[href$='.wave']:after,
+.m-defaultSet figure a[href$='.wave']:after,
+.m-defaultSet div a[href$='.wav']:after,
+.m-defaultSet p a[href$='.wav']:after,
+.m-defaultSet li a[href$='.wav']:after,
+.m-defaultSet figure a[href$='.wav']:after,
+.m-defaultSet div a[href$='.aac']:after,
+.m-defaultSet p a[href$='.aac']:after,
+.m-defaultSet li a[href$='.aac']:after,
+.m-defaultSet figure a[href$='.aac']:after,
+.m-defaultSet div a[href$='.flac']:after,
+.m-defaultSet p a[href$='.flac']:after,
+.m-defaultSet li a[href$='.flac']:after,
+.m-defaultSet figure a[href$='.flac']:after,
+.m-defaultSet div a[href$='.aif']:after,
+.m-defaultSet p a[href$='.aif']:after,
+.m-defaultSet li a[href$='.aif']:after,
+.m-defaultSet figure a[href$='.aif']:after,
+.m-defaultSet div a[href$='.omg']:after,
+.m-defaultSet p a[href$='.omg']:after,
+.m-defaultSet li a[href$='.omg']:after,
+.m-defaultSet figure a[href$='.omg']:after,
+.m-defaultSet div a[href$='.oma']:after,
+.m-defaultSet p a[href$='.oma']:after,
+.m-defaultSet li a[href$='.oma']:after,
+.m-defaultSet figure a[href$='.oma']:after,
+.m-defaultSet div a[href$='.aa3']:after,
+.m-defaultSet p a[href$='.aa3']:after,
+.m-defaultSet li a[href$='.aa3']:after,
+.m-defaultSet figure a[href$='.aa3']:after,
+.m-defaultSet div a[href$='.ogg']:after,
+.m-defaultSet p a[href$='.ogg']:after,
+.m-defaultSet li a[href$='.ogg']:after,
+.m-defaultSet figure a[href$='.ogg']:after,
+.m-defaultSet div a[href$='.oga']:after,
+.m-defaultSet p a[href$='.oga']:after,
+.m-defaultSet li a[href$='.oga']:after,
+.m-defaultSet figure a[href$='.oga']:after,
+.m-defaultSet div a[href$='.asf']:after,
+.m-defaultSet p a[href$='.asf']:after,
+.m-defaultSet li a[href$='.asf']:after,
+.m-defaultSet figure a[href$='.asf']:after,
+.m-defaultSet div a[href$='.m4a']:after,
+.m-defaultSet p a[href$='.m4a']:after,
+.m-defaultSet li a[href$='.m4a']:after,
+.m-defaultSet figure a[href$='.m4a']:after,
+.m-defaultSet div a[href$='.mov']:after,
+.m-defaultSet p a[href$='.mov']:after,
+.m-defaultSet li a[href$='.mov']:after,
+.m-defaultSet figure a[href$='.mov']:after,
+.m-defaultSet div a[href$='.alac']:after,
+.m-defaultSet p a[href$='.alac']:after,
+.m-defaultSet li a[href$='.alac']:after,
+.m-defaultSet figure a[href$='.alac']:after,
+.m-defaultSet div a[href$='.ape']:after,
+.m-defaultSet p a[href$='.ape']:after,
+.m-defaultSet li a[href$='.ape']:after,
+.m-defaultSet figure a[href$='.ape']:after,
+.m-defaultSet div a[href$='.tak']:after,
+.m-defaultSet p a[href$='.tak']:after,
+.m-defaultSet li a[href$='.tak']:after,
+.m-defaultSet figure a[href$='.tak']:after,
+.m-defaultSet div a[href$='.tta']:after,
+.m-defaultSet p a[href$='.tta']:after,
+.m-defaultSet li a[href$='.tta']:after,
+.m-defaultSet figure a[href$='.tta']:after,
+.m-defaultSet div a[href$='.aiff']:after,
+.m-defaultSet p a[href$='.aiff']:after,
+.m-defaultSet li a[href$='.aiff']:after,
+.m-defaultSet figure a[href$='.aiff']:after,
+.m-defaultSet div a[href$='.avi']:after,
+.m-defaultSet p a[href$='.avi']:after,
+.m-defaultSet li a[href$='.avi']:after,
+.m-defaultSet figure a[href$='.avi']:after,
+.m-defaultSet div a[href$='.wmv']:after,
+.m-defaultSet p a[href$='.wmv']:after,
+.m-defaultSet li a[href$='.wmv']:after,
+.m-defaultSet figure a[href$='.wmv']:after,
+.m-defaultSet div a[href$='.flv']:after,
+.m-defaultSet p a[href$='.flv']:after,
+.m-defaultSet li a[href$='.flv']:after,
+.m-defaultSet figure a[href$='.flv']:after,
+.m-defaultSet div a[href$='.mpg']:after,
+.m-defaultSet p a[href$='.mpg']:after,
+.m-defaultSet li a[href$='.mpg']:after,
+.m-defaultSet figure a[href$='.mpg']:after,
+.m-defaultSet div a[href$='.mp4']:after,
+.m-defaultSet p a[href$='.mp4']:after,
+.m-defaultSet li a[href$='.mp4']:after,
+.m-defaultSet figure a[href$='.mp4']:after {
+  color: #333;
 }
 .m-defaultSet div a[href*="#"]:before,
 .m-defaultSet p a[href*="#"]:before,
@@ -1732,13 +2480,13 @@ a:focus {
 .m-defaultSet p a[target^='_blank']:after,
 .m-defaultSet li a[target^='_blank']:after,
 .m-defaultSet figure a[target^='_blank']:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.m-defaultSet div a[href$='.pdf'],
-.m-defaultSet p a[href$='.pdf'],
-.m-defaultSet li a[href$='.pdf'],
-.m-defaultSet figure a[href$='.pdf'] {
-  content: #333;
+  content: "\EA07";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.pdf']:before,
 .m-defaultSet p a[href$='.pdf']:before,
@@ -1748,7 +2496,13 @@ a:focus {
 .m-defaultSet p a[href$='.pdf']:after,
 .m-defaultSet li a[href$='.pdf']:after,
 .m-defaultSet figure a[href$='.pdf']:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
+  content: "\EA08";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.doc']:before,
 .m-defaultSet p a[href$='.doc']:before,
@@ -1790,7 +2544,13 @@ a:focus {
 .m-defaultSet p a[href$='.dotm']:after,
 .m-defaultSet li a[href$='.dotm']:after,
 .m-defaultSet figure a[href$='.dotm']:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
+  content: "\EA02";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.xls']:before,
 .m-defaultSet p a[href$='.xls']:before,
@@ -1840,7 +2600,13 @@ a:focus {
 .m-defaultSet p a[href$='.csv']:after,
 .m-defaultSet li a[href$='.csv']:after,
 .m-defaultSet figure a[href$='.csv']:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
+  content: "\EA04";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.ppt']:before,
 .m-defaultSet p a[href$='.ppt']:before,
@@ -1866,7 +2632,13 @@ a:focus {
 .m-defaultSet p a[href$='.pptm']:after,
 .m-defaultSet li a[href$='.pptm']:after,
 .m-defaultSet figure a[href$='.pptm']:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
+  content: "\EA09";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.mp3']:before,
 .m-defaultSet p a[href$='.mp3']:before,
@@ -2028,7 +2800,13 @@ a:focus {
 .m-defaultSet p a[href$='.aiff']:after,
 .m-defaultSet li a[href$='.aiff']:after,
 .m-defaultSet figure a[href$='.aiff']:after {
-  background-image: url("../images/common/common_icon_music01.svg");
+  content: "\EA06";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.avi']:before,
 .m-defaultSet p a[href$='.avi']:before,
@@ -2078,7 +2856,13 @@ a:focus {
 .m-defaultSet p a[href$='.mp4']:after,
 .m-defaultSet li a[href$='.mp4']:after,
 .m-defaultSet figure a[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
+  content: "\EA05";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a[href$='.rtf']:before,
 .m-defaultSet p a[href$='.rtf']:before,
@@ -2088,7 +2872,13 @@ a:focus {
 .m-defaultSet p a[href$='.rtf']:after,
 .m-defaultSet li a[href$='.rtf']:after,
 .m-defaultSet figure a[href$='.rtf']:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
+  content: "\EA03";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .m-defaultSet div a span,
 .m-defaultSet p a span,
@@ -2735,11 +3525,11 @@ header.c-comHeader01 {
     padding-left: 0;
     border-left: none;
   }
+  header.c-comHeader01 .globalNavArea .globalNav > ul > li:hover > a+.childNav {
+    display: block;
+  }
   header.c-comHeader01 .globalNavArea .globalNav > ul > li > a {
     padding: 0.5em 0;
-  }
-  header.c-comHeader01 .globalNavArea .globalNav > ul > li > a:hover+.childNav {
-    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2934,6 +3724,7 @@ header.c-comHeader01 .globalNavArea a {
 @media screen and (max-width: 768px) {
   .c-imageText01 .imageBlock {
     width: 100%;
+    margin-bottom: 10px;
     padding: 0;
   }
 }
@@ -2948,8 +3739,110 @@ header.c-comHeader01 .globalNavArea a {
 .c-imageText01 .m-imageSet01 img {
   max-width: inherit;
 }
+@media screen and (min-width: 768px) {
+  .c-imageText01 .m-imageSet01 img {
+    width: inherit;
+  }
+}
 @media screen and (max-width: 768px) {
   .c-imageText01 .m-imageSet01 img {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .c-imageText02.is-imageRight .imageBlock {
+    float: right;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .c-imageText02.is-imageLeft .imageBlock {
+    float: left;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-imageText02 .imageBlock {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+}
+.c-imageText02 .textBlock {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .c-imageText02 .m-imageSet01 {
+    width: 100%;
+  }
+}
+.c-imageText02 .m-imageSet01 img {
+  max-width: inherit;
+}
+@media screen and (max-width: 768px) {
+  .c-imageText02 .m-imageSet01 img {
+    max-width: 100%;
+  }
+}
+.c-imageText03 {
+  border: 1px solid #ccc;
+}
+@media screen and (min-width: 768px) {
+  .c-imageText03.is-imageRight {
+    display: flex;
+    align-items: center;
+  }
+  .c-imageText03.is-imageRight .imageBlock {
+    order: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .c-imageText03.is-imageLeft {
+    display: flex;
+    align-items: center;
+  }
+}
+.c-imageText03 .imageBlock {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .c-imageText03 .imageBlock {
+    width: 700px;
+    min-height: 340px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-imageText03 .imageBlock {
+    width: 100%;
+    padding-top: 50%;
+  }
+}
+.c-imageText03 .textBlock {
+  padding: 15px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .c-imageText03 .textBlock {
+    width: calc(100% - 700px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-imageText03 .m-imageSet01 {
+    width: 100%;
+  }
+}
+.c-imageText03 .m-imageSet01 img {
+  max-width: inherit;
+}
+@media screen and (min-width: 768px) {
+  .c-imageText03 .m-imageSet01 img {
+    width: inherit;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-imageText03 .m-imageSet01 img {
     max-width: 100%;
   }
 }
@@ -3141,53 +4034,51 @@ header.c-comHeader01 .globalNavArea a {
   width: 16px;
   height: 16px;
   margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
   vertical-align: middle;
 }
-.c-newsSet01 a[target^='_blank']:after,
-.c-newsSet01 a[href$='.pdf']:after,
-.c-newsSet01 a[href$='.doc']:after,
-.c-newsSet01 a[href$='.docx']:after,
-.c-newsSet01 a[href$='.docm']:after,
-.c-newsSet01 a[href$='.dotx']:after,
-.c-newsSet01 a[href$='.dotm']:after,
-.c-newsSet01 a[href$='.rtf']:after,
-.c-newsSet01 a[href$='.xls']:after,
-.c-newsSet01 a[href$='.xlsx']:after,
-.c-newsSet01 a[href$='.xlt']:after,
-.c-newsSet01 a[href$='.xml']:after,
-.c-newsSet01 a[href$='.xlsm']:after,
-.c-newsSet01 a[href$='.csv']:after,
-.c-newsSet01 a[href$='.ppt']:after,
-.c-newsSet01 a[href$='.pptx']:after,
-.c-newsSet01 a[href$='.pptm']:after,
-.c-newsSet01 a[href$='.mp3']:after,
-.c-newsSet01 a[href$='.wma']:after,
-.c-newsSet01 a[href$='.wave']:after,
-.c-newsSet01 a[href$='.wav']:after,
-.c-newsSet01 a[href$='.aac']:after,
-.c-newsSet01 a[href$='.flac']:after,
-.c-newsSet01 a[href$='.aif']:after,
-.c-newsSet01 a[href$='.omg']:after,
-.c-newsSet01 a[href$='.oma']:after,
-.c-newsSet01 a[href$='.aa3']:after,
-.c-newsSet01 a[href$='.ogg']:after,
-.c-newsSet01 a[href$='.oga']:after,
-.c-newsSet01 a[href$='.asf']:after,
-.c-newsSet01 a[href$='.m4a']:after,
-.c-newsSet01 a[href$='.mov']:after,
-.c-newsSet01 a[href$='.alac']:after,
-.c-newsSet01 a[href$='.ape']:after,
-.c-newsSet01 a[href$='.tak']:after,
-.c-newsSet01 a[href$='.tta']:after,
-.c-newsSet01 a[href$='.aiff']:after,
-.c-newsSet01 a[href$='.avi']:after,
-.c-newsSet01 a[href$='.wmv']:after,
-.c-newsSet01 a[href$='.flv']:after,
-.c-newsSet01 a[href$='.mpg']:after,
-.c-newsSet01 a[href$='.mp4']:after {
-  content: "";
+.c-newsSet01 a[target^='_blank']:before,
+.c-newsSet01 a[href$='.pdf']:before,
+.c-newsSet01 a[href$='.doc']:before,
+.c-newsSet01 a[href$='.docx']:before,
+.c-newsSet01 a[href$='.docm']:before,
+.c-newsSet01 a[href$='.dotx']:before,
+.c-newsSet01 a[href$='.dotm']:before,
+.c-newsSet01 a[href$='.rtf']:before,
+.c-newsSet01 a[href$='.xls']:before,
+.c-newsSet01 a[href$='.xlsx']:before,
+.c-newsSet01 a[href$='.xlt']:before,
+.c-newsSet01 a[href$='.xml']:before,
+.c-newsSet01 a[href$='.xlsm']:before,
+.c-newsSet01 a[href$='.csv']:before,
+.c-newsSet01 a[href$='.ppt']:before,
+.c-newsSet01 a[href$='.pptx']:before,
+.c-newsSet01 a[href$='.pptm']:before,
+.c-newsSet01 a[href$='.mp3']:before,
+.c-newsSet01 a[href$='.wma']:before,
+.c-newsSet01 a[href$='.wave']:before,
+.c-newsSet01 a[href$='.wav']:before,
+.c-newsSet01 a[href$='.aac']:before,
+.c-newsSet01 a[href$='.flac']:before,
+.c-newsSet01 a[href$='.aif']:before,
+.c-newsSet01 a[href$='.omg']:before,
+.c-newsSet01 a[href$='.oma']:before,
+.c-newsSet01 a[href$='.aa3']:before,
+.c-newsSet01 a[href$='.ogg']:before,
+.c-newsSet01 a[href$='.oga']:before,
+.c-newsSet01 a[href$='.asf']:before,
+.c-newsSet01 a[href$='.m4a']:before,
+.c-newsSet01 a[href$='.mov']:before,
+.c-newsSet01 a[href$='.alac']:before,
+.c-newsSet01 a[href$='.ape']:before,
+.c-newsSet01 a[href$='.tak']:before,
+.c-newsSet01 a[href$='.tta']:before,
+.c-newsSet01 a[href$='.aiff']:before,
+.c-newsSet01 a[href$='.avi']:before,
+.c-newsSet01 a[href$='.wmv']:before,
+.c-newsSet01 a[href$='.flv']:before,
+.c-newsSet01 a[href$='.mpg']:before,
+.c-newsSet01 a[href$='.mp4']:before {
+  display: none;
 }
 .c-newsSet01 a[target^='_blank'].icon-before:before,
 .c-newsSet01 a[href$='.pdf'].icon-before:before,
@@ -3231,7 +4122,7 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.flv'].icon-before:before,
 .c-newsSet01 a[href$='.mpg'].icon-before:before,
 .c-newsSet01 a[href$='.mp4'].icon-before:before {
-  content: "";
+  display: inline-block;
 }
 .c-newsSet01 a[target^='_blank'].icon-before:after,
 .c-newsSet01 a[href$='.pdf'].icon-before:after,
@@ -3275,7 +4166,93 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.flv'].icon-before:after,
 .c-newsSet01 a[href$='.mpg'].icon-before:after,
 .c-newsSet01 a[href$='.mp4'].icon-before:after {
-  content: none;
+  display: none;
+}
+.c-newsSet01 a[target^='_blank']:before,
+.c-newsSet01 a[href$='.pdf']:before,
+.c-newsSet01 a[href$='.doc']:before,
+.c-newsSet01 a[href$='.docx']:before,
+.c-newsSet01 a[href$='.docm']:before,
+.c-newsSet01 a[href$='.dotx']:before,
+.c-newsSet01 a[href$='.dotm']:before,
+.c-newsSet01 a[href$='.rtf']:before,
+.c-newsSet01 a[href$='.xls']:before,
+.c-newsSet01 a[href$='.xlsx']:before,
+.c-newsSet01 a[href$='.xlt']:before,
+.c-newsSet01 a[href$='.xml']:before,
+.c-newsSet01 a[href$='.xlsm']:before,
+.c-newsSet01 a[href$='.csv']:before,
+.c-newsSet01 a[href$='.ppt']:before,
+.c-newsSet01 a[href$='.pptx']:before,
+.c-newsSet01 a[href$='.pptm']:before,
+.c-newsSet01 a[href$='.mp3']:before,
+.c-newsSet01 a[href$='.wma']:before,
+.c-newsSet01 a[href$='.wave']:before,
+.c-newsSet01 a[href$='.wav']:before,
+.c-newsSet01 a[href$='.aac']:before,
+.c-newsSet01 a[href$='.flac']:before,
+.c-newsSet01 a[href$='.aif']:before,
+.c-newsSet01 a[href$='.omg']:before,
+.c-newsSet01 a[href$='.oma']:before,
+.c-newsSet01 a[href$='.aa3']:before,
+.c-newsSet01 a[href$='.ogg']:before,
+.c-newsSet01 a[href$='.oga']:before,
+.c-newsSet01 a[href$='.asf']:before,
+.c-newsSet01 a[href$='.m4a']:before,
+.c-newsSet01 a[href$='.mov']:before,
+.c-newsSet01 a[href$='.alac']:before,
+.c-newsSet01 a[href$='.ape']:before,
+.c-newsSet01 a[href$='.tak']:before,
+.c-newsSet01 a[href$='.tta']:before,
+.c-newsSet01 a[href$='.aiff']:before,
+.c-newsSet01 a[href$='.avi']:before,
+.c-newsSet01 a[href$='.wmv']:before,
+.c-newsSet01 a[href$='.flv']:before,
+.c-newsSet01 a[href$='.mpg']:before,
+.c-newsSet01 a[href$='.mp4']:before,
+.c-newsSet01 a[target^='_blank']:after,
+.c-newsSet01 a[href$='.pdf']:after,
+.c-newsSet01 a[href$='.doc']:after,
+.c-newsSet01 a[href$='.docx']:after,
+.c-newsSet01 a[href$='.docm']:after,
+.c-newsSet01 a[href$='.dotx']:after,
+.c-newsSet01 a[href$='.dotm']:after,
+.c-newsSet01 a[href$='.rtf']:after,
+.c-newsSet01 a[href$='.xls']:after,
+.c-newsSet01 a[href$='.xlsx']:after,
+.c-newsSet01 a[href$='.xlt']:after,
+.c-newsSet01 a[href$='.xml']:after,
+.c-newsSet01 a[href$='.xlsm']:after,
+.c-newsSet01 a[href$='.csv']:after,
+.c-newsSet01 a[href$='.ppt']:after,
+.c-newsSet01 a[href$='.pptx']:after,
+.c-newsSet01 a[href$='.pptm']:after,
+.c-newsSet01 a[href$='.mp3']:after,
+.c-newsSet01 a[href$='.wma']:after,
+.c-newsSet01 a[href$='.wave']:after,
+.c-newsSet01 a[href$='.wav']:after,
+.c-newsSet01 a[href$='.aac']:after,
+.c-newsSet01 a[href$='.flac']:after,
+.c-newsSet01 a[href$='.aif']:after,
+.c-newsSet01 a[href$='.omg']:after,
+.c-newsSet01 a[href$='.oma']:after,
+.c-newsSet01 a[href$='.aa3']:after,
+.c-newsSet01 a[href$='.ogg']:after,
+.c-newsSet01 a[href$='.oga']:after,
+.c-newsSet01 a[href$='.asf']:after,
+.c-newsSet01 a[href$='.m4a']:after,
+.c-newsSet01 a[href$='.mov']:after,
+.c-newsSet01 a[href$='.alac']:after,
+.c-newsSet01 a[href$='.ape']:after,
+.c-newsSet01 a[href$='.tak']:after,
+.c-newsSet01 a[href$='.tta']:after,
+.c-newsSet01 a[href$='.aiff']:after,
+.c-newsSet01 a[href$='.avi']:after,
+.c-newsSet01 a[href$='.wmv']:after,
+.c-newsSet01 a[href$='.flv']:after,
+.c-newsSet01 a[href$='.mpg']:after,
+.c-newsSet01 a[href$='.mp4']:after {
+  color: #333;
 }
 .c-newsSet01 a[href*="#"]:before,
 .c-newsSet01 a[href*="#"]:after {
@@ -3287,14 +4264,23 @@ header.c-comHeader01 .globalNavArea a {
 }
 .c-newsSet01 a[target^='_blank']:before,
 .c-newsSet01 a[target^='_blank']:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.c-newsSet01 a[href$='.pdf'] {
-  content: #333;
+  content: "\EA07";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.pdf']:before,
 .c-newsSet01 a[href$='.pdf']:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
+  content: "\EA08";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.doc']:before,
 .c-newsSet01 a[href$='.docx']:before,
@@ -3306,7 +4292,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.docm']:after,
 .c-newsSet01 a[href$='.dotx']:after,
 .c-newsSet01 a[href$='.dotm']:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
+  content: "\EA02";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.xls']:before,
 .c-newsSet01 a[href$='.xlsx']:before,
@@ -3320,7 +4312,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.xml']:after,
 .c-newsSet01 a[href$='.xlsm']:after,
 .c-newsSet01 a[href$='.csv']:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
+  content: "\EA04";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.ppt']:before,
 .c-newsSet01 a[href$='.pptx']:before,
@@ -3328,7 +4326,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.ppt']:after,
 .c-newsSet01 a[href$='.pptx']:after,
 .c-newsSet01 a[href$='.pptm']:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
+  content: "\EA09";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.mp3']:before,
 .c-newsSet01 a[href$='.wma']:before,
@@ -3370,7 +4374,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.tak']:after,
 .c-newsSet01 a[href$='.tta']:after,
 .c-newsSet01 a[href$='.aiff']:after {
-  background-image: url("../images/common/common_icon_music01.svg");
+  content: "\EA06";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.avi']:before,
 .c-newsSet01 a[href$='.mov']:before,
@@ -3384,11 +4394,23 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet01 a[href$='.flv']:after,
 .c-newsSet01 a[href$='.mpg']:after,
 .c-newsSet01 a[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
+  content: "\EA05";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a[href$='.rtf']:before,
 .c-newsSet01 a[href$='.rtf']:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
+  content: "\EA03";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet01 a span {
   vertical-align: middle;
@@ -3481,6 +4503,31 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.ppt'] .text:before,
 .c-newsSet02 a[href$='.pptx'] .text:before,
 .c-newsSet02 a[href$='.pptm'] .text:before,
+.c-newsSet02 a[href$='.mp3'] .text:before,
+.c-newsSet02 a[href$='.wma'] .text:before,
+.c-newsSet02 a[href$='.wave'] .text:before,
+.c-newsSet02 a[href$='.wav'] .text:before,
+.c-newsSet02 a[href$='.aac'] .text:before,
+.c-newsSet02 a[href$='.flac'] .text:before,
+.c-newsSet02 a[href$='.aif'] .text:before,
+.c-newsSet02 a[href$='.omg'] .text:before,
+.c-newsSet02 a[href$='.oma'] .text:before,
+.c-newsSet02 a[href$='.aa3'] .text:before,
+.c-newsSet02 a[href$='.ogg'] .text:before,
+.c-newsSet02 a[href$='.oga'] .text:before,
+.c-newsSet02 a[href$='.asf'] .text:before,
+.c-newsSet02 a[href$='.m4a'] .text:before,
+.c-newsSet02 a[href$='.mov'] .text:before,
+.c-newsSet02 a[href$='.alac'] .text:before,
+.c-newsSet02 a[href$='.ape'] .text:before,
+.c-newsSet02 a[href$='.tak'] .text:before,
+.c-newsSet02 a[href$='.tta'] .text:before,
+.c-newsSet02 a[href$='.aiff'] .text:before,
+.c-newsSet02 a[href$='.avi'] .text:before,
+.c-newsSet02 a[href$='.wmv'] .text:before,
+.c-newsSet02 a[href$='.flv'] .text:before,
+.c-newsSet02 a[href$='.mpg'] .text:before,
+.c-newsSet02 a[href$='.mp4'] .text:before,
 .c-newsSet02 a[target^='_blank'] .text:after,
 .c-newsSet02 a[href$='.pdf'] .text:after,
 .c-newsSet02 a[href$='.doc'] .text:after,
@@ -3497,33 +4544,81 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.csv'] .text:after,
 .c-newsSet02 a[href$='.ppt'] .text:after,
 .c-newsSet02 a[href$='.pptx'] .text:after,
-.c-newsSet02 a[href$='.pptm'] .text:after {
+.c-newsSet02 a[href$='.pptm'] .text:after,
+.c-newsSet02 a[href$='.mp3'] .text:after,
+.c-newsSet02 a[href$='.wma'] .text:after,
+.c-newsSet02 a[href$='.wave'] .text:after,
+.c-newsSet02 a[href$='.wav'] .text:after,
+.c-newsSet02 a[href$='.aac'] .text:after,
+.c-newsSet02 a[href$='.flac'] .text:after,
+.c-newsSet02 a[href$='.aif'] .text:after,
+.c-newsSet02 a[href$='.omg'] .text:after,
+.c-newsSet02 a[href$='.oma'] .text:after,
+.c-newsSet02 a[href$='.aa3'] .text:after,
+.c-newsSet02 a[href$='.ogg'] .text:after,
+.c-newsSet02 a[href$='.oga'] .text:after,
+.c-newsSet02 a[href$='.asf'] .text:after,
+.c-newsSet02 a[href$='.m4a'] .text:after,
+.c-newsSet02 a[href$='.mov'] .text:after,
+.c-newsSet02 a[href$='.alac'] .text:after,
+.c-newsSet02 a[href$='.ape'] .text:after,
+.c-newsSet02 a[href$='.tak'] .text:after,
+.c-newsSet02 a[href$='.tta'] .text:after,
+.c-newsSet02 a[href$='.aiff'] .text:after,
+.c-newsSet02 a[href$='.avi'] .text:after,
+.c-newsSet02 a[href$='.wmv'] .text:after,
+.c-newsSet02 a[href$='.flv'] .text:after,
+.c-newsSet02 a[href$='.mpg'] .text:after,
+.c-newsSet02 a[href$='.mp4'] .text:after {
   display: inline-block;
   width: 16px;
   height: 16px;
   margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
   vertical-align: middle;
 }
-.c-newsSet02 a[target^='_blank'] .text:after,
-.c-newsSet02 a[href$='.pdf'] .text:after,
-.c-newsSet02 a[href$='.doc'] .text:after,
-.c-newsSet02 a[href$='.docx'] .text:after,
-.c-newsSet02 a[href$='.docm'] .text:after,
-.c-newsSet02 a[href$='.dotx'] .text:after,
-.c-newsSet02 a[href$='.dotm'] .text:after,
-.c-newsSet02 a[href$='.rtf'] .text:after,
-.c-newsSet02 a[href$='.xls'] .text:after,
-.c-newsSet02 a[href$='.xlsx'] .text:after,
-.c-newsSet02 a[href$='.xlt'] .text:after,
-.c-newsSet02 a[href$='.xml'] .text:after,
-.c-newsSet02 a[href$='.xlsm'] .text:after,
-.c-newsSet02 a[href$='.csv'] .text:after,
-.c-newsSet02 a[href$='.ppt'] .text:after,
-.c-newsSet02 a[href$='.pptx'] .text:after,
-.c-newsSet02 a[href$='.pptm'] .text:after {
-  content: "";
+.c-newsSet02 a[target^='_blank'] .text:before,
+.c-newsSet02 a[href$='.pdf'] .text:before,
+.c-newsSet02 a[href$='.doc'] .text:before,
+.c-newsSet02 a[href$='.docx'] .text:before,
+.c-newsSet02 a[href$='.docm'] .text:before,
+.c-newsSet02 a[href$='.dotx'] .text:before,
+.c-newsSet02 a[href$='.dotm'] .text:before,
+.c-newsSet02 a[href$='.rtf'] .text:before,
+.c-newsSet02 a[href$='.xls'] .text:before,
+.c-newsSet02 a[href$='.xlsx'] .text:before,
+.c-newsSet02 a[href$='.xlt'] .text:before,
+.c-newsSet02 a[href$='.xml'] .text:before,
+.c-newsSet02 a[href$='.xlsm'] .text:before,
+.c-newsSet02 a[href$='.csv'] .text:before,
+.c-newsSet02 a[href$='.ppt'] .text:before,
+.c-newsSet02 a[href$='.pptx'] .text:before,
+.c-newsSet02 a[href$='.pptm'] .text:before,
+.c-newsSet02 a[href$='.mp3'] .text:before,
+.c-newsSet02 a[href$='.wma'] .text:before,
+.c-newsSet02 a[href$='.wave'] .text:before,
+.c-newsSet02 a[href$='.wav'] .text:before,
+.c-newsSet02 a[href$='.aac'] .text:before,
+.c-newsSet02 a[href$='.flac'] .text:before,
+.c-newsSet02 a[href$='.aif'] .text:before,
+.c-newsSet02 a[href$='.omg'] .text:before,
+.c-newsSet02 a[href$='.oma'] .text:before,
+.c-newsSet02 a[href$='.aa3'] .text:before,
+.c-newsSet02 a[href$='.ogg'] .text:before,
+.c-newsSet02 a[href$='.oga'] .text:before,
+.c-newsSet02 a[href$='.asf'] .text:before,
+.c-newsSet02 a[href$='.m4a'] .text:before,
+.c-newsSet02 a[href$='.mov'] .text:before,
+.c-newsSet02 a[href$='.alac'] .text:before,
+.c-newsSet02 a[href$='.ape'] .text:before,
+.c-newsSet02 a[href$='.tak'] .text:before,
+.c-newsSet02 a[href$='.tta'] .text:before,
+.c-newsSet02 a[href$='.aiff'] .text:before,
+.c-newsSet02 a[href$='.avi'] .text:before,
+.c-newsSet02 a[href$='.wmv'] .text:before,
+.c-newsSet02 a[href$='.flv'] .text:before,
+.c-newsSet02 a[href$='.mpg'] .text:before,
+.c-newsSet02 a[href$='.mp4'] .text:before {
+  display: none;
 }
 .c-newsSet02 a[target^='_blank'] .text.icon-before:before,
 .c-newsSet02 a[href$='.pdf'] .text.icon-before:before,
@@ -3541,8 +4636,33 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.csv'] .text.icon-before:before,
 .c-newsSet02 a[href$='.ppt'] .text.icon-before:before,
 .c-newsSet02 a[href$='.pptx'] .text.icon-before:before,
-.c-newsSet02 a[href$='.pptm'] .text.icon-before:before {
-  content: "";
+.c-newsSet02 a[href$='.pptm'] .text.icon-before:before,
+.c-newsSet02 a[href$='.mp3'] .text.icon-before:before,
+.c-newsSet02 a[href$='.wma'] .text.icon-before:before,
+.c-newsSet02 a[href$='.wave'] .text.icon-before:before,
+.c-newsSet02 a[href$='.wav'] .text.icon-before:before,
+.c-newsSet02 a[href$='.aac'] .text.icon-before:before,
+.c-newsSet02 a[href$='.flac'] .text.icon-before:before,
+.c-newsSet02 a[href$='.aif'] .text.icon-before:before,
+.c-newsSet02 a[href$='.omg'] .text.icon-before:before,
+.c-newsSet02 a[href$='.oma'] .text.icon-before:before,
+.c-newsSet02 a[href$='.aa3'] .text.icon-before:before,
+.c-newsSet02 a[href$='.ogg'] .text.icon-before:before,
+.c-newsSet02 a[href$='.oga'] .text.icon-before:before,
+.c-newsSet02 a[href$='.asf'] .text.icon-before:before,
+.c-newsSet02 a[href$='.m4a'] .text.icon-before:before,
+.c-newsSet02 a[href$='.mov'] .text.icon-before:before,
+.c-newsSet02 a[href$='.alac'] .text.icon-before:before,
+.c-newsSet02 a[href$='.ape'] .text.icon-before:before,
+.c-newsSet02 a[href$='.tak'] .text.icon-before:before,
+.c-newsSet02 a[href$='.tta'] .text.icon-before:before,
+.c-newsSet02 a[href$='.aiff'] .text.icon-before:before,
+.c-newsSet02 a[href$='.avi'] .text.icon-before:before,
+.c-newsSet02 a[href$='.wmv'] .text.icon-before:before,
+.c-newsSet02 a[href$='.flv'] .text.icon-before:before,
+.c-newsSet02 a[href$='.mpg'] .text.icon-before:before,
+.c-newsSet02 a[href$='.mp4'] .text.icon-before:before {
+  display: inline-block;
 }
 .c-newsSet02 a[target^='_blank'] .text.icon-before:after,
 .c-newsSet02 a[href$='.pdf'] .text.icon-before:after,
@@ -3560,8 +4680,33 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.csv'] .text.icon-before:after,
 .c-newsSet02 a[href$='.ppt'] .text.icon-before:after,
 .c-newsSet02 a[href$='.pptx'] .text.icon-before:after,
-.c-newsSet02 a[href$='.pptm'] .text.icon-before:after {
-  content: none;
+.c-newsSet02 a[href$='.pptm'] .text.icon-before:after,
+.c-newsSet02 a[href$='.mp3'] .text.icon-before:after,
+.c-newsSet02 a[href$='.wma'] .text.icon-before:after,
+.c-newsSet02 a[href$='.wave'] .text.icon-before:after,
+.c-newsSet02 a[href$='.wav'] .text.icon-before:after,
+.c-newsSet02 a[href$='.aac'] .text.icon-before:after,
+.c-newsSet02 a[href$='.flac'] .text.icon-before:after,
+.c-newsSet02 a[href$='.aif'] .text.icon-before:after,
+.c-newsSet02 a[href$='.omg'] .text.icon-before:after,
+.c-newsSet02 a[href$='.oma'] .text.icon-before:after,
+.c-newsSet02 a[href$='.aa3'] .text.icon-before:after,
+.c-newsSet02 a[href$='.ogg'] .text.icon-before:after,
+.c-newsSet02 a[href$='.oga'] .text.icon-before:after,
+.c-newsSet02 a[href$='.asf'] .text.icon-before:after,
+.c-newsSet02 a[href$='.m4a'] .text.icon-before:after,
+.c-newsSet02 a[href$='.mov'] .text.icon-before:after,
+.c-newsSet02 a[href$='.alac'] .text.icon-before:after,
+.c-newsSet02 a[href$='.ape'] .text.icon-before:after,
+.c-newsSet02 a[href$='.tak'] .text.icon-before:after,
+.c-newsSet02 a[href$='.tta'] .text.icon-before:after,
+.c-newsSet02 a[href$='.aiff'] .text.icon-before:after,
+.c-newsSet02 a[href$='.avi'] .text.icon-before:after,
+.c-newsSet02 a[href$='.wmv'] .text.icon-before:after,
+.c-newsSet02 a[href$='.flv'] .text.icon-before:after,
+.c-newsSet02 a[href$='.mpg'] .text.icon-before:after,
+.c-newsSet02 a[href$='.mp4'] .text.icon-before:after {
+  display: none;
 }
 .c-newsSet02 a[href*="#"] .text:before,
 .c-newsSet02 a[href*="#"] .text:after {
@@ -3573,14 +4718,23 @@ header.c-comHeader01 .globalNavArea a {
 }
 .c-newsSet02 a[target^='_blank'] .text:before,
 .c-newsSet02 a[target^='_blank'] .text:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.c-newsSet02 a[href$='.pdf'] .text {
-  content: #333;
+  content: "\EA07";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.pdf'] .text:before,
 .c-newsSet02 a[href$='.pdf'] .text:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
+  content: "\EA08";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.doc'] .text:before,
 .c-newsSet02 a[href$='.docx'] .text:before,
@@ -3592,7 +4746,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.docm'] .text:after,
 .c-newsSet02 a[href$='.dotx'] .text:after,
 .c-newsSet02 a[href$='.dotm'] .text:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
+  content: "\EA02";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.xls'] .text:before,
 .c-newsSet02 a[href$='.xlsx'] .text:before,
@@ -3606,7 +4766,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.xml'] .text:after,
 .c-newsSet02 a[href$='.xlsm'] .text:after,
 .c-newsSet02 a[href$='.csv'] .text:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
+  content: "\EA04";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.ppt'] .text:before,
 .c-newsSet02 a[href$='.pptx'] .text:before,
@@ -3614,7 +4780,13 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.ppt'] .text:after,
 .c-newsSet02 a[href$='.pptx'] .text:after,
 .c-newsSet02 a[href$='.pptm'] .text:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
+  content: "\EA09";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.mp3'] .text:before,
 .c-newsSet02 a[href$='.wma'] .text:before,
@@ -3656,41 +4828,65 @@ header.c-comHeader01 .globalNavArea a {
 .c-newsSet02 a[href$='.tak'] .text:after,
 .c-newsSet02 a[href$='.tta'] .text:after,
 .c-newsSet02 a[href$='.aiff'] .text:after {
-  background-image: url("../images/common/common_icon_music01.svg");
+  content: "\EA06";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.c-newsSet02 a[href$='.avi']:before,
-.c-newsSet02 a[href$='.mov']:before,
-.c-newsSet02 a[href$='.wmv']:before,
-.c-newsSet02 a[href$='.flv']:before,
-.c-newsSet02 a[href$='.mpg']:before,
-.c-newsSet02 a[href$='.mp4']:before,
-.c-newsSet02 a[href$='.avi']:after,
-.c-newsSet02 a[href$='.mov']:after,
-.c-newsSet02 a[href$='.wmv']:after,
-.c-newsSet02 a[href$='.flv']:after,
-.c-newsSet02 a[href$='.mpg']:after,
-.c-newsSet02 a[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
+.c-newsSet02 a[href$='.avi'] .text:before,
+.c-newsSet02 a[href$='.mov'] .text:before,
+.c-newsSet02 a[href$='.wmv'] .text:before,
+.c-newsSet02 a[href$='.flv'] .text:before,
+.c-newsSet02 a[href$='.mpg'] .text:before,
+.c-newsSet02 a[href$='.mp4'] .text:before,
+.c-newsSet02 a[href$='.avi'] .text:after,
+.c-newsSet02 a[href$='.mov'] .text:after,
+.c-newsSet02 a[href$='.wmv'] .text:after,
+.c-newsSet02 a[href$='.flv'] .text:after,
+.c-newsSet02 a[href$='.mpg'] .text:after,
+.c-newsSet02 a[href$='.mp4'] .text:after {
+  content: "\EA05";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .c-newsSet02 a[href$='.rtf'] .text:before,
 .c-newsSet02 a[href$='.rtf'] .text:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
+  content: "\EA03";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.c-newsSet02 a .text:before,
+.c-newsSet02 a .text:after {
+  content: "\EA01";
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.c-newsSet02 a .text:before {
+  display: none;
 }
 .c-newsSet02 a .text:after {
-  content: "";
-  display: block;
   position: absolute;
   top: 50%;
   right: 10px;
   width: 16px;
   height: 16px;
   margin: 0 !important;
-  background-repeat: no-repeat;
-  background-size: cover;
   transform: translate3d(0, -50%, 0);
-  background-image: url("../images/common/common_icon_arrow01.svg");
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
 }
 .c-newsSet02 a .text span {
   vertical-align: middle;
@@ -4072,237 +5268,6 @@ header.c-comHeader01 .globalNavArea a {
 }
 .a-bgColorChange01 a {
   transition: 0.3s all ease;
-}
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 0 4px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  vertical-align: middle;
-}
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
-  content: "";
-}
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper.icon-before:before,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper.icon-before:before {
-  content: "";
-}
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper.icon-before:after,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper.icon-before:after {
-  content: none;
-}
-.a-bgColorChange01 a:hover[href*="#"] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href*="#"] .btnWrapper:after {
-  transform: translate3d(0, -50%, 0) rotate(90deg);
-}
-.a-bgColorChange01 a:hover[href*="#"] .btnWrapper[href*=".html"]:before,
-.a-bgColorChange01 a:hover[href*="#"] .btnWrapper[href*=".html"]:after {
-  transform: translate3d(0, -50%, 0) rotate(0);
-}
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[target^='_blank'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_outer01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper {
-  content: #fff;
-}
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pdf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_pdf01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.doc'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.docm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.dotm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_doc01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.xls'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xml'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.xlsm'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.csv'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_excel01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.ppt'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptx'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.pptm'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_ppt01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.mp3'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.wma'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.wave'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.wav'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.aac'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.flac'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.aif'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.omg'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.oma'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.aa3'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.ogg'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.oga'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.asf'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.m4a'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.mov'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.alac'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.ape'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.tak'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.tta'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.aiff'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.mp3'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.wma'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.wave'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.wav'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.aac'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.flac'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.aif'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.omg'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.oma'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.aa3'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.ogg'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.oga'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.asf'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.m4a'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.mov'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.alac'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.ape'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.tak'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.tta'] .btnWrapper:after,
-.a-bgColorChange01 a:hover[href$='.aiff'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_music01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.avi']:before,
-.a-bgColorChange01 a:hover[href$='.mov']:before,
-.a-bgColorChange01 a:hover[href$='.wmv']:before,
-.a-bgColorChange01 a:hover[href$='.flv']:before,
-.a-bgColorChange01 a:hover[href$='.mpg']:before,
-.a-bgColorChange01 a:hover[href$='.mp4']:before,
-.a-bgColorChange01 a:hover[href$='.avi']:after,
-.a-bgColorChange01 a:hover[href$='.mov']:after,
-.a-bgColorChange01 a:hover[href$='.wmv']:after,
-.a-bgColorChange01 a:hover[href$='.flv']:after,
-.a-bgColorChange01 a:hover[href$='.mpg']:after,
-.a-bgColorChange01 a:hover[href$='.mp4']:after {
-  background-image: url("../images/common/common_icon_movie01.svg");
-}
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:before,
-.a-bgColorChange01 a:hover[href$='.rtf'] .btnWrapper:after {
-  background-image: url("../images/common/common_icon_etc01.svg");
-}
-.a-bgColorChange01 a:hover .btnWrapper:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  width: 16px;
-  height: 16px;
-  margin: 0 !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translate3d(0, -50%, 0);
-  background-image: url("../images/common/common_icon_arrow01.svg");
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E%0A");
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16%3B' xml:space='preserve'%3E%3Ctitle%3ESlack icon%3C/title%3E%3Crect x='1' y='7' width='14' height='2'/%3E%3Cpolygon points='13.8,8.2 9.5,4 10.4,3 14.7,7.2 '/%3E%3Cpolygon points='13.8,7.8 9.5,12 10.4,13 14.7,8.8 '/%3E%3C/svg%3E");
-}
-.a-bgColorChange01 a:hover .btnWrapper span {
-  vertical-align: middle;
 }
 .a-borderChange01 {
   position: relative;
