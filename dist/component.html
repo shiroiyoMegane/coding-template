@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
     <meta name="format-detection" content="telephone=no">
-    <title>コンポーネント集 | </title>
+    <title>コンポーネント集 | コーディングベース</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta content="コンポーネント集 | " property="og:title">
+    <meta content="コンポーネント集 | コーディングベース" property="og:title">
     <meta content="" property="og:description">
     <meta content="images/common/ogp.png" property="og:image">
     <meta content="component.html" property="og:url">
@@ -67,6 +67,12 @@
 
 .l-columnBox
 	marginBottom(60)
+
+.l-childBox
+	padding 0 10px
+	box-sizing border-box
+	+MQ_SP(SP_RES_WID)
+		padding 0 5px
 
 .l-mqWrapper
 	+MQ(PC_RES_WID)
@@ -506,6 +512,7 @@
 			align-items center
 	
 	.imageBlock
+		background-position center center
 		background-repeat no-repeat
 		background-size cover
 		+MQ_PC(SP_RES_WID)

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html class="is-guideline" lang="ja">
+  <head>
+    <link rel="canonical" href="guideline.html">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
+    <meta name="format-detection" content="telephone=no">
+    <title>ガイドライン | コーディングベース</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="ガイドライン | コーディングベース" property="og:title">
+    <meta content="" property="og:description">
+    <meta content="images/common/ogp.png" property="og:image">
+    <meta content="guideline.html" property="og:url">
+    <meta content="article" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/common/favicon.ico">
+    <link rel="apple-touch-icon" href="images/common/webclip.png">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/function.js"></script>
+  </head>
+  <body>
+    <main id="l-contentsTop">
+      <div class="l-contentsBody">
+        <div class="l-columnBlock">
+          <div class="l-columnBox">
+            <h1 class="m-title-bg01"><span>コーディングガイドライン ver0.0</span></h1>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <div class="m-defaultSet">
+                  <h2 class="m-title-borderLeft01"><span>[1.0] 基本</span></h2>
+                  <div class="l-childBox">
+                    <h3 class="m-title-borderBottom01"><span>[1.1] ガイドラインの目的</span></h3>
+                    <div class="l-childBox">
+                      <p>下記目的を達成するために、常に見直し・更新を行ない、ガイドラインの制定と共有を図る。</p>
+                      <h4 class="m-title-boldLarge01"><span>[1.1] ガイドラインの目的</span></h4>
+                      <div class="l-childBox">
+                        <p>本ガイドラインは、以下にあげる3つの項目を達成するため制定する。 </p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.1.1] クオリティの向上 </span></h4>
+                      <div class="l-childBox">
+                        <p>制作を進める上で最適だと思われるルールをガイドラインとして制定することで、全体のクオリティ向上を図る。 </p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.1.2] クオリティの均一化</span></h4>
+                      <div class="l-childBox">
+                        <p>ルールを明確にすることで、制作担当者によって発生しうるクオリティのバラつきを防ぐ。 </p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.1.3] 制作の効率化</span></h4>
+                      <div class="l-childBox">
+                        <p>ルールを明確にすることでタイムロスを防ぎ、無駄なチェック・修正の工数を削減する。 </p>
+                      </div>
+                    </div>
+                    <h3 class="m-title-borderBottom01"><span>[1.2] 制作ルール</span></h3>
+                    <div class="l-childBox">
+                      <h4 class="m-title-boldLarge01"><span>[1.2.1] 文字コード</span></h4>
+                      <div class="l-childBox">
+                        <p>UTF-8 を使用する。<br>フォーム等でその他の文字コードが必要な場合は、適宜変更する。</p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.2] DOCTYPE</span></h4>
+                      <div class="l-childBox">
+                        <p>HTML5 とする。<br>要件に応じて、別の形式を採用する。</p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.3] マークアップ</span></h4>
+                      <div class="l-childBox">
+                        <p>w3cに則ったマークアップを行う。</p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.4] バリデート</span></h4>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>文法に則った HTML を記述する。</li>
+                          <li>バリデートチェックにはツール等を使用して、適宜チェックすること<br><a href="https://validator.w3.org/">https://validator.w3.org/</a></li>
+                        </ul>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.5] インデント</span></h4>
+                      <div class="l-childBox">
+                        <p>インデントは、タブもしくはスペース2個を使用し、いずれかに統一する。<br>（pugを使用する際は、出力の際半角スペースに変換される）</p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.6] 改行</span></h4>
+                      <div class="l-childBox">
+                        <p>ブロック要素は改行する。<br>インライン要素であっても、適宜改行して可読性を保つようにする。</p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.7] 文字</span></h4>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>英数字は半角を使用する</li>
+                          <li>原則、半角カタカナは使用しない。</li>
+                          <li>特殊文字は適切な文字コードに置き換える</li>
+                        </ul>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.8] パス</span></h4>
+                      <div class="l-childBox">
+                        <p>原則、相対パスを使用する。システムの要件に合わせて、ルート相対パス、絶対パス等を適宜使い分け、使用する際には統一する。</p>
+                        <h5 class="m-title-boldLarge01"><span>■相対パス</span></h5>
+                        <div class="l-childBox">
+                          <p>
+                            <pre><code>&lt;a href=&quot;../about/ &quot;&gt;ABOUT&lt;/a&gt;</code></pre>
+                          </p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>■ルート相対パス</span></h5>
+                        <div class="l-childBox">
+                          <p>
+                            <pre><code>&lt;a href=&quot;/about/ &quot;&gt;ABOUT&lt;/a&gt;</code></pre>
+                          </p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>■絶対パス</span></h5>
+                        <div class="l-childBox">
+                          <p>
+                            <pre><code>&lt;a href=&quot;https//www.sample.co.jp/about/ &quot;&gt;ABOUT&lt;/a&gt;
+</code></pre>
+                          </p>
+                        </div>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[1.2.9] タグ名</span></h4>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>タグ名を記述する際は、小文字を使用する。</li>
+                          <li>終了タグは省略しない。</li>
+                        </ul>
+                        <h5 class="m-title-boldLarge01"><span>[1.2.9.1] head</span></h5>
+                        <div class="l-childBox">
+                          <ul class="is-disc">
+                            <li>title、meta等は、システムやSEO等に配慮して、適宜記述する。</li>
+                            <li>style、scriptタグは基本head内に記述する。</li>
+                          </ul>
+                          <p>
+                            <pre><code>&lt;link rel=&quot;canonical&quot; href=&quot;index.html&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=0.5 , maximum-scale=2&quot;&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;
+&lt;title&gt;サイト名 | 下層ページ&lt;/title&gt;
+&lt;meta content=&quot;&quot; name=&quot;description&quot;&gt;
+&lt;meta content=&quot;&quot; name=&quot;keywords&quot;&gt;
+&lt;meta content=&quot;サイトタイトル&quot; property=&quot;og:title&quot;&gt;
+&lt;meta content=&quot;&quot; property=&quot;og:description&quot;&gt;
+&lt;meta content=&quot;images/common/ogp.png&quot; property=&quot;og:image&quot;&gt;
+&lt;meta content=&quot;index.html&quot; property=&quot;og:url&quot;&gt;
+&lt;meta content=&quot;website&quot; property=&quot;og:type&quot;&gt;
+&lt;meta content=&quot;ja_JP&quot; property=&quot;og:locale&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/common/favicon.ico&quot;&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/common/webclip.png&quot;&gt;
+&lt;script src=&quot;js/function.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+                          </p>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.1] title</span></h6>
+                          <div class="l-childBox">
+                            <p>ページ名、サイト名の順に、「 | 」（半角スペース＋半角縦棒＋半角スペース）で区切る。 </p>
+                            <p>
+                              <pre><code>&lt;title&gt;サイト名 | 下層ページ&lt;/title&gt;
+</code></pre>
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.2] description</span></h6>
+                          <div class="l-childBox">
+                            <p>description は、ページに合った説明文を、適切な文字数で記述すること。</p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>keywords</span></h6>
+                          <div class="l-childBox">
+                            <p>keywords は、キーワード毎に半角カンマ「,」で区切ること。</p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>ogp</span></h6>
+                          <div class="l-childBox">
+                            <p>ogpタグは、連携するsnsに推奨される形式を使用する</p>
+                            <p>
+                              <pre><code>&lt;meta content=&quot;サイトタイトル&quot; property=&quot;og:title&quot;&gt;
+&lt;meta content=&quot;&quot; property=&quot;og:description&quot;&gt;
+&lt;meta content=&quot;images/common/ogp.png&quot; property=&quot;og:image&quot;&gt;
+&lt;meta content=&quot;index.html&quot; property=&quot;og:url&quot;&gt;
+&lt;meta content=&quot;website&quot; property=&quot;og:type&quot;&gt;
+&lt;meta content=&quot;ja_JP&quot; property=&quot;og:locale&quot;&gt;
+</code></pre>
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.5] style</span></h6>
+                          <div class="l-childBox">
+                            <p>
+                              <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+</code></pre>
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.6] script</span></h6>
+                          <div class="l-childBox">
+                            <p>typeは省略する</p>
+                            <p>
+                              <pre><code>&lt;script src=&quot;js/function.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.7] favicon、webclip</span></h6>
+                          <div class="l-childBox">
+                            <p>サイトに適切なfavicon、webclipを設置する</p>
+                            <p>
+                              <pre><code>&lt;link rel=&quot;shortcut icon&quot; href=&quot;images/common/favicon.ico&quot;&gt;
+&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/common/webclip.png&quot;&gt;
+</code></pre>
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.8] Google Analytics</span></h6>
+                          <div class="l-childBox">
+                            <p>&lt;/head&gt; の直前に記述する。
+
+
+                            </p>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.1.9] その他</span></h6>
+                          <div class="l-childBox">
+                            <p>その他、外部ライブラリなど必要な記述は、適宜記述する。</p>
+                          </div>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[1.2.9.1] コンテンツ</span></h5>
+                        <div class="l-childBox">
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.2.1] hX</span></h6>
+                          <div class="l-childBox">
+                            <ul class="is-disc">
+                              <li>見出し要素は、バリデーションに則した形式で記述する。</li>
+                              <li>h1：トップページでは、サイトタイトル・サイトロゴに使用。その他のページでは、ページに適したタイトルを使用する。</li>
+                            </ul>
+                          </div>
+                          <h6 class="m-title-boldLarge01"><span>[1.2.9.2.2] img</span></h6>
+                          <div class="l-childBox">
+                            <ul class="is-disc">
+                              <li>基本、altを記述する。]</li>
+                              <li>装飾要素等でaltが必要ない場合などは、「alt=""」を使用する。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-bgBlock01">
+              <div class="l-contentsWidth">
+                <div class="l-mqWrapper">
+                  <div class="m-defaultSet">
+                    <h2 class="m-title-borderLeft01"><span>[2.0] ディレクトリ構成</span></h2>
+                    <p>
+                      <pre><code>root/
+|
+├ dist/
+|	|
+|	├ css/
+|	|	|
+|	|	└ style.css
+|	|
+|	├ images/
+|	|
+|	└ js/
+|	|
+|	├ component.html
+|	└ index.html
+|
+├ node_modules/
+|
+├ src/
+|	|
+|	├ pug/ [3.1]
+|	|	|
+|	|	└ _include/ [3.1.2]
+|	|	|	├ _components/ [3.1.2.1]
+|	|	|	|	|
+|	|	|	|	├ _c_componentName.pug
+|	|	|	|	└ ...
+|	|	|	|
+|	|	|	├ _layout/ [3.1.2.2]
+|	|	|	|	|
+|	|	|	|	├ _l_layoutName.pug
+|	|	|	|	└ ...
+|	|	|	|
+|	|	|	├ _modules/ [3.1.2.3]
+|	|	|	|	|
+|	|	|	|	├ _m_moduleName.pug
+|	|	|	|	└ ...
+|	|	|	|
+|	|	|	└ _settings/ [3.1.2.4]
+|	|	|	|	|
+|	|	|	|	├ _s_head.pug
+|	|	|	|	└ _s_mixin.pug
+|	|	|	|
+|	|	|	└ _template/ [3.1.2.5]
+|	|	|		|
+|	|	|		└ _t_templateName.pug
+|	|	|
+|	|	├ component.pug [3.1.1]
+|	|	└ index.pug [3.1.1]
+|	|
+|	└ stylus/ [3.2]
+|		|
+|		└ _include/ [3.2.2]
+|		|	|
+|		|	├ _components/ [3.2.2.1]
+|		|	|	|
+|		|	|	├ _c_componentName.styl
+|		|	|	└ ...
+|		|	|
+|		|	├ _layout/ [3.2.2.2]
+|		|	|	|
+|		|	|	├ _l_layoutName.styl
+|		|	|	└ ...
+|		|	|
+|		|	├ _modules/ [3.2.2.3]
+|		|	|	|
+|		|	|	├ _m_moduleName.styl
+|		|	|	└ ...
+|		|	|
+|		|	├ _pages/ [3.2.2.4]
+|		|	|	|
+|		|	|	├ _p_pageName.styl
+|		|	|	└ ...
+|		|	|
+|		|	└ _settings/ [3.2.2.5]
+|		|		|
+|		|		├ _s_base.styl
+|		|		├ _s_config.styl
+|		|		└ _s_reset.styl
+|		|
+|		└ style.styl [3.2.1]
+|
+├ .gitignore [6.0]
+|
+├ gulpfile.js [5.0]
+|
+└ package.json [5.0]
+
+</code></pre>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <div class="m-defaultSet">
+                  <h2 class="m-title-borderLeft01"><span>[3.0] 使用言語の役割</span></h2>
+                  <div class="l-childBox">
+                    <h3 class="m-title-borderBottom01"><span>[3.1] pug(html)</span></h3>
+                    <div class="l-childBox">
+                      <ul class="is-disc">
+                        <li>pug/の内容が、dist内に出力される。</li>
+                        <li>pugの記述を使用する。</li>
+                      </ul>
+                      <h4 class="m-title-boldLarge01"><span>[3.1.1] index.pug component.pug</span></h4>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>index.pug : ページトップ、ページリスト</li>
+                          <li>component.pug : コンポーネント集、モジュール集、パーツ集</li>
+                        </ul>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[3.1.2] pug/_include</span></h4>
+                      <div class="l-childBox">
+                        <p>pugで使用する、コンポーネントやパーツなどを格納する</p>
+                        <h5 class="m-title-boldLarge01"><span>[3.1.2.1] pug/_include/_components</span></h5>
+                        <div class="l-childBox">
+                          <p>ヘッダー、フッター、コンポーネント</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.1.2.2] pug/_include/_layout</span></h5>
+                        <div class="l-childBox">
+                          <p>コンテンツ、wrapperなどのレイアウト</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.1.2.3] pug/_include/_modules</span></h5>
+                        <div class="l-childBox">
+                          <p>ボタン、画像、リストなどのモジュール</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.1.2.4] pug/_include/_settings</span></h5>
+                        <div class="l-childBox">
+                          <p>head、mixinなど、基本的な要素</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.1.2.5] pug/_include/_template</span></h5>
+                        <div class="l-childBox">
+                          <p>ヘッダー、フッター、コンテンツなどを使用したテンプレート</p>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 class="m-title-borderBottom01"><span>[3.2] stylus(css)</span></h3>
+                    <div class="l-childBox">
+                      <p>stylus/の内容が、dist/stylus内に出力される。</p>
+                      <ul class="is-disc">
+                        <li>stylusの記述を使用する。</li>
+                        <li>外部ライブラリなど、修正が不要なファイルに関しては、css、scss記法を使用しても良い</li>
+                      </ul>
+                      <h4 class="m-title-boldLarge01"><span>[3.2.1] stylus/style.styl</span></h4>
+                      <div class="l-childBox">
+                        <p>style.cssに出力するデータをimportする</p>
+                        <p>
+                          <pre><code>@charset &quot;utf-8&quot;
+@import &quot;_include/_settings/_s_reset&quot;
+@import &quot;_include/_settings/_s_mixin&quot;
+@import &quot;_include/_settings/_s_base&quot;
+@import &quot;_include/_modules/*&quot;
+@import &quot;_include/_components/*&quot;
+@import &quot;_include/_layout/*&quot;
+@import &quot;_include/_pages/*&quot;
+</code></pre>
+                        </p>
+                      </div>
+                      <h4 class="m-title-boldLarge01"><span>[3.2.2] stylus/_include</span></h4>
+                      <div class="l-childBox">
+                        <p>style.stylにimportされるスタイルを格納する</p>
+                        <h5 class="m-title-boldLarge01"><span>[3.2.2.1] stylus/_include/_components</span></h5>
+                        <div class="l-childBox">
+                          <p>ヘッダー、フッター、コンポーネント</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.2.2.2] stylus/_include/_layout</span></h5>
+                        <div class="l-childBox">
+                          <p>コンテンツ、wrapperなどのレイアウト</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.2.2.3] stylus/_include/_modules</span></h5>
+                        <div class="l-childBox">
+                          <p>ボタン、画像、リストなどのモジュール</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.2.2.4] stylus/_include/_pages</span></h5>
+                        <div class="l-childBox">
+                          <p>各ページ固有のstyleを記述する</p>
+                        </div>
+                        <h5 class="m-title-boldLarge01"><span>[3.2.2.5] stylus/_include/_settings</span></h5>
+                        <div class="l-childBox">
+                          <p>ブラウザのデフォルトスタイルの初期化や、汎用スタイルを定義する。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-bgBlock01">
+              <div class="l-contentsWidth">
+                <div class="l-mqWrapper">
+                  <div class="m-defaultSet">
+                    <h2 class="m-title-borderLeft01"><span>[4.0] ファイル作成、命名規則</span></h2>
+                    <p>■識別名</p>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>bg</th>
+                        </tr>
+                        <tr>
+                          <th>btn</th>
+                        </tr>
+                        <tr>
+                          <th>icon</th>
+                        </tr>
+                        <tr>
+                          <th>image</th>
+                        </tr>
+                        <tr>
+                          <th>thumbnail</th>
+                        </tr>
+                        <tr>
+                          <th>title</th>
+                        </tr>
+                        <tr>
+                          <th>text</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="l-childBox">
+                      <h3 class="m-title-borderBottom01"><span>[4.1] ファイル作成</span></h3>
+                      <div class="l-childBox">
+                        <p>ファイル名に2バイト文字とスペースは使用しない</p>
+                        <p>ファイル名に使用できる文字は以下のものに限る。</p>
+                        <ul class="is-disc">
+                          <li>「a」〜「z」までの小文字のアルファベット（1 バイト）</li>
+                          <li>「0」〜「9」までの英数字（1 バイト）</li>
+                          <li>「-（ハイフン）」「_（アンダースコア）」 （1 バイト）</li>
+                        </ul>
+                      </div>
+                      <h3 class="m-title-borderBottom01"><span>[4.2] 画像の書き出し</span></h3>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>gif</li>
+                          <li>jpg</li>
+                          <li>png</li>
+                          <li>svg</li>
+                        </ul>
+                      </div>
+                      <h3 class="m-title-borderBottom01"><span>[4.3] 命名</span></h3>
+                      <div class="l-childBox">
+                        <p>同種の画像が他にない場合でも、必ず2桁の連番をつける。 </p>
+                      </div>
+                      <h3 class="m-title-borderBottom01"><span>[4.3.1] 画像ファイル</span></h3>
+                      <div class="l-childBox">
+                        <p>ページ名_要素名_識別名+連番2桁.拡張子 </p>
+                        <p>
+                          <pre><code>home_mainvisualBlock_image01.png</code></pre>
+                        </p>
+                      </div>
+                      <h3 class="m-title-borderBottom01"><span>[4.3.2] pug、stylus コンポーネント、モジュール</span></h3>
+                      <div class="l-childBox">
+                        <p>_接頭詞_要素名+連番2桁.拡張子</p>
+                        <p>
+                          <pre><code>_c_imageSet01.pug
+_m_btnSet01.styl</code></pre>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <div class="m-defaultSet">
+                  <h2 class="m-title-borderLeft01"><span>[5.0] gulp</span></h2>
+                  <div class="l-childBox">
+                    <p>pug、stylusの使用には、gulpを使用する。<br>package.jsonに記述されたモジュールをインストールしたのち、コンソールにてgulpを起動する。</p>
+                    <p>
+                      <pre><code>npm install
+gulp</code></pre>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-bgBlock01">
+              <div class="l-contentsWidth">
+                <div class="l-mqWrapper">
+                  <div class="m-defaultSet">
+                    <h2 class="m-title-borderLeft01"><span>[6.0] ファイル管理について</span></h2>
+                    <div class="l-childBox">
+                      <p>gitを使用して、ファイルを管理する。</p>
+                      <p>除外ファイルについては、.gitignoreファイルに適宜記述する。</p>
+                      <h3 class="m-title-borderBottom01"><span>[6.1] 除外ファイル</span></h3>
+                      <div class="l-childBox">
+                        <ul class="is-disc">
+                          <li>node_module/</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <div class="m-defaultSet">
+                  <h2 class="m-title-borderLeft01"><span>[7.0] コーディングチェック </span></h2>
+                  <div class="l-childBox">
+                    <h3 class="m-title-borderBottom01"><span>[7.1] 文法チェック</span></h3>
+                    <h3 class="m-title-borderBottom01"><span>[7.2] ブラウザチェック</span></h3>
+                    <div class="l-childBox">
+                      <h4 class="m-title-boldLarge01"><span>[7.2.1] 対応ブラウザ</span></h4>
+                      <div class="l-childBox">
+                        <p>[Windows]</p>
+                        <ul class="is-disc">
+                          <li>OS<br>8.1、10</li>
+                          <li>ブラウザ<br>IE11、Microsoft Edge最新バージョン、Chrome最新バージョン、Firefox最新バージョン</li>
+                        </ul>
+                        <p>[Mac]</p>
+                        <ul class="is-disc">
+                          <li>OS<br>Mojave（最新バージョン）</li>
+                          <li>ブラウザ<br>Safari最新バージョン、Chrome最新バージョン、Firefox最新バージョン</li>
+                        </ul>
+                        <p>[Android]</p>
+                        <ul class="is-disc">
+                          <li>OS<br>6.0～</li>
+                          <li>ブラウザ<br>Chrome最新バージョン</li>
+                        </ul>
+                        <p>[iOS]</p>
+                        <ul class="is-disc">
+                          <li>OS<br>12.0～</li>
+                          <li>ブラウザ<br>Safari最新バージョン</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <h3 class="m-title-borderBottom01"><span>[7.3] その他チェックリスト</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
