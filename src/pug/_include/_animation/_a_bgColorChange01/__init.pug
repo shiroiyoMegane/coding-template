@@ -1,12 +1,15 @@
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span アニメーション - ボックス背景色01
+			+m-markupTitle('アニメーション - ボックス背景色01')
 
 			+l-markupBlock
 				+p-markupBtn('stylus')
 					include ../../../../stylus/_include/_animation/_a_bgColorChange01.styl
+
+			mixin a-bgColorChange01(className)
+				.a-bgColorChange01(class=className)
+					block
 
 			//- 背景色 フェード
 			include _fade01

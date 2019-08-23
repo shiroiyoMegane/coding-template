@@ -15,6 +15,7 @@
     <meta content="component.html" property="og:url">
     <meta content="article" property="og:type">
     <meta content="ja_JP" property="og:locale">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/common/favicon.ico">
     <link rel="apple-touch-icon" href="images/common/webclip.png">
@@ -118,38 +119,1116 @@
           </div>
         </div>
         <div class="l-columnBlock">
+          <h3 class="m-title-bg01"><span>モジュール</span></h3>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - デフォルトタグ</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-defaultSet">
+                    <p>木曾路はすべて山の中である。<br>あるところは岨づたいに行く崖の道であり、<a href=".doc" class="icon-before"><span>あるところは数十間の深さ</span></a>に臨む<b>木曾川</b>の岸であり、<strong>あるところは山の尾をめぐる</strong>谷の入り口である。<i>一筋の街道</i>はこの<s>深い森林地帯</s>を貫いていた。<br>東ざかいの<sub>桜沢</sub>から、西の<sup>十曲峠</sup>まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。<br>道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難</p>
+                    <ul class="is-disc">
+                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                        <ul>
+                          <li>親譲りの無鉄砲で小供の時から損ばかりして
+                            <ul>
+                              <li>親譲りの無鉄砲で小供の時から損ばかりして</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ol class="is-decimal">
+                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                        <ol>
+                          <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                            <ol>
+                              <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          p!= テキスト
+                          
+                          ul.is-disc
+                          	li!= テキスト
+                          
+                          ol.is-decimal
+                          	li!= テキスト
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - デフォルトタグ
+::selection
+	background-color POINT_COLOR01
+	color #ffffff
+
+.m-defaultSet
+	div, p, li, figure
+		// margin-bottom 10px
+		&.is-right
+			text-align: right;
+		&.is-center
+			text-align: center;
+		&:last-child
+			margin-bottom 0
+
+		strong, b
+			font-weight: bold;
+		strong
+			color: DF_URL_TEXT_COLOR;
+		i
+			font-style: italic;
+		sup
+			fontSize(10);
+			vertical-align: super;
+		sub
+			fontSize(10);
+			vertical-align: sub;
+		a
+			iconSet(SITE_COLOR01)
+
+	ul, ol
+		&.is-decimal, &.is-disc
+			margin-bottom 10px
+			ul, ol
+				margin-top 5px
+				margin-left: 1.4em;
+				li
+					&:last-child
+						margin-bottom 0
+					
+		&.is-disc
+			padding-left: 1.3em;
+
+			li
+				list-style: disc;
+				
+		&.is-decimal
+			padding-left: 1.5em;
+			li
+				list-style: decimal;</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - アイコンセット</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-defaultSet">
+                    <ul class="is-disc">
+                      <li><a href="sample.pdf"><span>pdfファイル</span></a>
+                      </li>
+                      <li><a href="sample.doc"><span>ワードファイル</span></a>
+                      </li>
+                      <li><a href="sample.xls"><span>エクセルファイル</span></a>
+                      </li>
+                      <li><a href="sample.ppt"><span>パワーポイントファイル</span></a>
+                      </li>
+                      <li><a href="sample.mp3"><span>音楽ファイル</span></a>
+                      </li>
+                      <li><a href="sample.mp4"><span>動画ファイル</span></a>
+                      </li>
+                      <li><a href="sample.rtf"><span>その他ファイル</span></a>
+                      </li>
+                      <li><a href="sample.html" target="_blank"><span>外部リンク</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          a(href="sample.pdf")
+                          	span pdfファイル
+                          a(href="sample.doc")
+                          	span その他ファイル
+                          a(href="" target="_blank")
+                          	span 外部リンクファイル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - アイコンセット
+iconWidth = 16px
+iconHeight = 16px
+
+iconOption()
+	&:before, &:after
+		display inline-block
+		width iconWidth
+		height 16px
+		margin 0 4px
+		vertical-align middle
+		
+	&:before
+		display none
+	
+	&.icon-before
+		&:before
+			display inline-block
+		&:after
+			display none
+
+outerHashIcon()
+	&:before, &:after
+		transform translate3d(0, -50%, 0) rotate(90deg)
+	&[href*=".html"]
+		&:before, &:after
+			transform translate3d(0, -50%, 0) rotate(0)
+
+outerIcon()
+	&:before, &:after
+		fontIconSet("\EA07")
+		
+pdfIcon()
+	&:before, &:after
+		fontIconSet("\EA08")
+
+pptIcon()
+	&:before, &:after
+		fontIconSet("\EA09")
+
+docIcon()
+	&:before, &:after
+		fontIconSet("\EA02")
+
+excelIcon()
+	&:before, &:after
+		fontIconSet("\EA04")
+
+musicIcon()
+	&:before, &:after
+		fontIconSet("\EA06")
+
+movieIcon()
+	&:before, &:after
+		fontIconSet("\EA05")
+
+etcIcon()
+	&:before, &:after
+		fontIconSet("\EA03")
+
+defaultIcon()
+	&:before, &:after
+		fontIconSet("\EA01")
+		
+	&:before
+		display none
+
+iconSet()
+	&[target^='_blank'], &[href$='.pdf'],
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
+	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
+	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		iconOption()
+		&:before, &:after
+			color SITE_COLOR01
+	&[href*="#"]
+		outerHashIcon()
+	&[target^='_blank']
+		outerIcon()
+	&[href$='.pdf']
+		pdfIcon()
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
+		docIcon()
+	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
+		excelIcon()
+	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+		pptIcon()
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
+		musicIcon()
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		movieIcon()
+	&[href$='.rtf']
+		etcIcon()
+	span
+		vertical-align middle
+
+iconTagSet(tag)
+	&[target^='_blank'], &[href$='.pdf'],
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
+	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
+	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		{tag}
+			iconOption()
+	&[href*="#"]
+		{tag}
+			outerHashIcon()
+	&[target^='_blank']
+		{tag}
+			outerIcon()
+	&[href$='.pdf']
+		{tag}
+			pdfIcon()
+	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
+		{tag}
+			docIcon()
+	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
+		{tag}
+			excelIcon()
+	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
+		{tag}
+			pptIcon()
+	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
+	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
+	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
+		{tag}
+			musicIcon()
+	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
+		{tag}
+			movieIcon()
+	&[href$='.rtf']
+		{tag}
+			etcIcon()
+	{tag}
+		defaultIcon()
+		&:after
+			position absolute
+			top 50%
+			right 10px
+			width iconWidth
+			height iconHeight
+			margin 0 !important
+			transform translate3d(0, -50%, 0)
+
+		span
+			vertical-align middle</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボーダートップボトムタイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-borderTopBottom01"><span>ボーダートップボトムタイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-borderTopBottom01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - pc sp 切り替えセット
+.m-title-borderTopBottom01
+	marginBottom(30)
+	padding 10px 0
+	border-top 1px solid #ccc
+	border-bottom 1px solid #ccc
+
+	span
+		fontSize(20)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボーダートップタイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-borderTop01"><span>ボーダートップタイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-borderTop01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボーダートップタイトル01
+.m-title-borderTop01
+	marginBottom(30)
+	padding-top 10px
+	border-top 1px solid #ccc
+
+	span
+		fontSize(20)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボーダーボトムタイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-borderBottom01"><span>ボーダーボトムタイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-borderBottom01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボーダーボトムタイトル01
+.m-title-borderBottom01
+	marginBottom(30)
+	padding-bottom 10px
+	border-bottom 1px solid #ccc
+
+	span
+		fontSize(20)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボーダーレフトタイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-borderLeft01"><span>ボーダーレフトタイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-borderLeft01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボーダーレフトタイトル01
+.m-title-borderLeft01
+	marginBottom(30)
+	padding-left 10px
+	border-left 3px solid #ccc
+
+	span
+		fontSize(20)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボーダーライトタイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-borderRight01"><span>ボーダーライトタイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-borderRight01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボーダーライトタイトル01
+.m-title-borderRight01
+	position relative
+	marginBottom(30)
+	&:before
+		content ""
+		position absolute
+		top 50%
+		right 0
+		width 100%
+		height 1px
+		background-color #ccc
+
+	span
+		position relative
+		display inline-block
+		padding-right 10px
+		background-color #fff
+		fontSize(20)
+		z-index 1</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - 強調タイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-boldLarge01"><span>強調タイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-boldLarge01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - 強調タイトル01
+.m-title-boldLarge01
+	marginBottom(30)
+
+	span
+		fontSize(20)
+		font-weight bold</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - 複数文字タイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-twoWord01"><span class="is-large">複数文字タイトル01</span><span class="is-small">スモールタイトル</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-twoWord01
+                          	span.is-large ラージタイトル
+                          	span.is-small スモールタイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - 複数文字タイトル01
+.m-title-twoWord01
+	marginBottom(30)
+
+	span
+		display inline-block
+	.is-large
+		fontSize(20)
+	.is-small
+		margin-left 10px
+		color #999;
+		fontSize(14)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - 背景タイトル01</span></h2>
+                <div class="l-markupBlock">
+                  <h3 class="m-title-bg01"><span>背景タイトル01</span></h3>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          h3.m-title-bg01
+                          	span タイトル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>.m-title-bg01
+	marginBottom(30)
+	padding 0.5em 0.5em 0.6em
+	color #FFF
+	background-color POINT_COLOR01
+
+	span
+		fontSize(20)</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール01</span></h2>
+                <div class="l-markupBlock">
+                  <p class="m-btnSet01"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタンモジュール01</span></span></a>
+                  </p>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          p.m-btnSet01
+                          	a(href="") 拡張子でアイコン切り分け
+                          		span.btnWrapper
+                          			span.btnInner テキスト
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ボタンモジュール01
+.m-btnSet01
+	marginBottom(30)
+	
+	a
+		display block
+		iconTagSet('.btnWrapper')
+		color inherit
+		border 1px solid #ccc
+		text-decoration none
+
+	.btnWrapper
+		display block
+		position relative
+		padding 20px 40px 20px 20px
+		box-sizing border-box
+		
+		</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール02</span></h2>
+                <div class="l-markupBlock">
+                  <p class="m-btnSet02"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタンモジュール02</span></span></a>
+                  </p>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          p.m-btnSet02
+                          	a(href="") 拡張子でアイコン切り分け
+                          		span.btnWrapper
+                          			span.btnInner テキスト
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+//- モジュール - ボタンモジュール02
+.m-btnSet02
+	marginBottom(30)
+	a
+		display block
+		iconTagSet('.btnWrapper')
+		color SITE_BG01
+		background-color SITE_COLOR01
+		border 1px solid SITE_COLOR01
+		text-decoration none
+
+	.btnWrapper
+		display block
+		position relative
+		padding 20px 40px 20px 20px
+		box-sizing border-box
+		
+		
+		&:after
+			content ""
+			display block
+			position absolute
+			top 50%
+			right 10px
+
+			width 16px
+			height 16px
+			margin 0 !important
+
+			background-image url('../images/common/common_icon_arrow01.svg')
+			background-repeat no-repeat
+			background-size cover
+
+			transform translate3d(0, -50%, 0)
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - テキストボックス01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-inputText01">
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-inputText01
+                          	input(type="text")
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - テキストボックス01
+.m-inputText01
+	
+	input[type="text"]
+		padding 0.5em
+		border 1px solid #ccc
+		box-sizing border-box
+		line-height 1.0</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - セレクトボックス01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-inputSelect01">
+                    <select>
+                      <option>選択してください</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-inputSelect01
+                          	select
+                          		option 選択してください
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - セレクトボックス01
+.m-inputSelect01
+	
+	select
+		padding 0.5em
+		border 1px solid #ccc
+		box-sizing border-box</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - テキストエリア01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-inputTextarea01">
+                    <textarea></textarea>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-inputTextarea01
+                          	textarea
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - テキストエリア01
+.m-inputTextarea01
+	
+	textarea
+		padding 0.5em
+		border 1px solid #ccc
+		box-sizing border-box</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - ラジオボタン01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-inputRadio01">
+                    <label for="radio01">
+                      <input type="radio" name="radio" id="radio01" checked="checked"><span>ラベル</span>
+                    </label>
+                    <label for="radio02">
+                      <input type="radio" name="radio" id="radio02"><span>ラベル</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-inputRadio01
+                          	label(for="radio01")
+                          		input(type="radio" name="radio" id="radio01" checked="checked")
+                          		span ラベル
+                          	label(for="radio02")
+                          		input(type="radio" name="radio" id="radio02")
+                          		span ラベル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - ラジオボタン01
+.m-inputRadio01
+	
+	label
+		display inline-block
+		margin-left 20px
+		&:first-child
+			margin-left 0
+			
+	input[type="radio"]
+		margin-right 5px</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - チェックボタン01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-inputCheck01">
+                    <label for="check01">
+                      <input type="checkbox" name="checkbox" id="check01"><span>ラベル</span>
+                    </label>
+                    <label for="check02">
+                      <input type="checkbox" name="checkbox" id="check02"><span>ラベル</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-inputCheck01
+                          	label(for="check01")
+                          		input(type="checkbox" name="checkbox" id="check01")
+                          		span ラベル
+                          	label(for="check02")
+                          		input(type="checkbox" name="checkbox" id="check02")
+                          		span ラベル
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - チェックボタン01
+.m-inputCheck01
+	
+	label
+		display inline-block
+		margin-left 20px
+		&:first-child
+			margin-left 0
+			
+	input[type="checkbox"]
+		margin-right 5px</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - 画像モジュール01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="m-imageSet01">
+                    <figure class="image"><img src="https://placeimg.com/400/150/animals" alt="dummy">
+                      <figcaption>テキストが入ります</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="m-imageSet01">
+                    <p class="image"><img src="https://placeimg.com/400/150/animals" alt="dummy">
+                      <figcaption>テキストが入ります</figcaption>
+                    </p>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .m-imageSet01
+                          	figure.image or p.image
+                          		img(src="画像", alt="")
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- モジュール - 画像モジュール01
+.m-imageSet01
+	.image
+		display table
+		+MQ_SP(SP_RES_WID)
+			width 100%
+			text-align center
+
+		figcaption
+			display table-caption
+			caption-side bottom
+			margin-top 10px
+			text-align left
+			
+	iframe
+		+MQ_SP(SP_RES_WID)
+			width 100%
+	img
+		max-width 100%
+		width 100%
+		height auto
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>モジュール - pc sp 切り替えセット</span></h2>
+                <div class="l-markupBlock">
+                  <div class="is-spOnly">
+                    <div class="m-imageSet01">
+                      <figure class="image"><img src="https://placeimg.com/640/400/animals" alt="dummy">
+                        <figcaption>spのみ表示されます</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="is-pcOnly">
+                    <div class="m-imageSet01">
+                      <div class="m-imageSet01">
+                        <figure class="image"><img src="https://placeimg.com/960/200/animals" alt="dummy">
+                          <figcaption>pcのみ表示されます</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .is-pcOnly
+                          	pcのとき表示したい要素
+                          .is-spOnly
+                          	spのとき表示したい要素
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>.is-sp
+	display none
+
+	+MQ_SP(SP_RES_WID)
+		display block
+		& + .is-pc
+			display none
+
+.is-spOnly
+	display none
+	+MQ_SP(SP_RES_WID)
+		display block
+
+.is-pcOnly
+	display none
+	+MQ_PC(SP_RES_WID)
+		display block</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-columnBlock">
           <h3 class="m-title-bg01"><span>コンポーネント</span></h3>
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 分割セット01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 分割セット01</span></h2>
                 <div class="l-markupBlock">
-                  <div class="c-colSet01 is-two">
-                    <div class="col">
+                  <ul class="c-colSet01 is-two">
+                    <li class="col">
                       <div class="m-defaultSet">
                         <p>日本国民は、正当に選挙された国会における代表者を通じて行動し、<a href=".doc"><span>われらとわれらの子孫</span></a>のために、<b>諸国民</b>との<i>協和による成果</i>と、<strong>わが国全土にわたつてた</strong><s>自由のもたらす恵沢</s>を確保し、政府<sub>の</sub>行為によつて再び<sup>戦争</sup>の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。<br>そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者が</p>
                       </div>
-                    </div>
-                    <div class="col">
-                      <div class="c-colSet01 is-three">
-                        <div class="col">
+                    </li>
+                    <li class="col">
+                      <ul class="c-colSet01 is-three">
+                        <li class="col">
                           <div class="m-defaultSet">
                             <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
                           </div>
-                        </div>
-                        <div class="col">
+                        </li>
+                        <li class="col">
                           <div class="m-defaultSet">
                             <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
                           </div>
-                        </div>
-                        <div class="col">
+                        </li>
+                        <li class="col">
                           <div class="m-defaultSet">
                             <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -292,13 +1371,13 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-imageText01 is-imageRight">
                     <div class="imageBlock">
                       <div class="m-imageSet01">
-                        <figure class="image"><img src="https://placehold.jp/400x248.png" alt="">
-                          <figcaption>キャプションが入ります。キャプションが入ります。キャプションが入ります。</figcaption>
+                        <figure class="image"><img src="https://placeimg.com/400/250/animals" alt="dummy">
+                          <figcaption>テキストが入ります</figcaption>
                         </figure>
                       </div>
                     </div>
@@ -318,10 +1397,9 @@
                       <pre><code>
                           .c-imageText01 (.is-imageRight / .is-imageLeft)
                           	.imageBlock
-                          		.m-imageSet01
-                          
+                          		画像
                           	.textBlock
-                          		.m-defaultSet
+                          		テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -384,13 +1462,13 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント02</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント02</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-imageText02 is-imageLeft">
                     <div class="imageBlock">
                       <div class="m-imageSet01">
-                        <figure class="image"><img src="https://placehold.jp/400x248.png" alt="">
-                          <figcaption>キャプションが入ります。</figcaption>
+                        <figure class="image"><img src="https://placeimg.com/400/250/animals" alt="dummy">
+                          <figcaption>テキストが入ります</figcaption>
                         </figure>
                       </div>
                     </div>
@@ -410,10 +1488,9 @@
                       <pre><code>
                           .c-imageText02 (.is-imageRight / .is-imageLeft)
                           	.imageBlock
-                          		.m-imageSet01
-                          
+                          		画像
                           	.textBlock
-                          		.m-defaultSet
+                          		テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -464,10 +1541,10 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント03</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント03</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-imageText03 is-imageRight">
-                    <div class="imageBlock" style="background-image: url(&quot;https://placehold.jp/700x340.png&quot;)"></div>
+                    <div class="imageBlock" style="background-image: url(https://placeimg.com/700/340/animals)"></div>
                     <div class="textBlock">
                       <div class="m-defaultSet">
                         <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
@@ -484,7 +1561,7 @@
                           .c-imageText03 (.is-imageRight / .is-imageLeft)
                           	.imageBlock(style='background-image: url("画像")')
                           	.textBlock
-                          		.m-defaultSet
+                          		テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -548,13 +1625,19 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像背景コンポーネント01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像+テキストコンポーネント04</span></h2>
                 <div class="l-markupBlock">
-                  <div class="c-imageBgSet01">
-                    <p class="bg"><img src="https://placehold.jp/1800x400.png" alt=""></p>
-                    <div class="contentsArea is-left">
-                      <h3 class="m-title-boldLarge01"><span>タイトル</span></h3>
-                      <p class="text">テキストが入ります</p>
+                  <div class="c-imageText04 is-imageLeft">
+                    <div class="imageBlock">
+                      <div class="m-imageSet01">
+                        <p class="image"><img src="https://placeimg.com/600/400/animals" alt="dummy">
+                        </p>
+                      </div>
+                    </div>
+                    <div class="textBlock">
+                      <div class="m-defaultSet">
+                        <p>恥の多い生涯を送って来ました。自分には、人間の生活というものが、<a href=".pdf"><span>見当つかないのです。</span></a>自分は<b>東北</b>の<i>田舎に生れました</i>ので、<strong>汽車をはじめて見た</strong>のは、<s>よほど大きくなってから</s>でした。自分は<sub>停車場</sub>の<sup>ブリッジ</sup>を、上</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -564,11 +1647,97 @@
                     </p>
                     <div class="source js-accordion-child">
                       <pre><code>
-                          .c-imageBgSet01
+                          .c-imageText04 (.is-imageRight / .is-imageLeft)
+                          	.imageBlock
+                          		画像
+                          	.textBlock
+                          		テキスト
+                          </code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>//- コンポーネント - 画像+テキストコンポーネント04
+.c-imageText04
+	IMAGE_WIDTH = 600px
+	CF()
+	position relative
+
+	&.is-imageRight
+		.imageBlock
+			float right
+		.textBlock
+			left 0
+
+	&.is-imageLeft
+		.imageBlock
+			float left
+		.textBlock
+			right 0
+			
+	.imageBlock
+		+MQ_PC(SP_RES_WID)
+			width IMAGE_WIDTH
+		+MQ_SP(SP_RES_WID)
+			width 100%
+			margin-bottom 10px
+			padding 0
+	
+	.textBlock
+		position absolute
+		width "calc(100% - %s + 100px)" % IMAGE_WIDTH
+		top 50%
+		transform translate3d(0,-50%,0)
+		+MQ_SP(SP_RES_WID)
+			width 80%
+	
+	.m-imageSet01
+		+MQ_SP(SP_RES_WID)
+			width 80%
+		
+		img
+			max-width inherit
+			+MQ_PC(SP_RES_WID)
+				width inherit
+			+MQ_SP(SP_RES_WID)
+				max-width 100%</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像背景コンポーネント01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="c-imageBgSet01 is-left">
+                    <div class="bg">
+                      <div class="m-imageSet01">
+                        <p class="image"><img src="https://placeimg.com/900/400/animals" alt="dummy">
+                        </p>
+                      </div>
+                    </div>
+                    <div class="contentsArea">
+                      <h3 class="m-title-boldLarge01"><span>タイトル</span></h3>
+                      <p>テキストが入ります</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code>
+                          .c-imageBgSet01 (.is-left / .is-center / .is-right)
                           	p.bg
-                          		img(src="https://placehold.jp/1800x400.png", alt="")
-                          	.contentsArea (.is-left / .is-center / .is-right)
-                          		p テキスト
+                          		画像
+                          	.contentsArea
+                          		テキスト
                           </code></pre>
                     </div>
                   </div>
@@ -580,14 +1749,29 @@
 .c-imageBgSet01
 	position relative
 
+	&.is-left
+		.contentsArea
+			align-items flex-start
+
+	&.is-right
+		.contentsArea
+			align-items flex-end
+	
+	&.is-center
+		.contentsArea
+			align-items center
+
 	+MQ_SP(SP_RES_WID)
 		display block
 	
 	.bg
 		width 100%
-		img
+		.image
 			width 100%
-			height auto
+			img
+				max-width inherit
+				width 100%
+				height auto
 
 	.contentsArea
 		flexBox()
@@ -600,16 +1784,7 @@
 		height 100%
 		padding 20px
 		box-sizing border-box
-
-		&.is-left
-			align-items flex-start
-
-		&.is-right
-			align-items flex-end
-		
-		&.is-center
-			align-items center
-			</code></pre>
+</code></pre>
                     </div>
                   </div>
                 </div>
@@ -619,14 +1794,15 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像コンポーネント01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像コンポーネント01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-imageSet01">
                     <ul class="c-colSet01 is-three">
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/375/232/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -638,7 +1814,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/375/232/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -650,7 +1827,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/375/232/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -662,7 +1840,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/375/232/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -674,7 +1853,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/375/232/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -692,13 +1872,11 @@
                     </p>
                     <div class="source js-accordion-child">
                       <pre><code>
-                          .c-imageComponent
-                          	ul.box (.is-two / .is-three / .is-four)
-                          		li.item
+                          .c-imageSet01
+                          	ul.c-colSet01 (.is-two / .is-three / .is-four)
+                          		li.col
                           			.imageArea
-                          				.m-imageSet01
-                          					p.image
-                          						img(src="画像", alt="")
+                          				画像
                           			.textArea
                           				テキスト
                           </code></pre>
@@ -721,14 +1899,15 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - 画像コンポーネント02</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - 画像コンポーネント02</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-imageSet02">
-                    <ul class="c-colSet01 is-three">
+                    <ul class="c-colSet01 is-four">
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/235/145/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -740,7 +1919,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/235/145/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -752,7 +1932,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/235/145/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -764,7 +1945,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/235/145/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -776,7 +1958,8 @@
                       <li class="col">
                         <div class="imageArea">
                           <div class="m-imageSet01">
-                            <p class="image"><img src="https://placehold.jp/375x232.png" alt=""></p>
+                            <p class="image"><img src="https://placeimg.com/235/145/animals" alt="dummy">
+                            </p>
                           </div>
                         </div>
                         <div class="textArea">
@@ -834,27 +2017,33 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - ボタンコンポーネント01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - ボタンコンポーネント01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-btnSet01">
                     <ul class="c-colSet01 is-three">
                       <li class="col">
-                        <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">通常ボタン</span></span></a></div>
+                        <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">通常ボタン</span></span></a>
+                        </p>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet02"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">pdfファイル</span></span></a></div>
+                        <p class="m-btnSet01"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">pdfファイル</span></span></a>
+                        </p>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01"><a href=".doc"><span class="btnWrapper"><span class="btnInner">その他ファイル</span></span></a></div>
+                        <p class="m-btnSet01"><a href=".rtf"><span class="btnWrapper"><span class="btnInner">その他ファイル</span></span></a>
+                        </p>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01"><a href="#sample"><span class="btnWrapper"><span class="btnInner">ページ内リンク</span></span></a></div>
+                        <p class="m-btnSet01"><a href="#sample"><span class="btnWrapper"><span class="btnInner">ページ内リンク</span></span></a>
+                        </p>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01"><a href="index.html#sample"><span class="btnWrapper"><span class="btnInner">＃付きリンク</span></span></a></div>
+                        <p class="m-btnSet01"><a href="index.html#sample"><span class="btnWrapper"><span class="btnInner">＃付きリンク</span></span></a>
+                        </p>
                       </li>
                       <li class="col">
-                        <div class="m-btnSet01"><a href="" target="_blank"><span class="btnWrapper"><span class="btnInner">ターゲットブランク</span></span></a></div>
+                        <p class="m-btnSet01"><a href="" target="_blank"><span class="btnWrapper"><span class="btnInner">ターゲットブランク</span></span></a>
+                        </p>
                       </li>
                     </ul>
                   </div>
@@ -898,7 +2087,7 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - テーブルセット01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - テーブルセット01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-tableSet01">
                     <table>
@@ -969,7 +2158,7 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>コンポーネント - ページャーセット01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - ページャーセット01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-pagerSet01">
                     <ul>
@@ -1059,7 +2248,7 @@
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>複合コンポーネント - ヘッダー01</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - ヘッダー01</span></h2>
               </div>
             </div>
             <div class="l-markupBlock">
@@ -1067,7 +2256,7 @@
                 <div class="l-contentsWidth">
                   <div class="contentsArea">
                     <div class="logoBlock">
-                      <h1 class="logo"><span><img src="https://placehold.jp/200x70.png" alt=""></span></h1>
+                      <h1 class="logo"><span><img src="https://placeimg.com/200/70/animals" alt=""></span></h1>
                     </div>
                     <div class="navBlock">
                       <div class="subNavArea">
@@ -1303,7 +2492,7 @@ header.c-comHeader01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>フッター01</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - フッター01</span></h2>
               </div>
             </div>
             <div class="l-markupBlock">
@@ -1448,7 +2637,58 @@ footer.c-comFooter01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>複合コンポーネント - ニュースコンポーネント01</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - メインビジュアルセット01</span></h2>
+              </div>
+            </div>
+            <div class="l-markupBlock">
+              <div class="c-mainvisualSet01">
+                <div class="slideArea js-mainvisualSet01">
+                  <div class="slide">
+                    <div class="m-imageSet01">
+                      <p class="image"><img src="https://placeimg.com/960/500/animals" alt="dummy">
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="m-imageSet01">
+                      <p class="image"><img src="https://placeimg.com/960/500/animals" alt="dummy">
+                      </p>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="m-imageSet01">
+                      <p class="image"><img src="https://placeimg.com/960/500/animals" alt="dummy">
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                <div class="l-markupBlock">
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent pug">pug
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code></code></pre>
+                    </div>
+                  </div>
+                  <div class="js-accordion">
+                    <p class="p-markupBtn js-accordion-parent stylus">stylus
+                    </p>
+                    <div class="source js-accordion-child">
+                      <pre><code></code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - ニュースコンポーネント01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-newsSet01">
                     <dl>
@@ -1553,7 +2793,7 @@ footer.c-comFooter01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>複合コンポーネント - ニュースコンポーネント02</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - ニュースコンポーネント02</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-newsSet02">
                     <ul>
@@ -1658,26 +2898,9 @@ footer.c-comFooter01
 		text-align center
 
 	.text
-		color: DF_URL_TEXT_COLOR;
-		text-decoration: underline;
-		
-
-		&:after
-			content ""
-			display block
-			position absolute
-			top 50%
-			right 10px
-
-			width 16px
-			height 16px
-			margin 0 !important
-
-			background-image url('../images/common/common_icon_arrow01.svg')
-			background-repeat no-repeat
-			background-size cover
-
-			transform translate3d(0, -50%, 0)</code></pre>
+		span
+			color: DF_URL_TEXT_COLOR;
+			text-decoration: underline;</code></pre>
                     </div>
                   </div>
                 </div>
@@ -1687,7 +2910,7 @@ footer.c-comFooter01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>複合コンポーネント - ぱんくずセット01</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - ぱんくずセット01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-breadcrumbSet01">
                     <ol>
@@ -1739,7 +2962,7 @@ footer.c-comFooter01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>フォームセット01</span></h2>
+                        <h2 class="m-markupTitle"><span>複合コンポーネント - フォームセット01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-formSet01">
                     <table>
@@ -1924,7 +3147,7 @@ footer.c-comFooter01
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>QandAセット01</span></h2>
+                        <h2 class="m-markupTitle"><span>コンポーネント - QandAセット01</span></h2>
                 <div class="l-markupBlock">
                   <div class="c-qandaSet01 js-accordion">
                     <ul>
@@ -2038,1054 +3261,11 @@ footer.c-comFooter01
           </div>
         </div>
         <div class="l-columnBlock">
-          <h3 class="m-title-bg01"><span>モジュール</span></h3>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - デフォルトタグ</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-defaultSet">
-                    <p>木曾路はすべて山の中である。<br>あるところは岨づたいに行く崖の道であり、<a href=".doc" class="icon-before"><span>あるところは数十間の深さ</span></a>に臨む<b>木曾川</b>の岸であり、<strong>あるところは山の尾をめぐる</strong>谷の入り口である。<i>一筋の街道</i>はこの<s>深い森林地帯</s>を貫いていた。<br>東ざかいの<sub>桜沢</sub>から、西の<sup>十曲峠</sup>まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。<br>道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難</p>
-                    <ul class="is-disc">
-                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
-                        <ul>
-                          <li>親譲りの無鉄砲で小供の時から損ばかりして
-                            <ul>
-                              <li>親譲りの無鉄砲で小供の時から損ばかりして</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <ol class="is-decimal">
-                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
-                        <ol>
-                          <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
-                            <ol>
-                              <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</li>
-                            </ol>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          p!= テキスト
-                          
-                          ul.is-disc
-                          	li!= テキスト
-                          
-                          ol.is-decimal
-                          	li!= テキスト
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - デフォルトタグ
-::selection
-	background-color POINT_COLOR01
-	color #ffffff
-
-.m-defaultSet
-	div, p, li, figure
-		// margin-bottom 10px
-		&.is-right
-			text-align: right;
-		&.is-center
-			text-align: center;
-		&:last-child
-			margin-bottom 0
-
-		strong, b
-			font-weight: bold;
-		strong
-			color: DF_URL_TEXT_COLOR;
-		i
-			font-style: italic;
-		sup
-			fontSize(10);
-			vertical-align: super;
-		sub
-			fontSize(10);
-			vertical-align: sub;
-		a
-			iconSet(SITE_COLOR01)
-
-	ul, ol
-		&.is-decimal, &.is-disc
-			margin-bottom 10px
-			ul, ol
-				margin-top 5px
-				margin-left: 1.4em;
-				li
-					&:last-child
-						margin-bottom 0
-					
-		&.is-disc
-			padding-left: 1.3em;
-
-			li
-				list-style: disc;
-				
-		&.is-decimal
-			padding-left: 1.5em;
-			li
-				list-style: decimal;</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - アイコンセット</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-defaultSet">
-                    <ul class="is-disc">
-                      <li><a href="sample.pdf"><span>pdfファイル</span></a></li>
-                      <li><a href="sample.doc"><span>ワードファイル</span></a></li>
-                      <li><a href="sample.xls"><span>エクセルファイル</span></a></li>
-                      <li><a href="sample.ppt"><span>パワーポイントファイル</span></a></li>
-                      <li><a href="sample.mp3"><span>音楽ファイル</span></a></li>
-                      <li><a href="sample.mp4"><span>動画ファイル</span></a></li>
-                      <li><a href="sample.rtf"><span>その他ファイル</span></a></li>
-                      <li><a href="sample.html" target="_blank"><span>外部リンク</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          a(href="sample.pdf")
-                          	span pdfファイル
-                          a(href="sample.doc")
-                          	span その他ファイル
-                          a(href="" target="_blank")
-                          	span 外部リンクファイル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - アイコンセット
-iconWidth = 16px
-iconHeight = 16px
-
-iconOption()
-	&:before, &:after
-		display inline-block
-		width iconWidth
-		height 16px
-		margin 0 4px
-		vertical-align middle
-		
-	&:before
-		display none
-	
-	&.icon-before
-		&:before
-			display inline-block
-		&:after
-			display none
-
-outerHashIcon()
-	&:before, &:after
-		transform translate3d(0, -50%, 0) rotate(90deg)
-	&[href*=".html"]
-		&:before, &:after
-			transform translate3d(0, -50%, 0) rotate(0)
-
-outerIcon()
-	&:before, &:after
-		fontIconSet("\EA07")
-		
-pdfIcon()
-	&:before, &:after
-		fontIconSet("\EA08")
-
-pptIcon()
-	&:before, &:after
-		fontIconSet("\EA09")
-
-docIcon()
-	&:before, &:after
-		fontIconSet("\EA02")
-
-excelIcon()
-	&:before, &:after
-		fontIconSet("\EA04")
-
-musicIcon()
-	&:before, &:after
-		fontIconSet("\EA06")
-
-movieIcon()
-	&:before, &:after
-		fontIconSet("\EA05")
-
-etcIcon()
-	&:before, &:after
-		fontIconSet("\EA03")
-
-defaultIcon()
-	&:before, &:after
-		fontIconSet("\EA01")
-		
-	&:before
-		display none
-
-iconSet()
-	&[target^='_blank'], &[href$='.pdf'],
-	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
-	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
-	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
-	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
-	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
-	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		iconOption()
-		&:before, &:after
-			color SITE_COLOR01
-	&[href*="#"]
-		outerHashIcon()
-	&[target^='_blank']
-		outerIcon()
-	&[href$='.pdf']
-		pdfIcon()
-	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
-		docIcon()
-	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
-		excelIcon()
-	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-		pptIcon()
-	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
-	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
-	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
-		musicIcon()
-	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		movieIcon()
-	&[href$='.rtf']
-		etcIcon()
-	span
-		vertical-align middle
-
-iconTagSet(tag)
-	&[target^='_blank'], &[href$='.pdf'],
-	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm'],
-	&[href$='.rtf'], &[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'],
-	&[href$='.xlsm'], &[href$='.csv'], &[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
-	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
-	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif'],
-	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		{tag}
-			iconOption()
-	&[href*="#"]
-		{tag}
-			outerHashIcon()
-	&[target^='_blank']
-		{tag}
-			outerIcon()
-	&[href$='.pdf']
-		{tag}
-			pdfIcon()
-	&[href$='.doc'], &[href$='.docx'], &[href$='.docm'], &[href$='.dotx'], &[href$='.dotm']
-		{tag}
-			docIcon()
-	&[href$='.xls'], &[href$='.xlsx'], &[href$='.xlt'], &[href$='.xml'], &[href$='.xlsm'], &[href$='.csv']
-		{tag}
-			excelIcon()
-	&[href$='.ppt'], &[href$='.pptx'], &[href$='.pptm']
-		{tag}
-			pptIcon()
-	&[href$='.mp3'], &[href$='.wma'], &[href$='.wave'], &[href$='.wav'], &[href$='.aac'], &[href$='.flac'], &[href$='.aif'],
-	&[href$='.omg'], &[href$='.oma'], &[href$='.aa3'], &[href$='.ogg'], &[href$='.oga'], &[href$='.asf'], &[href$='.m4a'],
-	&[href$='.mov'], &[href$='.alac'], &[href$='.ape'], &[href$='.tak'], &[href$='.tta'], &[href$='.aiff'], &[href$='.aif']
-		{tag}
-			musicIcon()
-	&[href$='.avi'], &[href$='.mov'], &[href$='.wmv'], &[href$='.flv'], &[href$='.mpg'], &[href$='.mp4']
-		{tag}
-			movieIcon()
-	&[href$='.rtf']
-		{tag}
-			etcIcon()
-	{tag}
-		defaultIcon()
-		&:after
-			position absolute
-			top 50%
-			right 10px
-			width iconWidth
-			height iconHeight
-			margin 0 !important
-			transform translate3d(0, -50%, 0)
-
-		span
-			vertical-align middle</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - pc sp 切り替えセット</span></h2>
-                <div class="l-markupBlock">
-                  <div class="is-sp">
-                    <div class="m-imageSet01">
-                      <figure class="image"><img src="https://placehold.jp/640x400.png" alt="">
-                        <figcaption>spのみ表示されます</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="is-pc">
-                    <div class="m-imageSet01">
-                      <figure class="image"><img src="https://placehold.jp/960x150.png" alt="">
-                        <figcaption>pcのみ表示されます</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="is-pcOnly">
-                    <div class="m-imageSet01">
-                      <figure class="image"><img src="https://placehold.jp/960x20.png" alt="">
-                        <figcaption>pcのみ表示されます</figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          // pcとspで切り替え表示
-                          .is-sp
-                          	spのとき表示したい要素（必ずis-pcの前に書く）
-                          .is-pc
-                          	pcのとき表示したい要素
-                          
-                          // pcのみ、spのみ表示
-                          .is-pcOnly
-                          	pcのとき表示したい要素
-                          .is-spOnly
-                          	spのとき表示したい要素
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>.is-sp
-	display none
-
-	+MQ_SP(SP_RES_WID)
-		display block
-		& + .is-pc
-			display none
-
-.is-spOnly
-	display none
-	+MQ_SP(SP_RES_WID)
-		display block
-
-.is-pcOnly
-	display none
-	+MQ_PC(SP_RES_WID)
-		display block</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボーダートップボトムタイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-borderTopBottom01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-borderTopBottom01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - pc sp 切り替えセット
-.m-title-borderTopBottom01
-	marginBottom(30)
-	padding 10px 0
-	border-top 1px solid #ccc
-	border-bottom 1px solid #ccc
-
-	span
-		fontSize(20)</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボーダートップタイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-borderTop01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-borderTop01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ボーダートップタイトル01
-.m-title-borderTop01
-	marginBottom(30)
-	padding-top 10px
-	border-top 1px solid #ccc
-
-	span
-		fontSize(20)</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボーダーボトムタイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-borderBottom01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-borderBottom01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ボーダーボトムタイトル01
-.m-title-borderBottom01
-	marginBottom(30)
-	padding-bottom 10px
-	border-bottom 1px solid #ccc
-
-	span
-		fontSize(20)</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボーダーレフトタイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-borderLeft01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-borderLeft01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ボーダーレフトタイトル01
-.m-title-borderLeft01
-	marginBottom(30)
-	padding-left 10px
-	border-left 3px solid #ccc
-
-	span
-		fontSize(20)</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボーダーライトタイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-borderRight01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-borderRight01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ボーダーライトタイトル01
-.m-title-borderRight01
-	position relative
-	marginBottom(30)
-	&:before
-		content ""
-		position absolute
-		top 50%
-		right 0
-		width 100%
-		height 1px
-		background-color #ccc
-
-	span
-		position relative
-		display inline-block
-		padding-right 10px
-		background-color #fff
-		fontSize(20)
-		z-index 1</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - 強調タイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-boldLarge01"><span>タイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-boldLarge01
-                          	span タイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - 強調タイトル01
-.m-title-boldLarge01
-	marginBottom(30)
-
-	span
-		fontSize(20)
-		font-weight bold</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - 複数文字タイトル01</span></h2>
-                <div class="l-markupBlock">
-                  <h3 class="m-title-twoWord01"><span class="is-large">ラージタイトル</span><span class="is-small">スモールタイトル</span></h3>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          h3.m-title-twoWord01
-                          	span.is-large ラージタイトル
-                          	span.is-small スモールタイトル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - 複数文字タイトル01
-.m-title-twoWord01
-	marginBottom(30)
-
-	span
-		display inline-block
-	.is-large
-		fontSize(20)
-	.is-small
-		margin-left 10px
-		color #999;
-		fontSize(14)</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール01</span></h2>
-                <div class="l-markupBlock">
-                  <p class="m-btnSet01"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタン</span></span></a></p>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          p.m-btnSet01
-                          	a(href="") 拡張子でアイコン切り分け
-                          		span.btnWrapper
-                          			span.btnInner ボタン
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ボタンモジュール01
-.m-btnSet01
-	marginBottom(30)
-	
-	a
-		display block
-		iconTagSet('.btnWrapper')
-		color inherit
-		border 1px solid #ccc
-		text-decoration none
-
-	.btnWrapper
-		display block
-		position relative
-		padding 20px 40px 20px 20px
-		box-sizing border-box
-		
-		</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ボタンモジュール02</span></h2>
-                <div class="l-markupBlock">
-                  <p class="m-btnSet02"><a href=".pdf"><span class="btnWrapper"><span class="btnInner">ボタン</span></span></a></p>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          p.m-btnSet02
-                          	a(href="") 拡張子でアイコン切り分け
-                          		span.btnWrapper
-                          			span.btnInner ボタン
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-//- モジュール - ボタンモジュール02
-.m-btnSet02
-	marginBottom(30)
-	a
-		display block
-		iconTagSet('.btnWrapper')
-		color SITE_BG01
-		background-color SITE_COLOR01
-		border 1px solid SITE_COLOR01
-		text-decoration none
-
-	.btnWrapper
-		display block
-		position relative
-		padding 20px 40px 20px 20px
-		box-sizing border-box
-		
-		
-		&:after
-			content ""
-			display block
-			position absolute
-			top 50%
-			right 10px
-
-			width 16px
-			height 16px
-			margin 0 !important
-
-			background-image url('../images/common/common_icon_arrow01.svg')
-			background-repeat no-repeat
-			background-size cover
-
-			transform translate3d(0, -50%, 0)
-</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - テキストボックス01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-inputText01">
-                    <input type="text">
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-inputText01
-                          	input(type="text")
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - テキストボックス01
-.m-inputText01
-	
-	input[type="text"]
-		padding 0.5em
-		border 1px solid #ccc
-		box-sizing border-box
-		line-height 1.0</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - セレクトボックス01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-inputSelect01">
-                    <select>
-                      <option>選択してください</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-inputSelect01
-                          	select
-                          		option 選択してください
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - セレクトボックス01
-.m-inputSelect01
-	
-	select
-		padding 0.5em
-		border 1px solid #ccc
-		box-sizing border-box</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - テキストエリア01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-inputTextarea01">
-                    <textarea></textarea>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-inputTextarea01
-                          	textarea
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - テキストエリア01
-.m-inputTextarea01
-	
-	textarea
-		padding 0.5em
-		border 1px solid #ccc
-		box-sizing border-box</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - ラジオボタン01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-inputRadio01">
-                    <label for="radio01">
-                      <input type="radio" name="radio" id="radio01" checked="checked"><span>ラベル</span>
-                    </label>
-                    <label for="radio02">
-                      <input type="radio" name="radio" id="radio02"><span>ラベル</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-inputRadio01
-                          	label(for="radio01")
-                          		input(type="radio" name="radio" id="radio01" checked="checked")
-                          		span ラベル
-                          	label(for="radio02")
-                          		input(type="radio" name="radio" id="radio02")
-                          		span ラベル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - ラジオボタン01
-.m-inputRadio01
-	
-	label
-		display inline-block
-		margin-left 20px
-		&:first-child
-			margin-left 0
-			
-	input[type="radio"]
-		margin-right 5px</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - チェックボタン01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-inputCheck01">
-                    <label for="check01">
-                      <input type="checkbox" name="checkbox" id="check01"><span>ラベル</span>
-                    </label>
-                    <label for="check02">
-                      <input type="checkbox" name="checkbox" id="check02"><span>ラベル</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-inputCheck01
-                          	label(for="check01")
-                          		input(type="checkbox" name="checkbox" id="check01")
-                          		span ラベル
-                          	label(for="check02")
-                          		input(type="checkbox" name="checkbox" id="check02")
-                          		span ラベル
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - チェックボタン01
-.m-inputCheck01
-	
-	label
-		display inline-block
-		margin-left 20px
-		&:first-child
-			margin-left 0
-			
-	input[type="checkbox"]
-		margin-right 5px</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="l-columnBox">
-            <div class="l-contentsWidth">
-              <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>モジュール - 画像モジュール01</span></h2>
-                <div class="l-markupBlock">
-                  <div class="m-imageSet01">
-                    <figure class="image"><img src="https://placehold.jp/400x150.png" alt="">
-                      <figcaption>テキストが入ります</figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="m-imageSet01">
-                    <p class="image"><img src="https://placehold.jp/400x150.png" alt=""></p>
-                  </div>
-                </div>
-                <div class="l-markupBlock">
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent pug">pug
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>
-                          .m-imageSet01
-                          	figure.image p.image
-                          		img(src="画像", alt="")
-                          		figcaption テキスト
-                          </code></pre>
-                    </div>
-                  </div>
-                  <div class="js-accordion">
-                    <p class="p-markupBtn js-accordion-parent stylus">stylus
-                    </p>
-                    <div class="source js-accordion-child">
-                      <pre><code>//- モジュール - 画像モジュール01
-.m-imageSet01
-	.image
-		display table
-		+MQ_SP(SP_RES_WID)
-			width 100%
-			text-align center
-
-		figcaption
-			display table-caption
-			caption-side bottom
-			margin-top 10px
-			text-align left
-			
-	iframe
-		+MQ_SP(SP_RES_WID)
-			width 100%
-	img
-		max-width 100%
-		width 100%
-		height auto
-</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-columnBlock">
           <h3 class="m-title-bg01"><span>cssアニメーション</span></h3>
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>アニメーション - ボックス背景色01</span></h2>
+                        <h2 class="m-markupTitle"><span>アニメーション - ボックス背景色01</span></h2>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
                     <p class="p-markupBtn js-accordion-parent stylus">stylus
@@ -3106,7 +3286,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-fade01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - フェード</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - フェード</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3133,7 +3314,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideRight01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドライト</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドライト</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3175,7 +3357,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideLeft01">
-                  <p class="m-btnSet01"><a href="#"><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドレフト</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドレフト</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3217,7 +3400,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideBottom01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドボトム</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドボトム</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3259,7 +3443,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideTop01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドトップ</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドトップ</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3301,7 +3486,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideCenterOut01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターアウト</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターアウト</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3341,7 +3527,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-bgColorChange01 is-slideCenterIn01">
-                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターイン</span></span></a></p>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックス背景色 - スライドセンターイン</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3393,10 +3580,11 @@ iconTagSet(tag)
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>アニメーション - ボックスシャドウ01</span></h2>
+                        <h2 class="m-markupTitle"><span>アニメーション - ボックスシャドウ01</span></h2>
                 <div class="l-markupBlock">
                   <div class="a-shadowAppear01">
-                    <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスシャドウ01 - シャドウ01</span></span></a></div>
+                    <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスシャドウ01 - シャドウ01</span></span></a>
+                    </p>
                   </div>
                 </div>
                 <div class="l-markupBlock">
@@ -3430,7 +3618,7 @@ iconTagSet(tag)
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>アニメーション - ボックスボーダー01</span></h2>
+                        <h2 class="m-markupTitle"><span>アニメーション - ボックスボーダー01</span></h2>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
                     <p class="p-markupBtn js-accordion-parent pug">pug
@@ -3460,7 +3648,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderBottomLeft01">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドレフト01</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドレフト01</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3499,7 +3688,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderBottomRight01">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドライト01</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドライト01</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3538,7 +3728,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderBottomCenter01">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドセンター01</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボトム - スライドセンター01</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3575,7 +3766,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderBold01">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド01</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボーダーボールド01</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3615,7 +3807,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderBold02">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボーダーボールド02</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ボーダーボールド02</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3654,7 +3847,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderDraw01">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー01</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー01</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3706,7 +3900,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderDraw02">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー02</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー02</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3757,7 +3952,8 @@ iconTagSet(tag)
                   </div>
                 </div>
                 <div class="a-borderChange01 is-boderDraw03">
-                  <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー03</span></span></a></div>
+                  <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">ボックスボーダー01 - ドロー03</span></span></a>
+                  </p>
                 </div>
                 <div class="l-markupBlock">
                   <div class="js-accordion">
@@ -3813,10 +4009,11 @@ iconTagSet(tag)
           <div class="l-columnBox">
             <div class="l-contentsWidth">
               <div class="l-mqWrapper">
-                <h2 class="m-markupTitle"><span>アニメーション - フェードイン01</span></h2>
+                        <h2 class="m-markupTitle"><span>アニメーション - フェードイン01</span></h2>
                 <div class="l-markupBlock">
                   <div class="a-fadeIn01 js-inview">
-                    <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a></div>
+                    <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -3835,7 +4032,7 @@ iconTagSet(tag)
                       <div class="m-defaultSet">
                         <p class="js-matchHeight">タイトルが入ります<br>タイトルが入りますタイトルが入りますタイトルが入ります</p>
                         <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/150x150.png" alt=""></p>
+                          <p class="image"><img src="https://placeimg.com/150/150/animals" alt=""></p>
                         </div>
                       </div>
                     </div>
@@ -3843,7 +4040,7 @@ iconTagSet(tag)
                       <div class="m-defaultSet">
                         <p class="js-matchHeight">タイトルが入ります</p>
                         <div class="m-imageSet01">
-                          <p class="image"><img src="https://placehold.jp/150x150.png" alt=""></p>
+                          <p class="image"><img src="https://placeimg.com/150/150/animals" alt=""></p>
                         </div>
                       </div>
                     </div>
@@ -4004,7 +4201,8 @@ iconTagSet(tag)
                 <h2 class="m-markupTitle"><span>inView</span></h2>
                 <div class="l-markupBlock">
                   <div class="a-fadeIn01 js-inview">
-                    <div class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a></div>
+                    <p class="m-btnSet01"><a href=""><span class="btnWrapper"><span class="btnInner">フェードイン01</span></span></a>
+                    </p>
                   </div>
                 </div>
                 <div class="l-markupBlock">
@@ -4031,6 +4229,70 @@ iconTagSet(tag)
                           	changeTiming: 0, // 位置調整 0~0.5
                           	reverse: true, // 繰り返し
                           });</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>プラグイン - slick01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="p-slick01">
+                    <div class="slideArea js-slickSlider">
+                      <div class="slide">
+                        <div class="m-imageSet01">
+                          <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="slide">
+                        <div class="m-imageSet01">
+                          <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="slide">
+                        <div class="m-imageSet01">
+                          <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-columnBox">
+            <div class="l-contentsWidth">
+              <div class="l-mqWrapper">
+                        <h2 class="m-markupTitle"><span>プラグイン - swiper01</span></h2>
+                <div class="l-markupBlock">
+                  <div class="p-swiper01">
+                    <div class="swiper-container js-swiperSlider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                            </p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="m-imageSet01">
+                            <p class="image"><img src="https://placeimg.com/960/250/animals" alt="dummy">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

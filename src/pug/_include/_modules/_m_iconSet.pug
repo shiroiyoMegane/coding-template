@@ -1,36 +1,36 @@
+mixin m-iconlinkSet01(text, link, blank)
+	if(blank=="_blank")
+		a(href=link target="_blank")
+			span!= text
+			block
+	else
+		a(href=link)
+			span!= text
+			block
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span モジュール - アイコンセット
-
+			+m-markupTitle('モジュール - アイコンセット')
 			+l-markupBlock
-				.m-defaultSet
+				+m-defaultSet
 					ul.is-disc
 						li
-							a(href="sample.pdf")
-								span pdfファイル
+							+m-iconlinkSet01('pdfファイル','sample.pdf')
 						li
-							a(href="sample.doc")
-								span ワードファイル
+							+m-iconlinkSet01('ワードファイル','sample.doc')
 						li
-							a(href="sample.xls")
-								span エクセルファイル
+							+m-iconlinkSet01('エクセルファイル','sample.xls')
 						li
-							a(href="sample.ppt")
-								span パワーポイントファイル
+							+m-iconlinkSet01('パワーポイントファイル','sample.ppt')
 						li
-							a(href="sample.mp3")
-								span 音楽ファイル
+							+m-iconlinkSet01('音楽ファイル','sample.mp3')
 						li
-							a(href="sample.mp4")
-								span 動画ファイル
+							+m-iconlinkSet01('動画ファイル','sample.mp4')
 						li
-							a(href="sample.rtf")
-								span その他ファイル
+							+m-iconlinkSet01('その他ファイル','sample.rtf')
 						li
-							a(href="sample.html" target="_blank")
-								span 外部リンク
+							+m-iconlinkSet01('外部リンク','sample.html','_blank')
 
 			
 			+l-markupBlock

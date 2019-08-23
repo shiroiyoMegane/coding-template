@@ -1,15 +1,20 @@
+//- mixn
+mixin c-imageText03(layout, image)
+	block
+	.c-imageText03(class= layout)
+		.imageBlock(style='background-image: url('+image+')')
+		.textBlock
+			+textBlock()
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span コンポーネント - 画像+テキストコンポーネント03
+			+m-markupTitle('コンポーネント - 画像+テキストコンポーネント03')
 
 			+l-markupBlock
-
-				.c-imageText03.is-imageRight
-					.imageBlock(style='background-image: url("https://placehold.jp/700x340.png")')
-					.textBlock
-						.m-defaultSet
+				+c-imageText03("is-imageRight", "https://placeimg.com/700/340/animals")
+					mixin textBlock
+						+m-defaultSet
 							p!= DUMMY_TEXT_100
 
 			+l-markupBlock
@@ -17,7 +22,7 @@
 					.c-imageText03 (.is-imageRight / .is-imageLeft)
 						.imageBlock(style='background-image: url("画像")')
 						.textBlock
-							.m-defaultSet
+							テキスト
 
 				+p-markupBtn('stylus')
 					include ../../../stylus/_include/_components/_c_imageText03.styl

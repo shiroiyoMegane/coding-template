@@ -1,25 +1,28 @@
+
+mixin m-imageSet01(tag, image, alt)
+	.m-imageSet01
+		#{tag}.image
+			img(src= image, alt= alt)
+			block
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span モジュール - 画像モジュール01
+			+m-markupTitle('モジュール - 画像モジュール01')
 			
 			+l-markupBlock
-				.m-imageSet01
-					figure.image
-						img(src="https://placehold.jp/400x150.png", alt="")
-						figcaption テキストが入ります
+				+m-imageSet01('figure', 'https://placeimg.com/400/150/animals', 'dummy')
+					figcaption テキストが入ります
+				
 			+l-markupBlock
-				.m-imageSet01
-					p.image
-						img(src="https://placehold.jp/400x150.png", alt="")
+				+m-imageSet01('p', 'https://placeimg.com/400/150/animals', 'dummy')
+					figcaption テキストが入ります
 
 			+l-markupBlock
 				+p-markupBtn('pug').
 					.m-imageSet01
-						figure.image p.image
+						figure.image or p.image
 							img(src="画像", alt="")
-							figcaption テキスト
 					
 				+p-markupBtn('stylus')
 					include ../../../stylus/_include/_modules/_m_imageSet01.styl

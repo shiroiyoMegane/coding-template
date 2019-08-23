@@ -1,11 +1,13 @@
+mixin m-defaultSet
+	.m-defaultSet
+		block
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span モジュール - デフォルトタグ
-
+			+m-markupTitle('モジュール - デフォルトタグ')
 			+l-markupBlock
-				.m-defaultSet
+				+m-defaultSet
 					p!= DUMMY_TEXT_400
 
 					ul.is-disc

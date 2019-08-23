@@ -1,20 +1,25 @@
+//- mixn
+mixin c-imageText02(layout)
+	block
+	.c-imageText02(class= layout)
+		.imageBlock
+			+imageBlock()
+
+		.textBlock
+			+textBlock()
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span コンポーネント - 画像+テキストコンポーネント02
+			+m-markupTitle('コンポーネント - 画像+テキストコンポーネント02')
 
 			+l-markupBlock
-
-				.c-imageText02.is-imageLeft
-					.imageBlock
-						.m-imageSet01
-							figure.image
-								img(src="https://placehold.jp/400x248.png", alt="")
-								figcaption キャプションが入ります。
-
-					.textBlock
-						.m-defaultSet
+				+c-imageText02("is-imageLeft")
+					mixin imageBlock
+						+m-imageSet01('figure', 'https://placeimg.com/400/250/animals', 'dummy')
+							figcaption テキストが入ります
+					mixin textBlock
+						+m-defaultSet
 							p!= DUMMY_TEXT_200
 							p!= DUMMY_TEXT_400
 
@@ -22,10 +27,9 @@
 				+p-markupBtn('pug').
 					.c-imageText02 (.is-imageRight / .is-imageLeft)
 						.imageBlock
-							.m-imageSet01
-
+							画像
 						.textBlock
-							.m-defaultSet
+							テキスト
 
 				+p-markupBtn('stylus')
 					include ../../../stylus/_include/_components/_c_imageText02.styl

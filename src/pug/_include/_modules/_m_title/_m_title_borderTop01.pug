@@ -1,12 +1,13 @@
+mixin m-title-borderTop01(tag,text)
+	#{tag}.m-title-borderTop01
+		span!= text
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span モジュール - ボーダートップタイトル01
-			
+			+m-markupTitle('モジュール - ボーダートップタイトル01')
 			+l-markupBlock
-				h3.m-title-borderTop01
-					span タイトル
+				+m-title-borderTop01('h3','ボーダートップタイトル01')
 
 			+l-markupBlock
 				+p-markupBtn('pug').

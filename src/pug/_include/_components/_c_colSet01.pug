@@ -1,24 +1,30 @@
+mixin c-colSet01(className)
+	mixin col
+		li.col
+			block
+	ul.c-colSet01(class= className)
+		block
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span コンポーネント - 分割セット01
+			+m-markupTitle('コンポーネント - 分割セット01')
 
 			+l-markupBlock
-				.c-colSet01.is-two
-					.col
-						.m-defaultSet
+				+c-colSet01('is-two')
+					+col
+						+m-defaultSet
 							p!= DUMMY_TEXT_200
-					.col
-						.c-colSet01.is-three
-							.col
-								.m-defaultSet
+					+col
+						+c-colSet01('is-three')
+							+col
+								+m-defaultSet
 									p!= DUMMY_TEXT_100
-							.col
-								.m-defaultSet
+							+col
+								+m-defaultSet
 									p!= DUMMY_TEXT_100
-							.col
-								.m-defaultSet
+							+col
+								+m-defaultSet
 									p!= DUMMY_TEXT_100
 
 			+l-markupBlock

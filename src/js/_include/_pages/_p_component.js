@@ -6,6 +6,7 @@ const smoothScroll = require('../_modules/smoothScroll.js');
 const spTellLink = require('../_modules/spTellLink.js');
 const accordionSet = require('../_modules/accordionSet.js');
 const inView = require('../_modules/inView.js');
+const slick = require('../_modules/slick.js');
 
 // マークアップアコーディオン用
 function markupBlock() {
@@ -45,9 +46,28 @@ class initSet {
 		accordionSet();
 		inView();
 		markupBlock();
+
+		let mainvisualSet01 = new slick();
+		mainvisualSet01.set('.js-mainvisualSet01');
+		mainvisualSet01.option({
+			arrows: true,
+			appendArrows: $('.c-mainvisualSet01'),
+			prevArrow: '<p class="slick-prev"></p>',
+			nextArrow: '<p class="slick-next"></p>',
+			customPaging: function(slick, index){
+				return '<span></span>';
+			},
+			dots: true,
+		});
+
+		let slickSlider = new slick();
+		slickSlider.set('.js-slickSlider');
+		slickSlider.option();
+		let swiper = new Swiper('.js-swiperSlider');
 	}
 	imageReadAfter(op) {
 		// 画像読み込み後
+		
 	}
 	windowResize(op) {
 		// リサイズ

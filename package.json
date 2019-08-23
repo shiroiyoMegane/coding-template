@@ -33,6 +33,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
     "lodash": "^4.17.15",
+    "slick-carousel": "^1.8.1",
     "stylus-svg": "^1.1.2",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.1.3",

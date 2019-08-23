@@ -1,42 +1,27 @@
+mixin c-btnSet01(className)
+	.c-btnSet01
+		+c-colSet01(className)
+			block
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span コンポーネント - ボタンコンポーネント01
+			+m-markupTitle('コンポーネント - ボタンコンポーネント01')
 			
 			+l-markupBlock
-				.c-btnSet01
-					ul.c-colSet01.is-three
-						li.col
-							.m-btnSet01
-								a(href="")
-									span.btnWrapper
-										span.btnInner 通常ボタン
-						li.col
-							.m-btnSet02
-								a(href=".pdf")
-									span.btnWrapper
-										span.btnInner pdfファイル
-						li.col
-							.m-btnSet01
-								a(href=".doc")
-									span.btnWrapper
-										span.btnInner その他ファイル
-						li.col
-							.m-btnSet01
-								a(href="#sample")
-									span.btnWrapper
-										span.btnInner ページ内リンク
-						li.col
-							.m-btnSet01
-								a(href="index.html#sample")
-									span.btnWrapper
-										span.btnInner ＃付きリンク
-						li.col
-							.m-btnSet01
-								a(href="" target="_blank")
-									span.btnWrapper
-										span.btnInner ターゲットブランク
+				+c-btnSet01('is-three')
+					+col
+						+m-btnSet01('p','通常ボタン','')
+					+col
+						+m-btnSet01('p','pdfファイル','.pdf')
+					+col
+						+m-btnSet01('p','その他ファイル','.rtf')
+					+col
+						+m-btnSet01('p','ページ内リンク','#sample')
+					+col
+						+m-btnSet01('p','＃付きリンク','index.html#sample')
+					+col
+						+m-btnSet01('p','ターゲットブランク','', '_blank')
 
 			+l-markupBlock
 				+p-markupBtn('pug').

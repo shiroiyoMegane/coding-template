@@ -1,13 +1,14 @@
+mixin m-title-bg01(tag,text)
+	#{tag}.m-title-bg01
+		span!= text
+
 +l-columnBox
 	+l-contentsWidth
 		+l-mqWrapper
-			h2.m-markupTitle
-				span 背景タイトル01
-			
+			+m-markupTitle('モジュール - 背景タイトル01')
 			+l-markupBlock
-				h3.m-title-bg01
-					span タイトル
-
+				+m-title-bg01('h3','背景タイトル01')
+			
 			+l-markupBlock
 				+p-markupBtn('pug').
 					h3.m-title-bg01

@@ -2,14 +2,29 @@
 .c-imageBgSet01
 	position relative
 
+	&.is-left
+		.contentsArea
+			align-items flex-start
+
+	&.is-right
+		.contentsArea
+			align-items flex-end
+	
+	&.is-center
+		.contentsArea
+			align-items center
+
 	+MQ_SP(SP_RES_WID)
 		display block
 	
 	.bg
 		width 100%
-		img
+		.image
 			width 100%
-			height auto
+			img
+				max-width inherit
+				width 100%
+				height auto
 
 	.contentsArea
 		flexBox()
@@ -22,13 +37,3 @@
 		height 100%
 		padding 20px
 		box-sizing border-box
-
-		&.is-left
-			align-items flex-start
-
-		&.is-right
-			align-items flex-end
-		
-		&.is-center
-			align-items center
-			

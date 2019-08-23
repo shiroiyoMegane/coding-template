@@ -13,10 +13,19 @@ block vars
 	- var jquery = "true"
 
 block contents
+	mixin m-markupTitle(title)
+		h2.m-markupTitle
+			span!= title
+			
 	+l-columnBlock
 		h3.m-title-bg01
 			span レイアウト
 		include _include/_layout/__l_init01
+	
+	+l-columnBlock
+		h3.m-title-bg01
+			span モジュール
+		include _include/_modules/__m_init01
 
 	+l-columnBlock
 		h3.m-title-bg01
@@ -26,12 +35,7 @@ block contents
 	+l-columnBlock
 		h3.m-title-bg01
 			span 複合コンポーネント
-		include _include/_components/__c_init02
-
-	+l-columnBlock
-		h3.m-title-bg01
-			span モジュール
-		include _include/_modules/__m_init01
+		include _include/_components/__c_init02	
 
 	+l-columnBlock
 		h3.m-title-bg01
