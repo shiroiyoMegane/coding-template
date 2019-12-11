@@ -93,9 +93,9 @@
 
 __webpack_require__(1);
 var comSet = __webpack_require__(278);
-var homeSet = __webpack_require__(281);
-var componentSet = __webpack_require__(282);
-var uaSet = __webpack_require__(280);
+var componentSet = __webpack_require__(280);
+var canvasSet = __webpack_require__(288);
+var uaSet = __webpack_require__(282);
 
 var option = {
 	SP_WIDTH: 768,
@@ -105,8 +105,8 @@ var option = {
 };
 var init = function init() {
 	comSet(option);
-	homeSet(option);
 	componentSet(option);
+	canvasSet(option);
 };
 init();
 
@@ -7893,6 +7893,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var initFunc = __webpack_require__(279);
 
+var simpleModalSet = function simpleModalSet() {
+
+	var target = document.querySelectorAll('.c-simpleModal01Target');
+	[].slice.call(target).forEach(function (event, i) {
+		event.addEventListener("click", function (e) {
+			e.preventDefault();
+			document.getElementById(event.getAttribute('data-simplemodal-target')).classList.add("is-active");
+
+			var close = event.getAttribute('data-simplemodal-target');
+		}, false);
+	});
+};
+
 // init
 
 var initSet = function () {
@@ -7902,18 +7915,12 @@ var initSet = function () {
 
 	_createClass(initSet, [{
 		key: 'DOMReadBefore',
-		value: function DOMReadBefore(op) {
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/service_worker.js').then(function (registration) {
-					console.log('ServiceWorker registration successful with scope: ', registration.scope);
-				}).catch(function (err) {
-					console.log('ServiceWorker registration failed: ', err);
-				});
-			};
-		}
+		value: function DOMReadBefore(op) {}
 	}, {
 		key: 'DOMReadAfter',
-		value: function DOMReadAfter(op) {}
+		value: function DOMReadAfter(op) {
+			simpleModalSet();
+		}
 	}, {
 		key: 'imageReadAfter',
 		value: function imageReadAfter(op) {}
@@ -7935,13 +7942,11 @@ module.exports = function (option) {
 
 /***/ }),
 /* 279 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 
 
 module.exports = function (tg, op, flag) {
-	var uaSet = __webpack_require__(280);
-
 	var timeoutId = 1,
 	    pageFlag = void 0;
 	var currentWidth = window.innerWidth;
@@ -7993,82 +7998,6 @@ module.exports = function (tg, op, flag) {
 
 /***/ }),
 /* 280 */
-/***/ (function(module, exports) {
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-//ua 判定
-module.exports = function () {
-	function ua() {
-		_classCallCheck(this, ua);
-
-		this.ua = navigator.userAgent;
-		this.type = 'pc';
-	}
-
-	_createClass(ua, [{
-		key: 'dvType',
-		value: function dvType() {
-			if (this.ua.indexOf('iPhone') > 0 || this.ua.indexOf('Android') > 0 && this.ua.indexOf('Mobile') > 0) {
-				// スマートフォン用コード
-				this.type = 'sp';
-			} else if (this.ua.indexOf('iPad') > 0 || this.ua.indexOf('Android') > 0) {
-				// タブレット用コード
-				this.type = 'tb';
-			}
-			return this.type;
-		}
-	}]);
-
-	return ua;
-}();
-
-/***/ }),
-/* 281 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var initFunc = __webpack_require__(279);
-
-// init
-
-var initSet = function () {
-	function initSet() {
-		_classCallCheck(this, initSet);
-	}
-
-	_createClass(initSet, [{
-		key: 'DOMReadBefore',
-		value: function DOMReadBefore(op) {}
-	}, {
-		key: 'DOMReadAfter',
-		value: function DOMReadAfter(op) {}
-	}, {
-		key: 'imageReadAfter',
-		value: function imageReadAfter(op) {}
-	}, {
-		key: 'windowResize',
-		value: function windowResize(op) {}
-	}, {
-		key: 'windowScroll',
-		value: function windowScroll(op) {}
-	}]);
-
-	return initSet;
-}();
-
-module.exports = function (option) {
-	var init = new initSet();
-	initFunc(init, option, 'is-home');
-};
-
-/***/ }),
-/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8078,12 +8007,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var initFunc = __webpack_require__(279);
 
 // 追加module
-var matchHeight = __webpack_require__(283);
-var smoothScroll = __webpack_require__(284);
-var spTellLink = __webpack_require__(285);
-var accordionSet = __webpack_require__(286);
-var inView = __webpack_require__(287);
-var slick = __webpack_require__(288);
+var matchHeight = __webpack_require__(281);
+var smoothScroll = __webpack_require__(283);
+var spTellLink = __webpack_require__(284);
+var accordionSet = __webpack_require__(285);
+var inView = __webpack_require__(286);
+var slick = __webpack_require__(287);
 
 // マークアップアコーディオン用
 function markupBlock() {
@@ -8110,6 +8039,19 @@ function markupBlock() {
 	init();
 }
 
+function memoSet01() {
+	var $target = $(".c-memoSet01"),
+	    tab = '.group.is-before .tab li',
+	    content = '.group.is-primary';
+
+	$target.on('click', tab, function () {
+		$(this).parents(".c-memoSet01").find(tab).removeClass('is-current');
+		$(this).parents(".c-memoSet01").find(content).removeClass('is-current');
+		$(this).addClass('is-current');
+		$(this).parents(".c-memoSet01").find(content).eq($(this).index()).addClass('is-current');
+	});
+}
+
 // init
 
 var initSet = function () {
@@ -8132,6 +8074,8 @@ var initSet = function () {
 			accordionSet();
 			inView();
 			markupBlock();
+			memoSet01();
+			hljs.initHighlightingOnLoad();
 
 			var mainvisualSet01 = new slick();
 			mainvisualSet01.set('.js-mainvisualSet01');
@@ -8178,13 +8122,13 @@ module.exports = function (option) {
 };
 
 /***/ }),
-/* 283 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _this = this;
 
 module.exports = function (op) {
-	var uaSet = __webpack_require__(280);
+	var uaSet = __webpack_require__(282);
 
 	var _g_defaultOp = {
 		className: '.js-matchHeight', //要素
@@ -8310,7 +8254,41 @@ module.exports = function (op) {
 };
 
 /***/ }),
-/* 284 */
+/* 282 */
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+//ua 判定
+module.exports = function () {
+	function ua() {
+		_classCallCheck(this, ua);
+
+		this.ua = navigator.userAgent;
+		this.type = 'pc';
+	}
+
+	_createClass(ua, [{
+		key: 'dvType',
+		value: function dvType() {
+			if (this.ua.indexOf('iPhone') > 0 || this.ua.indexOf('Android') > 0 && this.ua.indexOf('Mobile') > 0) {
+				// スマートフォン用コード
+				this.type = 'sp';
+			} else if (this.ua.indexOf('iPad') > 0 || this.ua.indexOf('Android') > 0) {
+				// タブレット用コード
+				this.type = 'tb';
+			}
+			return this.type;
+		}
+	}]);
+
+	return ua;
+}();
+
+/***/ }),
+/* 283 */
 /***/ (function(module, exports) {
 
 //スムーススクロール npm install SweetScroll
@@ -8359,11 +8337,11 @@ module.exports = function () {
 };
 
 /***/ }),
-/* 285 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function (op) {
-	var uaSet = __webpack_require__(280);
+	var uaSet = __webpack_require__(282);
 
 	var _g_defaultOp = {
 		className: '.js-tellLink',
@@ -8380,7 +8358,7 @@ module.exports = function (op) {
 };
 
 /***/ }),
-/* 286 */
+/* 285 */
 /***/ (function(module, exports) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8536,7 +8514,7 @@ module.exports = function (op) {
 };
 
 /***/ }),
-/* 287 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8546,7 +8524,7 @@ var _this = this;
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 module.exports = function (op) {
-	var uaSet = __webpack_require__(280);
+	var uaSet = __webpack_require__(282);
 
 	// デフォルトオプション
 	var _g_defaultOp = {
@@ -8674,7 +8652,7 @@ module.exports = function (op) {
 };
 
 /***/ }),
-/* 288 */
+/* 287 */
 /***/ (function(module, exports) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -8752,14 +8730,14 @@ module.exports = function () {
 	}
 
 	_createClass(ua, [{
-		key: 'set',
+		key: "set",
 		value: function set(tg) {
 			var _t = this;
 			_t.tg = tg;
 			$(_t.tg).slick();
 		}
 	}, {
-		key: 'option',
+		key: "option",
 		value: function option(op) {
 			var _t = this;
 			_t.defaultOp = Object.assign(_t.defaultOp, op);
@@ -8769,6 +8747,680 @@ module.exports = function () {
 	}]);
 
 	return ua;
+}();
+
+$("ターゲット").slick({
+	// accessibility: true, // 矢印キーでスライドを切り替えるか
+	// adaptiveHeight: false, // スライドの高さが違うときに自動調整するか
+	// autoplay: false, // 自動再生するか
+	// autoplaySpeed: 3000, // 自動再生で切り替えする時間(ミリ秒)
+	arrows: false, // 前次ボタンを表示するか
+	// asNavFor: null, // 別のスライドと連携したいときにクラス名を指定
+	// appendArrows: $('.my-slide'), // 矢印ボタンの生成位置を変更
+	// appendDots: $('.my-slide'), // ドットナビゲーションの生成位置を変更
+
+	// prevArrow: '<button type="button" class="slick-prev">Previous</button>', // 前ボタンの要素を変更
+	// nextArrow: '<button type="button" class="slick-next">Next</button>',// 次ボタンの要素を変更
+	// centerMode: false,// slidesToShowが奇数のとき、現在のスライドを中央に表示するか
+	// centerPadding: '50px',// centerMode:trueのとき、左右のスライドをチラ見せさせる幅
+	// cssEase: 'ease',// ease-in,ease-in-outなどCSSのイージング
+	// customPaging: function(slick, index){// dots:trueのとき、ドットをサムネイルなどにカスタマイズ
+	// 	var num = slick.$slides.eq(index).html();
+	// 	return '<b>' + num + '</b>';
+	// },
+	dots: false // ドットナビゲーションを表示するか
+	// dotsClass: 'slick-dots',// ドットナビゲーションのクラス名を変更
+	// draggable: true,// マウスドラッグでスライドの切り替えをするか
+	// fade: false,// スライド切り替えをフェードするか
+	// focusOnSelect: true,// クリックでメインのスライドを切り替えるか
+	// easing: 'linear',// jQueryのイージング
+	// infinite: true,// スライドをループさせるか
+	// edgeFriction: 0.15,// infinite:falseのとき、両端のスライドをドラッグしようとした際のバウンドスクロール値
+	// initialSlide: 0,// 開始スライド（0から始まるので注意）
+	// lazyLoad: 'ondemand',// 画像の遅延表示タイプ（ondemand/progressive)
+	// mobileFirst: false,// モバイルファーストにするか
+	// pauseOnFocus: true,// autoplay:trueのとき、マウスフォーカスしたら一時停止させるか
+	// pauseOnHover: true,// autoplay:trueのとき、マウスホバーしたら一時停止させるか
+	// pauseOnDotsHover: false,// autoplay:trueのとき、ドットナビゲーションをマウスホバーしたら一時停止させるか
+	// respondTo: 'window',// レスポンシブ設定の基準（window/slider/min） [初期値:'window']
+	// responsive: [// レスポンシブ設定
+	// 	{
+	// 		breakpoint: 1024,
+	// 		settings: {
+	// 			slidesToShow: 3,
+	// 			slidesToScroll: 3,
+	// 			infinite: true,
+	// 			dots: true
+	// 		}
+	// 	},
+	// ],
+	// rows: 1, // 行数 [初期値:1]
+	// slide: '', // スライド部分の要素のタグ名
+	// slidesPerRow: 1, // rowsの値が2以上のとき、1行あたりに表示させるスライド数
+	// slidesToShow: 1, // 表示させるスライド数
+	// slidesToScroll: 1, // 一度に移動させるスライド数
+	// speed: 300,// スライド/フェードさせるスピード（ミリ秒）
+	// swipe: true,// スワイプを検知するか
+	// swipeToSlide: false, // slidesToScrollの値に関係なく、マウスドラッグやスワイプでスライドさせる際は1スライドずつ動かす
+	// touchMove: true,// タッチでスライドさせるか
+	// touchThreshold: 5,// (1/touchThreshold)*スライダーの横幅 分マウスドラッグするとスライドされる
+	// useCSS: true,// CSSのtransitionを使用するか
+	// useTransform: true,// CSSのtransformを使用するか
+	// variableWidth: false,// 横幅がバラバラなスライドにするか
+	// vertical: false,// 縦方向にスライドさせるか
+	// verticalSwiping: false,// 縦方向のスワイプを有効にするか
+	// rtl: false,// スライドの順番を逆にするか
+	// waitForAnimate: true,// スライドアニメーション中サムネイルをクリックしたとき反応させないか
+	// zIndex: 1000// z-index値
+});
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var initFunc = __webpack_require__(279);
+var canvasLoading = __webpack_require__(289);
+
+var nxpgLogoFunc = function nxpgLogoFunc() {
+	var logoTarget = void 0;
+	var init = function init() {
+		logoTarget = new logoSet({
+			tg: document.querySelector('#js-logoTarget')
+		});
+		logoTarget.set();
+	};
+
+	var logoSet = function () {
+		function logoSet(op) {
+			_classCallCheck(this, logoSet);
+
+			var _t = this;
+			_t.target = op.tg;
+			_t.queue = new createjs.LoadQueue(false);
+			_t.imageArray = [{ src: "../images/sample01.jpg" }];
+			_t.imagePath = {};
+		}
+
+		_createClass(logoSet, [{
+			key: 'set',
+			value: function set() {
+				var _this = this;
+
+				var _t = this;
+				var initSet = function initSet() {
+					_t.stageTarget = new createjs.Stage(_t.target);
+					createjs.Ticker.addEventListener('tick', update, false);
+					createjs.Ticker.setFPS(60);
+					createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+					$.each(_t.imageArray, function (index, val) {
+						_t.imagePath[index] = new Image();
+						_t.imagePath[index].src = val.src;
+						val.width = _t.imagePath[index].naturalWidth;
+						val.height = _t.imagePath[index].naturalHeight;
+					});
+					_t.queue.loadManifest(_t.imageArray);
+					_t.queue.setMaxConnections(3);
+					_t.queue.addEventListener('complete', function (e) {
+						scaleInit();
+						drawInit();
+						tweenInit();
+					});
+					function update() {
+						_t.stageTarget.update();
+					}
+				};
+				var scaleInit = function scaleInit() {
+					function set() {
+						_t.stageTarget.canvas.width = 500;
+						_t.stageTarget.canvas.height = 500;
+					}
+					set();
+					window.addEventListener("resize", set);
+				};
+				var drawInit = function drawInit() {
+					var _t = _this;
+					_t.containerTarget = new createjs.Container();
+					_t.graphicTarget = new createjs.Shape();
+					_t.imageTarget = new createjs.Bitmap(_t.imageArray[0].src);
+					_t.maskTarget = new createjs.Shape();
+
+					_t.stageTarget.addChild(_t.containerTarget);
+					_t.containerTarget.addChild(_t.graphicTarget);
+					_t.containerTarget.addChild(_t.imageTarget);
+
+					_t.imageTarget.x = 0;
+					_t.imageTarget.y = 0;
+					_t.imageTarget.scale = 0.3;
+
+					_t.maskTarget.set({
+						x: 0,
+						y: 0,
+						scaleX: 1.0,
+						scaleY: 1.0
+					});
+
+					_t.point0101 = _t.maskTarget.graphics.moveTo(0, 0).command;
+					_t.point0102 = _t.maskTarget.graphics.lineTo(25, 0).command;
+					_t.point0103 = _t.maskTarget.graphics.lineTo(25, 0).command;
+					_t.point0104 = _t.maskTarget.graphics.lineTo(0, 0).command;
+					_t.maskTarget.graphics.closePath().command;
+
+					_t.point0201 = _t.maskTarget.graphics.moveTo(50, 60).command;
+					_t.point0202 = _t.maskTarget.graphics.lineTo(75, 60).command;
+					_t.point0203 = _t.maskTarget.graphics.lineTo(75, 60).command;
+					_t.point0204 = _t.maskTarget.graphics.lineTo(50, 60).command;
+					_t.maskTarget.graphics.closePath().command;
+
+					_t.point0301 = _t.maskTarget.graphics.moveTo(100, 0).command;
+					_t.point0302 = _t.maskTarget.graphics.lineTo(125, 0).command;
+					_t.point0303 = _t.maskTarget.graphics.lineTo(125, 0).command;
+					_t.point0304 = _t.maskTarget.graphics.lineTo(100, 0).command;
+					_t.maskTarget.graphics.closePath().command;
+
+					_t.point0401 = _t.maskTarget.graphics.moveTo(150, 0).command;
+					_t.point0402 = _t.maskTarget.graphics.lineTo(175, 0).command;
+					_t.point0403 = _t.maskTarget.graphics.lineTo(175, 0).command;
+					_t.point0404 = _t.maskTarget.graphics.lineTo(150, 0).command;
+					_t.maskTarget.graphics.closePath().command;
+
+					_t.graphicTarget.graphics.beginFill("#000000").drawRect(0, 0, _t.stageTarget.canvas.width, _t.stageTarget.canvas.height);
+					_t.containerTarget.set({
+						mask: _t.maskTarget
+					});
+				};
+
+				var tweenInit = function tweenInit() {
+					var _t = _this;
+					function logo01() {
+						createjs.Tween.get(_t.point0103, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut);
+						createjs.Tween.get(_t.point0104, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut).call(logo02);
+					}
+					function logo02() {
+						createjs.Tween.get(_t.point0203, { override: true }).to({ y: 60 }, 0).to({ y: 180 }, 600, createjs.Ease.cubicOut);
+						createjs.Tween.get(_t.point0204, { override: true }).to({ y: 60 }, 0).to({ y: 180 }, 600, createjs.Ease.cubicOut).call(logo03);
+					}
+					function logo03() {
+						createjs.Tween.get(_t.point0303, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut);
+						createjs.Tween.get(_t.point0304, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut).call(logo04);
+					}
+					function logo04() {
+						createjs.Tween.get(_t.point0403, { override: true }).to({ y: 0 }, 0).to({ y: 60 }, 600, createjs.Ease.cubicOut);
+						createjs.Tween.get(_t.point0404, { override: true }).to({ y: 0 }, 0).to({ y: 60 }, 600, createjs.Ease.cubicOut);
+					}
+					logo01();
+				};
+				initSet();
+			}
+		}]);
+
+		return logoSet;
+	}();
+
+	init();
+};
+
+var canvasLoadingFunc = function canvasLoadingFunc() {
+	var canvasLoadingTarget = void 0;
+	var init = function init() {
+		canvasLoadingTarget = new canvasLoading({
+			tg: document.querySelector('#js-canvasLoadingAnimation')
+		});
+		canvasLoadingTarget.set();
+	};
+
+	$('#type01_start').on('click', function () {
+		canvasLoadingTarget.type01_start();
+	});
+	$('#type01_end').on('click', function () {
+		canvasLoadingTarget.type01_end();
+	});
+	$('#type02_start').on('click', function () {
+		canvasLoadingTarget.type02_start();
+	});
+	$('#type02_end').on('click', function () {
+		canvasLoadingTarget.type02_end();
+	});
+	$('#type03_start').on('click', function () {
+		canvasLoadingTarget.type03_start();
+	});
+	$('#type03_end').on('click', function () {
+		canvasLoadingTarget.type03_end();
+	});
+	$('#type04_start').on('click', function () {
+		canvasLoadingTarget.type04_start();
+	});
+	$('#type04_end').on('click', function () {
+		canvasLoadingTarget.type04_end();
+	});
+	$('#type05_start').on('click', function () {
+		canvasLoadingTarget.type05_start();
+	});
+	$('#type05_end').on('click', function () {
+		canvasLoadingTarget.type05_end();
+	});
+	init();
+};
+
+// init
+
+var initSet = function () {
+	function initSet() {
+		_classCallCheck(this, initSet);
+	}
+
+	_createClass(initSet, [{
+		key: 'DOMReadBefore',
+		value: function DOMReadBefore(op) {}
+	}, {
+		key: 'DOMReadAfter',
+		value: function DOMReadAfter(op) {
+			canvasLoadingFunc();
+			nxpgLogoFunc();
+		}
+	}, {
+		key: 'imageReadAfter',
+		value: function imageReadAfter(op) {}
+	}, {
+		key: 'windowResize',
+		value: function windowResize(op) {}
+	}, {
+		key: 'windowScroll',
+		value: function windowScroll(op) {}
+	}]);
+
+	return initSet;
+}();
+
+module.exports = function (option) {
+	var init = new initSet();
+	initFunc(init, option, 'is-canvas');
+};
+
+/***/ }),
+/* 289 */
+/***/ (function(module, exports) {
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+//ua 判定
+module.exports = function () {
+	function canvasLoading(op) {
+		_classCallCheck(this, canvasLoading);
+
+		var _t = this;
+		_t.target = op.tg;
+		_t.contentsName = [{ name: "type01", src: "../images/logo01.png" }, { name: "type02", src: "../images/logo02.png" }, { name: "type03", src: "../images/logo03.png" }, { name: "type04", src: "../images/logo04.png" }, { name: "type05", src: "../images/logo05.png" }];
+		_t.containerArray = {};
+		_t.graphicArray = {};
+		_t.pointArray = {};
+		_t.bgArray = {};
+		_t.imageArray = {};
+		_t.queue = new createjs.LoadQueue(false);
+	}
+
+	_createClass(canvasLoading, [{
+		key: "set",
+		value: function set() {
+			var _t = this;
+			_t.imagePath = {};
+
+			var callFunction = function callFunction() {
+				$.each(_t.contentsName, function (index, val) {
+					_t.imagePath[index] = new Image();
+					_t.imagePath[index].src = val.src;
+					val.width = _t.imagePath[index].naturalWidth;
+					val.height = _t.imagePath[index].naturalHeight;
+				});
+				scaleInit();
+				_t.drawInit();
+			};
+			var initSet = function initSet() {
+				_t.stage = new createjs.Stage(_t.target);
+				createjs.Ticker.addEventListener('tick', update, false);
+				createjs.Ticker.setFPS(60);
+				createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+
+				_t.queue.loadManifest(_t.contentsName);
+				_t.queue.setMaxConnections(3);
+				_t.queue.addEventListener('complete', function (e) {
+					callFunction();
+				});
+
+				function update() {
+					_t.stage.update();
+				}
+			};
+
+			var scaleInit = function scaleInit() {
+				function scaleset() {
+					_t.stage.canvas.width = window.innerWidth;
+					_t.stage.canvas.height = window.innerHeight;
+				}
+				scaleset();
+				window.addEventListener("resize", scaleset);
+			};
+			initSet();
+		}
+	}, {
+		key: "drawInit",
+		value: function drawInit() {
+			var _t = this;
+			function resize() {
+				_t.cw = _t.stage.canvas.width * 1.5;
+				_t.ch = _t.stage.canvas.height * 1.5;
+
+				$.each(_t.contentsName, function (index, val) {
+					_t.graphicArray[index] = new createjs.Shape();
+					_t.imageArray[index] = new createjs.Bitmap(val.src);
+					_t.containerArray[index] = new createjs.Container();
+
+					_t.bgArray[index] = new createjs.Shape();
+					_t.stage.removeChild(_t.containerArray[index]);
+					_t.containerArray[index].removeChild(_t.bgArray[index]);
+					_t.containerArray[index].removeChild(_t.imageArray[index]);
+					_t.stage.addChild(_t.containerArray[index]);
+					_t.containerArray[index].addChild(_t.bgArray[index]);
+					_t.containerArray[index].addChild(_t.imageArray[index]);
+
+					switch (val.name) {
+						case "type01":
+							_t.bgArray[index].graphics.beginFill("#355cfc").drawRect(0, 0, _t.cw, _t.ch);
+							_t.pointArray[index] = [];
+
+							chm = _t.ch / 9;
+
+							_t.pointArray[index][0] = _t.graphicArray[index].graphics.moveTo(_t.cw * 0.5, 0).command;
+							_t.pointArray[index][1] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.6, 0).command;
+
+							_t.pointArray[index][2] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw * 0.7, chm * 1, _t.cw * 0.65, chm * 2, _t.cw * 0.75, chm * 3).command;
+							_t.pointArray[index][3] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw * 0.85, chm * 4, _t.cw * 0.7, chm * 5, _t.cw * 0.85, chm * 6).command;
+							_t.pointArray[index][4] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw * 1.05, chm * 7, _t.cw, chm * 8, _t.cw, chm * 9).command;
+
+							_t.pointArray[index][5] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.5, _t.ch).command;
+							_t.pointArray[index][6] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.pointArray[index][7] = _t.graphicArray[index].graphics.moveTo(_t.cw * 0.5 + 10, _t.ch).command;
+							_t.pointArray[index][8] = _t.graphicArray[index].graphics.lineTo(0, _t.ch).command;
+							_t.pointArray[index][9] = _t.graphicArray[index].graphics.bezierCurveTo(0, chm * 8, 0, chm * 7, 0, chm * 6).command;
+							_t.pointArray[index][10] = _t.graphicArray[index].graphics.bezierCurveTo(0, chm * 5, 0, chm * 4, 0, chm * 3).command;
+							_t.pointArray[index][11] = _t.graphicArray[index].graphics.bezierCurveTo(0, chm * 2, 0, chm * 1, 0, 0).command;
+							_t.pointArray[index][12] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.5 + 10, 0).command;
+							_t.graphicArray[index].set({
+								x: -_t.cw * 2,
+								// x        : 0,
+								y: 0,
+								scaleX: 1.0,
+								scaleY: 1.0
+							});
+							break;
+
+						case "type02":
+							_t.bgArray[index].graphics.beginFill("#ff5b7f").drawRect(0, 0, _t.cw, _t.ch);
+							_t.pointArray[index] = [];
+
+							cwm = _t.cw / 6;
+
+							_t.pointArray[index][0] = _t.graphicArray[index].graphics.moveTo(0, _t.ch * 0.5).command;
+							_t.pointArray[index][1] = _t.graphicArray[index].graphics.lineTo(0, _t.ch * 0.3).command;
+							_t.pointArray[index][2] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 1, _t.ch * 0.1, cwm * 2, _t.ch * 0.22, cwm * 3, _t.ch * 0.2).command;
+							_t.pointArray[index][3] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 4, _t.ch * 0.2, cwm * 5, 0, cwm * 6, _t.ch * 0.07).command;
+
+							_t.pointArray[index][4] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch / 2).command;
+							_t.pointArray[index][5] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.pointArray[index][6] = _t.graphicArray[index].graphics.moveTo(_t.cw, _t.ch / 2).command;
+
+							_t.pointArray[index][7] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch).command;
+							_t.pointArray[index][8] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 5, _t.ch, cwm * 4, _t.ch, cwm * 3, _t.ch).command;
+							_t.pointArray[index][9] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 2, _t.ch, cwm * 1, _t.ch, 0, _t.ch).command;
+							_t.pointArray[index][10] = _t.graphicArray[index].graphics.lineTo(0, _t.ch / 2).command;
+							_t.graphicArray[index].set({
+								x: 0,
+								y: _t.ch,
+								scaleX: 1.0,
+								scaleY: 1.0
+							});
+							break;
+
+						case "type03":
+							_t.bgArray[index].graphics.beginFill("#22ad77").drawRect(0, 0, _t.cw, _t.ch);
+							_t.pointArray[index] = [];
+
+							cwm = _t.cw / 12;
+
+							_t.pointArray[index][0] = _t.graphicArray[index].graphics.moveTo(0, _t.ch * 0.5).command;
+							_t.pointArray[index][1] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.5).command;
+							_t.pointArray[index][2] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.6).command;
+
+							_t.pointArray[index][3] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 11, _t.ch * 0.52, cwm * 10, _t.ch * 0.75, cwm * 9, _t.ch * 0.55).command;
+							_t.pointArray[index][4] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 8, _t.ch * 0.4, cwm * 7, _t.ch * 0.65, cwm * 6, _t.ch * 0.55).command;
+							_t.pointArray[index][5] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 5, _t.ch * 0.45, cwm * 4, _t.ch * 0.8, cwm * 3, _t.ch * 0.65).command;
+							_t.pointArray[index][6] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 2, _t.ch * 0.40, cwm * 1, _t.ch * 0.8, 0, _t.ch * 0.55).command;
+
+							_t.pointArray[index][8] = _t.graphicArray[index].graphics.lineTo(0, _t.ch * 0.6).command;
+							_t.pointArray[index][9] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.pointArray[index][10] = _t.graphicArray[index].graphics.moveTo(0, _t.ch * 0.5).command;
+							_t.pointArray[index][11] = _t.graphicArray[index].graphics.lineTo(0, 0).command;
+							_t.pointArray[index][12] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 1, 0, cwm * 2, 0, cwm * 3, 0).command;
+							_t.pointArray[index][13] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 4, 0, cwm * 5, 0, cwm * 6, 0).command;
+							_t.pointArray[index][14] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 7, 0, cwm * 8, 0, cwm * 9, 0).command;
+							_t.pointArray[index][15] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 10, 0, cwm * 11, 0, cwm * 12, 0).command;
+
+							_t.pointArray[index][17] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.5).command;
+
+							_t.graphicArray[index].set({
+								x: 0,
+								y: -_t.ch,
+								// y        : 0,
+								scaleX: 1.0,
+								scaleY: 1.0
+							});
+							break;
+
+						case "type04":
+							_t.bgArray[index].graphics.beginFill("#ffb000").drawRect(0, 0, _t.cw, _t.ch);
+							_t.pointArray[index] = [];
+
+							cwm = _t.cw / 9;
+
+							_t.pointArray[index][0] = _t.graphicArray[index].graphics.moveTo(0, _t.ch * 0.5).command;
+							_t.pointArray[index][1] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.5).command;
+							_t.pointArray[index][2] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.55).command;
+
+							_t.pointArray[index][3] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 8, _t.ch * 0.75, cwm * 7, _t.ch * 0.52, cwm * 6, _t.ch * 0.65).command;
+							_t.pointArray[index][4] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 5, _t.ch * 0.80, cwm * 4, _t.ch * 0.65, cwm * 3, _t.ch * 0.85).command;
+							_t.pointArray[index][5] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 2, _t.ch * 1.00, cwm * 1, _t.ch * 0.96, 0, _t.ch * 0.95).command;
+
+							_t.pointArray[index][6] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.pointArray[index][7] = _t.graphicArray[index].graphics.moveTo(0, _t.ch * 0.5).command;
+							_t.pointArray[index][8] = _t.graphicArray[index].graphics.lineTo(0, _t.ch * 0).command;
+							_t.pointArray[index][9] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 1, _t.ch * 0, cwm * 2, _t.ch * 0, cwm * 3, _t.ch * 0).command;
+							_t.pointArray[index][10] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 4, _t.ch * 0, cwm * 5, _t.ch * 0, cwm * 6, _t.ch * 0).command;
+							_t.pointArray[index][11] = _t.graphicArray[index].graphics.bezierCurveTo(cwm * 7, _t.ch * 0, cwm * 8, _t.ch * 0, cwm * 9, _t.ch * 0).command;
+
+							_t.pointArray[index][12] = _t.graphicArray[index].graphics.lineTo(_t.cw, _t.ch * 0.5).command;
+							_t.pointArray[index][13] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.graphicArray[index].set({
+								x: 0,
+								y: -_t.ch,
+								scaleX: 1.0,
+								scaleY: 1.0
+							});
+							break;
+
+						case "type05":
+							_t.bgArray[index].graphics.beginFill("#e65024").drawRect(0, 0, _t.cw, _t.ch);
+							_t.pointArray[index] = [];
+
+							chm = _t.ch / 6;
+
+							_t.pointArray[index][0] = _t.graphicArray[index].graphics.moveTo(_t.cw * 0.5, 0).command;
+							_t.pointArray[index][1] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.5, _t.ch).command;
+
+							_t.pointArray[index][2] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.15, _t.ch).command;
+							_t.pointArray[index][3] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw * 0.15, chm * 4, _t.cw * 0.35, chm * 5, _t.cw * 0.25, chm * 3).command;
+							_t.pointArray[index][4] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw * 0.18, chm * 1, _t.cw * 0.45, chm * 2, _t.cw * 0.4, 0).command;
+
+							_t.pointArray[index][5] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.pointArray[index][6] = _t.graphicArray[index].graphics.moveTo(_t.cw * 0.5, 0).command;
+
+							_t.pointArray[index][7] = _t.graphicArray[index].graphics.lineTo(_t.cw, 0).command;
+							_t.pointArray[index][8] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw, chm * 1, _t.cw, chm * 2, _t.cw, chm * 3).command;
+							_t.pointArray[index][9] = _t.graphicArray[index].graphics.bezierCurveTo(_t.cw, chm * 4, _t.cw, chm * 5, _t.cw, chm * 6).command;
+							_t.pointArray[index][10] = _t.graphicArray[index].graphics.lineTo(_t.cw * 0.5, _t.ch).command;
+
+							_t.pointArray[index][11] = _t.graphicArray[index].graphics.closePath().command;
+
+							_t.graphicArray[index].set({
+								x: _t.cw,
+								y: 0,
+								scaleX: 1.0,
+								scaleY: 1.0
+							});
+							break;
+					}
+
+					_t.containerArray[index].set({
+						mask: _t.graphicArray[index]
+					});
+					_t.imageArray[index].x = _t.stage.canvas.width / 2;
+					_t.imageArray[index].y = _t.stage.canvas.height / 2;
+
+					_t.imageArray[index].regX = val.width / 2;
+					_t.imageArray[index].regY = val.height / 2;
+				});
+			}
+			resize();
+			window.addEventListener("resize", resize);
+		}
+	}, {
+		key: "type01_start",
+		value: function type01_start() {
+			var _t = this;
+			_t.cw = _t.stage.canvas.width * 1.5;
+			_t.ch = _t.stage.canvas.height * 1.5;
+			createjs.Tween.get(_t.graphicArray[0], { override: true }).to({ x: -_t.cw }, 0).to({ x: 0 }, 1200, createjs.Ease.cubicOut);
+
+			createjs.Tween.get(_t.pointArray[0][1], { override: true }).to({ x: _t.cw * 0.6 }, 0).to({ x: _t.cw }, 1400, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[0][2], { override: true }).to({ cp1x: _t.cw * 0.7, cp2x: _t.cw * 0.65, x: _t.cw * 0.75 }, 0).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 1200, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[0][3], { override: true }).to({ cp1x: _t.cw * 0.85, cp2x: _t.cw * 0.7, x: _t.cw * 0.85 }, 0).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 1100, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[0][4], { override: true }).to({ cp1x: _t.cw * 1.05 }, 0).to({ cp1x: _t.cw }, 600, createjs.Ease.cubicOut);
+		}
+	}, {
+		key: "type01_end",
+		value: function type01_end() {
+			var _t = this;
+
+			createjs.Tween.get(_t.graphicArray[0], { override: true }).to({ x: 0 }, 0).to({ x: _t.cw }, 1400, createjs.Ease.cubicOut);
+
+			createjs.Tween.get(_t.pointArray[0][8], { override: true }).to({ x: 0 }, 0).wait(100).to({ x: _t.cw * 0.4 }, 1000, createjs.Ease.cubicOut).to({ x: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[0][9], { override: true }).to({ cp1x: 0, cp2x: 0, x: 0 }, 0).wait(100).to({ cp1x: _t.cw * 0.3, cp2x: _t.cw * 0.35, x: _t.cw * 0.25 }, 1200, createjs.Ease.cubicOut).to({ cp1x: 0, cp2x: 0, x: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[0][10], { override: true }).to({ cp1x: 0, cp2x: 0, x: 0 }, 0).wait(100).to({ cp1x: _t.cw * 0.15, cp2x: _t.cw * 0.3, x: _t.cw * 0.15 }, 1300, createjs.Ease.cubicOut).to({ cp1x: 0, cp2x: 0, x: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[0][11], { override: true }).to({ cp1x: 0 }, 0).wait(100).to({ cp1x: _t.cw * 0.05 }, 2000, createjs.Ease.cubicOut).to({ cp1x: 0 }, 0);
+		}
+	}, {
+		key: "type02_start",
+		value: function type02_start() {
+			var _t = this;
+			_t.cw = _t.stage.canvas.width * 1.5;
+			_t.ch = _t.stage.canvas.height * 1.5;
+			createjs.Tween.get(_t.graphicArray[1], { override: true }).to({ y: _t.ch }, 0).to({ y: 0 }, 1200, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[1][1], { override: true }).to({ y: _t.ch * 0.3 }, 0).to({ y: 0 }, 1400, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[1][2], { override: true }).to({ cp1y: _t.ch * 0.1, cp2y: _t.ch * 0.22, y: _t.ch * 0.2 }, 0).to({ cp1y: 0, cp2y: 0, y: 0 }, 1200, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[1][3], { override: true }).to({ cp1y: _t.ch * 0.2, cp2y: 0, y: _t.ch * 0.07 }, 0).to({ cp1y: 0, cp2y: 0, y: 0 }, 1200, createjs.Ease.cubicOut);
+		}
+	}, {
+		key: "type02_end",
+		value: function type02_end() {
+			var _t = this;
+			createjs.Tween.get(_t.graphicArray[1], { override: true }).to({ y: 0 }, 0).to({ y: -_t.ch }, 1200, createjs.Ease.cubicOut);
+
+			createjs.Tween.get(_t.pointArray[1][7], { override: true }).to({ y: _t.ch }, 0).to({ y: _t.ch * 0.7 }, 1200, createjs.Ease.cubicOut).to({ y: _t.ch }, 0);
+			createjs.Tween.get(_t.pointArray[1][8], { override: true }).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 0).to({ cp1y: _t.ch * 0.9, cp2y: _t.ch * 0.78, y: _t.ch * 0.8 }, 1200, createjs.Ease.cubicOut).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 0);
+			createjs.Tween.get(_t.pointArray[1][9], { override: true }).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 0).to({ cp1y: _t.ch * 0.8, cp2y: _t.ch, y: _t.ch * 0.93 }, 1200, createjs.Ease.cubicOut).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 0);
+		}
+	}, {
+		key: "type03_start",
+		value: function type03_start() {
+			var _t = this;
+			_t.cw = _t.stage.canvas.width * 1.5;
+			_t.ch = _t.stage.canvas.height * 1.5;
+			createjs.Tween.get(_t.graphicArray[2], { override: true }).to({ y: -_t.ch }, 0).to({ y: 0 }, 1500);
+
+			createjs.Tween.get(_t.pointArray[2][2], { override: true }).to({ y: _t.ch * 0.4 }, 0).wait(600).to({ y: _t.ch * 0.6 }, 600).to({ y: _t.ch }, 800, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[2][3], { override: true }).to({ cp1y: _t.ch * 0.4, cp2y: _t.ch * 0.4, y: _t.ch * 0.4 }, 0).wait(600).to({ cp1y: _t.ch * 0.52, cp2y: _t.ch * 0.75, y: _t.ch * 0.55 }, 600).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 800, createjs.Ease.cubicOut);
+
+			createjs.Tween.get(_t.pointArray[2][4], { override: true }).to({ cp1y: _t.ch * 0.4, cp2y: _t.ch * 0.4, y: _t.ch * 0.4 }, 0).wait(600).to({ cp1y: _t.ch * 0.4, cp2y: _t.ch * 0.65, y: _t.ch * 0.55 }, 600).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 800, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[2][5], { override: true }).to({ cp1y: _t.ch * 0.4, cp2y: _t.ch * 0.4, y: _t.ch * 0.4 }, 0).wait(600).to({ cp1y: _t.ch * 0.45, cp2y: _t.ch * 0.8, y: _t.ch * 0.65 }, 600).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 800, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[2][6], { override: true }).to({ cp1y: _t.ch * 0.4, cp2y: _t.ch * 0.4, y: _t.ch * 0.4 }, 0).wait(600).to({ cp1y: _t.ch * 0.40, cp2y: _t.ch * 0.8, y: _t.ch * 0.55 }, 600).to({ cp1y: _t.ch, cp2y: _t.ch, y: _t.ch }, 800, createjs.Ease.cubicOut);
+		}
+	}, {
+		key: "type03_end",
+		value: function type03_end() {
+			var _t = this;
+			createjs.Tween.get(_t.graphicArray[2], { override: true }).to({ y: 0 }, 0).to({ y: _t.ch }, 1000);
+
+			createjs.Tween.get(_t.pointArray[2][11], { override: true }).to({ y: 0 }, 0).to({ y: _t.ch * 0.4 }, 600).wait(500).to({ y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[2][12], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.48, cp2y: _t.ch * 0.25, y: _t.ch * 0.45 }, 600).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[2][13], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.6, cp2y: _t.ch * 0.35, y: _t.ch * 0.45 }, 600).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[2][14], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.55, cp2y: _t.ch * 0.2, y: _t.ch * 0.35 }, 600).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[2][15], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.6, cp2y: _t.ch * 0.2, y: _t.ch * 0.45 }, 600).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+		}
+	}, {
+		key: "type04_start",
+		value: function type04_start() {
+			var _t = this;
+			_t.cw = _t.stage.canvas.width * 1.5;
+			_t.ch = _t.stage.canvas.height * 1.5;
+			createjs.Tween.get(_t.graphicArray[3], { override: true }).to({ y: -_t.ch }, 0).to({ x: 0, y: 0 }, 1000, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[3][2], { override: true }).to({ y: _t.ch * 0.55 }, 0).wait(300).to({ y: _t.ch }, 1500, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[3][3], { override: true }).to({ y: _t.ch * 0.65, cp1y: _t.ch * 0.75, cp2y: _t.ch * 0.52 }, 0).wait(300).to({ y: _t.ch, cp1y: _t.ch, cp2y: _t.ch }, 1500, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[3][4], { override: true }).to({ y: _t.ch * 0.85, cp1y: _t.ch * 0.80, cp2y: _t.ch * 0.65 }, 0).wait(300).to({ y: _t.ch, cp1y: _t.ch, cp2y: _t.ch }, 1500, createjs.Ease.cubicOut);
+			createjs.Tween.get(_t.pointArray[3][5], { override: true }).to({ y: _t.ch * 1.00, cp1y: _t.ch * 0.96, cp2y: _t.ch * 0.95 }, 0).wait(300).to({ y: _t.ch, cp1y: _t.ch, cp2y: _t.ch }, 1500, createjs.Ease.cubicOut);
+		}
+	}, {
+		key: "type04_end",
+		value: function type04_end() {
+			var _t = this;
+			createjs.Tween.get(_t.graphicArray[3], { override: true }).to({ y: 0 }, 0).to({ y: _t.ch }, 1000, createjs.Ease.cubicIn);
+			createjs.Tween.get(_t.pointArray[3][8], { override: true }).to({ y: 0 }, 0).to({ y: _t.ch * 0.45 }, 1500, createjs.Ease.cubicOut).wait(500).to({ y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[3][9], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.25, cp2y: _t.ch * 0.48, y: _t.ch * 0.35 }, 1500, createjs.Ease.cubicOut).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[3][10], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0.20, cp2y: _t.ch * 0.35, y: _t.ch * 0.15 }, 1500, createjs.Ease.cubicOut).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+			createjs.Tween.get(_t.pointArray[3][11], { override: true }).to({ y: 0, cp1y: 0, cp2y: 0 }, 0).to({ cp1y: _t.ch * 0, cp2y: _t.ch * 0.04, y: _t.ch * 0.05 }, 1500, createjs.Ease.cubicOut).wait(500).to({ y: 0, cp1y: 0, cp2y: 0 }, 0);
+		}
+	}, {
+		key: "type05_start",
+		value: function type05_start() {
+			var _t = this;
+			_t.cw = _t.stage.canvas.width * 1.5;
+			_t.ch = _t.stage.canvas.height * 1.5;
+			createjs.Tween.get(_t.graphicArray[4], { override: true }).to({ x: _t.cw }, 0).to({ x: 0 }, 1500, createjs.Ease.cubicInOut);
+			createjs.Tween.get(_t.pointArray[4][2], { override: true }).to({ x: _t.cw * 0.15 }, 0).to({ x: 0 }, 1500, createjs.Ease.cubicInOut);
+			createjs.Tween.get(_t.pointArray[4][3], { override: true }).to({ cp1x: _t.cw * 0.15, cp2x: _t.cw * 0.35, x: _t.cw * 0.25 }, 0).to({ cp1x: 0, cp2x: 0, x: 0 }, 1500, createjs.Ease.cubicInOut);
+			createjs.Tween.get(_t.pointArray[4][4], { override: true }).to({ cp1x: _t.cw * 0.18, cp2x: _t.cw * 0.45, x: _t.cw * 0.4 }, 0).to({ cp1x: 0, cp2x: 0, x: 0 }, 1500, createjs.Ease.cubicInOut);
+		}
+	}, {
+		key: "type05_end",
+		value: function type05_end() {
+			var _t = this;
+			createjs.Tween.get(_t.graphicArray[4], { override: true }).to({ x: 0 }, 0).to({ x: -_t.cw }, 1500, createjs.Ease.cubicInOut);
+			createjs.Tween.get(_t.pointArray[4][7], { override: true }).to({ x: _t.cw }, 0).to({ x: _t.cw * 0.85 }, 1500, createjs.Ease.cubicInOut).to({ x: _t.cw }, 0);
+			createjs.Tween.get(_t.pointArray[4][8], { override: true }).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 0).to({ cp1x: _t.cw * 0.85, cp2x: _t.cw * 0.65, x: _t.cw * 0.75 }, 1500, createjs.Ease.cubicInOut).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 0);
+			createjs.Tween.get(_t.pointArray[4][9], { override: true }).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 0).to({ cp1x: _t.cw * 0.85, cp2x: _t.cw * 0.55, x: _t.cw * 0.6 }, 1500, createjs.Ease.cubicInOut).to({ cp1x: _t.cw, cp2x: _t.cw, x: _t.cw }, 0);
+		}
+	}]);
+
+	return canvasLoading;
 }();
 
 /***/ })

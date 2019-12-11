@@ -12,7 +12,7 @@ const url = {
 	fonts : 'fonts/',
 	virtualDomain : 'http://test/'
 };
-const port = 8888;
+const port = 8088;
 const virtualDomainMode = false;
 const phpMode = false;
 
@@ -38,7 +38,7 @@ gulp.task('webpack', function() {
 //js_vendor
 const concat = require('gulp-concat');
 gulp.task('jsVendor', () => {
-	gulp.src(url.src + url.js + '_include/_vendor/' + '**/*.js')
+	gulp.src(url.src + '_include/_vendor/' + '**/*/*.js')
 		.pipe(concat('vendor.js'))
 		.pipe(gulp.dest(url.dist + url.js));
 });
@@ -46,11 +46,12 @@ gulp.task('jsVendor', () => {
 //pug
 const pug = require('gulp-pug');
 const pugOptions = {
-	pretty: true
+	pretty: true,
+	basedir: url.src
 }
 
 gulp.task('pug', () => {
-	gulp.src([url.src + url.pug + '**/*.pug', '!' + url.src + url.pug + '**/_*.pug'])
+	gulp.src([url.src + '**/*.pug', '!' + url.src + '**/_*.pug'])
 		.pipe(plumber())
 		.pipe(pug(pugOptions))
 		.pipe(gulpIf(phpMode,
@@ -63,33 +64,13 @@ gulp.task('pug', () => {
 
 //stylus
 const stylus = require('gulp-stylus');
-const stylusSvgImport = require('stylus-svg');
 
 gulp.task('stylus', () => {
-	gulp.src(url.src + url.stylus + '*.styl')
+	gulp.src([url.src + '**/*.styl', '!' + url.src + '**/_*.styl'])
 		.pipe(plumber())
 		.pipe(stylus())
-		.pipe(gulp.dest(url.dist + url.css))
-});
-
-//scss
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const wait = require('gulp-wait');
-const sassOptions = {
-	outputStyle: 'expanded'
-}
-
-gulp.task('scss', function () {
-	gulp.src(url.src + '**/*.scss')
-		.pipe(wait(300))
-		.pipe(plumber())
-		.pipe(sass(sassOptions))
-		.pipe(autoprefixer())
 		.pipe(gulp.dest(url.dist))
 });
-
-
 
 //images
 var changed  = require('gulp-changed');
@@ -142,7 +123,6 @@ gulp.task('browser-sync', () => {
 			}
 		});
 	}
-	gulp.watch(url.dist + '**/*.scss', ['scss']);
 	gulp.watch(url.dist + "**/*.html", ['reload']);
 	gulp.watch(url.dist + "**/*.js", ['reload']);
 	gulp.watch(url.dist + "**/*.css", ['reload']);
@@ -157,7 +137,7 @@ const consolidate = require('gulp-consolidate');
 const fontName = 'myfont';
  
 gulp.task('iconfont', function(){
-	return gulp.src([url.src + url.icons + '*.svg'])
+	return gulp.src([url.src + url.fonts + url.icons + '*.svg'])
 	.pipe(iconfont({
 		fontName: fontName,
 		prependUnicode: true,
@@ -193,16 +173,17 @@ gulp.task('iconfont', function(){
 //watch
 gulp.task('watch', function () {
 	gulp.watch(url.src + url.js + 'entry.js', ['webpack']);
-	gulp.watch(url.src + url.js + '_include/' + '**/*.js', ['webpack']);
+	// gulp.watch(url.src + url.js + '_include/' + '**/*.js', ['webpack']);
+	gulp.watch(url.src + '**/*.js', ['webpack']);
+
 	gulp.watch(url.src + url.js + '_include/_vendor' + '**/*.js', ['jsVendor']);
-	gulp.watch([url.src + url.pug + '**/*.pug', '!' + url.src + '**/_*.pug'], ['pug']);
-	gulp.watch([url.src + '**/*.scss'], ['scss']);
-	gulp.watch(url.src + url.stylus + '**/*.styl', ['stylus']);
+	gulp.watch([url.src + '**/*.pug', '!' + url.src + '**/_*.pug'], ['pug']);
+	gulp.watch(url.src + '**/*.styl', ['stylus']);
 	gulp.watch(url.src + url.images + '/**/*.+(jpg|jpeg|png|gif)', ['imagemin']);
 	gulp.watch(url.src + url.images + '/**/*.+(svg)', ['svgmin']);
-	gulp.watch(url.src + url.icons + '*.svg', ['iconfont']);
+	gulp.watch(url.src + url.fonts + url.icons + '*.svg', ['iconfont']);
 });
 
-gulp.task('build', ['webpack', 'jsVendor', 'pug', 'stylus', 'scss', 'imagemin','svgmin']);
+gulp.task('build', ['webpack', 'jsVendor', 'pug', 'stylus', 'imagemin','svgmin']);
 gulp.task('default', ['browser-sync', 'watch']);
 

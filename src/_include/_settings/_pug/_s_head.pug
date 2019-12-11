@@ -1,0 +1,36 @@
+//- - var DOMAIN = ''
+//- - var HOME_TITLE = "コーディングベース"
+//- - var CSS_PATH = 'css'
+//- - var JS_PATH = 'js'
+
+
+link(rel= "canonical", href=DOMAIN + URL)
+meta(charset= "utf-8")
+meta(http-equiv= "X-UA-Compatible", content="IE=edge")
+//- meta(name= "viewport", content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=0.5 , maximum-scale=2")
+meta(name= "viewport", content="width=device-width, minimum-scale=0.5 , maximum-scale=2")
+meta(name= "format-detection", content="telephone=no")
+
+//- title #{TITLE + (KEY == "home" ? "" : " | ") + HOME_TITLE}
+title #{pageOption.TITLE}
+
+
+meta(content= pageOption.DESCRIPTION, name="description")
+meta(content= pageOption.KEYWORDS, name="keywords")
+meta(content= pageOption.TITLE, property="og:title")
+meta(content= pageOption.DESCRIPTION, property="og:description")
+//- meta(content= DOMAIN + "images/common/ogp.png", property="og:image")
+//- meta(content= DOMAIN + URL, property="og:url")
+meta(content= (pageOption.KEY == "home" ? "website" : "article"), property="og:type")
+meta(content= "ja_JP", property="og:locale")
+
+//- link(rel="manifest" href=RELATIVE_PATH+"manifest.json")
+link(rel= "stylesheet", href= pageOption.RELATIVE_PATH+"/css/style.css")
+link(rel="shortcut icon" href= pageOption.RELATIVE_PATH+"images/common/favicon.ico")
+link(rel="apple-touch-icon" href= pageOption.RELATIVE_PATH+"images/common/webclip.png")
+
+if (pageOption.jquery == true)
+    script(src= "https://code.jquery.com/jquery-1.12.4.min.js")
+script(src= pageOption.RELATIVE_PATH+"/js/vendor.js")
+script(src= pageOption.RELATIVE_PATH+"/js/function.js")
+
