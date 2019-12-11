@@ -41,10 +41,10 @@ block contents
 						+m-list01({url:"component/c_news.html", text:"コンポーネント_ニュース"})
 						+m-list01({url:"component/c_form.html", text:"コンポーネント_フォーム"})
 						+m-list01({url:"component/c_column.html", text:"コンポーネント_カラム"})
-				+l-columnBox({tag:"div"})
-					+m-componentTitle01({tag:"p",text:"テスト"})
-					+m-discList01
-						+m-list01({url:"test/canvas.html", text:"テスト_キャンバス"})
+				//- +l-columnBox({tag:"div"})
+				//- 	+m-componentTitle01({tag:"p",text:"テスト"})
+				//- 	+m-discList01
+				//- 		+m-list01({url:"test/canvas.html", text:"テスト_キャンバス"})
 			+l-columnBlock({tag:"div"})
 				+l-columnBox({tag:"div"})
 					+m-borderRightTitle01({tag:"h3", title:"ダウンロード"})
@@ -55,6 +55,9 @@ block contents
 					+l-columnBox({tag:"div"})
 						+m-borderRightTitle01({tag:"h3", title:"インストール"})
 						+m-defaultTag({tag:"div"})
+							p
+								| <b>■必須環境</b><br>
+								| NodeJs
 							p
 								| <b>■初期設定のとき</b><br>
 								| npm install<br>
