@@ -2,7 +2,7 @@
 
 const url = {
 	src: 'src/', 
-	dist: 'dist/', 
+	dist: 'docs/', 
 	js : 'js/',
 	pug : 'pug/',
 	css : 'css/',
