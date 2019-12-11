@@ -10,11 +10,13 @@ block vars
 			DESCRIPTION: '',
 			KEYWORDS: '',
 			side: [false,"left"],
-			HEADER: false,
+			HEADER: true,
 			FOOTER: false,
 			SIDE: false,
 			jquery: true
 		}
+block header
+	+c-templateHeader01
 block contents
 	+l-contentsWidth({tag:"div"})
 		+l-mqWrapper({tag:"div"})
