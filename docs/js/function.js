@@ -97,17 +97,54 @@ var componentSet = __webpack_require__(280);
 var canvasSet = __webpack_require__(288);
 var uaSet = __webpack_require__(282);
 
-var option = {
+var globalTimeoutId = void 0,
+    globalRequestId = void 0;
+var globalOption = {
+	W_WIDTH: window.innerWidth,
 	SP_WIDTH: 768,
 	PC_WIDTH: 1200,
 	UA: new uaSet().dvType(),
 	PAGE_FLAG: "html"
 };
-var init = function init() {
-	comSet(option);
-	componentSet(option);
-	canvasSet(option);
+
+var globalOptionSet = function globalOptionSet(op) {
+	var scroll = void 0;
+	(function (w, r) {
+		w['r' + r] = w['r' + r] || w['webkitR' + r] || w['mozR' + r] || w['msR' + r] || w['oR' + r] || function (c) {
+			w.setTimeout(c, 1000 / 60);
+		};
+	})(window, 'equestAnimationFrame');
+
+	var set = function set() {
+		op.SCROLL_TOP = window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop;
+		op.W_WIDTH = window.innerWidth;
+		// console.log(op);
+		$('#debug').append(op);
+	};
+	var loop = function loop() {
+		globalRequestId = requestAnimationFrame(loop);
+		globalTimeoutId = setTimeout(function () {
+			set();
+			window.cancelAnimationFrame(globalRequestId);
+		}, 300);
+	};
+	loop();
+	window.addEventListener('resize', function () {
+		clearTimeout(globalTimeoutId);
+		loop();
+	}, false);
+	window.addEventListener('scroll', function () {
+		clearTimeout(globalTimeoutId);
+		loop();
+	}, false);
 };
+
+function init() {
+	globalOptionSet(globalOption);
+	comSet(globalOption);
+	componentSet(globalOption);
+	canvasSet(globalOption);
+}
 init();
 
 /***/ }),
@@ -8067,6 +8104,9 @@ var initSet = function () {
 	}, {
 		key: 'DOMReadAfter',
 		value: function DOMReadAfter(op) {
+
+			// console.log(op);
+
 			// DOM読み込み後
 			smoothScroll();
 			matchHeight();
@@ -8825,6 +8865,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var initFunc = __webpack_require__(279);
 var canvasLoading = __webpack_require__(289);
 
+var alphabetMaskFunc = function alphabetMaskFunc() {
+	var init = function init() {
+		var funcTarget = new logoSet({
+			tg: document.querySelector('#js-alphabetMask')
+		});
+		funcTarget.set();
+	};
+
+	var logoSet = function () {
+		function logoSet(op) {
+			_classCallCheck(this, logoSet);
+
+			var _t = this;
+			_t.target = op.tg;
+			_t.C_WIDTH = 500;
+			_t.C_HEIGHT = 500;
+		}
+
+		_createClass(logoSet, [{
+			key: 'set',
+			value: function set() {
+				var _this = this;
+
+				var _t = this;
+				var callSet = function callSet() {
+					initSet();
+					_t.scaleInit();
+				};
+				var initSet = function initSet() {
+					var _t = _this;
+					function set() {
+						_t.stage = new createjs.Stage(_t.target);
+
+						_t.container = new createjs.Container();
+						_t.stage.addChild(_t.container);
+
+						_t.graphic = new createjs.Shape();
+						_t.graphic.graphics.f("#F00").dr(0, 0, _t.C_WIDTH, _t.C_HEIGHT);
+						_t.container.addChild(_t.graphic);
+
+						_t.maskWrap = new createjs.Shape();
+						// _t.maskWrap.set({
+						// 	x        : 0,
+						// 	y        : 0,
+						// });
+						_t.maskWrap.cache(0, 0, _t.C_WIDTH, _t.C_HEIGHT);
+
+						_t.sSet = [{ type: "mt", s: "231.47, 148.81" }, { type: "bt", s: "205.84, 123.35, 159.47, 121.42, 125.06, 116.05000000000001" }, { type: "lt", s: "125.06, 143.37" }, { type: "bt", s: "76.12, 138.45, 68.14, 96, 94.86, 71.67" }, { type: "bt", s: "125.1, 48.14, 185.51, 61.36, 206.35, 83.85" }, { type: "lt", s: "249.73, 41" }, { type: "bt", s: "217, 8.62, 173.24, -3.25, 119.91, 0.74" }, { type: "bt", s: "-27.66, 14, -19.93, 207.07, 125.1, 207.28" }, { type: "lt", s: "125.1, 180" }, { type: "bt", s: "223.56, 181.27, 206.86, 276, 125.1, 268.65999999999997" }, { type: "lt", s: "125.1, 296" }, { type: "bt", s: "94.17999999999999, 295.36, 65.69, 287.75, 44.459999999999994, 266.51" }, { type: "lt", s: "0, 310.89" }, { type: "bt", s: "33.83, 345.21, 73.38, 356.77, 125.06, 357.24" }, { type: "lt", s: "125.06, 33" }, { type: "bt", s: "280.78, 330.43, 276.88, 190.43, 231.47, 148.8" }];
+						_t.sx = 0;
+						_t.sy = 0;
+						_t.ss = 0.5;
+						_t.s = _t.maskWrap.graphics.mt((231.47 + _t.sx) * _t.ss, (148.81 + _t.sy) * _t.ss).bt((205.84 + _t.sx) * _t.ss, (123.35 + _t.sy) * _t.ss, (159.47 + _t.sx) * _t.ss, (121.42 + _t.sy) * _t.ss, (125.06 + _t.sx) * _t.ss, (116.05000000000001 + _t.sy) * _t.ss).lt((125.06 + _t.sx) * _t.ss, (143.37 + _t.sy) * _t.ss).bt((76.12 + _t.sx) * _t.ss, (138.45 + _t.sy) * _t.ss, (68.14 + _t.sx) * _t.ss, (96 + _t.sy) * _t.ss, (94.86 + _t.sx) * _t.ss, (71.67 + _t.sy) * _t.ss).bt((125.1 + _t.sx) * _t.ss, (48.14 + _t.sy) * _t.ss, (185.51 + _t.sx) * _t.ss, (61.36 + _t.sy) * _t.ss, (206.35 + _t.sx) * _t.ss, (83.85 + _t.sy) * _t.ss).lt((249.73 + _t.sx) * _t.ss, (41 + _t.sy) * _t.ss).bt((217 + _t.sx) * _t.ss, (8.62 + _t.sy) * _t.ss, (173.24 + _t.sx) * _t.ss, (-3.25 + _t.sy) * _t.ss, (119.91 + _t.sx) * _t.ss, (0.74 + _t.sy) * _t.ss).bt((-27.66 + _t.sx) * _t.ss, (14 + _t.sy) * _t.ss, (-19.93 + _t.sx) * _t.ss, (207.07 + _t.sy) * _t.ss, (125.1 + _t.sx) * _t.ss, (207.28 + _t.sy) * _t.ss).lt((125.1 + _t.sx) * _t.ss, (180 + _t.sy) * _t.ss).bt((223.56 + _t.sx) * _t.ss, (181.27 + _t.sy) * _t.ss, (206.86 + _t.sx) * _t.ss, (276 + _t.sy) * _t.ss, (125.1 + _t.sx) * _t.ss, (268.65999999999997 + _t.sy) * _t.ss).lt((125.1 + _t.sx) * _t.ss, (296 + _t.sy) * _t.ss).bt((94.17999999999999 + _t.sx) * _t.ss, (295.36 + _t.sy) * _t.ss, (65.69 + _t.sx) * _t.ss, (287.75 + _t.sy) * _t.ss, (44.459999999999994 + _t.sx) * _t.ss, (266.51 + _t.sy) * _t.ss).lt((0 + _t.sx) * _t.ss, (310.89 + _t.sy) * _t.ss).bt((33.83 + _t.sx) * _t.ss, (345.21 + _t.sy) * _t.ss, (73.38 + _t.sx) * _t.ss, (356.77 + _t.sy) * _t.ss, (125.06 + _t.sx) * _t.ss, (357.24 + _t.sy) * _t.ss).lt((125.06 + _t.sx) * _t.ss, (330 + _t.sy) * _t.ss).bt((280.78 + _t.sx) * _t.ss, (330.43 + _t.sy) * _t.ss, (276.88 + _t.sx) * _t.ss, (190.43 + _t.sy) * _t.ss, (231.47 + _t.sx) * _t.ss, (148.81 + _t.sy) * _t.ss).closePath().command;
+
+						_t.container.set({
+							mask: _t.maskWrap
+						});
+
+						createjs.Ticker.addEventListener('tick', update, false);
+						createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+						function update() {
+							_t.stage.update();
+						}
+					}
+					set();
+				};
+				callSet();
+			}
+		}, {
+			key: 'scaleInit',
+			value: function scaleInit() {
+				var _t = this;
+				function set() {
+					_t.stage.canvas.width = _t.C_WIDTH;
+					_t.stage.canvas.height = _t.C_HEIGHT;
+				}
+				set();
+			}
+		}]);
+
+		return logoSet;
+	}();
+
+	init();
+};
+
 var nxpgLogoFunc = function nxpgLogoFunc() {
 	var logoTarget = void 0;
 	var init = function init() {
@@ -8848,13 +8973,12 @@ var nxpgLogoFunc = function nxpgLogoFunc() {
 		_createClass(logoSet, [{
 			key: 'set',
 			value: function set() {
-				var _this = this;
+				var _this2 = this;
 
 				var _t = this;
 				var initSet = function initSet() {
 					_t.stageTarget = new createjs.Stage(_t.target);
 					createjs.Ticker.addEventListener('tick', update, false);
-					createjs.Ticker.setFPS(60);
 					createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
 					$.each(_t.imageArray, function (index, val) {
 						_t.imagePath[index] = new Image();
@@ -8882,7 +9006,7 @@ var nxpgLogoFunc = function nxpgLogoFunc() {
 					window.addEventListener("resize", set);
 				};
 				var drawInit = function drawInit() {
-					var _t = _this;
+					var _t = _this2;
 					_t.containerTarget = new createjs.Container();
 					_t.graphicTarget = new createjs.Shape();
 					_t.imageTarget = new createjs.Bitmap(_t.imageArray[0].src);
@@ -8934,7 +9058,7 @@ var nxpgLogoFunc = function nxpgLogoFunc() {
 				};
 
 				var tweenInit = function tweenInit() {
-					var _t = _this;
+					var _t = _this2;
 					function logo01() {
 						createjs.Tween.get(_t.point0103, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut);
 						createjs.Tween.get(_t.point0104, { override: true }).to({ y: 0 }, 0).to({ y: 120 }, 600, createjs.Ease.cubicOut).call(logo02);
@@ -9020,6 +9144,7 @@ var initSet = function () {
 		value: function DOMReadAfter(op) {
 			canvasLoadingFunc();
 			nxpgLogoFunc();
+			alphabetMaskFunc();
 		}
 	}, {
 		key: 'imageReadAfter',

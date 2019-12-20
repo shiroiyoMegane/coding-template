@@ -8,6 +8,8 @@ const accordionSet = require('../../_modules/_m_javascript/_m_accordionSet/_m_ac
 const inView = require('../../_modules/_m_javascript/_m_inView/_m_inView.js');
 const slick = require('../../_modules/_m_javascript/_m_slick/_m_slick.js');
 
+
+
 // マークアップアコーディオン用
 function markupBlock() {
 
@@ -52,6 +54,9 @@ class initSet {
 		// DOM読み込み前
 	}
 	DOMReadAfter(op) {
+
+		// console.log(op);
+
 		// DOM読み込み後
 		smoothScroll();
 		matchHeight();
