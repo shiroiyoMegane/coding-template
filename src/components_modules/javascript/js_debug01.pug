@@ -1,0 +1,27 @@
+extends /_include/_template/_t_base_template
+
+block vars
+	-
+		var pageOption = {
+			KEY: "component",
+			URL: '',
+			RELATIVE_PATH: '../../',
+			TITLE: '',
+			DESCRIPTION: '',
+			KEYWORDS: '',
+			HEADER: true,
+			FOOTER: false,
+			SIDE: false,
+			jquery: true
+		}
+block header
+	+c-templateHeader01
+block contents
+	+l-contentsWidth({tag:"div"})
+		+l-mqWrapper({tag:"div"})
+			ul
+				li W_WIDTH:
+				li SP_WIDTH:
+				li PC_WIDTH:
+				li UA:
+				li PAGE_FLAG:

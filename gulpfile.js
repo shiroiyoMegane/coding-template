@@ -1,189 +1,281 @@
+const { src, dest, parallel, series, watch } = require('gulp');
+const $ = require('./modules.js');
 
-
-const url = {
-	src: 'src/', 
-	dist: 'docs/', 
-	js : 'js/',
-	pug : 'pug/',
-	css : 'css/',
-	stylus : 'stylus/',
-	images : 'images/',
-	icons : 'icons/',
-	fonts : 'fonts/',
-	virtualDomain : 'http://test/'
-};
-const port = 8088;
-const virtualDomainMode = false;
-const phpMode = false;
-
-
-
-//gulp
-const gulp = require('gulp');
-const plumber = require("gulp-plumber");
-const gulpIf = require("gulp-if");
-const rename = require('gulp-rename');
-
-//webpack
-const webpack = require("webpack");
-const webpackStream = require("webpack-stream");
-const webpackConfigApp = require("./webpackApp.config");
-gulp.task('webpack', function() {
-	gulp.src(url.src + url.js + 'entry.js')
-	.pipe(plumber())
-	.pipe(webpackStream(webpackConfigApp, webpack))
-	.pipe(gulp.dest(url.dist + url.js))
-});
-
-//js_vendor
-const concat = require('gulp-concat');
-gulp.task('jsVendor', () => {
-	gulp.src(url.src + '_include/_vendor/' + '**/*/*.js')
-		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest(url.dist + url.js));
-});
-
-//pug
-const pug = require('gulp-pug');
-const pugOptions = {
-	pretty: true,
-	basedir: url.src
+const option = {
+	url: {
+		src: 'src/', 
+		dist: 'docs/', 
+		js : 'js/',
+		pug : 'pug/',
+		css : 'css/',
+		stylus : 'stylus/',
+		images : 'images/',
+		fonts : 'fonts/',
+		iconfont : 'iconfont/',
+		resources : 'resources/'
+	},
+	pugOption: {
+		pretty : true,
+		basedir : 'src/'
+	},
+	jsOption: {
+		webpackConfig : require("./webpack.config"),
+	},
+	browserSyncOption: {
+		port : 8088,
+		virtualDomain : 'http://sample/',
+		virtualDomainMode : false,
+		phpMode : false,
+	},
+	iconFontOption: {
+		fontName : 'myfont',
+		className : 'is-iconFont',
+	}
 }
 
-gulp.task('pug', () => {
-	gulp.src([url.src + '**/*.pug', '!' + url.src + '**/_*.pug'])
-		.pipe(plumber())
-		.pipe(pug(pugOptions))
-		.pipe(gulpIf(phpMode,
-			rename({
-				extname: '.php'
+function pug() {
+	return src([option.url.src + '**/*.pug', '!' + option.url.src + '**/_*.pug'])
+	.pipe($.cache(pug))
+	.pipe(
+		$.plumber()
+	)
+	.pipe(
+		$.pug(option.pugOption)
+	)
+	.pipe($.gulpIf(option.phpMode,
+		$.rename({
+			extname: '.php'
+		})
+	))
+	.pipe(dest(option.url.dist))
+	.pipe(
+		$.browserSync.reload({
+			stream: true,
+			once: true
+		})
+	);
+}
+
+function stylus() {
+	return src([option.url.src + '**/*.styl', '!' + option.url.src + '**/_*.styl'])
+	.pipe(
+		$.plumber()
+	)
+	.pipe(
+		$.stylus()
+	)
+	.pipe(
+		$.autoprefixer({
+			browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
+			cascade: false
+		})
+	)
+	.pipe(
+		$.pleeease({
+			mqpacker: true,
+			minifier: true,
+		})
+	)
+	.pipe(dest(option.url.dist))
+	.pipe(
+		$.browserSync.reload({
+			stream: true,
+			once: true
+		})
+	);
+}
+
+function js() {
+	return src([option.url.src + '**/*.js', '!' + option.url.src + '**/_*.js'])
+	.pipe(
+		$.plumber()
+	)
+	.pipe(
+		$.webpackStream(option.jsOption.webpackConfig, $.webpack)
+	)
+	.pipe(dest(option.url.dist))
+	.pipe(
+		$.browserSync.reload({
+			stream: true,
+			once: true
+		})
+	);
+}
+
+function jsVendor() {
+	return src([option.url.src + '**/_vendor/' + '**/*/*.js'])
+	.pipe(
+		$.concat('vendor.js')
+	)
+	.pipe(dest(option.url.dist + option.url.resources + option.url.js))
+	.pipe(
+		$.browserSync.reload({
+			stream: true,
+			once: true
+		})
+	);
+}
+
+
+function imagemin() {
+	return src( option.url.src + '**/*.+(jpg|jpeg|png|gif)' )
+		.pipe(
+			$.changed( option.url.dist + option.url.images )
+		)
+		.pipe(
+			$.imagemin([
+				$.imageminPng(),
+				$.imageminJpg({
+					min: 50,
+					max: 95,
+					quality:'high'
+				}),
+				$.imageminGif({
+					interlaced: false,
+					optimizationLevel: 3,
+					colors:180
+				})
+			])
+		)
+		.pipe(dest( option.url.dist ))
+		.pipe(
+			$.browserSync.reload({
+				stream: true,
+				once: true
 			})
-		))
-		.pipe(gulp.dest(url.dist));
-});
+		);
+}
 
-//stylus
-const stylus = require('gulp-stylus');
-
-gulp.task('stylus', () => {
-	gulp.src([url.src + '**/*.styl', '!' + url.src + '**/_*.styl'])
-		.pipe(plumber())
-		.pipe(stylus())
-		.pipe(gulp.dest(url.dist))
-});
-
-//images
-var changed  = require('gulp-changed');
-var imagemin = require('gulp-imagemin');
-var imageminJpg = require('imagemin-jpeg-recompress');
-var imageminPng = require('imagemin-pngquant');
-var imageminGif = require('imagemin-gifsicle');
-var svgmin = require('gulp-svgmin');
-
-gulp.task('imagemin', () => {
-	var srcGlob = url.src + url.images + '/**/*.+(jpg|jpeg|png|gif)';
-	var dstGlob = url.dist + url.images;
-	gulp.src( srcGlob )
-		.pipe(changed( dstGlob ))
-		.pipe(imagemin([
-			imageminPng(),
-			imageminJpg(),
-			imageminGif({
-				interlaced: false,
-				optimizationLevel: 3,
-				colors:180
+function svgmin() {
+	return src( option.url.src + option.url.images + '**/*.+(svg)' )
+		.pipe(
+			$.changed( option.url.dist + option.url.images )
+		)
+		.pipe(
+			$.svgmin()
+		)
+		.pipe(dest( option.url.dist + option.url.images ))
+		.pipe(
+			$.browserSync.reload({
+				stream: true,
+				once: true
 			})
-		]))
-		.pipe(gulp.dest( dstGlob ));
-});
-gulp.task('svgmin', function(){
-	var srcGlob = url.src + url.images + '/**/*.+(svg)';
-	var dstGlob = url.dist + url.images;
-	gulp.src( srcGlob )
-		.pipe(changed( dstGlob ))
-		.pipe(svgmin())
-		.pipe(gulp.dest( dstGlob ));
-});
+		);
+}
 
-
-//Browser Sync
-const browserSync = require("browser-sync");
-gulp.task('browser-sync', () => {
-	if(virtualDomainMode) {
-		browserSync.init({
-			files: [url.src + '**/*.pug', '!' + url.src + '**/_*.pug'],
-			proxy: url.virtualDomain,
-			open: 'external' //「open: 'external'」オプション
-		});
-	} else {
-		browserSync({
-			port: port,
-			server: {
-				baseDir: url.dist
-			}
-		});
-	}
-	gulp.watch(url.dist + "**/*.html", ['reload']);
-	gulp.watch(url.dist + "**/*.js", ['reload']);
-	gulp.watch(url.dist + "**/*.css", ['reload']);
-	gulp.watch(url.dist + "**/*.{png,jpg,gif,svg}", ['reload']);
-});
-gulp.task('reload', () => {
-	browserSync.reload();
-});
-
-const iconfont    = require('gulp-iconfont');
-const consolidate = require('gulp-consolidate');
-const fontName = 'myfont';
- 
-gulp.task('iconfont', function(){
-	return gulp.src([url.src + url.fonts + url.icons + '*.svg'])
-	.pipe(iconfont({
-		fontName: fontName,
+function iconFont() {
+	let iconfontUrl = option.url.src + option.url.fonts + option.url.iconfont;
+	return src([option.url.src + option.url.fonts + '**/*.svg'])
+	.pipe($.iconfont({
+		fontName: option.iconFontOption.fontName,
 		prependUnicode: true,
 		formats: ['ttf', 'eot', 'woff']
 	}))
 	.on('glyphs', function(glyphs) {
-		var options = {
-			glyphs: glyphs.map(function(glyph) {
-			return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
-			}),
-			fontName: fontName,
-			fontPath: '../fonts/',
-			className: 'is-iconFont'
-		};
-		gulp.src(url.src + url.icons +'iconfont.css')
-			.pipe(consolidate('lodash', options))
+		src(iconfontUrl + '_template/iconfont.css')
+			.pipe($.consolidate('lodash', {
+				glyphs: glyphs.map(function(glyph) {
+					return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+				}),
+				fontName: option.iconFontOption.fontName,
+				fontPath: '../'+option.url.fonts+'iconfont/',
+				className: option.iconFontOption.className
+			}))
 			.pipe(
-				rename({
-					basename: '_s_' + fontName,
+				$.rename({
+					basename: '_s_' + option.iconFontOption.fontName,
 					extname: '.styl'
 				})
 			)
-			.pipe(gulp.dest(url.src + url.stylus + '_include/_settings/'));
-
-		gulp.src(url.src + url.icons +'myfont.html')
-			.pipe(consolidate('lodash', options))
-			.pipe(rename({ basename:'sample' }))
-			.pipe(gulp.dest(url.dist + url.fonts));
+			.pipe(
+				dest(option.url.src + '_include/_settings/_stylus/')
+			);
+		src(iconfontUrl + '_template/iconfont.css')
+			.pipe($.consolidate('lodash', {
+				glyphs: glyphs.map(function(glyph) {
+					return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+				}),
+				fontName: option.iconFontOption.fontName,
+				fontPath: '',
+				className: option.iconFontOption.className
+			}))
+			.pipe(
+				$.rename({
+					basename: '_s_' + option.iconFontOption.fontName,
+					extname: '.css'
+				})
+			)
+			.pipe(
+				dest(iconfontUrl + '_list/')
+			);
+		src(iconfontUrl + '_template/myfont.html')
+			.pipe($.consolidate('lodash',  {
+				glyphs: glyphs.map(function(glyph) {
+					return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+				}),
+				fontName: option.iconFontOption.fontName,
+				fontPath: '../'+option.url.fonts + option.url.iconfont,
+				className: option.iconFontOption.className
+			}))
+			.pipe($.rename({ basename:'sample' }))
+			.pipe(
+				dest(iconfontUrl + '_list/')
+			);
 	})
-	.pipe(gulp.dest(url.dist + url.fonts));
+	.pipe(
+		dest(option.url.dist + option.url.fonts + option.url.iconfont)
+	)
+	.pipe(
+		dest(iconfontUrl + '_list/')
+	)
+	.pipe(
+		$.browserSync.reload({
+			stream: true,
+			once: true
+		})
+	);
+}
+
+function bs() {
+	if(option.browserSyncOption.virtualDomainMode) {
+		$.browserSync.init({
+			files: [option.url.src + '**/*.pug', '!' + option.url.src + '**/_*.pug'],
+			proxy: option.browserSyncOption.virtualDomain,
+			open: 'external'
+		});
+	} else {
+		$.browserSync.init({
+			port: option.browserSyncOption.port,
+			server: {
+				baseDir: option.url.dist
+			},
+			notify: true,
+			xip: false
+		});
+	}
+}
+
+function clean() {
+	return $.del([ option.url.dist ]);
+}
+exports.clean = clean;
+var build = series(clean, parallel([stylus, pug, js, jsVendor, imagemin, svgmin, iconFont]));
+exports.stylus = stylus;
+exports.pug = pug;
+exports.js = js;
+exports.jsVendor = jsVendor;
+exports.imagemin = imagemin;
+exports.svgmin = svgmin;
+exports.iconFont = iconFont;
+exports.bs = bs;
+exports.build = build;
+
+exports.default = parallel([stylus, pug, js, jsVendor, imagemin, svgmin, iconFont, bs], () => {
+	watch([option.url.src + '**/*.pug'], pug);
+	watch([option.url.src + '**/*.styl'], stylus);
+	watch([option.url.src + '**/_vendor/' + '**/*.js'], jsVendor);
+	watch([option.url.src + '**/*.js'], js);
+	watch([option.url.src + '**/*.+(jpg|jpeg|png|gif)'], imagemin);
+	watch([option.url.src + option.url.image + '**/*.+(svg)'], svgmin);
+	watch([option.url.src + option.url.fonts + '**/*.+(svg)'], iconFont);
 });
-
-//watch
-gulp.task('watch', function () {
-	gulp.watch(url.src + url.js + 'entry.js', ['webpack']);
-	// gulp.watch(url.src + url.js + '_include/' + '**/*.js', ['webpack']);
-	gulp.watch(url.src + '**/*.js', ['webpack']);
-
-	gulp.watch(url.src + url.js + '_include/_vendor' + '**/*.js', ['jsVendor']);
-	gulp.watch([url.src + '**/*.pug', '!' + url.src + '**/_*.pug'], ['pug']);
-	gulp.watch(url.src + '**/*.styl', ['stylus']);
-	gulp.watch(url.src + url.images + '/**/*.+(jpg|jpeg|png|gif)', ['imagemin']);
-	gulp.watch(url.src + url.images + '/**/*.+(svg)', ['svgmin']);
-	gulp.watch(url.src + url.fonts + url.icons + '*.svg', ['iconfont']);
-});
-
-gulp.task('build', ['webpack', 'jsVendor', 'pug', 'stylus', 'imagemin','svgmin']);
-gulp.task('default', ['browser-sync', 'watch']);
-

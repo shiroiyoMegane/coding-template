@@ -25,12 +25,12 @@ meta(content= (pageOption.KEY == "home" ? "website" : "article"), property="og:t
 meta(content= "ja_JP", property="og:locale")
 
 //- link(rel="manifest" href=RELATIVE_PATH+"manifest.json")
-link(rel="stylesheet", href= pageOption.RELATIVE_PATH+"css/style.css")
-link(rel="shortcut icon" href= pageOption.RELATIVE_PATH+"images/common/favicon.ico")
-link(rel="apple-touch-icon" href= pageOption.RELATIVE_PATH+"images/common/webclip.png")
+link(rel="stylesheet", href= pageOption.RELATIVE_PATH+"resources/css/style.css")
+link(rel="shortcut icon" href= pageOption.RELATIVE_PATH+"resources/images/common/favicon.ico")
+link(rel="apple-touch-icon" href= pageOption.RELATIVE_PATH+"resources/images/common/webclip.png")
 
 if (pageOption.jquery == true)
     script(src= "https://code.jquery.com/jquery-1.12.4.min.js")
-script(src= pageOption.RELATIVE_PATH+"js/vendor.js")
-script(src= pageOption.RELATIVE_PATH+"js/function.js")
+script(src= pageOption.RELATIVE_PATH+"resources/js/vendor.js")
+script(src= pageOption.RELATIVE_PATH+"resources/js/function.js")
 
