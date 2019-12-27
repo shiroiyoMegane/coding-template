@@ -13,7 +13,6 @@ block vars
 			HEADER: true,
 			FOOTER: false,
 			SIDE: false,
-			jquery: true
 		}
 block header
 	+c-templateHeader01
@@ -34,7 +33,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 							.col
@@ -45,7 +45,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 							.col
@@ -53,7 +54,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 							.col
@@ -61,7 +63,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 				+l-columnBox({tag:"div"})
@@ -108,7 +111,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 							.col
@@ -119,7 +123,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_50
+										.m-defaultTag
+											p!= DUMMY_TEXT_50
 									.area.is-sub
 										p 2019.09.07
 				+l-columnBox({tag:"div"})
@@ -162,7 +167,8 @@ block contents
 								.area.is-title
 									+m-componentTitle01({tag:"h3",text:"固定要素+コンテンツセット01"})
 								.area.is-text
-									p テキスト
+									.m-defaultTag
+										p テキスト
 
 						mixin primaryGroup()
 							.block.is-fixed
@@ -173,7 +179,8 @@ block contents
 								.area.is-title
 									+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 								.area.is-text
-									p!= DUMMY_TEXT_400
+									.m-defaultTag
+										p!= DUMMY_TEXT_400
 
 						mixin afterGroup()
 							.block.is-text
@@ -186,9 +193,9 @@ block contents
 							.block.is-fixed
 								.area.is-btn
 									ul
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
 
 							.block.is-contents
 								.area.is-title
@@ -306,14 +313,15 @@ block contents
 										figcaption テキストが入ります
 								.area.is-btn
 									ul
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
 
 							.block.is-text
 								.area.is-title
 									+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 								.area.is-text
-									p!= DUMMY_TEXT_200
-									p!= DUMMY_TEXT_400
+									.m-defaultTag
+										p!= DUMMY_TEXT_200
+										p!= DUMMY_TEXT_400
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before
@@ -361,7 +369,8 @@ block contents
 									.area.is-title
 										+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 									.area.is-text
-										p!= DUMMY_TEXT_100
+										.m-defaultTag
+											p!= DUMMY_TEXT_100
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before
@@ -408,10 +417,11 @@ block contents
 								.area.is-title
 									+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
 								.area.is-text
-									p!= DUMMY_TEXT_100
+									.m-defaultTag
+										p!= DUMMY_TEXT_100
 								.area.is-btn
 									ul
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before
@@ -459,10 +469,11 @@ block contents
 								.area.is-image(style='background-image: url(https://placeimg.com//960/400/animals)')
 							.block.is-contents
 								.area.is-text
-									p!= DUMMY_TEXT_100
+									.m-defaultTag
+										p!= DUMMY_TEXT_100
 								.area.is-btn
 									ul
-										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"is-icon"})
+										+m-btn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before

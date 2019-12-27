@@ -12,7 +12,6 @@ block vars
 			HEADER: true,
 			FOOTER: false,
 			SIDE: false,
-			jquery: true
 		}
 block header
 	+c-templateHeader01
@@ -23,7 +22,7 @@ block contents
 			+l-columnBlock({tag:"div"})
 				+l-columnBox({tag:"div"})
 					+m-componentTitle01({tag:"p",text:"ボタン01"})
-					+m-btn01({tag:"p",text:"ボタン01", url:"index.html", className:"is-icon"})
+					+m-btn01({tag:"p",text:"ボタン01", url:"index.html", className:"m-iconSet"})
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before
@@ -45,7 +44,7 @@ block contents
 								.area.is-code
 									ul.m-discList01
 										li
-											a(href=pageOption.RELATIVE_PATH + "file/_m_btn01.zip") _m_btn01.zip
+											a(href=pageOption.RELATIVE_PATH + "assets/file/_m_btn01.zip") _m_btn01.zip
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -66,7 +65,7 @@ block contents
 			+l-columnBlock({tag:"div"})
 				+l-columnBox({tag:"div"})
 					+m-componentTitle01({tag:"p",text:"ボタン02"})
-					+m-btn02({tag:"p",text:"ボタン02", url:"index.html", className:"is-icon"})
+					+m-btn02({tag:"p",text:"ボタン02", url:"index.pdf", className:"m-iconSet"})
 				+l-columnBox({tag:"div"})
 					.c-memoSet01
 						.group.is-before
@@ -88,7 +87,7 @@ block contents
 								.area.is-code
 									ul.m-discList01
 										li
-											a(href=pageOption.RELATIVE_PATH + "file/_m_btn02.zip") _m_btn02.zip
+											a(href=pageOption.RELATIVE_PATH + "assets/file/_m_btn02.zip") _m_btn02.zip
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -131,7 +130,7 @@ block contents
 								.area.is-code
 									ul.m-discList01
 										li
-											a(href=pageOption.RELATIVE_PATH + "file/_m_pager01.zip") _m_pager01.zip
+											a(href=pageOption.RELATIVE_PATH + "assets/file/_m_pager01.zip") _m_pager01.zip
 						.group.is-primary
 							.block.is-text
 								.area.is-code

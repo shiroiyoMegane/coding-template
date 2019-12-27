@@ -1,0 +1,44 @@
+// /* mixin & Variable */
+
+MQ_SP(maxWidth){
+	@media screen and (max-width: maxWidth) {
+		{block}
+	}
+	
+}
+
+MQ_PC(minWidth){
+	@media screen and (min-width: minWidth) {
+		{block}
+	}
+	
+}
+
+CF()
+	+cache('clearfix')
+		&::after
+			content: "";
+			display: block;
+			clear: both;
+
+fontSet()
+	font-family: DF_FONT;
+	fontSize(14);
+	line-height: 1.6;
+	-webkit-text-size-adjust: 100%;
+	
+	+MQ_SP(SP_RES_WID01)
+		fontSize(13);
+		
+fontSize(size) {
+	font-size: (size) px;
+	font-size: (size / 10) rem;
+}
+
+vwsp(size)
+	rate = 100 / 650;
+	return rate * size * 1vw
+
+fontSp(font_size)
+	font-size: font_size * 1px;
+	font-size: vwsp(font_size);

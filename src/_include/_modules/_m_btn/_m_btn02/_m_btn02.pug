@@ -12,9 +12,9 @@ mixin m-btn02(tg)
 	#{op.tag}( class = op.baseName + op.className ).com-btn
 		if(op.blank=="_blank")
 			a(href= op.url target="_blank")
-				span.btnWrapper
-					span.btnInner!= op.text
+				span.moduleWrapper
+					span.moduleInner!= op.text
 		else
 			a(href= op.url)
-				span.btnWrapper
-					span.btnInner!= op.text
+				span.moduleWrapper
+					span.moduleInner!= op.text

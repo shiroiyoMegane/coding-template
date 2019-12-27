@@ -12,7 +12,7 @@ const option = {
 		images : 'images/',
 		fonts : 'fonts/',
 		iconfont : 'iconfont/',
-		resources : 'resources/'
+		assets : 'assets/'
 	},
 	pugOption: {
 		pretty : true,
@@ -34,6 +34,7 @@ const option = {
 }
 
 function pug() {
+	let revision = $.crypto.randomBytes(8).toString('hex');
 	return src([option.url.src + '**/*.pug', '!' + option.url.src + '**/_*.pug'])
 	.pipe($.cache(pug))
 	.pipe(
@@ -47,6 +48,9 @@ function pug() {
 			extname: '.php'
 		})
 	))
+	.pipe(
+		$.replace(/\.(js|css|gif|jpg|jpeg|png|svg|ico)\?rev/g, '.$1?rev='+revision)
+	)
 	.pipe(dest(option.url.dist))
 	.pipe(
 		$.browserSync.reload({
@@ -76,6 +80,13 @@ function stylus() {
 			minifier: true,
 		})
 	)
+	.pipe(
+		$.cssTimeStamp(
+			{
+				useDate:true
+			}
+		)
+	)
 	.pipe(dest(option.url.dist))
 	.pipe(
 		$.browserSync.reload({
@@ -103,11 +114,13 @@ function js() {
 }
 
 function jsVendor() {
-	return src([option.url.src + '**/_vendor/' + '**/*/*.js'])
+	return src(
+		[option.url.src + '**/_vendor/_v_jquery/' + '*.js', option.url.src + '**/_vendor/' + '**/*/*.js'],
+	)
 	.pipe(
 		$.concat('vendor.js')
 	)
-	.pipe(dest(option.url.dist + option.url.resources + option.url.js))
+	.pipe(dest(option.url.dist + option.url.assets + option.url.js))
 	.pipe(
 		$.browserSync.reload({
 			stream: true,
@@ -164,8 +177,8 @@ function svgmin() {
 }
 
 function iconFont() {
-	let iconfontUrl = option.url.src + option.url.fonts + option.url.iconfont;
-	return src([option.url.src + option.url.fonts + '**/*.svg'])
+	let iconfontUrl = option.url.src + option.url.assets + option.url.fonts + option.url.iconfont;
+	return src([iconfontUrl + '**/*.svg'])
 	.pipe($.iconfont({
 		fontName: option.iconFontOption.fontName,
 		prependUnicode: true,
@@ -223,7 +236,7 @@ function iconFont() {
 			);
 	})
 	.pipe(
-		dest(option.url.dist + option.url.fonts + option.url.iconfont)
+		dest(option.url.dist + option.url.assets + option.url.fonts + option.url.iconfont)
 	)
 	.pipe(
 		dest(iconfontUrl + '_list/')
@@ -258,8 +271,38 @@ function bs() {
 function clean() {
 	return $.del([ option.url.dist ]);
 }
+
+function zip() {
+	return src([option.url.src + '_include/_modules/*/*/', option.url.src + '_include/_components/*/*/'], {base: option.url.src})
+		.pipe(
+			$.foreach(function(stream, file){
+				var point = file.path.lastIndexOf('\\')+1;
+				var fileName = file.path.substr(point);
+				console.log(fileName);
+				src([file.path + '/*.styl', file.path + '/*.pug'], {base: option.url.src})
+					.pipe(
+						$.zip(fileName+".zip")
+					)
+					.pipe(
+						dest(option.url.dist + option.url.assets + "file/")
+				);
+				return stream;
+			})
+		);
+}
+
+function baseSrcZip() {
+	return src(['baseSrc/**/*','baseSrc/.gitignore'])
+		.pipe(
+			$.zip("_b_baseSrc.zip")
+		)
+		.pipe(
+			dest(option.url.dist + option.url.assets + "file/")
+		);
+}
+
 exports.clean = clean;
-var build = series(clean, parallel([stylus, pug, js, jsVendor, imagemin, svgmin, iconFont]));
+var build = series(clean, parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip, baseSrcZip]));
 exports.stylus = stylus;
 exports.pug = pug;
 exports.js = js;
@@ -269,13 +312,15 @@ exports.svgmin = svgmin;
 exports.iconFont = iconFont;
 exports.bs = bs;
 exports.build = build;
+exports.zip = zip;
+exports.baseSrcZip = baseSrcZip;
 
-exports.default = parallel([stylus, pug, js, jsVendor, imagemin, svgmin, iconFont, bs], () => {
+exports.default = parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, bs], () => {
+	watch([option.url.src + '**/*.+(jpg|jpeg|png|gif)'], imagemin);
+	watch([option.url.src + option.url.assets + option.url.image + '**/*.+(svg)'], svgmin);
+	watch([option.url.src + option.url.assets + option.url.fonts + '**/*.+(svg)'], iconFont);
 	watch([option.url.src + '**/*.pug'], pug);
 	watch([option.url.src + '**/*.styl'], stylus);
 	watch([option.url.src + '**/_vendor/' + '**/*.js'], jsVendor);
 	watch([option.url.src + '**/*.js'], js);
-	watch([option.url.src + '**/*.+(jpg|jpeg|png|gif)'], imagemin);
-	watch([option.url.src + option.url.image + '**/*.+(svg)'], svgmin);
-	watch([option.url.src + option.url.fonts + '**/*.+(svg)'], iconFont);
 });
