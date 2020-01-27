@@ -20,7 +20,6 @@ const alphabetMaskFunc = () => {
 					{src: "/assets/images/top_mainvisual_bg01.jpg"},
 				];
 				_t.imagePath = {};
-				_t.circleFlag = true;
 		}
 		set() {
 			let _t = this;
@@ -78,11 +77,10 @@ const alphabetMaskFunc = () => {
 				});
 				
 				function mouseOverEvent(e) {
-					if(_t.circleFlag == true) {
-						circleTween();
-						_t.circleFlag = false;
-					}
-					
+					console.log("侵入");
+					console.log("x座標:"+_t.mouseX);
+					console.log("y座標:"+_t.mouseY);
+					circleTween();
 				}
 				function mouseMoveEvent(e) {
 					_t.mouseX = e.clientX;
@@ -148,6 +146,7 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.05,
 				});
 				_t.alphabet[0].set();
+				_t.alphabet[0].tween();
 
 				/// E
 				_t.alphabet[1] = new logoSet({
@@ -180,6 +179,7 @@ const alphabetMaskFunc = () => {
 					posy: - _t.C_HEIGHT*0.02,
 				});
 				_t.alphabet[1].set();
+				_t.alphabet[1].tween();
 
 				/// K
 				_t.alphabet[2] = new logoSet({
@@ -205,6 +205,7 @@ const alphabetMaskFunc = () => {
 					posy: - _t.C_HEIGHT*0.05,
 				});
 				_t.alphabet[2].set();
+				_t.alphabet[2].tween();
 				
 				/// S
 				_t.alphabet[3] = new logoSet({
@@ -231,6 +232,7 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.16,
 				});
 				_t.alphabet[3].set();
+				_t.alphabet[3].tween();
 
 				/// T
 				_t.alphabet[4] = new logoSet({
@@ -254,6 +256,7 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.7,
 				});
 				_t.alphabet[4].set();
+				_t.alphabet[4].tween();
 
 
 				/// F
@@ -285,7 +288,7 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.67,
 				});
 				_t.alphabet[5].set();
-
+				_t.alphabet[5].tween();
 
 				/// y
 				_t.alphabet[6] = new logoSet({
@@ -312,6 +315,7 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.64,
 				});
 				_t.alphabet[6].set();
+				_t.alphabet[6].tween();
 
 				/// i
 				_t.alphabet[7] = new logoSet({
@@ -331,6 +335,8 @@ const alphabetMaskFunc = () => {
 					posy: _t.C_HEIGHT*0.7,
 				});
 				_t.alphabet[7].set();
+				_t.alphabet[7].tween();
+				
 				_t.hoverCircle = _t.circleMaskWrap.graphics.f('#FFF').dc(0,0,1).command;
 				
 			}
@@ -338,7 +344,10 @@ const alphabetMaskFunc = () => {
 				createjs.Ticker.addEventListener('tick', update , false);
 				createjs.Tween.get(_t.alphabetContainer)
 				.to({alpha:0}, 0)
-				.to({alpha:1.0}, 2000);
+				.to({alpha:1.0}, 2000)
+				.call(function(){
+					createjs.Ticker.removeEventListener("tick", update);
+				});;
 				
 			}
 			const circleTween = () => {
@@ -386,22 +395,50 @@ const alphabetMaskFunc = () => {
 				_t.p = e.s.split(',');
 			let pointCjs;
 			_t.t[i] = {};
+			
 			[].slice.call(_t.p).forEach(function(event, index) {
-				
 				if((index % 2) != 0 ) {
-					_t.p[index] = "("+event+"+_t.sy)*_t.ss,";	
+					_t.p[index] = "("+event+100+"+_t.sy)*_t.ss,";
 				} else {
-					_t.p[index] = "("+event+"+_t.sx)*_t.ss,";	
+					_t.p[index] = "("+event+"+_t.sx)*_t.ss,";
+				}
+				
+				if( index == 0 ) {
+					if(_t.p.length > 2) {
+						_t.t[i].cp1x = event*2 + _t.sx*2;
+					}
+					_t.t[i].x = event*2 + _t.sx*2;
+				} else if( index == 1 ) {
+					if(_t.p.length > 2) {
+						_t.t[i].cp1y = event*2 + _t.sy*2;
+					}
+					_t.t[i].y = event*2 + _t.sy*2;
+				} else if( index == 2 ) {
+					_t.t[i].cp2x = event*2 + _t.sx*2;
+				} else if( index == 3 ) {
+					_t.t[i].cp2y = event*2 + _t.sy*2;
+				} else if( index == 4 ) {
+					_t.t[i].x = event*2 + _t.sx*2;
+				} else if( index == 5 ) {
+					_t.t[i].y = event*2 + _t.sy*2;
 				}
 			});
 			pointCjs = _t.p.join('');
 			return eval("_t.mask.graphics."+_t.point[i].type+"("+ pointCjs +")").command
 		}
 		tween() {
+			
 			let _t = this;
-			createjs.Tween.get(_t.hoverCircle)
-				.to({y:0, y1:0, y2:0}, 0)
-				.to({y:0, y1:0, y2:0}, 0);
+			let randRange = function (min, max) {
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			};
+			_t.changeTime = randRange(500, 1200);
+
+			[].slice.call(_t.point).forEach(function(event, index) {
+				createjs.Tween.get(_t.s[index], createjs.Ease.cubicInOut)
+					.to({y:_t.t[index].y+100, cp1y:_t.t[index].cp1y+100, cp2y:_t.t[index].cp2y+100}, 0)
+					.to({y:_t.t[index].y, cp1y:_t.t[index].cp1y, cp2y:_t.t[index].cp2y}, _t.changeTime);
+			});
 		}
 	}
 	init();

@@ -273,7 +273,7 @@ function clean() {
 }
 
 function zip() {
-	return src([option.url.src + '_include/_modules/*/*/', option.url.src + '_include/_components/*/*/'], {base: option.url.src})
+	return src([option.url.src + '_include/_modules/*/*/', option.url.src + '_include/_components/*/*/', option.url.src + '_include/_layout/*/'], {base: option.url.src})
 		.pipe(
 			$.foreach(function(stream, file){
 				var point = file.path.lastIndexOf('\\')+1;
