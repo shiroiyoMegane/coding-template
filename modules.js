@@ -22,6 +22,7 @@ module.exports = {
     stylus: require('gulp-stylus'),
     svgmin : require('gulp-svgmin'),
     unzip : require("gulp-unzip"),
+    through2 : require("through2"),
     rename: require('gulp-rename'),
     webpack : require("webpack"),
     webpackStream : require("webpack-stream"),
