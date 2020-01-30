@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html class="is-component" lang="ja">
   <head>
-    <link rel="canonical" href="null">
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
@@ -13,11 +75,19 @@
     <meta content="" property="og:description">
     <meta content="article" property="og:type">
     <meta content="ja_JP" property="og:locale">
+<<<<<<< HEAD
     <link rel="stylesheet" href="assets/css/style.css?rev=588883d4024ce3b6">
     <link rel="shortcut icon" href="assets/images/common/favicon.ico?rev=588883d4024ce3b6">
     <link rel="apple-touch-icon" href="assets/images/common/webclip.png?rev=588883d4024ce3b6">
     <script src="assets/js/vendor.js?rev=588883d4024ce3b6"></script>
     <script src="assets/js/function.js?rev=588883d4024ce3b6"></script>
+=======
+    <link rel="stylesheet" href="assets/css/style.css?rev=f5a4d224637c0ea8">
+    <link rel="shortcut icon" href="assets/images/common/favicon.ico?rev=f5a4d224637c0ea8">
+    <link rel="apple-touch-icon" href="assets/images/common/webclip.png?rev=f5a4d224637c0ea8">
+    <script src="assets/js/vendor.js?rev=f5a4d224637c0ea8"></script>
+    <script src="assets/js/function.js?rev=f5a4d224637c0ea8"></script>
+>>>>>>> 77acbd97be75bec2ebdc3335d0fa07117c72e378
   </head>
   <body>
     <main id="l-contentsTop">
@@ -117,7 +187,7 @@
                   </div>
                   <div class="m-defaultTag ">
                     <p><b>■必須環境</b></p>
-                    <pre><code class="stylus">node 11.0.0
+                    <pre><code class="stylus">node 10.0.0（11使うとbrowsersyncが止まる）
 gulp 4
 webpack 4
 詳しくは、package.json</code></pre>
@@ -126,7 +196,8 @@ webpack 4
                     <p><b>■構築</b></p>
                     <pre><code class="stylus">gulp build</code></pre>
                     <p><b>■gulp 起動</b></p>
-                    <pre><code class="stylus">gulp
+                    <pre><code class="stylus">gulp</code></pre>
+                    <pre><code class="stylus">gulp build でdocsのデータを一度してから削除するので注意
 </code></pre>
                   </div>
                 </div>
@@ -142,7 +213,7 @@ webpack 4
                   <div class="m-defaultTag ">
                     <p><b>■除外ファイルはプッシュしない(gitignoreで設定)</b></p>
                     <pre><code class="stylus">node_module/ ←ファイル数いっぱいあるのでプッシュしたら大変なことになる！
-dist/ ←案件によっては、コメントアウトしよう
+docs/ ←案件によっては、コメントアウトしよう
 </code></pre>
                   </div>
                 </div>
@@ -156,7 +227,7 @@ dist/ ←案件によっては、コメントアウトしよう
                     </div>
                   </div>
                   <div class="m-defaultTag ">
-                    <p>モジュール、コンポーネントなどは、pug、stylus、jsに限らず、_include 以下に入れる。</p>
+                    <p>モジュール、コンポーネントなどは、pug、stylus、jsに限らず、_include 以下に入れる。<br>制作物に合わせて適宜変更する</p>
                     <pre><code class="stylus">● _include
 |-- □ components     // コンポーネント・共通パーツ（ヘッダー、フッター）などのパーツ
 |-- □ layout         // レイアウト（wrapperやcontents幅など）外側のパーツ
@@ -184,6 +255,8 @@ dist/ ←案件によっては、コメントアウトしよう
                     <p><b>■ コンポーネント、モジュールの名前の付け方</b></p>
                     <pre><code class="stylus">接頭辞-名前-番号
 例: c-newsSet01</code></pre>
+                    <pre><code class="stylus">bem記法を混ぜないこと！！（アンダーバーを混ぜないで）
+例: .c-newsSet01__element</code></pre>
                   </div>
                 </div>
                 <div class="l-columnBox">
