@@ -301,6 +301,17 @@ function baseSrcZip() {
 		);
 }
 
+
+function add() {
+	return src(['addModule/_m_borderLeftTitle01.zip'])
+		.pipe(
+			$.unzip()
+		)
+		.pipe(
+			dest('addModule/')
+		);
+}
+
 exports.clean = clean;
 var build = series(clean, parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip, baseSrcZip]));
 exports.stylus = stylus;
@@ -313,6 +324,7 @@ exports.iconFont = iconFont;
 exports.bs = bs;
 exports.build = build;
 exports.zip = zip;
+exports.add = add;
 exports.baseSrcZip = baseSrcZip;
 
 exports.default = parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, bs], () => {
