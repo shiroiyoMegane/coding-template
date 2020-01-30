@@ -1,0 +1,21 @@
+extends /_include/_template/_t_base_template
+
+block vars
+	-
+		var pageOption = {
+			KEY: "canvas",
+			URL: '',
+			RELATIVE_PATH: '../../',
+			TITLE: '',
+			DESCRIPTION: '',
+			KEYWORDS: '',
+			HEADER: true,
+			FOOTER: false,
+			SIDE: false,
+		}
+block header
+	+c-templateHeader01
+block contents
+	+l-contentsWidth({tag:"div"})
+		+l-mqWrapper({tag:"div"})
+			

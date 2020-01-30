@@ -45,7 +45,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -53,29 +52,49 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-defaultTag
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") _m_defaultTag.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") m-defaultTag
 						.group.is-primary
 							.block.is-text
 								.area.is-code
 									pre
 										code.stylus
+											.
+												+m-defaultTag({tag:"div"})
+													p テキスト
+													ul
+														li リスト
+														li リスト
+											
+												コンポーネント等で使用する場合は「.m-defaultTag」のclass名を使いたい箇所につける。
+												※stylus側でincludeしないように！ファイルが巨大になる！！
+
+												.sampleBlock
+													.sampleArea.m-defaultTag
 						.group.is-primary
 							.block.is-text
 								.area.is-code
 									pre
 										code.stylus
+											.
+												.m-defaultTag
+													p テキスト
+													ul
+														li リスト
+														li リスト
 						.group.is-primary
 							.block.is-text
 								.area.is-code
 									pre
 										code.html
 											:escape-html
+												<div class="m-defaultTag">
+													<p>テキスト<p>
+													<ul>
+														<li>リスト</li>
+														<li>リスト</li>
+													</ul>
+												</div>
 												
 			//- ディスクリスト ----------------------------------------------------------------------------------------------------------------------
 			+l-columnBlock({tag:"div"})
@@ -94,7 +113,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -102,18 +120,19 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-discList01
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_discList01.zip") _m_discList01.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_discList01.zip") m-discList01
 						.group.is-primary
 							.block.is-text
 								.area.is-code
 									pre
 										code.stylus
+											+m-discList01
+												li ディスクリスト
+													ul
+														li ディスクリスト
+															ul
+																li ディスクリスト
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -142,7 +161,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -150,13 +168,8 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-decimalList01
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_decimalList01.zip") _m_decimalList01.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_decimalList01.zip") m-decimalList01
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -187,7 +200,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -195,13 +207,8 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-linkModule01
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_linkModule01.zip") _m_linkModule01.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_linkModule01.zip") m-linkModule01
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -243,7 +250,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -251,13 +257,8 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-table01
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_table01.zip") _m_table01.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_table01.zip") m-table01
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -286,7 +287,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -294,13 +294,8 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-breadcrumb01
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_breadcrumb01.zip") _m_breadcrumb01.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_breadcrumb01.zip") m-breadcrumb01
 						.group.is-primary
 							.block.is-text
 								.area.is-code
@@ -329,7 +324,6 @@ block contents
 								.area.is-text
 									ul.tab
 										li.is-current 使用モジュール
-										li ダウンロード
 										li 使い方
 										li pug
 										li html
@@ -337,13 +331,8 @@ block contents
 							.block.is-text
 								.area.is-code
 									ul.m-discList01
-										li m-defaultTag
-						.group.is-primary
-							.block.is-text
-								.area.is-code
-									ul.m-discList01
 										li
-											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") _m_defaultTag.zip
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") m-defaultTag
 						.group.is-primary
 							.block.is-text
 								.area.is-code
