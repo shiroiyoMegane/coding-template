@@ -59,7 +59,7 @@ block contents
 							b ■必須環境
 						pre
 							code.stylus.
-								node 11.0.0
+								node 10.0.0（11使うとbrowsersyncが止まる）
 								gulp 4
 								webpack 4
 								詳しくは、package.json
@@ -78,6 +78,9 @@ block contents
 						pre
 							code.stylus.
 								gulp
+						pre
+							code.stylus.
+								gulp build でdocsのデータを一度してから削除するので注意
 							
 			+l-columnBlock({tag:"div"})
 				+l-columnBox({tag:"div"})
@@ -88,13 +91,15 @@ block contents
 						pre
 							code.stylus.
 								node_module/ ←ファイル数いっぱいあるのでプッシュしたら大変なことになる！
-								dist/ ←案件によっては、コメントアウトしよう
+								docs/ ←案件によっては、コメントアウトしよう
 
 			+l-columnBlock({tag:"div"})
 				+l-columnBox({tag:"div"})
 					+m-borderRightTitle01({tag:"h3", title:"ファイル構成"})
 					+m-defaultTag({tag:"div"})
 						p モジュール、コンポーネントなどは、pug、stylus、jsに限らず、_include 以下に入れる。
+							br
+							| 制作物に合わせて適宜変更する
 						pre
 							code.stylus.
 								● _include
@@ -119,6 +124,10 @@ block contents
 							code.stylus.
 								接頭辞-名前-番号
 								例: c-newsSet01
+						pre
+							code.stylus.
+								bem記法を混ぜないこと！！（アンダーバーを混ぜないで）
+								例: .c-newsSet01__element
 				+l-columnBox({tag:"div"})
 					+m-defaultTag({tag:"div"})
 						p

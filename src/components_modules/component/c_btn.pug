@@ -33,8 +33,40 @@ block contents
 					//- 個別にタグ指定したいとき
 					//- +c-btnSet01({tag:"div", className: "is-center", colClass:"is-two"})
 					//- 	li
-					//- 		+m-btn01({tag:"p",text:"ボタン01", url:"index.html"})
+					//- 		+m-borderBtn01({tag:"p",text:"ボタン01", url:"index.html"})
 					//- 	li
-					//- 		+m-btn01({tag:"p",text:"ボタン02", url:"index.html"})
+					//- 		+m-borderBtn01({tag:"p",text:"ボタン02", url:"index.html"})
 					//- 	li
-					//- 		+m-btn01({tag:"p",text:"ボタン02", url:"index.html"})
+					//- 		+m-borderBtn01({tag:"p",text:"ボタン02", url:"index.html"})
+				+l-columnBox({tag:"div"})
+					.c-memoSet01
+						.group.is-before
+							.block.is-text
+								.area.is-text
+									ul.tab
+										li.is-current 使用モジュール
+										li 使い方
+										li pug
+										li html
+						.group.is-primary.is-current
+							.block.is-text
+								.area.is-code
+									ul.m-discList01
+										li
+											a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") c-btnSet01
+						.group.is-primary
+							.block.is-text
+								.area.is-code
+									pre
+										code.stylus
+						.group.is-primary
+							.block.is-text
+								.area.is-code
+									pre
+										code.stylus
+						.group.is-primary
+							.block.is-text
+								.area.is-code
+									pre
+										code.html
+											:escape-html
