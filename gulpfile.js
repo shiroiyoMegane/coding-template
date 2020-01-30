@@ -1,5 +1,6 @@
 const { src, dest, parallel, series, watch } = require('gulp');
 const $ = require('./modules.js');
+const fs = require('fs');
 
 const option = {
 	url: {
@@ -303,13 +304,38 @@ function baseSrcZip() {
 
 
 function add() {
-	return src(['addModule/_m_borderLeftTitle01.zip'])
+	return src(['addModule/*.zip'])
+		// .pipe(
+		// 	$.unzip()
+		// )
 		.pipe(
-			$.unzip()
+			$.foreach(function(stream, file){
+				var slash = file.path.lastIndexOf('\\')+1;
+				var point = file.path.lastIndexOf('.zip')+1;
+				var fileName = file.path.substr(43,44);
+				console.log(fileName);
+				return stream;
+			})
 		)
+		// .pipe(
+			
+		// 	$.through2.obj((file, enc, callback) => {
+		// 		console.log(file);
+		// 		function writeFile(path, data) {
+		// 			fs.writeFile(path, data, function (err) {
+		// 				if (err) {
+		// 				  throw err;
+		// 				}
+		// 			});
+		// 		}
+		// 		writeFile("addModule/test.pug", "test OK!");
+		// 		callback();
+		// 	})
+		// )
 		.pipe(
 			dest('addModule/')
-		);
+		)
+		;
 }
 
 exports.clean = clean;
