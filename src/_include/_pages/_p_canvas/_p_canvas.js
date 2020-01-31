@@ -4,17 +4,61 @@ const initFunc = require('../../_modules/_m_javascript/_m_initFunc/_m_initFunc.j
 // const PIXI = require('pixi.js');
 
 const pixiTest = () => {
-	let app = new PIXI.Application({ 
-		width: 256,         // default: 800
-		height: 256,        // default: 600
-		antialias: true,    // default: false
-		transparent: false, // default: false
-		resolution: 1       // default: 1
-		}
-	);
 
-	//Add the canvas that Pixi automatically created for you to the HTML document
-	document.body.appendChild(app.view);
+	const loader = PIXI.loader;
+	loader.add("bg" , '/assets/images/contents/dummy_bg01.jpg');
+
+	loader.load((loader, resources) => {
+		console.log(resources.bg);
+		let app = new PIXI.Application({ 
+				view : document.getElementById("js-sliderTest01"),
+				width: 960,         // default: 800
+				height: 500,        // default: 600
+				antialias: true,    // default: false
+				transparent: false, // default: false
+				resolution: 1       // default: 1
+			});
+		const container = new PIXI.Container({
+			width: 960,
+			height: 500
+		});
+		app.stage.addChild(container);
+		
+		const bg = new PIXI.Sprite(PIXI.Texture.fromImage(resources.bg.url));
+		bg.x = 0;
+		bg.y = 0;
+		bg.width = resources.bg.data.width*0.2;
+		bg.height = resources.bg.data.height*0.2;
+		
+		container.addChild(bg);
+
+		const thing = new PIXI.Graphics();
+		app.stage.addChild(thing);
+		thing.x = 0;
+		thing.y = 0;
+
+		container.mask = thing;
+
+		const tween = PIXI.tweenManager.createTween(thing);
+		tween.from({ x: 0 }).to({ x: 250 })
+		tween.time = 1000;
+		tween.repeat = 10;
+		tween.on('start', () => { console.log('tween started') });
+		tween.on('repeat', ( loopCount ) => { console.log('loopCount: ' + loopCount) });
+		tween.start();
+		app.ticker.add(() => {
+			thing.clear();
+
+			thing.beginFill(0x8bc5ff, 0.4);
+			thing.moveTo(0, 0);
+			thing.lineTo(800, 0);
+			thing.lineTo(800, 500);
+			thing.lineTo(0, 500);
+			PIXI.tweenManager.update();
+		});
+	});
+ 
+	
 }
 
 // const alphabetMaskFunc = () => {
