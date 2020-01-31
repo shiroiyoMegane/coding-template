@@ -1,64 +1,344 @@
 const initFunc = require('../../_modules/_m_javascript/_m_initFunc/_m_initFunc.js');
-// const canvasLoading = require('../../_modules/_m_javascript/_m_canvasLoading/_m_canvasLoading.js');
-
-// const PIXI = require('pixi.js');
-
-const pixiTest = () => {
-
-	const loader = PIXI.loader;
-	loader.add("bg" , '/assets/images/contents/dummy_bg01.jpg');
-
-	loader.load((loader, resources) => {
-		console.log(resources.bg);
-		let app = new PIXI.Application({ 
-				view : document.getElementById("js-sliderTest01"),
-				width: 960,         // default: 800
-				height: 500,        // default: 600
-				antialias: true,    // default: false
-				transparent: false, // default: false
-				resolution: 1       // default: 1
-			});
-		const container = new PIXI.Container({
-			width: 960,
-			height: 500
+const canvasSlider = () => {
+	let app;
+	let target = '.canvas-sliderSet';
+	let mainCanvas = '.canvas-sliderSet .canvasMain';
+	let loader = PIXI.loader;
+	let DEVICE  = {
+		WIDTH: window.innerWidth,
+		HEIGHT: window.innerHeight,
+	}
+	let PARAMETER = {
+		SPEED: 600,
+		DURATION: 5000,
+		CURRENT_SLIDE: 0,
+	}
+	let bgResorce = {};
+	let slideArray = {};
+	// let textArray = {};
+	let statusBar;
+	let clickFlag = true;
+	
+	//アプリケーション -----------------------------------------------------------
+	function init() {
+		app = new PIXI.Application({ 
+			view : document.querySelector(mainCanvas),
+			width: DEVICE.WIDTH,         // default: 800
+			height: DEVICE.HEIGHT,        // default: 600
+			antialias: true,    // default: false
+			transparent: false, // default: false
+			resolution: 1,       // default: 1
+			forceCanvas: true //canvasMode
 		});
-		app.stage.addChild(container);
+		app.renderer.autoResize = true;
+		app.stage.interactive = true;
+
+		$(target).find('.textSlider .slide').each(function(index){
+			bgResorce[index] = {};
+			bgResorce[index].pcImage = window.innerWidth <= 768 ? $(this).data('spimage') : $(this).data('pcimage');
+		});
 		
-		const bg = new PIXI.Sprite(PIXI.Texture.fromImage(resources.bg.url));
-		bg.x = 0;
-		bg.y = 0;
-		bg.width = resources.bg.data.width*0.2;
-		bg.height = resources.bg.data.height*0.2;
-		
-		container.addChild(bg);
+		$.each(bgResorce, function(index, val) {
+			loader
+				.add("pcbg"+index , val.pcImage)
+				
+		});
+		loader.load((loader, resources) => {
+			loaderAfter(loader, resources);
+			resize();
+		});
+	}
 
-		const thing = new PIXI.Graphics();
-		app.stage.addChild(thing);
-		thing.x = 0;
-		thing.y = 0;
+	// 画像読み込み完了後 ----------------------------------------------------
+	function loaderAfter(ld, res) {
+		sliderBg(ld, res);
+		// textSetFunc();
+		statusFunc();
+		pagerSet();
+		slideArray[PARAMETER.CURRENT_SLIDE].scaleStart();
 
-		container.mask = thing;
-
-		const tween = PIXI.tweenManager.createTween(thing);
-		tween.from({ x: 0 }).to({ x: 250 })
-		tween.time = 1000;
-		tween.repeat = 10;
-		tween.on('start', () => { console.log('tween started') });
-		tween.on('repeat', ( loopCount ) => { console.log('loopCount: ' + loopCount) });
-		tween.start();
-		app.ticker.add(() => {
-			thing.clear();
-
-			thing.beginFill(0x8bc5ff, 0.4);
-			thing.moveTo(0, 0);
-			thing.lineTo(800, 0);
-			thing.lineTo(800, 500);
-			thing.lineTo(0, 500);
+		app.ticker.speed = 60;
+		app.ticker.add((delta) => {
 			PIXI.tweenManager.update();
 		});
-	});
- 
+	}
+
+	// リサイズ ----------------------------------------------------
+	function resize() {
+		$(window).on('load resize',function(){
+			DEVICE.WIDTH = window.innerWidth;
+			DEVICE.HEIGHT = window.innerHeight;
+			app.renderer.resize(DEVICE.WIDTH, DEVICE.HEIGHT);
+			statusBar.reset();
+			$.each(slideArray, function(index, val) {
+				val.reset();
+			});
+			$(target).css({
+				height: DEVICE.HEIGHT
+			})
+		});
+	}
+
+	// ページャー ----------------------------------------------------
+	function pagerSet() {
+		$(target).find('.btnArea .pager').on('click',function(){
+			if(clickFlag == true) {
+				slideArray[ PARAMETER.CURRENT_SLIDE ].end();
+				clickFlag = false;
+				if($(this).hasClass('is-left')) {
+					PARAMETER.CURRENT_SLIDE = PARAMETER.CURRENT_SLIDE <= 0 ? Object.keys(bgResorce).length - 1 : PARAMETER.CURRENT_SLIDE - 1 ;
+					// console.log(PARAMETER.CURRENT_SLIDE);
+				} else if($(this).hasClass('is-right')) {
+					// console.log(PARAMETER.CURRENT_SLIDE);
+					PARAMETER.CURRENT_SLIDE = PARAMETER.CURRENT_SLIDE >= Object.keys(bgResorce).length - 1 ? 0 : PARAMETER.CURRENT_SLIDE + 1 ;
+				}
+				$(target).find('.textSlider').slick('slickGoTo', PARAMETER.CURRENT_SLIDE);
+				slideArray[ PARAMETER.CURRENT_SLIDE ].start();
+			}
+		});
+	}
+
+	// ステータスバー ----------------------------------------------------
+	function statusFunc() {
+		function init() {
+			statusBar = new statusSet();
+			statusBar.set();
+			statusBar.tween();
+		}
+		class statusSet {
+			constructor(op) {
+				let _t = this;
+			}
+			set() {
+				let _t = this;
+				_t.Graphics_overbg = new PIXI.Graphics();
+				app.stage.addChild(_t.Graphics_overbg);
+				_t.Graphics_overbg.x = 0;
+				_t.Graphics_overbg.y = 0;
+				_t.Graphics_overbg.beginFill(0x000000);
+				window.innerWidth <= 768 ? _t.Graphics_overbg.drawRect(0, 0, DEVICE.WIDTH, DEVICE.HEIGHT) : _t.Graphics_overbg.drawRect(0, 0, 480, DEVICE.HEIGHT);;
+				_t.Graphics_overbg.alpha = 0.5;
+
+				_t.Graphics_bar = new PIXI.Graphics();
+				app.stage.addChild(_t.Graphics_bar);
+				_t.Graphics_bar.x = 0;
+				_t.Graphics_bar.y = 0;
+				_t.Graphics_bar.beginFill(0xD04539);
+				window.innerWidth <= 768 ? _t.Graphics_bar.drawRect(0, 0, DEVICE.WIDTH, 4) : _t.Graphics_bar.drawRect(0, 0, DEVICE.WIDTH, 6);
+				
+			}
+			tween() {
+				let _t = this;
+				_t.Tween_bar = PIXI.tweenManager.createTween(_t.Graphics_bar);
+				_t.Tween_bar
+					.from({
+						scale: {
+							x: 0
+						}
+					})
+					.to({
+						scale: {
+							x: 1
+						}
+					});
+				_t.Tween_bar.time = PARAMETER.DURATION;
+				_t.Tween_bar.easing = PIXI.tween.Easing.linear();
+				_t.Tween_bar.start();
+				_t.Tween_bar.on('end', ( loopCount ) => {
+					
+					
+					slideArray[ PARAMETER.CURRENT_SLIDE ].end();
+					slideArray[ PARAMETER.CURRENT_SLIDE >= Object.keys(bgResorce).length - 1 ? 0 : PARAMETER.CURRENT_SLIDE + 1].start();
+					$(target).find('.textSlider').slick('slickGoTo', PARAMETER.CURRENT_SLIDE >= Object.keys(bgResorce).length - 1 ? 0 : PARAMETER.CURRENT_SLIDE + 1);
+					PARAMETER.CURRENT_SLIDE = PARAMETER.CURRENT_SLIDE >= Object.keys(bgResorce).length - 1 ? 0 : PARAMETER.CURRENT_SLIDE + 1 ;
+					
+					_t.Graphics_bar.scale.x = 0;
+				});
+			}
+			reset() {
+				let _t = this;
+				_t.Graphics_overbg.clear();
+				window.innerWidth <= 768 ? _t.Graphics_overbg.drawRect(0, 0, DEVICE.WIDTH, DEVICE.HEIGHT) : _t.Graphics_overbg.drawRect(0, 0, 480, DEVICE.HEIGHT);
+				_t.Graphics_overbg.alpha = 0.5;
+				
+				_t.Graphics_bar.clear();
+				window.innerWidth <= 768 ? _t.Graphics_bar.drawRect(0, 0, DEVICE.WIDTH, 4) : _t.Graphics_bar.drawRect(0, 0, DEVICE.WIDTH, 6);
+				
+				_t.Tween_bar.reset();
+				_t.Tween_bar.start();
+				
+			}
+		}
+		init();
+	}
+
+	// 背景画像 ----------------------------------------------------
+	function sliderBg(ld, res) {
+		function init() {
+			let ct = 0;
+			$.each(res, function(index, val) {
+				slideArray[ct] = new bgSet({
+					tg: val,
+					name: index,
+					no: ct,
+				});
+				slideArray[ct].set();
+				ct++;
+				
+			});
+		}
+		class bgSet {
+			constructor(op) {
+				let _t = this;
+					_t.target = op.tg;
+					_t.name = op.name;
+					_t.no = op.no;
+					_t.image = _t.target.url;
+					_t.imageWidth = _t.target.data.width;
+					_t.imageHeight = _t.target.data.height;
+			}
+			set() {
+				let _t = this;
+					_t.Container_main = new PIXI.Container();
+					app.stage.addChild(_t.Container_main);
+					_t.Sprite_bg = new PIXI.Sprite(PIXI.Texture.fromImage(_t.image));
+					_t.Container_main.addChild(_t.Sprite_bg);
+					_t.Graphics_mask = new PIXI.Graphics();
+					_t.Container_main.addChild(_t.Graphics_mask);
+					_t.imageSize({
+						tg: _t.Sprite_bg
+					});
+					_t.mask();
+					_t.tween();
+			}
+			mask() {
+				let _t = this;
+					_t.Graphics_mask.clear();
+					_t.Graphics_mask.x = _t.no == PARAMETER.CURRENT_SLIDE ? 0 : - DEVICE.WIDTH;
+					_t.Graphics_mask.y = 0;
+					_t.Graphics_mask.drawRect(0, 0, DEVICE.WIDTH, _t.Container_main.height);
+					_t.Container_main.mask = _t.Graphics_mask;
+			}
+			imageSize(op) {
+				let _t = this;
+					op.tg.position.x = DEVICE.WIDTH / 2;
+					op.tg.position.y = DEVICE.HEIGHT / 2;
+					op.tg.anchor.set(0.5, 0.5);
 	
+					if(_t.imageHeight * DEVICE.WIDTH /  _t.imageWidth < DEVICE.HEIGHT) {
+						op.tg.scale.x = (DEVICE.HEIGHT / _t.imageHeight);
+						op.tg.scale.y = op.tg.scale.x;
+					} else {
+						op.tg.scale.x = (DEVICE.WIDTH / _t.imageWidth);
+						op.tg.scale.y = op.tg.scale.x;
+					}
+					_t.imageScale = op.tg.scale.x;
+			}
+			tween(op) {
+				let _t = this;
+					_t.Tween_maskStart = PIXI.tweenManager.createTween(_t.Graphics_mask);
+					_t.Tween_maskStart
+						.from({ x: - DEVICE.WIDTH })
+						.to({ x: 0 })
+						_t.Tween_maskStart.time = PARAMETER.SPEED;
+						_t.Tween_maskStart.easing = PIXI.tween.Easing.linear();
+					
+					_t.Tween_maskEnd = PIXI.tweenManager.createTween(_t.Graphics_mask);
+					_t.Tween_maskEnd
+						.from({ x: 0 })
+						.to({ x: DEVICE.WIDTH })
+						_t.Tween_maskEnd.time = PARAMETER.SPEED;
+						_t.Tween_maskEnd.easing = PIXI.tween.Easing.linear();
+
+					_t.Tween_imageScale = PIXI.tweenManager.createTween(_t.Sprite_bg);
+					_t.Tween_imageScale
+						.from({
+							scale: {
+								x: _t.imageScale*1.05,
+								y: _t.imageScale*1.05
+							}
+						})
+						.to({
+							scale: {
+								x: _t.imageScale,
+								y: _t.imageScale,
+							}
+						});
+						_t.Tween_imageScale.time = PARAMETER.SPEED;
+						_t.Tween_imageScale.easing = PIXI.tween.Easing.linear();
+			}
+			scaleStart() {
+				let _t = this;
+					_t.Tween_imageScale.reset();
+					_t.Tween_imageScale.start();
+			}
+			start(op) {
+				let _t = this;
+					_t.Tween_maskStart.reset();
+					_t.Tween_maskStart.start();
+					_t.scaleStart()
+			}
+			end(op) {
+				let _t = this;
+					_t.Tween_maskEnd.reset();
+					_t.Tween_maskEnd.start();
+					_t.Tween_maskEnd.on('end', ( loopCount ) => {
+						statusBar.reset();
+						clickFlag = true;
+					});
+			}
+			reset() {
+				let _t = this;
+					_t.imageSize({
+						tg: _t.Sprite_bg
+					});
+					_t.mask();
+					_t.tween();
+			}
+		}
+		init();
+	}
+
+	// テキススライダー ----------------------------------------------------
+	$(target).find('.textSlider').slick({
+		arrows: true,
+		appendArrows: $(target).find('.btnArea'),
+		prevArrow: '<p class="pager is-left"><span><</span></p>',
+		nextArrow: '<p class="pager is-right"><span>></span></p>',
+		fade: true,
+	});
+
+	// // テキスト ----------------------------------------------------
+	// function textSetFunc() {
+	// 	function init() {
+	// 		let ct = 0;
+	// 		$.each(bgResorce, function(index, val) {
+	// 			textArray[index] = new textSet({
+	// 				title: val.title,
+	// 				text: val.text,
+	// 			});
+	// 			textArray[index].set();
+	// 		});
+	// 	}
+	// 	class textSet {
+	// 		constructor(op) {
+	// 			let _t = this;
+	// 				_t.title = op.title;
+	// 				_t.text = op.text;
+	// 				console.log(_t.text);
+	// 		}
+	// 		set() {
+	// 			let _t = this;
+	// 				_t.Container_main = new PIXI.Container();
+	// 				app.stage.addChild(_t.Container_main);
+	// 				_t.Text_Title = new PIXI.Text(_t.title);
+	// 				_t.Container_main.addChild(_t.Text_Title);
+	// 		}
+	// 	}
+	// 	init();
+	// }
+
+	init();
 }
 
 // const alphabetMaskFunc = () => {
@@ -663,7 +943,7 @@ class initSet {
 		// canvasLoadingFunc();
 		// nxpgLogoFunc();
 		// alphabetMaskFunc();
-		pixiTest();
+		canvasSlider();
 	}
 	imageReadAfter(op) {
 	}
