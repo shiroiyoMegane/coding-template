@@ -1,7 +1,69 @@
 <!DOCTYPE html>
 <html class="is-canvas" lang="ja">
   <head>
-    <link rel="canonical" href="null">
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
@@ -13,11 +75,11 @@
     <meta content="" property="og:description">
     <meta content="article" property="og:type">
     <meta content="ja_JP" property="og:locale">
-    <link rel="stylesheet" href="../../assets/css/style.css?rev=a3d0d6fbf06cd87d">
-    <link rel="shortcut icon" href="../../assets/images/common/favicon.ico?rev=a3d0d6fbf06cd87d">
-    <link rel="apple-touch-icon" href="../../assets/images/common/webclip.png?rev=a3d0d6fbf06cd87d">
-    <script src="../../assets/js/vendor.js?rev=a3d0d6fbf06cd87d"></script>
-    <script src="../../assets/js/function.js?rev=a3d0d6fbf06cd87d"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css?rev=431fa966bf3b901f">
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.ico?rev=431fa966bf3b901f">
+    <link rel="apple-touch-icon" href="../../assets/images/common/webclip.png?rev=431fa966bf3b901f">
+    <script src="../../assets/js/vendor.js?rev=431fa966bf3b901f"></script>
+    <script src="../../assets/js/function.js?rev=431fa966bf3b901f"></script>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   </head>
   <body>
