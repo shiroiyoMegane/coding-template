@@ -1,8 +1,10 @@
-//高さそろえる
+import globalSet from '../_m_globalSet/_m_globalSet.js';
+globalSet();
+let _g = window.GLOBAL;
 
-module.exports = (op) => {
-	
-	let _g_defaultOp = {
+window.C_ACCORDION = {
+	TARGET: null,
+	DEFAULT: {
 		target: '.js-accordion',
 		parentName: '.js-accordion-parent', // クリック要素
 		childName: '.js-accordion-child', // アコーディオン要素
@@ -13,111 +15,123 @@ module.exports = (op) => {
 		setBefore: function() {},
 		setAfter: function() {},
 		animationAfter: function() {},
-	}
+	},
+	OPTION: null,
+	G_ARRAY: {},
+	init: function(op){
+		let _c = this;
+			_c.OPTION = Object.assign(_c.DEFAULT, op);
+			_c.TARGET = document.querySelectorAll(_c.OPTION.target);
 
-	let _g_op = Object.assign(_g_defaultOp, op);
-
-	let gArray = {}; fArray = {}, arrayLength = 0;
-
-	let init = () => {
-		let _t = this;
-			gArray = {};
-			_t.target = document.querySelectorAll(_g_op.target);
-
-		[].slice.call(_t.target).forEach(function(event, index) {
-			gArray[index] = new accordionWrap(event);
-			gArray[index].set();
+		[].slice.call(_c.TARGET).forEach(function(event, index) {
+			_c.G_ARRAY[index] = new accordionWrap({
+				target: event,
+				op:_c.OPTION,
+			});
+			_c.G_ARRAY[index].set();
 		});
 	}
+}
 
-	class accordionWrap {
-		constructor(_c_tg) {
-			let _t = this;
-				_t.tg = _c_tg;
-				_t.targetParents = _t.tg.querySelectorAll(_g_op.parentName);
-				_t.arrayLength = _t.targetParents.length;
-		}
-		set() {
-			let _t = this;
-				_t.fArray = {};
+class accordionWrap {
+	constructor(op) {
+		let _t = this;
+			_t.tg = op.target;
+			_t.op = op.op;
+			_t.targetParents = _t.tg.querySelectorAll(_t.op.parentName);
+			_t.arrayLength = _t.targetParents.length;
+	}
+	set() {
+		let _t = this;
+			_t.fArray = {};
 			[].slice.call(_t.targetParents).forEach(function(event, index) {
-				_t.fArray[index] = new accordionChild(event, _t.fArray, _t.arrayLength);
+				_t.fArray[index] = new accordionChild({
+					target:event,
+					array:_t.fArray,
+					length:_t.arrayLength,
+					op:_t.op
+				});
 				_t.fArray[index].set();
 			});
-		}
 	}
+}
 
-	class accordionChild {
-		constructor(_c_tg, _c_array, _c_length) {
-			let _t = this;
-				_t.targetParent = _c_tg;
-				_t.targetParent.style.cursor = 'pointer';
-				_t.targetChild = _c_tg.nextElementSibling;
-				_t.targetChild.style.overflow = 'hidden';
-				_t.targetChild.style.transitionProperty = 'height';
-				_t.targetChild.style.transitionDuration = _g_op.speed + 'ms';
-				_t.targetChild.style.transitionTimingFunction = _g_op.timing;
-				_t.clientH = _t.targetChild.clientHeight;
-				_t.currentFlag = false;
-				_t.array = _c_array;
-				_t.arrayLength = _c_length;
-		}
-		set() {
-			let _t = this;
+class accordionChild {
+	constructor(op) {
+		let _t = this;
+			_t.targetParent = op.target;
+			_t.targetParent.style.cursor = 'pointer';
+			_t.targetChild = op.target.nextElementSibling;
+			_t.targetChild.style.overflow = 'hidden';
+			_t.targetChild.style.transitionProperty = 'height';
+			_t.op = op.op;
+			_t.targetChild.style.transitionDuration = _t.op.speed + 'ms';
+			_t.targetChild.style.transitionTimingFunction = _t.op.timing;
+			_t.clientH = _t.targetChild.clientHeight;
+			_t.currentFlag = false;
+			_t.array = op.array;
+			_t.arrayLength = op.length;
+	}
+	set() {
+		let _t = this;
 
-			_g_op.setBefore();
+		_t.op.setBefore();
 
-			(_t.targetParent.classList.contains("is-open")) ? _t.open(_t) : _t.close(_t) ;
+		(_t.targetParent.classList.contains("is-open")) ? _t.open(_t) : _t.close(_t) ;
 
-			_t.targetParent.addEventListener('click',function(){
-				_t.lastH = _t.targetChild.style.height;
-				for(let i = 0; i < _t.arrayLength; i++) {
-					_t.array[i].currentFlag = false;
-				}
-
-				_t.currentFlag = true;
-				
-				if(_t.lastH == '0px') {
-					_t.open();
-				} else if(_g_op.collapsible) {
-					_t.close();
-				}
-
-				if(_g_op.linkage) {
-					_t.linkage();
-				}
-
-			},false);
-
-			
-			_t.targetChild.addEventListener('transitionend', function() {
-				if(_t.currentFlag == true) {
-					_g_op.animationAfter();
-				}
-			},false);
-			
-
-			_g_op.setAfter();
-		}
-		open() { // 開く処理
-			let _t = this;
-				_t.targetChild.style.height = _t.clientH + 'px'
-		}
-		close() { // 閉じる処理
-			let _t = this;
-				_t.targetChild.style.height = '0px';
-				_t.currentFlag = false;
-		}
-		linkage() { // アコーディオン連動
-			let _t = this;
-				_t.lastH = _t.targetChild.style.height;
+		_t.targetParent.addEventListener('click',function(){
+			_t.lastH = _t.targetChild.style.height;
 			for(let i = 0; i < _t.arrayLength; i++) {
-				if(_t.array[i].currentFlag == false) {
-					_t.array[i].close();
-				}
+				_t.array[i].currentFlag = false;
+			}
+
+			_t.currentFlag = true;
+			
+			if(_t.lastH == '0px') {
+				_t.open();
+			} else if(_t.op.collapsible) {
+				_t.close();
+			}
+
+			if(_t.op.linkage) {
+				_t.linkage();
+			}
+
+		},false);
+
+		
+		_t.targetChild.addEventListener('transitionend', function() {
+			if(_t.currentFlag == true) {
+				_t.op.animationAfter();
+			}
+		},false);
+		
+
+		_t.op.setAfter();
+	}
+	open() { // 開く処理
+		let _t = this;
+			_t.targetChild.style.height = _t.clientH + 'px'
+	}
+	close() { // 閉じる処理
+		let _t = this;
+			_t.targetChild.style.height = '0px';
+			_t.currentFlag = false;
+	}
+	linkage() { // アコーディオン連動
+		let _t = this;
+			_t.lastH = _t.targetChild.style.height;
+		for(let i = 0; i < _t.arrayLength; i++) {
+			if(_t.array[i].currentFlag == false) {
+				_t.array[i].close();
 			}
 		}
 	}
-	init();
+}
+
+export default function(op) {
+	_g.imageLoad(function(){
+		window.C_ACCORDION.init(op);
+	});
 }
 

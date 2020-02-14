@@ -1,20 +1,10 @@
-const initFunc = require('../../_modules/_m_javascript/_m_initFunc/_m_initFunc.js');
+const globalSet = require('../../_modules/_m_javascript/_m_globalSet/_m_globalSet.js');
+globalSet();
+let _g = window.GLOBAL;
 
-// init
-class initSet {
-	DOMReadBefore(op) {
-	}
-	DOMReadAfter(op) {
-	}
-	imageReadAfter(op) {
-	}
-	windowResize(op) {
-	}
-	windowScroll(op) {
-	}
+function init() {
 }
 
-module.exports = (option) => {
-	let init = new initSet();
-	initFunc(init, option);
+module.exports = () => {
+	init();
 }

@@ -1,5 +1,11 @@
-const initFunc = require('../../_modules/_m_javascript/_m_initFunc/_m_initFunc.js');
-const canvasSlider = require('../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js');
+import canvasSlider01 from '../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js';
+function init() {
+	canvasSlider01();
+}
+
+export default function() {
+	init();
+}
 
 // const alphabetMaskFunc = () => {
 // 	const init = () => {
@@ -594,26 +600,3 @@ const canvasSlider = require('../../_modules/_m_javascript/_m_canvasSlider01/_m_
 // 	init();
 // }
 
-
-// init
-class initSet {
-	DOMReadBefore(op) {
-	}
-	DOMReadAfter(op) {
-		// canvasLoadingFunc();
-		// nxpgLogoFunc();
-		// alphabetMaskFunc();
-		canvasSlider();
-	}
-	imageReadAfter(op) {
-	}
-	windowResize(op) {
-	}
-	windowScroll(op) {
-	}
-}
-
-module.exports = (option) => {
-	let init = new initSet();
-	initFunc(init, option, 'is-canvas');
-}

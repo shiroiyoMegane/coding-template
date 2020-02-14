@@ -1,24 +1,27 @@
-module.exports = (op) => {
+import globalSet from '../_m_globalSet/_m_globalSet.js';
+globalSet();
+let _g = window.GLOBAL;
+
+export default function() {
 	// マークアップアコーディオン用
 	function markupBlock() {
 
 		function init() {
-			let _t = this;
-			_t.$target = $(".l-markupBlock");
-			replaceWord(_t.$target,'.pug+.source code', '                        ')
-			replaceWord(_t.$target,'.js+.source code', '                        ')
+			let $target = $(".l-markupBlock");
+			replaceWord($target,'.pug+.source code', '                        ')
+			replaceWord($target,'.js+.source code', '                        ')
 		}
 		function replaceAll(_f_str, _f_beforeStr, _f_afterStr){
-			let _t = this;
-			_t.reg = new RegExp(_f_beforeStr, "g");
-			return _f_str.replace(_t.reg, _f_afterStr);
+			let reg = new RegExp(_f_beforeStr, "g");
+			return _f_str.replace(reg, _f_afterStr);
 		}
 		function replaceWord(_f_$tg, _f_tg, _f_word) {
 			let _t = this;
+			let $str;
 			_f_$tg.each(function(){
-				_t.$str = $(this).find(_f_tg).text();
-				_t.$str = replaceAll(_t.$str, _f_word, '');
-				$(this).find(_f_tg).text(_t.$str);
+				$str = $(this).find(_f_tg).text();
+				$str = replaceAll($str, _f_word, '');
+				$(this).find(_f_tg).text($str);
 			});
 		}
 		init();
@@ -36,6 +39,9 @@ module.exports = (op) => {
 			$(this).parents(".c-memoSet01").find(content).eq($(this).index()).addClass('is-current');
 		});
 	}
-	markupBlock();
-	memoSet01();
+	_g.domLoad(function(){
+		markupBlock();
+		memoSet01();
+	});
+	
 }

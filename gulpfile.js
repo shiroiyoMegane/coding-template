@@ -338,8 +338,21 @@ function add() {
 		;
 }
 
+function favicon() {
+	return src( option.url.src + '**/*.ico' )
+		.pipe(dest( option.url.dist ))
+}
+function manifestJson() {
+	return src( option.url.src + 'manifest.json' )
+		.pipe(dest( option.url.dist ))
+}
+function htaccess() {
+	return src( option.url.src + '.htaccess' )
+		.pipe(dest( option.url.dist ))
+}
+
 exports.clean = clean;
-var build = series(clean, parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip, baseSrcZip]));
+var build = series(clean, parallel([favicon, htaccess, manifestJson, imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip, baseSrcZip]));
 exports.stylus = stylus;
 exports.pug = pug;
 exports.js = js;
@@ -352,6 +365,9 @@ exports.build = build;
 exports.zip = zip;
 exports.add = add;
 exports.baseSrcZip = baseSrcZip;
+exports.manifestJson = manifestJson;
+exports.htaccess = htaccess;
+exports.favicon = favicon;
 
 exports.default = parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, bs], () => {
 	watch([option.url.src + '**/*.+(jpg|jpeg|png|gif)'], imagemin);

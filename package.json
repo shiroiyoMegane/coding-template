@@ -44,8 +44,8 @@
   "dependencies": {
     "gulp-unzip": "^1.1.0",
     "highlight.js": "^9.17.1",
+    "luxy.js": "^0.1.0",
     "pixi-tween": "^0.2.0",
-    "pixi.js": "^5.2.1",
     "through2": "^3.0.1"
   }
 }

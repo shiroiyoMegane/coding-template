@@ -1,6 +1,8 @@
-//ua 判定
-module.exports = () => {
+import globalSet from '../_m_globalSet/_m_globalSet.js';
+globalSet();
+let _g = window.GLOBAL;
 
+export default function() {
 	window.C_SLIDER01 = {
 		LOADER: null,
 		STATUS_BAR: null,
@@ -43,7 +45,7 @@ module.exports = () => {
 						_c.IMAGE_ARRAY[index] = {};
 						_c.IMAGE_ARRAY[index].pcImage = window.innerWidth <= _c.BREAKPOINT ? $(this).data(_c.DATA_SP_IMAGE_NAME) : $(this).data(_c.DATA_PC_IMAGE_NAME);
 					});
-					_c.IMAGE_ARRAY_LENGTH = _c.IMAGE_ARRAY_LENGTH;
+					_c.IMAGE_ARRAY_LENGTH = Object.keys(_c.IMAGE_ARRAY).length - 1;
 					
 					$.each(_c.IMAGE_ARRAY, function(index, val) {
 						_c.LOADER
@@ -301,6 +303,7 @@ module.exports = () => {
 			},
 		}
 	}
-	
-	window.C_SLIDER01.FUNC.init(C_SLIDER01);
+	_g.domLoad(function(){
+		window.C_SLIDER01.FUNC.init(C_SLIDER01);
+	});
 }

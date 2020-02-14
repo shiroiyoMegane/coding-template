@@ -75,11 +75,11 @@
     <meta content="" property="og:description">
     <meta content="article" property="og:type">
     <meta content="ja_JP" property="og:locale">
-    <link rel="stylesheet" href="../../assets/css/style.css?rev=6f625be931097899">
-    <link rel="shortcut icon" href="../../assets/images/common/favicon.ico?rev=6f625be931097899">
-    <link rel="apple-touch-icon" href="../../assets/images/common/webclip.png?rev=6f625be931097899">
-    <script src="../../assets/js/vendor.js?rev=6f625be931097899"></script>
-    <script src="../../assets/js/function.js?rev=6f625be931097899"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css?rev=d86ca1c903e2462c">
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.ico?rev=d86ca1c903e2462c">
+    <link rel="apple-touch-icon" href="../../assets/images/common/webclip.png?rev=d86ca1c903e2462c">
+    <script src="../../assets/js/vendor.js?rev=d86ca1c903e2462c"></script>
+    <script src="../../assets/js/function.js?rev=d86ca1c903e2462c"></script>
   </head>
   <body>
     <main id="l-contentsTop">
@@ -165,9 +165,9 @@
 カラム数がspのとき必ずしも一つになるとは限らないので、spとpcとで記述を分ける。
 他のコンポーネントで、間隔変えたいときは以下のように書いて上書きしてあげるといい</code></pre>
                           <pre><code class="stylus">&.is-two
-	+MQ_PC(SP_RES_WID01)
+	+MQ_MIN(SP_RES_WID01)
 		l-colSet01({col:2, margin:PC_MARGIN})
-	+MQ_SP(SP_RES_WID01)
+	+MQ_MAX(SP_RES_WID01)
 		l-colSet01({col:1, margin:SP_MARGIN})</code></pre>
                         </div>
                       </div>

@@ -1,5 +1,10 @@
+import globalSet from '../_m_globalSet/_m_globalSet.js';
+globalSet();
+let _g = window.GLOBAL;
 
-module.exports = class ua {
+import 'slick-carousel';
+
+export default class {
 	constructor() {
 		this.defaultOp = {
 			// accessibility: true, // 矢印キーでスライドを切り替えるか

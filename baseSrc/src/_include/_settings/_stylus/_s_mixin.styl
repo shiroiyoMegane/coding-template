@@ -1,13 +1,13 @@
 // /* mixin & Variable */
 
-MQ_SP(maxWidth){
+MQ_MAX(maxWidth){
 	@media screen and (max-width: maxWidth) {
 		{block}
 	}
 	
 }
 
-MQ_PC(minWidth){
+MQ_MIN(minWidth){
 	@media screen and (min-width: minWidth) {
 		{block}
 	}
@@ -27,7 +27,7 @@ fontSet()
 	line-height: 1.6;
 	-webkit-text-size-adjust: 100%;
 	
-	+MQ_SP(SP_RES_WID01)
+	+MQ_MAX(SP_RES_WID01)
 		fontSize(13);
 		
 fontSize(size) {
