@@ -21,7 +21,7 @@ import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBl
 import mainvisualSet01 from '../../_modules/_m_javascript/_m_mainvisualSet01/_m_mainvisualSet01.js';
 
 function init() {
-	serviceWorkerSet();
+	// serviceWorkerSet();
 	inView();
 	luxySet();
 	accordionSet();

@@ -1,3 +1,14 @@
 //- レイアウト - 背景01
 .l-contentsBody
-	padding-bottom 100px
+	+MQ_MAX(PC_RES_WID01)
+		padding-top pSet(100)
+	+MQ_MIN(PC_RES_WID01)
+		padding-top 100px
+	.is-home &
+		+MQ_MIN(PC_RES_WID01)
+			padding-top 0
+.l-mainContents
+	+MQ_MAX(PC_RES_WID01)
+		padding-bottom pSet(100)
+	+MQ_MIN(PC_RES_WID01)
+		padding-bottom 100px

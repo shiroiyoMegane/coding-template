@@ -1,0 +1,60 @@
++l-columnBlock({tag:"div"})
+	+l-columnBox({tag:"div"})
+		+m-componentTitle01({tag:"p", text:"テキストリンク"})
+		p
+			+m-linkModule01({url:"index.html"})
+				| テキストリンク
+	+l-columnBox({tag:"div"})
+		.c-memoSet01
+			.group.is-before
+				.block.is-text
+					.area.is-text
+						ul.tab
+							li.is-current 使用モジュール
+							li 使い方
+							li pug
+							li html
+			.group.is-primary.is-current
+				.block.is-text
+					.area.is-code
+						ul.m-discList01
+							li
+								a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_linkModule01.zip") m-linkModule01
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.stylus
+								.
+									・オプション
+									+m-linkModule01({
+										url:       tg.url ? tg.url : "", //url
+										blank:     tg.blank ? tg.blank : "", //外部リンク
+										className: tg.className ? tg.className : "" //追加class名
+									})
+										
+									+m-linkModule01({url:"index.html"})
+										| テキストが入ります
+									
+									・外部リンクを設定したいとき
+									+m-linkModule01({url:"index.html", blank:"_blank"})
+										| テキストが入ります
+
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.stylus
+								.
+									a(href= "index.html")
+										span テキストが入ります
+
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.html
+								:escape-html
+									<a href="index.html">
+										<span>テキストリンク</span>
+									</a>

@@ -23,7 +23,7 @@ const option = {
 		webpackConfig : require("./webpack.config"),
 	},
 	browserSyncOption: {
-		port : 8088,
+		port : 1580,
 		virtualDomain : 'http://sample/',
 		virtualDomainMode : false,
 		phpMode : false,

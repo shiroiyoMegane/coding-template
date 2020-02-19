@@ -1,0 +1,76 @@
++l-columnBlock({tag:"div"})
+	+l-columnBox({tag:"div"})
+		+m-componentTitle01({tag:"p", text:"デフォルトテキストセット(WYSIWYG)"})
+		+m-defaultTag({tag:"div"})
+			p!= DUMMY_TEXT_400
+
+			ul
+				li!= DUMMY_TEXT_50
+					ul
+						li!= DUMMY_TEXT_20
+							ul
+								li!= DUMMY_TEXT_20
+			
+			ol
+				li!= DUMMY_TEXT_50
+					ol
+						li!= DUMMY_TEXT_50
+							ol
+								li!= DUMMY_TEXT_50
+	+l-columnBox({tag:"div"})
+		.c-memoSet01
+			.group.is-before
+				.block.is-text
+					.area.is-text
+						ul.tab
+							li.is-current 使用モジュール
+							li 使い方
+							li pug
+							li html
+			.group.is-primary.is-current
+				.block.is-text
+					.area.is-code
+						ul.m-discList01
+							li
+								a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip") m-defaultTag
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.stylus
+								.
+									+m-defaultTag({tag:"div"})
+										p テキスト
+										ul
+											li リスト
+											li リスト
+								
+									コンポーネント等で使用する場合は「.m-defaultTag」のclass名を使いたい箇所につける。
+									※stylus側でincludeしないように！ファイルが巨大になる！！
+
+									.sampleBlock
+										.sampleArea.m-defaultTag
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.stylus
+								.
+									.m-defaultTag
+										p テキスト
+										ul
+											li リスト
+											li リスト
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.html
+								:escape-html
+									<div class="m-defaultTag">
+										<p>テキスト<p>
+										<ul>
+											<li>リスト</li>
+											<li>リスト</li>
+										</ul>
+									</div>

@@ -4,7 +4,7 @@ let _g = window.GLOBAL;
 export default function() {
 	function init() {
 		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register(_g.absolutePath('assets/js/sw.js')).then(() => {
+			navigator.serviceWorker.register(_g.absolutePath('/sw.js')).then(() => {
 				console.log('sw install');
 			},() => {
 				console.log('sw error');

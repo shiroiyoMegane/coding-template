@@ -1,0 +1,27 @@
+extends /_include/_template/_t_base_template
+
+block vars
+	-
+		var pageOption = {
+			KEY: "component",
+			URL: '',
+			RELATIVE_PATH: '../../',
+			TITLE: 'カラダがwebでできている',
+			DESCRIPTION: '',
+			KEYWORDS: '',
+			side: [false,"left"],
+			HEADER: true,
+			FOOTER: true,
+			SIDE: false,
+		}
+block header
+	+c-templateHeader01
+block footer
+	+c-templateFooter01
+block contents
+	+l-contentsWidth({tag:"div"})
+		+l-mqWrapper({tag:"div"})
+			+l-columnBlock({tag:"div"})
+				+l-columnBox({tag:"div"})
+					+m-discList01
+						+m-list01({url:"js_canvas01.html", text:"canvasテスト"})

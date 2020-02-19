@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html class="is-component" lang="ja">
+  <head>
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="" property="og:title">
+    <meta content="" property="og:description">
+    <meta content="article" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <link rel="stylesheet" href="../../assets/css/style.css?rev=91414a979fddeab4">
+    <link rel="shortcut icon" href="../../assets/images/common/favicon.ico?rev=91414a979fddeab4">
+    <link rel="apple-touch-icon" href="../../assets/images/common/webclip.png?rev=91414a979fddeab4">
+    <script src="../../assets/js/vendor.js?rev=91414a979fddeab4"></script>
+    <script src="../../assets/js/function.js?rev=91414a979fddeab4"></script>
+  </head>
+  <body>
+    <main id="l-contentsTop">
+      <div class="l-contentsHeader">
+        <header class="c-templateHeader01">
+          <div class="l-contentsWidth ">
+            <div class="group is-primary">
+              <div class="block is-logo">
+                <h1 class="logo"><span>カラダはwebでできている</span></h1>
+              </div>
+              <div class="block is-nav">
+                <nav>
+                  <ul>
+                    <li><a href="../../index.html"><span>TOP</span></a></li>
+                    <li><a href="../../manual/"><span>MANUAL</span></a></li>
+                    <li><a href="../../module/"><span>MODULE</span></a></li>
+                    <li><a href="../../component/"><span>COMPONENT</span></a></li>
+                    <li><a href="../../javascript/"><span>JAVASCRIPT</span></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="l-contentsBody">
+        <div class="l-mainContents">
+          <div class="l-contentsWidth ">
+            <div class="l-mqWrapper ">
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>デフォルトテキストセット(WYSIWYG)</span></p>
+                  <div class="m-defaultTag ">
+                    <p>木曾路はすべて山の中である。<br>あるところは岨づたいに行く崖の道であり、<a href=".doc" class="icon-before"><span>あるところは数十間の深さ</span></a>に臨む<b>木曾川</b>の岸であり、<strong>あるところは山の尾をめぐる</strong>谷の入り口である。<i>一筋の街道</i>はこの<s>深い森林地帯</s>を貫いていた。<br>東ざかいの<sub>桜沢</sub>から、西の<sup>十曲峠</sup>まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。<br>道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難</p>
+                    <ul>
+                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                        <ul>
+                          <li>親譲りの無鉄砲で小供の時から損ばかりして
+                            <ul>
+                              <li>親譲りの無鉄砲で小供の時から損ばかりして</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ol>
+                      <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                        <ol>
+                          <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ
+                            <ol>
+                              <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip">m-defaultTag</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-defaultTag({tag:"div"})
+	p テキスト
+	ul
+		li リスト
+		li リスト
+
+コンポーネント等で使用する場合は「.m-defaultTag」のclass名を使いたい箇所につける。
+※stylus側でincludeしないように！ファイルが巨大になる！！
+
+.sampleBlock
+	.sampleArea.m-defaultTag</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">.m-defaultTag
+	p テキスト
+	ul
+		li リスト
+		li リスト</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;div class=&quot;m-defaultTag&quot;&gt;
+	&lt;p&gt;テキスト&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;リスト&lt;/li&gt;
+		&lt;li&gt;リスト&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>ディスクリスト</span></p>
+                  <ul class="m-discList01">
+                    <li>ディスクリスト
+                      <ul>
+                        <li>ディスクリスト
+                          <ul>
+                            <li>ディスクリスト</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_discList01.zip">m-discList01</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-discList01
+	li ディスクリスト
+		ul
+			li ディスクリスト
+				ul
+					li ディスクリスト</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">ul.m-discList01
+	li リスト
+	li リスト</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;ul class=&quot;m-discList01&quot;&gt;
+	&lt;li&gt;ディスクリスト
+		&lt;ul&gt;
+			&lt;li&gt;ディスクリスト
+				&lt;ul&gt;
+					&lt;li&gt;ディスクリスト&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>数字リスト</span></p>
+                  <ol class="m-decimalList01">
+                    <li>数字リスト
+                      <ol>
+                        <li>数字リスト
+                          <ol>
+                            <li>数字リスト</li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_decimalList01.zip">m-decimalList01</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-decimalList01
+	li ディスクリスト
+		ol
+			li ディスクリスト
+				ol
+					li ディスクリスト</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">ol.m-decimalList01
+	li 数字リスト
+		ol
+			li 数字リスト
+				ol
+					li 数字リスト</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;ol class=&quot;m-decimalList01&quot;&gt;
+	&lt;li&gt;数字リスト
+		&lt;ol&gt;
+			&lt;li&gt;数字リスト
+				&lt;ol&gt;
+					&lt;li&gt;数字リスト&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>テキストリンク</span></p>
+                  <p><a href="index.html"><span>テキストリンク</span></a>
+                  </p>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_linkModule01.zip">m-linkModule01</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">・オプション
++m-linkModule01({
+	url:       tg.url ? tg.url : "", //url
+	blank:     tg.blank ? tg.blank : "", //外部リンク
+	className: tg.className ? tg.className : "" //追加class名
+})
+	
++m-linkModule01({url:"index.html"})
+	| テキストが入ります
+
+・外部リンクを設定したいとき
++m-linkModule01({url:"index.html", blank:"_blank"})
+	| テキストが入ります
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">a(href= "index.html")
+	span テキストが入ります
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;a href=&quot;index.html&quot;&gt;
+	&lt;span&gt;テキストリンク&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>テーブル</span></p>
+                  <div class="m-table01 ">
+                    <div class="tableWrapper">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>テキスト</th>
+                            <th>テキスト</th>
+                            <th>テキスト</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>テキスト</th>
+                            <td>木曾路はすべて山の中である。<br>あるところは岨づたいに行く崖の道であり、<a href=".doc" class="icon-before"><span>あるところは数十間の深さ</span></a>に臨む<b>木曾川</b>の岸であり、<strong>あるところは山の尾をめぐる</strong>谷の入り口である。<i>一筋の街道</i>はこの<s>深い森林地帯</s>を貫いていた。<br>東ざかいの<sub>桜沢</sub>から、西の<sup>十曲峠</sup>まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。<br>道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難</td>
+                            <td>
+                              <ol>
+                                <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</li>
+                                <li>吾輩は猫である。名前はまだ無い。<a href="index.html" target="_blank"><span>どこで生れたかとんと見当がつかぬ。</span></a>何でも<i>薄暗い</i><b>じめじめした</b>所でニャ</li>
+                              </ol>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_table01.zip">m-table01</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-table01({tag:"div"})
+	thead
+		tr
+			th テキスト
+			th テキスト
+			th テキスト
+	tbody
+		tr
+			th テキスト
+			td テキスト
+			td テキスト
+
+セルの幅を固定したいときは、別途classを用意してあげて指定してあげたほうがよい
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">.m-table01
+	.tableWrapper
+		table
+			thead
+				tr
+					th テキスト
+					th テキスト
+					th テキスト
+			tbody
+				tr
+					th テキスト
+					td テキスト
+					td テキスト
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;div class=&quot;m-table01 &quot;&gt;
+	&lt;div class=&quot;tableWrapper&quot;&gt;
+		&lt;table&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th&gt;テキスト&lt;/th&gt;
+					&lt;th&gt;テキスト&lt;/th&gt;
+					&lt;th&gt;テキスト&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;th&gt;テキスト&lt;/th&gt;
+					&lt;td&gt;木曾路はすべて山の中である。&lt;br&gt;あるところは岨づたいに行く崖の道であり、&lt;a href=&quot;.doc&quot; class=&quot;icon-before&quot;&gt;&lt;span&gt;あるところは数十間の深さ&lt;/span&gt;&lt;/a&gt;に臨む&lt;b&gt;木曾川&lt;/b&gt;の岸であり、&lt;strong&gt;あるところは山の尾をめぐる&lt;/strong&gt;谷の入り口である。&lt;i&gt;一筋の街道&lt;/i&gt;はこの&lt;s&gt;深い森林地帯&lt;/s&gt;を貫いていた。&lt;br&gt;東ざかいの&lt;sub&gt;桜沢&lt;/sub&gt;から、西の&lt;sup&gt;十曲峠&lt;/sup&gt;まで、木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋もれた。名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった。新規に新規にとできた道はだんだん谷の下の方の位置へと降って来た。&lt;br&gt;道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。そのかわり、大雨ごとにやって来る河水の氾濫が旅行を困難&lt;/td&gt;
+					&lt;td&gt;
+					&lt;ol&gt;
+						&lt;li&gt;吾輩は猫である。名前はまだ無い。&lt;a href=&quot;index.html&quot; target=&quot;_blank&quot;&gt;&lt;span&gt;どこで生れたかとんと見当がつかぬ。&lt;/span&gt;&lt;/a&gt;何でも&lt;i&gt;薄暗い&lt;/i&gt;&lt;b&gt;じめじめした&lt;/b&gt;所でニャ&lt;/li&gt;
+						&lt;li&gt;吾輩は猫である。名前はまだ無い。&lt;a href=&quot;index.html&quot; target=&quot;_blank&quot;&gt;&lt;span&gt;どこで生れたかとんと見当がつかぬ。&lt;/span&gt;&lt;/a&gt;何でも&lt;i&gt;薄暗い&lt;/i&gt;&lt;b&gt;じめじめした&lt;/b&gt;所でニャ&lt;/li&gt;
+					&lt;/ol&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>パンくず</span></p>
+                  <div class="m-breadcrumb01 ">
+                    <ol>
+                      <li><a href="#"><span>ホーム</span></a>
+                      </li>
+                      <li><a href="#"><span>下層ページ</span></a>
+                      </li>
+                      <li><span>下層ページ</span>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_breadcrumb01.zip">m-breadcrumb01</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-breadcrumb01(
+	tag : "div", //タグ
+	baseName:  "m-breadcrumb01", //ベースclass
+	className: "", // 追加class
+	list: [{text:"ホーム", url:"#"}, {text:"下層ページ", url:"#"}, {text:"下層ページ"}]) // リスト
+
++m-breadcrumb01([{text:"ホーム", url:"#"}, {text:"下層ページ", url:"#"}, {text:"下層ページ"}])</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">.m-breadcrumb01
+	ol
+		li
+			a(href="")
+				span ホーム
+		li
+			a(href="")
+				span 下層ページ
+		li
+			span 下層ページ
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">.
+	&lt;div class=&quot;m-breadcrumb01 &quot;&gt;
+		&lt;ol&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;
+					&lt;span&gt;ホーム&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#&quot;&gt;
+					&lt;span&gt;下層ページ&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;span&gt;下層ページ&lt;/span&gt;
+			&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/div&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <p class="m-componentTitle01  com-title"><span>ラベル</span></p>
+                  <p class="m-textLabel01 is-red01"><span class="is-text">ラベル01</span></p>
+                </div>
+                <div class="l-columnBox">
+                  <div class="c-memoSet01">
+                    <div class="group is-before">
+                      <div class="block is-text">
+                        <div class="area is-text">
+                          <ul class="tab">
+                            <li class="is-current">使用モジュール</li>
+                            <li>使い方</li>
+                            <li>pug</li>
+                            <li>html</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary is-current">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <ul class="m-discList01">
+                            <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_defaultTag.zip">m-defaultTag</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">+m-textLabel01({tag:"p", text:"ラベル01", className:"is-red01"})
+
+色を帰る場合は、classNameで設定する</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="stylus">p.m-textLabel01.is-red01
+	span.is-text ラベル01</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group is-primary">
+                      <div class="block is-text">
+                        <div class="area is-code">
+                          <pre><code class="html">&lt;p class=&quot;m-textLabel01 is-red01&quot;&gt;
+	&lt;span class=&quot;is-text&quot;&gt;ラベル01&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-contentsFooter">
+          <footer class="c-templateFooter01">
+            <div class="l-contentsWidth ">
+              <div class="group is-primary">
+                <div class="block is-nav">
+                  <nav class="footerNav">
+                    <nav>
+                      <ul>
+                        <li><a href="../../index.html"><span>TOP</span></a></li>
+                        <li><a href="../../manual/"><span>MANUAL</span></a></li>
+                        <li><a href="../../module/"><span>MODULE</span></a></li>
+                        <li><a href="../../component/"><span>COMPONENT</span></a></li>
+                        <li><a href="../../javascript/"><span>JAVASCRIPT</span></a></li>
+                      </ul>
+                    </nav>
+                  </nav>
+                </div>
+                <div class="block is-copyright">
+                  <p>copyright xxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

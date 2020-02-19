@@ -10,7 +10,7 @@ export default function() {
 	function luxySet() {
 		if(_g.UA == 'pc') {
 			luxy.init({
-				wrapper: '#l-contentsTop',
+				wrapper: '.l-contentsBody',
 				wrapperSpeed: 0.1,
 			});
 		}

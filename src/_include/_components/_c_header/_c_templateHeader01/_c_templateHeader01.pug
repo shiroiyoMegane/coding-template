@@ -4,4 +4,23 @@ mixin c-templateHeader01
 			.group.is-primary
 				.block.is-logo
 					h1.logo
-						span カラダがwebでできている
+						span カラダはwebでできている
+				
+				.block.is-nav
+					nav
+						ul
+							li
+								a(href=pageOption.RELATIVE_PATH + "index.html")
+									span TOP
+							li
+								a(href=pageOption.RELATIVE_PATH + "manual/")
+									span MANUAL
+							li
+								a(href=pageOption.RELATIVE_PATH + "module/")
+									span MODULE
+							li
+								a(href=pageOption.RELATIVE_PATH + "component/")
+									span COMPONENT
+							li
+								a(href=pageOption.RELATIVE_PATH + "javascript/")
+									span JAVASCRIPT

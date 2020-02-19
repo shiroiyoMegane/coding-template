@@ -39,6 +39,23 @@ vwsp(size)
 	rate = 100 / 650;
 	return rate * size * 1vw
 
+vwpc(size)
+	rate = 100 / 1000;
+	return rate * size * 1vw
+
 fontSp(font_size)
 	font-size: font_size * 1px;
 	font-size: vwsp(font_size);
+
+fontPc(font_size)
+	font-size: font_size * 1px;
+	font-size: vwpc(font_size);
+
+vwFontSet(font_size)
+	+MQ_MAX(PC_RES_WID01)
+		fontPc(font_size)
+	+MQ_MIN(PC_RES_WID01)
+		fontSize(font_size)
+
+pSet(px)
+	return px / 1000 * 100 * 1%

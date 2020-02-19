@@ -1,0 +1,90 @@
++l-columnBlock({tag:"div"})
+	+l-columnBox({tag:"div"})
+		+m-componentTitle01({tag:"p",text:"下線タイトル01"})
+		+m-borderBottomTitle01({tag:"h3", largeTitle:"大タイトル", title:"下線タイトル01（全要素表示）", smallTitle:"少タイトル", className:"is-center",before:true, after:true, titleBefore:true, titleAfter:true})
+			mixin beforeGroup()
+				p beforeテキスト
+			mixin titleBefore()
+				+m-textLabel01({tag:"p", text:"ラベル01", className:"is-red01"})
+			mixin titleAfter()
+				+m-borderBtn01({tag:"p",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+			mixin afterGroup()
+				p afterテキスト
+		+m-borderBottomTitle01({tag:"h3", title:"下線タイトル01"})
+	+l-columnBox({tag:"div"})
+		.c-memoSet01
+			.group.is-before
+				.block.is-text
+					.area.is-text
+						ul.tab
+							li.is-current 使用モジュール
+							li 使い方
+							li pug
+							li html
+			.group.is-primary.is-current
+				.block.is-text
+					.area.is-code
+						ul.m-discList01
+							li
+								a(href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_m_borderBottomTitle01.zip") m-borderBottomTitle01
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						p
+							| 背景タイトル01とほぼ同じ
+						pre
+							code.stylus
+								.
+									+m-borderBottomTitle01({
+										tag:          "div",                //親タグ名
+										baseName:     "m-borderBottomTitle01",   //ベースclass名
+										title:        "",                   // タイトル
+										smallTitle:   "",                   // 中タイトル
+										largeTitle:   "",                   // 大タイトル
+										className:    "",                   //追加class名
+										before:       false,                //コンテンツの前に入る要素
+										after:        false,                //コンテンツの後ろに入る要素
+										titleBefore:  false,                //タイトルの前に入る要素
+										titleAfter:   false                 //タイトルの後ろに入る要素
+									})
+					.area.is-code
+						p 【シンプル】
+						pre
+							code.stylus
+								.
+									+m-borderBottomTitle01({tag:"h3", title:"タイトル"})
+					.area.is-code
+						p 【全要素表示】
+						pre
+							code.stylus
+								.
+									+m-borderBottomTitle01({tag:"h3", largeTitle:"大タイトル", title:"タイトル", smallTitle:"少タイトル", className:"is-center",before:true, after:true, titleBefore:true, titleAfter:true})
+										mixin beforeGroup()
+											// コンテンツの前に入る要素
+										mixin titleBefore()
+											// タイトルの前に入る要素
+										mixin titleAfter()
+											// タイトルの後に入る要素
+										mixin afterGroup()
+											// コンテンツの後に入る要素
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.stylus
+								.
+									.m-borderBottomTitle01
+										.group.is-primary
+											h3.com-title
+												span.is-title tg.title
+			.group.is-primary
+				.block.is-text
+					.area.is-code
+						pre
+							code.html
+								:escape-html
+									<div class="m-borderBottomTitle01">
+										<div class="group is-primary">
+											<h3 class="com-title"><span class="is-title">背景タイトル01</span></h3>
+										</div>
+									</div>

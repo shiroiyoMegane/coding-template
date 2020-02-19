@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="is-" lang="ja">
+  <head>
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
+    <meta name="format-detection" content="telephone=no">
+    <title>カラダがwebでできている</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="カラダがwebでできている" property="og:title">
+    <meta content="" property="og:description">
+    <meta content="article" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <link rel="stylesheet" href="../assets/css/style.css?rev=91414a979fddeab4">
+    <link rel="shortcut icon" href="../assets/images/common/favicon.ico?rev=91414a979fddeab4">
+    <link rel="apple-touch-icon" href="../assets/images/common/webclip.png?rev=91414a979fddeab4">
+    <script src="../assets/js/vendor.js?rev=91414a979fddeab4"></script>
+    <script src="../assets/js/function.js?rev=91414a979fddeab4"></script>
+  </head>
+  <body>
+    <main id="l-contentsTop">
+      <div class="l-contentsHeader">
+        <header class="c-templateHeader01">
+          <div class="l-contentsWidth ">
+            <div class="group is-primary">
+              <div class="block is-logo">
+                <h1 class="logo"><span>カラダはwebでできている</span></h1>
+              </div>
+              <div class="block is-nav">
+                <nav>
+                  <ul>
+                    <li><a href="../index.html"><span>TOP</span></a></li>
+                    <li><a href="../manual/"><span>MANUAL</span></a></li>
+                    <li><a href="../module/"><span>MODULE</span></a></li>
+                    <li><a href="../component/"><span>COMPONENT</span></a></li>
+                    <li><a href="../javascript/"><span>JAVASCRIPT</span></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="l-contentsBody">
+        <div class="l-mainContents">
+          <div class="l-contentsWidth ">
+            <div class="l-mqWrapper ">
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">ダウンロード</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <ul class="m-discList01">
+                    <li><a href="https://github.com/shiroiyoMegane/coding-template/raw/master/docs/assets/file/_b_baseSrc.zip"><span>初期セット</span></a>
+                    </li>
+                  </ul>
+                  <div class="m-defaultTag ">
+                    <p>今バグってるので、gitから落としてくる</p>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">インストール</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■必須環境</b></p>
+                    <pre><code class="stylus">node 10.0.0（11使うとbrowsersyncが止まる）
+gulp 4
+webpack 4
+詳しくは、package.json</code></pre>
+                    <p><b>■初期設定 インストール</b></p>
+                    <pre><code class="stylus">npm install</code></pre>
+                    <p><b>■構築</b></p>
+                    <pre><code class="stylus">gulp build</code></pre>
+                    <p><b>■gulp 起動</b></p>
+                    <pre><code class="stylus">gulp</code></pre>
+                    <pre><code class="stylus">gulp build でdocsのデータを一度してから削除するので注意
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">git</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■除外ファイルはプッシュしない(gitignoreで設定)</b></p>
+                    <pre><code class="stylus">node_module/ ←ファイル数いっぱいあるのでプッシュしたら大変なことになる！
+docs/ ←案件によっては、コメントアウトしよう
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">ファイル構成</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p>モジュール、コンポーネントなどは、pug、stylus、jsに限らず、_include 以下に入れる。<br>制作物に合わせて適宜変更する</p>
+                    <pre><code class="stylus">● _include
+|-- □ components     // コンポーネント・共通パーツ（ヘッダー、フッター）などのパーツ
+|-- □ layout         // レイアウト（wrapperやcontents幅など）外側のパーツ
+|-- □ modules        // モジュール(ボタン、タイトルなど)内側のパーツ
+|-- □ pages          // ページ固有のコンポーネント群
+	|-- ○ _p_home    // トップページ用 コンポーネント群
+|-- □ settings       // head、meta、グローバル変数、mixinなど 初期設定群
+	|-- ○ _pug       // pug用設定ファイル
+	|-- ○ _stylus    // stylus用設定ファイル
+|-- □ template       // テンプレートファイル
+
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">class命名規則</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■ コンポーネント、モジュールの名前の付け方</b></p>
+                    <pre><code class="stylus">接頭辞-名前-番号
+例: c-newsSet01</code></pre>
+                    <pre><code class="stylus">bem記法を混ぜないこと！！（アンダーバーを混ぜないで）
+例: .c-newsSet01__element</code></pre>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ 接頭辞 / プリフィックス</b></p>
+                    <div class="m-table01 ">
+                      <div class="tableWrapper">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>l-</td>
+                              <td>layout / レイアウト</td>
+                            </tr>
+                            <tr>
+                              <td>c-</td>
+                              <td>component / コンポーネント</td>
+                            </tr>
+                            <tr>
+                              <td>m-</td>
+                              <td>module / モジュール</td>
+                            </tr>
+                            <tr>
+                              <td>p-</td>
+                              <td>page / ページ</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ コンポーネントの構造について</b></p>
+                    <p>コンポーネントの基本構造については、大きい順から.group>.block>.areaに分けて考える。<br>ブロックをテキストや画像などの、特定の要素に振り分けたい場合は、is-text、is-imageなどのステートを付与することで管理する。</p>
+                    <pre><code class="stylus">//構造の例
+.group.is-primary
+	.block.is-contents
+		.area.is-title
+			.box
+				.item
+					p
+					ul
+		.area.is-image
+			p
+				img(src="", alt="")</code></pre>
+                    <div class="m-table01 ">
+                      <div class="tableWrapper">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>.group</td>
+                              <td>コンポーネントの中で一番目に大きい要素</td>
+                            </tr>
+                            <tr>
+                              <td>.block</td>
+                              <td>コンポーネントの中で二番目に大きい要素</td>
+                            </tr>
+                            <tr>
+                              <td>.area</td>
+                              <td>コンポーネントの中で三番目に大きい要素</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ ステート</b></p>
+                    <pre><code class="stylus">.is-名前
+
+.is-red, is-left, is-animate
+.is-left, .is-right
+.is-pc, .is-sp
+.is-imageLeft, .is-imageRight
+.is-active, .is-current
+.is-white, .is-red</code></pre>
+                    <div class="m-table01 ">
+                      <div class="tableWrapper">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>.is-</td>
+                              <td>.is-text is-active など、属している情報や状態などに</td>
+                            </tr>
+                            <tr>
+                              <td>.has-</td>
+                              <td>.has-title .has-image など、子要素に何か含んでいる場合など</td>
+                            </tr>
+                            <tr>
+                              <td>.js-</td>
+                              <td>.js-mainvisualSet .js-matchHeight など、javascriptでターゲットにする要素に</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ class名サンプル</b></p>
+                    <div class="m-table01 ">
+                      <div class="tableWrapper">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>.btn</td>
+                              <td>ボタン要素。buttonにするとhtmlの要素とかぶるので省略形で</td>
+                            </tr>
+                            <tr>
+                              <td>.bg</td>
+                              <td>背景要素</td>
+                            </tr>
+                            <tr>
+                              <td>.icon</td>
+                              <td>アイコン要素</td>
+                            </tr>
+                            <tr>
+                              <td>.image</td>
+                              <td>画像要素</td>
+                            </tr>
+                            <tr>
+                              <td>.list</td>
+                              <td>リスト要素</td>
+                            </tr>
+                            <tr>
+                              <td>.title</td>
+                              <td>タイトル要素</td>
+                            </tr>
+                            <tr>
+                              <td>.subTitle</td>
+                              <td>サブタイトル要素</td>
+                            </tr>
+                            <tr>
+                              <td>.text</td>
+                              <td>テキスト要素</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">images</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■ディレクトリについて</b></p>
+                    <p>共通画像はcommonへ<br>ページごとの画像はcontents以下へ</p>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ 画像命名規則</b></p>
+                    <pre><code class="stylus">ページ_名前_パーツ番号 = home_mainvisual_image01.png
+
+common_header_arrow01.png
+home_mainvisual_image01.png
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">pug</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■ 基本</b></p>
+                    <ul class="m-discList01">
+                      <li>「=」の後ろにはスペースを入れる</li>
+                      <li>各ページの頭にある変数で、ヘッダー、フッター、サイドメニューの表示非表示できる</li>
+                      <li>階層は「RELATIVE_PATH」を利用すると階層が変わったときにもすぐに対応できる
+                        <pre><code class="stylus">a(href= pageOption.RELATIVE_PATH + "index.html")
+img(src= pageOption.RELATIVE_PATH + "images/contents/home/image01.png" alt="")</code></pre>
+                      </li>
+                      <li>インデントはタブで（distに書き出したらスペースになるので、みやすさ重視）</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ 新規ページ追加</b></p>
+                    <ul class="m-discList01">
+                      <li>ページの「pageOption.KEY」変数を変更するとbodyのclassを変更することができる</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">stylus</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■ 基本</b></p>
+                    <ul class="m-discList01">
+                      <li>広い範囲で、titleやtextなどのclassにスタイルを当てない（他のページに影響するので）</li>
+                      <li>スタイルを当てるときは、親子関係を意識する</li>
+                      <li>importantは極力使わない</li>
+                      <li>プロパティ、疑似要素、ブレイクポイントの前などは改行を入れるなどして、あとで見たときわかりやすくしておく</li>
+                      <li>「：」と「；」は省略</li>
+                      <li>インデントはタブで（distに書き出したらスペースになるので、みやすさ重視）</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ コンポーネント化、モジュール化</b></p>
+                    <ul class="m-discList01">
+                      <li>モジュールにあまり細かい指定をしない<br>（フォントサイズやマージンなどはコンポーネントで指定する）</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ レスポンシブ、ブレイクポイント</b></p>
+                    <ul class="m-discList01">
+                      <li>ブレイクポイントの記述は離しすぎない（どこに行ったかわからなくなるので）</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ cssサンプル</b>影響範囲の広さ、外側から内側へむかって書く:（コロン）;（セミコロン）は省略する</p>
+                    <pre><code class="stylus">content ""
+cursor pointer
+overflow hidden
+
+・ディスプレイ
+display flex
+order 1
+flex-wrap wrap
+justify-contents space-between
+align-items center
+
+list-style-type decimal
+table-layout fixed
+border-collapse collapse
+
+・float
+clear both
+float left
+
+・ポジション
+position absolute
+top 0
+right 0
+bottom 0
+left 0
+z-index 10
+
+・サイズ
+max-width 100px
+min-width 100px
+width 100px
+max-height 100px
+min-height 100px
+height 100px
+
+・間隔
+margin 10px 20px
+padding 10px 20px
+
+・色
+color #fff
+background-color #fff
+background-image url("")
+background-repeat no-repeat
+background-position left top
+background-size cover
+border 1px solid #fff
+border-radius 10px
+
+・文字
+font-family ""
+font-size 10px
+text-align center
+line-height 1.0
+vertical-align middle
+text-decoration: underline;
+
+・トランスフォーム
+transform-origine center
+transform translate3d(-50%, -50%, 0) rotate(180deg)
+
+・アニメーション
+animation-name fadeIn
+animation-duration 3s
+animation-timing-function linear
+transition all 0.3s ease
+
+
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="l-columnBlock ">
+                <div class="l-columnBox">
+                  <div class="m-borderRightTitle01">
+                    <div class="group is-primary">
+                      <h3 class="com-title"><span class="is-title">コーディング仕様</span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="m-defaultTag ">
+                    <p><b>■ 文字コード</b>
+                      <p>原則、UTF-8 とする<br>※システム要件/言語/サーバの仕様で Shift-JIS や EUC-JP などが必要な場合は適宜変更する。</p>
+                    </p>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ DOCTYPE</b></p>
+                    <p>原則、HTML5 とする。仕様に応じて適宜変更する。</p>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ マークアップ</b></p>
+                    <p>文法に則った HTML を記述する。 </p>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ 書式ルール</b></p>
+                    <p>インデントは、半角スペース 2つもしくは、タブを使用する。<br>混在しないように気をつける。</p>
+                  </div>
+                </div>
+                <div class="l-columnBox">
+                  <div class="m-defaultTag ">
+                    <p><b>■ 改行</b></p>
+                    <p>適切なブロックごとに改行する。<br>pugで出力されたもので制御できない場合もある。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-contentsFooter">
+          <footer class="c-templateFooter01">
+            <div class="l-contentsWidth ">
+              <div class="group is-primary">
+                <div class="block is-nav">
+                  <nav class="footerNav">
+                    <nav>
+                      <ul>
+                        <li><a href="../index.html"><span>TOP</span></a></li>
+                        <li><a href="../manual/"><span>MANUAL</span></a></li>
+                        <li><a href="../module/"><span>MODULE</span></a></li>
+                        <li><a href="../component/"><span>COMPONENT</span></a></li>
+                        <li><a href="../javascript/"><span>JAVASCRIPT</span></a></li>
+                      </ul>
+                    </nav>
+                  </nav>
+                </div>
+                <div class="block is-copyright">
+                  <p>copyright xxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
