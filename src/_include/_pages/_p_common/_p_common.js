@@ -1,9 +1,10 @@
+// global option
 import globalSet from '../../_modules/_m_javascript/_m_globalSet/_m_globalSet.js';
 globalSet();
-let _g = window.GLOBAL;
-
 // top serviceWorker
 import serviceWorkerSet from '../../_modules/_m_javascript/_m_serviceWorkerSet/_m_serviceWorkerSet.js';
+// pjax
+import barbaSet from '../../_modules/_m_javascript/_m_barbaSet/_m_barbaSet.js';
 // inview set
 import inView from '../../_modules/_m_javascript/_m_inView/_m_inView.js';
 // Inertial scroll
@@ -19,18 +20,57 @@ import matchHeight from '../../_modules/_m_javascript/_m_matchHeight/_m_matchHei
 // ----- component用 ------
 import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBlock.js';
 import mainvisualSet01 from '../../_modules/_m_javascript/_m_mainvisualSet01/_m_mainvisualSet01.js';
+import canvasSlider01 from '../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js';
+import canvasCircle01 from '../../_modules/_m_javascript/_m_canvasCircle01/_m_canvasCircle01.js';
+// import arcanoid01 from '../../_modules/_m_javascript/_m_arcanoid01/_m_arcanoid01.js';
+
+let _g;
+
+function domLoadAfter() {
+	accordionSet();
+	markupBlock();
+	spTellLink();
+	
+}
+
+function imageLoadAfter() {
+	inView();
+	luxySet(_g);
+	mainvisualSet01();
+	matchHeight();
+	canvasSlider01(_g);
+	canvasCircle01();
+	// arcanoid01();
+}
 
 function init() {
 	// serviceWorkerSet();
-	inView();
-	luxySet();
-	accordionSet();
-	spTellLink();
-	matchHeight();
-
-	markupBlock();
-	mainvisualSet01();
 	
+	_g = window.GLOBAL;
+	_g.domLoad(function(){
+		barbaSet();
+		if(_g.PJAX_FLAG == false) {
+			console.log("domLoad");
+			domLoadAfter();
+		}
+		_g.pjaxLoad(function(){
+			console.log("domLoad_pjax");
+			domLoadAfter();
+		});
+	});
+	_g.imageLoad(function(){
+		if(_g.PJAX_FLAG == false) {
+			console.log("imageLoad");
+			
+			imageLoadAfter();
+			
+		}
+		_g.pjaxLoad(function(){
+			console.log("imageLoad_pjax");
+			imageLoadAfter();
+		});
+		_g.PJAX_FLAG = true;
+	});
 }
 
 export default function() {

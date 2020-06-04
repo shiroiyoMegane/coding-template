@@ -1,6 +1,3 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
 
 window.C_MATCH_HEIGHT = {
 	ELM: null,
@@ -12,6 +9,7 @@ window.C_MATCH_HEIGHT = {
 	ARRAY_LENGTH: 0,
 	ARRAY_COUNT: 0,
 	init: function(op){
+		let _g = window.GLOBAL;
 		let _c = this;
 			_c.ELM = document.querySelectorAll(_c.DEFAULT.className);
 			if(_c.ELM != null) {
@@ -87,8 +85,6 @@ window.C_MATCH_HEIGHT = {
 }
 
 export default function(op) {
-	_g.imageLoad(function(){
-		window.C_MATCH_HEIGHT.init(op);
-	});
+	window.C_MATCH_HEIGHT.init(op);
 }
 

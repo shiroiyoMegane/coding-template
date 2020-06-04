@@ -1,7 +1,3 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
-
 export default function() {
 	// マークアップアコーディオン用
 	function markupBlock() {
@@ -39,9 +35,6 @@ export default function() {
 			$(this).parents(".c-memoSet01").find(content).eq($(this).index()).addClass('is-current');
 		});
 	}
-	_g.domLoad(function(){
-		markupBlock();
-		memoSet01();
-	});
-	
+	markupBlock();
+	memoSet01();
 }

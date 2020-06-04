@@ -1,5 +1,5 @@
 
-
+import Barba from "barba.js"
 export default function(name) {
 	window.GLOBAL = {
 		GLOBAL_WIDTH: window.innerWidth,
@@ -23,11 +23,13 @@ export default function(name) {
 		OS: null,
 		WINDOW_TOP: null,
 		WINDOW_BOTTOM: null,
+		PJAX_FLAG: false,
 		init() {
 			let _t = this;
 				_t.ua();
 				_t.set();
 				_t.reset();
+				_t.deviceSet();
 		},
 		set() {
 			let _t = this;
@@ -85,21 +87,62 @@ export default function(name) {
 				});
 		},
 		ua() {
+			let agent = window.navigator.userAgent.toLowerCase();
+			var ipad = agent.indexOf('ipad') > -1 || agent.indexOf('macintosh') > -1 && 'ontouchend' in document;
 			let _t = this,
 				ua = navigator.userAgent;
+
 				if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
 					_t.UA = 'sp'
-				} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+				} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0 || ipad == true) {
 					_t.UA = 'tb'
 				} else {
 					_t.UA = 'pc'
 				}
 				if (navigator.platform.indexOf("Win") != -1) {
 					_t.OS = 'windows'
+				} else if(navigator.platform.indexOf("Mac") != -1) {
+					_t.OS = 'mac'
 				}
 				else {
 					_t.OS = 'other'
 				}
+
+				if (ua.indexOf('iPhone') > 0) {
+					_t.DEVICE = 'iPhone';
+				} else if(ua.indexOf('iPad') > 0 || ipad == true) {
+					_t.DEVICE = 'iPad';
+				}  else if(ua.indexOf('Android') > 0) {
+					_t.DEVICE = 'Android';
+				} else if(ua.indexOf('Mobile') > 0) {
+					_t.DEVICE = 'Mobile';
+				} else {
+					_t.DEVICE = 'pc';
+				}
+
+				if(agent.indexOf('msie') != -1 || agent.indexOf('trident') != -1) {
+					_t.BROWSER = "ie"
+				} else if(agent.indexOf('edge') != -1) {
+					_t.BROWSER = "edge"
+				} else if(agent.indexOf('chrome') != -1) {
+					_t.BROWSER = "chrome"
+				} else if(agent.indexOf('safari') != -1) {
+					_t.BROWSER = "safari"
+				} else if(agent.indexOf('firefox') != -1) {
+					_t.BROWSER = "firefox"
+				} else if(agent.indexOf('opera') != -1) {
+					_t.BROWSER = "opera"
+				} else {
+					_t.BROWSER = "other"
+				}
+		},
+		deviceSet() {
+			let _t = this;
+			_t.domLoad(function(){
+				document.getElementById('l-contentsTop').classList.add(_t.DEVICE);
+				document.getElementById('l-contentsTop').classList.add(_t.OS);
+				document.getElementById('l-contentsTop').classList.add(_t.BROWSER);
+			})
 		},
 		domLoad(cb) {
 			let _t = this;
@@ -118,6 +161,15 @@ export default function(name) {
 				window.addEventListener('load', () => {
 					init();
 				},false);
+		},
+		pjaxLoad(cb) {
+			let _t = this;
+				function init() {
+					cb();
+				}
+				Barba.Dispatcher.on('transitionCompleted', function () {
+					init();
+				});
 		},
 		resize(cb) {
 			let _t = this;

@@ -1,19 +1,18 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
 import luxy from 'luxy.js';
 
-export default function() {
-	function init() {
-		_g.domLoad(luxySet);
+
+function init() {
+	luxySet();
+}
+function luxySet() {
+	luxy.init({
+		wrapper: '.l-contentsBody',
+		wrapperSpeed: 0.08,
+	});
+}
+
+export default function(_g) {
+	if(_g.UA == 'pc') {
+		init();
 	}
-	function luxySet() {
-		if(_g.UA == 'pc') {
-			luxy.init({
-				wrapper: '.l-contentsBody',
-				wrapperSpeed: 0.1,
-			});
-		}
-	}
-	init();
 }

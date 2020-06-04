@@ -13,12 +13,18 @@ html(lang="ja" class= "is-" + pageOption.KEY)
 			if pageOption.HEADER
 				.l-contentsHeader
 					block header
-			.l-contentsBody(class = (pageOption.SIDE?'has-side':""))
-				if pageOption.SIDE
-					aside.l-sideContents
-						block side
-				.l-mainContents
-					block contents
+			.l-contentsBody
+				.l-contentsWrapper#barba-wrapper
+					.barba-container
+						if pageOption.SIDE == true
+							.l-sideWrappar
+								aside.l-sideContents
+									block side
+								.l-mainContents
+									block contents
+						else
+							.l-mainContents
+								block contents
 				if pageOption.FOOTER
 					.l-contentsFooter
 						block footer

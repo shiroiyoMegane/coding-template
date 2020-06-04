@@ -1,6 +1,6 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
+// import globalSet from '../_m_globalSet/_m_globalSet.js';
+// globalSet();
+// let _g = window.GLOBAL;
 
 window.C_ACCORDION = {
 	TARGET: null,
@@ -130,8 +130,9 @@ class accordionChild {
 }
 
 export default function(op) {
-	_g.imageLoad(function(){
-		window.C_ACCORDION.init(op);
-	});
+	window.C_ACCORDION.init(op);
+	// _g.imageLoad(function(){
+	// 	window.C_ACCORDION.init(op);
+	// });
 }
 

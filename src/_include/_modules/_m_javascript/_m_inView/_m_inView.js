@@ -1,7 +1,3 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
-
 window.C_INVIEW = {
 	TARGET: null,
 	DEFAULT: {
@@ -12,6 +8,7 @@ window.C_INVIEW = {
 	OPTION: null,
 	ARRAY: {},
 	init: function(op){
+		let _g = window.GLOBAL;
 		let _c = this;
 			_c.OPTION = Object.assign(_c.DEFAULT, op);
 			_c.TARGET = document.querySelectorAll(_c.OPTION.className);
@@ -19,6 +16,7 @@ window.C_INVIEW = {
 				_c.inviewSetFunc(true);
 				_g.resize(function(){
 					_c.inviewSetFunc();
+					
 				});
 				_g.scroll(function(){
 					_c.inviewSetFunc();
@@ -44,6 +42,7 @@ class inviewSet {
 			_t.tg = tg;
 	}
 	set(op) {
+		let _g = window.GLOBAL;
 		let _t = this;
 			_t.tgRect = _t.tg.getBoundingClientRect();
 			_t.scrollTopPos = _g.WINDOW_TOP;
@@ -70,8 +69,6 @@ class inviewSet {
 }
 
 export default function(op) {
-	_g.imageLoad(function(){
-		window.C_INVIEW.init(op);
-	});
+	window.C_INVIEW.init(op);
 }
 

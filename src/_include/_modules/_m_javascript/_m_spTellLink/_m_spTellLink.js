@@ -1,9 +1,6 @@
-import globalSet from '../_m_globalSet/_m_globalSet.js';
-globalSet();
-let _g = window.GLOBAL;
-
 export default function(op) {
 	let init = () => {
+		let _g = window.GLOBAL;
 		let _g_defaultOp = {
 			className: '.js-tellLink',
 		}
@@ -16,8 +13,5 @@ export default function(op) {
 			});
 		}
 	}
-	
-	_g.domLoad(function(){
-		init();
-	});
+	init();
 }
