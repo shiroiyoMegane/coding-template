@@ -1,0 +1,45 @@
+extends /_include/_template/_t_base_template
+
+block vars
+	-
+		var pageOption = {
+			KEY: "canvas",
+			URL: '',
+			RELATIVE_PATH: '../',
+			TITLE: '',
+			DESCRIPTION: '',
+			KEYWORDS: '',
+			side: [false,"left"],
+			HEADER: true,
+			FOOTER: true,
+			SIDE: false,
+		}
+
+block library
+
+block header
+	+c-templateHeader01
+block footer
+	+c-templateFooter01
+
+block contents
+	+l-contentsWidth({tag:"div"})
+		+l-mqWrapper({tag:"div"})
+			+l-columnBlock({tag:"div"})
+				.c-gridlayout01
+					.box
+						p 1
+					.box
+						p 2
+					.box
+						p 3
+					.box
+						p 4
+					.box
+						p 5
+					.box
+						p 6
+					.box
+						p 7
+					.box
+						p 8
