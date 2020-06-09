@@ -71,8 +71,9 @@ function stylus() {
 	)
 	.pipe(
 		$.autoprefixer({
-			browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
-			cascade: false
+			// browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
+			cascade: false,
+			grid: "autoplace"
 		})
 	)
 	.pipe(

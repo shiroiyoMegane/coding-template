@@ -23,6 +23,9 @@ block footer
 	+c-templateFooter01
 
 block contents
+	.m-mouseStalker01
+		canvas(width=50 height=50).js-mouseStalker01
+	
 	+l-contentsWidth({tag:"div"})
 		+l-mqWrapper({tag:"div"})
 			+l-columnBlock({tag:"div"})
@@ -31,7 +34,7 @@ block contents
 					a(href="")
 						.group.is-primary
 							.block.is-circle
-								canvas(width=100 height=100).js-canvasCircle01
+								canvas(width=200 height=200).js-canvasCircle01
 							.block.is-text
 								p
 									span テキストだよテキストだよテキストだよ
@@ -41,7 +44,7 @@ block contents
 					a(href="")
 						.group.is-primary
 							.block.is-circle
-								canvas(width=100 height=100).js-canvasCircle01
+								canvas(width=200 height=200).js-canvasCircle01
 							.block.is-text
 								p
 									span テキストだよ

@@ -15,6 +15,8 @@ import accordionSet from '../../_modules/_m_javascript/_m_accordionSet/_m_accord
 import spTellLink from '../../_modules/_m_javascript/_m_spTellLink/_m_spTellLink.js';
 //matchHeight
 import matchHeight from '../../_modules/_m_javascript/_m_matchHeight/_m_matchHeight.js';
+//mouseStarker
+import mouseStalker01 from '../../_modules/_m_javascript/_m_mouseStalker01/_m_mouseStalker01.js';
 
 
 // ----- component用 ------
@@ -22,6 +24,7 @@ import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBl
 import mainvisualSet01 from '../../_modules/_m_javascript/_m_mainvisualSet01/_m_mainvisualSet01.js';
 import canvasSlider01 from '../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js';
 import canvasCircle01 from '../../_modules/_m_javascript/_m_canvasCircle01/_m_canvasCircle01.js';
+
 // import arcanoid01 from '../../_modules/_m_javascript/_m_arcanoid01/_m_arcanoid01.js';
 
 let _g;
@@ -40,6 +43,7 @@ function imageLoadAfter() {
 	matchHeight();
 	canvasSlider01(_g);
 	canvasCircle01();
+	mouseStalker01();
 	// arcanoid01();
 }
 
