@@ -5,7 +5,7 @@
 window.C_OUTLINESET = {
 	TARGET: null,
 	DEFAULT: {
-		target: '.l-columnBlock',
+		target: '*',
 	},
 	OPTION: null,
 	init: function(op){
