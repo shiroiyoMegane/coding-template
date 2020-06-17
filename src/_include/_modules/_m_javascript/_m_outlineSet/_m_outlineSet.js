@@ -33,6 +33,31 @@ window.C_OUTLINESET = {
 				  }
 				}
 			});
+
+			$(window).on("touchstart", function(e) {
+				
+				for (var i = 0; i < e.touches.length; i++) {
+					var t = e.touches[i];       // 触れている指に関する情報を取得
+				}
+				if(e.touches.length>2) {
+					$(_c.TARGET).css({
+						'outline': '2px solid red'
+					})
+				} else {
+					$(_c.TARGET).css({
+						'outline': 'none'
+					})
+				}
+				
+			});
+
+			$(window).on("touchend", function(e) {
+				$(_c.TARGET).css({
+					'outline': 'none'
+				})
+			});
+
+			
 	}
 }
 
