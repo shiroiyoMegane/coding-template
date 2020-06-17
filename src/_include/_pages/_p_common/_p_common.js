@@ -17,6 +17,8 @@ import spTellLink from '../../_modules/_m_javascript/_m_spTellLink/_m_spTellLink
 import matchHeight from '../../_modules/_m_javascript/_m_matchHeight/_m_matchHeight.js';
 //mouseStarker
 import mouseStalker01 from '../../_modules/_m_javascript/_m_mouseStalker01/_m_mouseStalker01.js';
+//outline
+import outlineSet from '../../_modules/_m_javascript/_m_outlineSet/_m_outlineSet.js';
 
 
 // ----- component用 ------
@@ -33,7 +35,7 @@ function domLoadAfter() {
 	accordionSet();
 	markupBlock();
 	spTellLink();
-	
+	outlineSet();
 }
 
 function imageLoadAfter() {
