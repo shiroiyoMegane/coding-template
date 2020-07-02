@@ -1,0 +1,83 @@
+
+//- 背景なし
++c_halfSet01({tag:"div"})
+
+	mixin title01
+		+m-componentTitle01({tag:"h3",text:"均等分割セット01"})
+	mixin cell01
+		+m-cellContentsSet01({tag:"li"})
+			.block.is-image
+				.area.is-image
+					+m-imageSet01({imageTag:"p", className:"is-imageFull", imageUrl: 'https://placeimg.com/375/232/animals'})
+			.block.is-text
+				.area.is-title
+					+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+				.area.is-text
+					.m-defaultTag
+						p!= DUMMY_TEXT_50
+				.area.is-sub
+					p 2019.09.07
+	mixin cell02
+		+m-cellContentsSet01({tag:"li"})
+			.block.is-text
+				.area.is-title
+					+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+				.area.is-text
+					.m-defaultTag
+						p!= DUMMY_TEXT_50
+				.area.is-sub
+					p 2019.09.07
+
+	.group.is-before
+		.block.is-title
+			+title01
+	.group.is-primary
+		.block.is-list
+			+l-colSet01({className:"is-two"})
+				+cell01
+				+cell01
+				+cell02
+				+cell02
+
+
+//- 背景あり
++c_halfSet01({tag:"div"})
+	mixin cell01
+		+m-cellContentsSet02({tag:"li"})
+			.block.is-image
+				.area.is-image
+					+m-imageSet01({imageTag:"p", className:"is-imageFull", imageUrl: 'https://placeimg.com/375/232/animals'})
+			.block.is-text
+				.area.is-title
+					+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+				.area.is-text
+					.m-defaultTag
+						p!= DUMMY_TEXT_50
+				.area.is-sub
+					p 2019.09.07
+	.group.is-primary
+		.block.is-list
+			+l-colSet01({className:"is-two"})
+				+cell01
+				+cell01
+
+
+//- 背景画像
++c_halfSet01({tag:"div"})
+	mixin cell01
+		+m-bgCellContentsSet01({tag:"li"})
+			.block.is-image(style="background-image: url('https://placeimg.com/450/450/animals');")
+			.block.is-text
+				.area.is-title
+					+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+				.area.is-text
+					p name
+				.area.is-sub
+					p 2019.09.07
+	.group.is-primary
+		.block.is-list
+			+l-colSet01({className:"is-four"})
+				+cell01
+				+cell01
+				+cell01
+				+cell01

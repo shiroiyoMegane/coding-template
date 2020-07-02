@@ -9,12 +9,6 @@ mixin c-bgContentsSet01(tg)
 		}
 
 	#{op.tag}( class = op.baseName + op.className )
-		block
-		if op.before == true
-			.group.is-before
-				+beforeGroup()
-		.group.is-primary
-			+primaryGroup()
-		if op.after == true
-			.group.is-after
-				+afterGroup()
+		.componentWrapper
+			block
+		

@@ -1,0 +1,48 @@
+extends /_include/_template/_t_base_template
+
+block vars
+	-
+		var pageOption = {
+			KEY: "component",
+			URL: '',
+			RELATIVE_PATH: '../../../',
+			TITLE: '',
+			DESCRIPTION: '',
+			KEYWORDS: '',
+			HEADER: true,
+			FOOTER: true,
+			SIDE: false,
+		}
+block header
+	+c-templateHeader01
+block footer
+	+c-templateFooter01
+block contents
+	+l-contentsWidth({tag:"div"})
+		+l-mqWrapper({tag:"div"})
+			//- 分割レイアウト ----------------------------------------------------------------------------------------------------------------------
+			+l-columnBlock({tag:"div"})
+				+m-componentTitle01({tag:"p",text:"分割レイアウト"})
+				+l-columnBox({tag:"div"})
+					+l-colSet01({tag:"ul", className:"is-two"})
+						li
+							+m-borderBtn01({tag:"p",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+						li
+							+m-borderBtn01({tag:"p",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+						li
+							+m-borderBtn01({tag:"p",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+				+l-columnBox({tag:"div"})
+					+l-colSet01({tag:"ul", className:"is-three"})
+						li ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+						li いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+						li えええええええええええええええええええええええええええええええええええええええええ
+						li おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+				
+			//- pc表示 sp表示 切り替え ----------------------------------------------------------------------------------------------------------------------
+			+l-columnBlock({tag:"div"})
+				+m-componentTitle01({tag:"p",text:"pc表示 sp表示 切り替え"})
+				+l-columnBox({tag:"div"})
+					p.is-pcOnly pcのみ表示
+					p.is-spOnly spのみ表示
+				
+			

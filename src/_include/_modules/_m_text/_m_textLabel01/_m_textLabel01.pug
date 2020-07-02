@@ -5,5 +5,5 @@ mixin m-textLabel01(tg)
 			baseName:  tg.baseName ? tg.baseName : "m-textLabel01",
 			className: tg.className ? " " + tg.className : "",
 		}
-	#{op.tag}( class = op.baseName + op.className )
+	#{op.tag}( class = op.baseName + op.className ).is-module
 		span.is-text!= tg.text

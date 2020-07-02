@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="is-component" lang="ja">
+  <head>
+    <link rel="canonical" href="undefinedclass URL {
+  constructor(input, base) {
+    // toUSVString is not needed.
+    input = `${input}`;
+    if (base !== undefined) {
+      base = new URL(base);
+    }
+    parse(this, input, base);
+  }
+
+  get [special]() {
+    return (this[context].flags &amp; URL_FLAGS_SPECIAL) !== 0;
+  }
+
+  get [cannotBeBase]() {
+    return (this[context].flags &amp; URL_FLAGS_CANNOT_BE_BASE) !== 0;
+  }
+
+  // https://url.spec.whatwg.org/#cannot-have-a-username-password-port
+  get [cannotHaveUsernamePasswordPort]() {
+    const { host, scheme } = this[context];
+    return ((host == null || host === '') ||
+            this[cannotBeBase] ||
+            scheme === 'file:');
+  }
+
+  [util.inspect.custom](depth, opts) {
+    if (this == null ||
+        Object.getPrototypeOf(this[context]) !== URLContext.prototype) {
+      throw new ERR_INVALID_THIS('URL');
+    }
+
+    if (typeof depth === 'number' &amp;&amp; depth &lt; 0)
+      return opts.stylize('[Object]', 'special');
+
+    var ctor = getConstructorOf(this);
+
+    var obj = Object.create({
+      constructor: ctor === null ? URL : ctor
+    });
+
+    obj.href = this.href;
+    obj.origin = this.origin;
+    obj.protocol = this.protocol;
+    obj.username = this.username;
+    obj.password = this.password;
+    obj.host = this.host;
+    obj.hostname = this.hostname;
+    obj.port = this.port;
+    obj.pathname = this.pathname;
+    obj.search = this.search;
+    obj.searchParams = this.searchParams;
+    obj.hash = this.hash;
+
+    if (opts.showHidden) {
+      obj.cannotBeBase = this[cannotBeBase];
+      obj.special = this[special];
+      obj[context] = this[context];
+    }
+
+    return util.inspect(obj, opts);
+  }
+}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5 , maximum-scale=2">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="" property="og:title">
+    <meta content="" property="og:description">
+    <meta content="article" property="og:type">
+    <meta content="ja_JP" property="og:locale">
+    <link rel="stylesheet" href="../../../assets/css/style.css?rev=5971a6b77d9943b2">
+    <link rel="shortcut icon" href="../../../assets/images/common/favicon.ico?rev=5971a6b77d9943b2">
+    <link rel="apple-touch-icon" href="../../../assets/images/common/webclip.png?rev=5971a6b77d9943b2">
+    <script src="../../../assets/js/vendor.js?rev=5971a6b77d9943b2"></script>
+    <script src="../../../assets/js/function.js?rev=5971a6b77d9943b2"></script>
+  </head>
+  <body>
+    <main id="l-contentsTop">
+      <div class="l-contentsHeader">
+        <header class="c-templateHeader01">
+          <div class="l-contentsWidth ">
+            <div class="group is-primary">
+              <div class="block is-logo">
+                <h1 class="logo"><span>カラダはwebでできている</span></h1>
+              </div>
+              <div class="block is-nav">
+                <nav>
+                  <ul>
+                    <li><a href="/index.html"><span>TOP</span></a></li>
+                    <li><a href="/children/manual/"><span>MANUAL</span></a></li>
+                    <li><a href="/children/module/"><span>MODULE</span></a></li>
+                    <li><a href="/children/component/"><span>COMPONENT</span></a></li>
+                    <li><a href="/children/javascript/"><span>JAVASCRIPT</span></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="l-contentsBody">
+        <div class="l-contentsWrapper" id="barba-wrapper">
+          <div class="barba-container">
+            <div class="l-mainContents">
+              <div class="l-contentsWidth ">
+                <div class="l-mqWrapper ">
+                  <div class="l-columnBlock ">
+                    <div class="l-columnBox">
+                      <p class="m-componentTitle01  com-title is-module"><span>画像モジュール01</span></p>
+                      <div class="m-imageSet01  com-image is-module">
+                        <figure class="image"><img src="https://placeimg.com/400/150/animals?rev" alt="ダミーテキスト">
+                          <figcaption>テキストが入ります</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="l-columnBox">
+                      <div class="m-imageSet01  com-image is-module">
+                        <p class="image"><img src="https://placeimg.com/400/150/animals?rev" alt="ダミーテキスト">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-contentsFooter">
+          <footer class="c-templateFooter01">
+            <div class="l-contentsWidth ">
+              <div class="group is-primary">
+                <div class="block is-nav">
+                  <nav class="footerNav">
+                    <nav>
+                      <ul>
+                        <li><a href="../../../index.html"><span>TOP</span></a></li>
+                        <li><a href="../../../manual/"><span>MANUAL</span></a></li>
+                        <li><a href="../../../module/"><span>MODULE</span></a></li>
+                        <li><a href="../../../component/"><span>COMPONENT</span></a></li>
+                        <li><a href="../../../javascript/"><span>JAVASCRIPT</span></a></li>
+                      </ul>
+                    </nav>
+                  </nav>
+                </div>
+                <div class="block is-copyright">
+                  <p>copyright xxxxxxxxxxxxxxxxxxxxxxx</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

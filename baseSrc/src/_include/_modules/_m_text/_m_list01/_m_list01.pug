@@ -1,8 +1,0 @@
-mixin m-list01(tg)
-	li
-		if tg.url
-			+m-linkModule01(tg)
-				!= tg.text
-		else
-			span!= tg.text
-		block

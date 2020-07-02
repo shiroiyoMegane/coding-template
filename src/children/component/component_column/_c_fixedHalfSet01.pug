@@ -1,0 +1,47 @@
++c-fixedHalfSet01({tag:"div"})
+	.group.is-before
+		.block.is-text
+			+m-componentTitle01({tag:"h3",text:"固定要素+コンテンツセット01"})
+
+	.group.is-primary
+		.block.is-fixed
+			.area.is-image
+				+m-imageSet01({imageTag:"figure", imageUrl: 'https://placeimg.com//400/250/animals'})
+					figcaption テキストが入ります
+		.block.is-contents
+			.area.is-title
+				+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+			.area.is-text
+				.m-defaultTag
+					p!= DUMMY_TEXT_400
+
++c-fixedHalfSet01({tag:"div", className: "is-contentsLeft"})
+	.group.is-primary
+		.block.is-fixed
+			.area.is-btn
+				ul
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+
+		.block.is-contents
+			.area.is-title
+				+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+
++c-fixedHalfSet01({tag:"div", className:"is-float is-contentsLeft"})
+	.group.is-primary
+		.block.is-fixed
+			.area.is-image
+				+m-imageSet01({imageTag:"figure", imageUrl: 'https://placeimg.com//400/250/animals'})
+					figcaption テキストが入ります
+			.area.is-btn
+				ul
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+
+		.block.is-text
+			.area.is-title
+				+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+			.area.is-text
+				.m-defaultTag
+					p!= DUMMY_TEXT_200
+					p!= DUMMY_TEXT_400

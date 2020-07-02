@@ -20,14 +20,11 @@ import mouseStalker01 from '../../_modules/_m_javascript/_m_mouseStalker01/_m_mo
 //outline
 import outlineSet from '../../_modules/_m_javascript/_m_outlineSet/_m_outlineSet.js';
 
-
 // ----- component用 ------
 import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBlock.js';
 import mainvisualSet01 from '../../_modules/_m_javascript/_m_mainvisualSet01/_m_mainvisualSet01.js';
 import canvasSlider01 from '../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js';
 import canvasCircle01 from '../../_modules/_m_javascript/_m_canvasCircle01/_m_canvasCircle01.js';
-
-// import arcanoid01 from '../../_modules/_m_javascript/_m_arcanoid01/_m_arcanoid01.js';
 
 let _g;
 
@@ -46,7 +43,6 @@ function imageLoadAfter() {
 	canvasSlider01(_g);
 	canvasCircle01();
 	mouseStalker01();
-	// arcanoid01();
 }
 
 function init() {
@@ -67,9 +63,7 @@ function init() {
 	_g.imageLoad(function(){
 		if(_g.PJAX_FLAG == false) {
 			console.log("imageLoad");
-			
 			imageLoadAfter();
-			
 		}
 		_g.pjaxLoad(function(){
 			console.log("imageLoad_pjax");

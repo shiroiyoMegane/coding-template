@@ -9,7 +9,7 @@ mixin m-bgBtn01(tg)
 			text:      tg.text ? tg.text : "ボタン"
 		}
 	
-	#{op.tag}( class = op.baseName + op.className ).com-btn
+	#{op.tag}( class = op.baseName + op.className ).com-btn.is-module
 		if(op.blank=="_blank")
 			a(href= op.url target="_blank")
 				span.moduleWrapper

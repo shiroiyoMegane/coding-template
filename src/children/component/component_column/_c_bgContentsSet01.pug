@@ -1,0 +1,31 @@
++c-bgContentsSet01({tag:"div", className:"is-contentsRight is-imageFixed"})
+	.group.is-before
+		.block.is-text
+			.area.is-title
+				+m-componentTitle01({tag:"h3",text:"背景要素+コンテンツセット01"})
+	.group.is-primary
+		.block.is-image
+			.area.is-image(style='background-image: url(https://placeimg.com//700/400/animals)')
+		.block.is-contents
+			.area.is-title
+				+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+			.area.is-text
+				.m-defaultTag
+					p!= DUMMY_TEXT_100
+			.area.is-btn
+				ul
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})
+
++c-bgContentsSet01({tag:"div", className:"is-contentsRight"})
+	.group.is-primary
+		.block.is-image
+			.area.is-image(style='background-image: url(https://placeimg.com//700/400/animals)')
+		.block.is-contents
+			.area.is-title
+				+m-borderLeftTitle01({tag:"h3", title:"左線タイトル01"})
+			.area.is-text
+				.m-defaultTag
+					p!= DUMMY_TEXT_100
+			.area.is-btn
+				ul
+					+m-borderBtn01({tag:"li",text:"ボタン01", url:"index.html", className:"m-iconSet"})

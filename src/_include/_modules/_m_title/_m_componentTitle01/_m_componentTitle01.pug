@@ -6,5 +6,5 @@ mixin m-componentTitle01(tg)
 			className: tg.className ? " " + tg.className : " " + "",
 			text:      tg.text ? tg.text : "ダミータイトルです"
 		}
-	#{op.tag}( class = op.baseName + op.className ).com-title
+	#{op.tag}( class = op.baseName + op.className ).com-title.is-module
 		span!= op.text

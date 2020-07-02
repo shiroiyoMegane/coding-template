@@ -1,0 +1,11 @@
+mixin m-bgCellContentsSet01(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "p",
+			baseName:  tg.baseName ? tg.baseName : "m-bgCellContentsSet01",
+			className: tg.className ? " " + tg.className : "",
+		}
+	#{op.tag}( class = op.baseName + op.className ).is-module
+		.moduleWrapper
+			.group.is-primary
+				block

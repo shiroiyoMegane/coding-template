@@ -6,7 +6,7 @@ mixin m-table01(tg)
 			className: tg.className ? tg.className : "",
 		}
 
-	#{op.tag}( class = op.baseName + " " + op.className )
+	#{op.tag}( class = op.baseName + " " + op.className ).is-module
 		.tableWrapper
 			table
 				block

@@ -1,0 +1,11 @@
+mixin m-cellContentsSet02(tg)
+	-
+		var op = {
+			tag:       tg.tag ? tg.tag : "p",
+			baseName:  tg.baseName ? tg.baseName : "m-cellContentsSet02",
+			className: tg.className ? " " + tg.className : "",
+		}
+	#{op.tag}( class = op.baseName + op.className ).is-module
+		.moduleWrapper
+			.group
+				block

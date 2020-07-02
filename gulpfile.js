@@ -353,7 +353,9 @@ function htaccess() {
 }
 
 exports.clean = clean;
-var build = series(clean, parallel([favicon, htaccess, manifestJson, imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip, baseSrcZip]));
+
+var build = series(clean, parallel([favicon, htaccess, manifestJson, imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip]));
+
 exports.stylus = stylus;
 exports.pug = pug;
 exports.js = js;
