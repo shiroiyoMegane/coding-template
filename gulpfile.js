@@ -1,6 +1,5 @@
 const { src, dest, parallel, series, watch } = require('gulp');
 const $ = require('./modules.js');
-const fs = require('fs');
 
 const option = {
 	url: {
@@ -71,7 +70,6 @@ function stylus() {
 	)
 	.pipe(
 		$.autoprefixer({
-			// browsers: ['last 2 version', 'iOS >= 8.1', 'Android >= 4.4'],
 			cascade: false,
 			grid: "autoplace"
 		})
@@ -162,14 +160,14 @@ function imagemin() {
 }
 
 function svgmin() {
-	return src( option.url.src + option.url.images + '**/*.+(svg)' )
+	return src([ option.url.src + '**/*.+(svg)' , '!' + option.url.src + option.url.assets + option.url.fonts + option.url.iconfont + '**/*.svg' ])
 		.pipe(
 			$.changed( option.url.dist + option.url.images )
 		)
-		.pipe(
-			$.svgmin()
-		)
-		.pipe(dest( option.url.dist + option.url.images ))
+		// .pipe(
+		// 	$.svgmin()
+		// )
+		.pipe(dest( option.url.dist ))
 		.pipe(
 			$.browserSync.reload({
 				stream: true,
@@ -354,7 +352,9 @@ function htaccess() {
 
 exports.clean = clean;
 
-var build = series(clean, parallel([favicon, htaccess, manifestJson, imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip]));
+// var build = series(clean, parallel([favicon, htaccess, manifestJson, imagemin, svgmin, iconFont, stylus, pug, js, jsVendor, zip]));
+var build = series(clean, parallel([imagemin, svgmin, iconFont, stylus, pug, js, jsVendor]));
+
 
 exports.stylus = stylus;
 exports.pug = pug;
@@ -365,8 +365,8 @@ exports.svgmin = svgmin;
 exports.iconFont = iconFont;
 exports.bs = bs;
 exports.build = build;
-exports.zip = zip;
-exports.add = add;
+// exports.zip = zip;
+// exports.add = add;
 exports.baseSrcZip = baseSrcZip;
 exports.manifestJson = manifestJson;
 exports.htaccess = htaccess;

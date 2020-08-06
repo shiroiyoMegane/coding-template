@@ -1,36 +1,34 @@
 // global option
-import globalSet from '../../_modules/_m_javascript/_m_globalSet/_m_globalSet.js';
+import globalSet from '../../_javascript/_j_base/_j_globalSet/_j_globalSet.js';
 globalSet();
-// top serviceWorker
-import serviceWorkerSet from '../../_modules/_m_javascript/_m_serviceWorkerSet/_m_serviceWorkerSet.js';
 // pjax
-import barbaSet from '../../_modules/_m_javascript/_m_barbaSet/_m_barbaSet.js';
+import barbaSet from '../../_javascript/_j_load/_j_barbaSet/_j_barbaSet.js';
 // inview set
-import inView from '../../_modules/_m_javascript/_m_inView/_m_inView.js';
+import inView from '../../_javascript/_j_scroll/_j_inView/_j_inView.js';
 // Inertial scroll
-import luxySet from '../../_modules/_m_javascript/_m_luxySet/_m_luxySet.js';
+import luxySet from '../../_javascript/_j_scroll/_j_luxySet/_j_luxySet.js';
 // accordion
-import accordionSet from '../../_modules/_m_javascript/_m_accordionSet/_m_accordionSet.js';
+import accordionSet from '../../_javascript/_j_base/_j_accordionSet/_j_accordionSet.js';
 // sp tell link
-import spTellLink from '../../_modules/_m_javascript/_m_spTellLink/_m_spTellLink.js';
+import spTellLink from '../../_javascript/_j_base/_j_spTellLink/_j_spTellLink.js';
 //matchHeight
-import matchHeight from '../../_modules/_m_javascript/_m_matchHeight/_m_matchHeight.js';
+import matchHeight from '../../_javascript/_j_base/_j_matchHeight/_j_matchHeight.js';
 //mouseStarker
-import mouseStalker01 from '../../_modules/_m_javascript/_m_mouseStalker01/_m_mouseStalker01.js';
+import mouseStalker01 from '../../_javascript/_j_etc/_j_mouseStalker01/_j_mouseStalker01.js';
 //outline
-import outlineSet from '../../_modules/_m_javascript/_m_outlineSet/_m_outlineSet.js';
+import outlineSet from '../../_javascript/_j_etc/_j_outlineSet/_j_outlineSet.js';
 
-// ----- component用 ------
-import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBlock.js';
-import mainvisualSet01 from '../../_modules/_m_javascript/_m_mainvisualSet01/_m_mainvisualSet01.js';
-import canvasSlider01 from '../../_modules/_m_javascript/_m_canvasSlider01/_m_canvasSlider01.js';
-import canvasCircle01 from '../../_modules/_m_javascript/_m_canvasCircle01/_m_canvasCircle01.js';
+// // ----- component用 ------
+// import markupBlock from '../../_modules/_m_javascript/_m_markupBlock/_m_markupBlock.js';
+import mainvisualSet01 from '../../_javascript/_j_slider/_j_mainvisualSet01/_j_mainvisualSet01.js';
+import canvasSlider01 from '../../_javascript/_j_slider/_j_canvasSlider01/_j_canvasSlider01.js';
+import canvasCircle01 from '../../_javascript/_j_etc/_j_canvasCircle01/_j_canvasCircle01.js';
 
 let _g;
 
 function domLoadAfter() {
 	accordionSet();
-	markupBlock();
+	// markupBlock();
 	spTellLink();
 	outlineSet();
 }
