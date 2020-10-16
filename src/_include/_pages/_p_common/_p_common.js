@@ -31,6 +31,7 @@ function domLoadAfter() {
 	// markupBlock();
 	spTellLink();
 	outlineSet();
+	
 }
 
 function imageLoadAfter() {
